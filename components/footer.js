@@ -31,7 +31,7 @@
               <li><a href="/golf-in-asia/">Golf in Asia</a></li>
               <li><a href="/golf-in-asia/thailand/">Golf in Thailand</a></li>
               <li><a href="/golf-in-asia/vietnam/">Golf in Vietnam</a></li>
-              <li><a href="/beyond/scotland/">Scotland Golf</a></li>
+              <li><a href="/whisky-fairways.html">Scotland Golf</a></li>
               <li><a href="/beyond/">Beyond Asia</a></li>
             </ul>
           </div>
