@@ -15,7 +15,6 @@
       <text x="55" y="42" font-family="Cormorant Garamond, serif" font-size="24" font-weight="300" fill="currentRoseText" opacity="0.75">F</text>
     </svg>`;
 
-  // SVG with actual colour values
   const markLight = (size = 38) => `
     <svg width="${size}" height="${size}" viewBox="0 0 100 100" aria-hidden="true">
       <circle cx="50" cy="50" r="48" fill="none" stroke="#c49a5e" stroke-width="2"/>
@@ -42,13 +41,57 @@
       <text x="55" y="42" font-family="Cormorant Garamond, serif" font-size="24" font-weight="300" fill="#c4607a" opacity="0.82">F</text>
     </svg>`;
 
-  // Detect active page for nav highlighting
-  const path = window.location.pathname;
-  const isGolf    = path.includes('/golf-in-asia');
-  const isBeyond  = path.includes('/beyond');
-  const isDest    = path.includes('/destinations');
+  // ── CURRENCY SYSTEM ──────────────────────────────────────────
+  // Exchange rates — update these periodically (approx. guidance only)
+  const RATES = { GBP: 1, USD: 1.27, SGD: 1.71 };
+  const SYMBOLS = { GBP: '£', USD: '$', SGD: 'S$' };
+  let activeCurrency = sessionStorage.getItem('lf_currency') || 'GBP';
 
-  // Build nav HTML
+  function convertPrice(gbpAmount) {
+    return Math.round(gbpAmount * RATES[activeCurrency]);
+  }
+
+  function formatPrice(amount, currency) {
+    return SYMBOLS[currency] + amount.toLocaleString();
+  }
+
+  // Find and update all price elements on page
+  function updatePrices() {
+    document.querySelectorAll('[data-price-gbp]').forEach(el => {
+      const gbp = parseInt(el.getAttribute('data-price-gbp'), 10);
+      el.textContent = formatPrice(convertPrice(gbp), activeCurrency);
+    });
+    // Also update simple text nodes matching £N,NNN or £NN,NNN pattern
+    document.querySelectorAll('[data-price-text]').forEach(el => {
+      const gbp = parseInt(el.getAttribute('data-price-gbp'), 10);
+      el.innerHTML = formatPrice(convertPrice(gbp), activeCurrency) +
+        (activeCurrency !== 'GBP' ? ' <span style="font-size:0.7em;color:#7a6e65;" title="Approximate — prices confirmed on enquiry">approx.</span>' : '');
+    });
+  }
+
+  function setCurrency(c) {
+    activeCurrency = c;
+    sessionStorage.setItem('lf_currency', c);
+    updatePrices();
+    // Update toggle UI
+    document.querySelectorAll('.lf-currency-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.currency === c);
+    });
+  }
+
+  // Expose globally so pages can call LF.setCurrency()
+  window.LF = window.LF || {};
+  window.LF.setCurrency  = setCurrency;
+  window.LF.activeCurrency = () => activeCurrency;
+  window.LF.markLight    = markLight;
+  window.LF.markDark     = markDark;
+
+  // ── NAV HTML ─────────────────────────────────────────────────
+  const path     = window.location.pathname;
+  const isGolf   = path.includes('/golf-in-asia');
+  const isBeyond = path.includes('/beyond');
+  const isDest   = path.includes('/destinations');
+
   const navHTML = `
     <nav class="nav" id="main-nav" role="navigation" aria-label="Main navigation">
       <div class="nav-left">
@@ -70,6 +113,13 @@
         <li class="golf-link ${isGolf ? 'active' : ''}"><a href="/golf-in-asia/">Golf in Asia</a></li>
         <li class="beyond-link ${isBeyond ? 'active' : ''}"><a href="/beyond/">Beyond Asia</a></li>
         <li><a href="/journal/">Journal</a></li>
+        <li class="nav-currency" aria-label="Select currency">
+          <button class="lf-currency-btn ${activeCurrency==='GBP'?'active':''}" data-currency="GBP">£</button>
+          <span class="nav-currency-sep">·</span>
+          <button class="lf-currency-btn ${activeCurrency==='USD'?'active':''}" data-currency="USD">$</button>
+          <span class="nav-currency-sep">·</span>
+          <button class="lf-currency-btn ${activeCurrency==='SGD'?'active':''}" data-currency="SGD">S$</button>
+        </li>
         <li class="enquire-link"><a href="/contact/">Enquire</a></li>
       </ul>
       <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation">
@@ -77,25 +127,27 @@
       </button>
     </nav>`;
 
-  // Insert nav
   document.body.insertAdjacentHTML('afterbegin', navHTML);
 
-  // Scroll behaviour — transparent on hero pages, solid otherwise
-  const nav = document.getElementById('main-nav');
-  const hasHero = document.querySelector('.hero, .dest-hero');
+  // Currency button click handlers
+  document.querySelectorAll('.lf-currency-btn').forEach(btn => {
+    btn.addEventListener('click', () => setCurrency(btn.dataset.currency));
+  });
+
+  // ── SCROLL BEHAVIOUR ─────────────────────────────────────────
+  const nav    = document.getElementById('main-nav');
+  const hasHero = document.querySelector('.hero, .dest-hero, .signature-hero');
 
   function updateNav() {
     if (hasHero) {
       if (window.scrollY > 60) {
         nav.classList.remove('transparent');
         nav.classList.add('scrolled');
-        // Switch to light mark
         const markEl = nav.querySelector('svg');
         if (markEl) markEl.outerHTML = markLight(38);
       } else {
         nav.classList.add('transparent');
         nav.classList.remove('scrolled');
-        // Switch to dark mark for transparent bg
         const markEl = nav.querySelector('svg');
         if (markEl) markEl.outerHTML = markDark(38);
       }
@@ -107,14 +159,13 @@
 
   if (hasHero) {
     nav.classList.add('transparent');
-    // Set dark mark initially
     const markEl = nav.querySelector('svg');
     if (markEl) markEl.outerHTML = markDark(38);
   }
 
   window.addEventListener('scroll', updateNav, { passive: true });
 
-  // Mobile toggle
+  // ── MOBILE TOGGLE ────────────────────────────────────────────
   const toggle = document.getElementById('nav-toggle');
   const links  = document.getElementById('nav-links');
   toggle.addEventListener('click', () => {
@@ -122,7 +173,7 @@
     toggle.setAttribute('aria-expanded', isOpen);
   });
 
-  // Smooth scroll for enquiry CTA
+  // ── SMOOTH SCROLL ────────────────────────────────────────────
   document.addEventListener('click', e => {
     if (e.target.closest('a[href="#enquiry"]')) {
       e.preventDefault();
@@ -131,9 +182,11 @@
     }
   });
 
-  // Export mark functions for use in other scripts
-  window.LF = window.LF || {};
-  window.LF.markLight = markLight;
-  window.LF.markDark  = markDark;
+  // Run price update after DOM ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', updatePrices);
+  } else {
+    updatePrices();
+  }
 
 })();
