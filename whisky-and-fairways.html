@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Whisky & Fairways — A Scottish Golf & Distillery Journey | Lotus & Fairways</title>
+  <meta name="description" content="Nine days through Scotland's finest links and Speyside's great distilleries. St Andrews, Carnoustie and Royal Dornoch golf, paired with Glenfiddich, Loch Ness and the Highlands. A signature Lotus & Fairways experience.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://lotusfairways.com/whisky-and-fairways.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Whisky & Fairways — Lotus & Fairways">
+  <meta property="og:description" content="Nine days through Scotland's finest links and Speyside's great distilleries. A signature Lotus & Fairways experience.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lotusfairways.com/whisky-and-fairways.html">
+  <meta property="og:image" content="https://lotusfairways.com/images/scotland-glenfinnan-viaduct.jpg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+
+  <style>
+    /* ── Page-specific additions, built on existing tokens ── */
+    .signature-hero {
+      position: relative;
+      height: 78vh;
+      min-height: 520px;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+    }
+    .signature-hero img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .signature-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(26,18,8,0.82) 0%, rgba(26,18,8,0.25) 50%, rgba(26,18,8,0.1) 100%);
+    }
+    .signature-hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 var(--space-xl) var(--space-2xl);
+      width: 100%;
+      color: var(--parchment);
+    }
+    .signature-hero-content .eyebrow { color: var(--bronze-light); margin-bottom: var(--space-md); }
+    .signature-hero-content h1 { color: var(--white); margin-bottom: var(--space-md); max-width: 800px; }
+    .signature-hero-meta {
+      display: flex;
+      gap: var(--space-xl);
+      flex-wrap: wrap;
+      margin-top: var(--space-lg);
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+    }
+    .signature-hero-meta strong { display: block; font-family: var(--font-serif); font-size: 1.4rem; font-weight: 400; }
+
+    .at-a-glance {
+      background: var(--white);
+      border-radius: 4px;
+      box-shadow: var(--shadow-md);
+      padding: var(--space-xl);
+      margin-top: -90px;
+      position: relative;
+      z-index: 2;
+      max-width: var(--max-width);
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .at-a-glance-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--space-lg);
+    }
+    .at-a-glance-item h4 { color: var(--bronze); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 6px; font-family: var(--font-sans); font-weight: 500; }
+    .at-a-glance-item p { font-size: 0.95rem; color: var(--deep); margin: 0; line-height: 1.5; }
+
+    .price-note {
+      font-size: 0.75rem;
+      color: var(--warm-grey);
+      font-style: italic;
+      margin-top: var(--space-sm);
+    }
+
+    .intro-text {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .intro-text p { font-size: 1.1rem; line-height: 1.9; }
+
+    .timeline { max-width: 880px; margin: 0 auto; }
+    .day-block {
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      gap: var(--space-lg);
+      padding: var(--space-xl) 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .day-block:last-child { border-bottom: none; }
+    .day-number {
+      font-family: var(--font-serif);
+      font-size: 2.2rem;
+      color: var(--bronze);
+      line-height: 1;
+    }
+    .day-number span { display: block; font-family: var(--font-sans); font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--warm-grey); margin-top: 6px; }
+    .day-title { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 400; margin-bottom: 10px; color: var(--deep); }
+    .day-block p { margin-bottom: 12px; }
+    .day-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+    .day-tag {
+      font-size: 0.68rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 20px;
+      background: var(--rose-pale);
+      color: var(--rose);
+      font-family: var(--font-sans);
+    }
+    .day-tag.golf { background: #e8efe9; color: var(--green); }
+    .day-tag.whisky { background: #f3ead9; color: var(--bronze); }
+
+    .inclusions-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-2xl);
+      max-width: 880px;
+      margin: 0 auto;
+    }
+    @media (max-width: 700px) { .inclusions-grid { grid-template-columns: 1fr; gap: var(--space-xl); } }
+    .inclusions-grid h4 { font-family: var(--font-sans); font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: var(--space-md); }
+    .inclusions-grid ul li { font-size: 0.92rem; padding: 8px 0; border-bottom: 1px solid var(--rule); color: var(--slate); }
+    .inclusions-grid ul li:last-child { border-bottom: none; }
+
+    .gallery-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-sm);
+    }
+    .gallery-strip img { width: 100%; height: 200px; object-fit: cover; border-radius: 2px; }
+    @media (max-width: 700px) { .gallery-strip { grid-template-columns: repeat(2, 1fr); } }
+
+    .cta-band {
+      background: var(--green);
+      color: var(--parchment);
+      text-align: center;
+      padding: var(--space-3xl) var(--space-xl);
+    }
+    .cta-band h2 { color: var(--white); margin-bottom: var(--space-md); }
+    .cta-band p { color: var(--parchment-dark); max-width: 560px; margin: 0 auto var(--space-lg); font-size: 1rem; }
+  </style>
+</head>
+<body>
+
+<!-- Nav injected by component -->
+<script src="/components/nav.js"></script>
+
+<!-- ══════════════════════════════════════════
+     HERO
+══════════════════════════════════════════ -->
+<section class="signature-hero">
+  <img src="/images/scotland-glenfinnan-viaduct.jpg" alt="Highland Scotland — Whisky & Fairways">
+  <div class="signature-hero-content">
+    <div class="eyebrow">— Signature Experience —</div>
+    <h1>Whisky & Fairways</h1>
+    <p style="font-size:1.1rem; color:var(--parchment-dark); max-width:600px;">Nine days through Scotland's most storied links and its oldest distilleries — golf by morning, single malt by evening, the Highlands in between.</p>
+    <div class="signature-hero-meta">
+      <div><strong>9 Nights</strong>Edinburgh to Edinburgh</div>
+      <div><strong>5 Rounds</strong>St Andrews, Carnoustie, Royal Dornoch, Murrayshall</div>
+      <div><strong>From £6,995pp</strong>Private group of 6–8</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     AT A GLANCE
+══════════════════════════════════════════ -->
+<div class="at-a-glance">
+  <div class="at-a-glance-grid">
+    <div class="at-a-glance-item">
+      <h4>Golf</h4>
+      <p>Duke's & Eden (St Andrews), Carnoustie Championship, Royal Dornoch (Struie & Championship), Murrayshall</p>
+    </div>
+    <div class="at-a-glance-item">
+      <h4>Whisky</h4>
+      <p>Glenfiddich, Eden Mill, Byres Farm — barley to bottle</p>
+    </div>
+    <div class="at-a-glance-item">
+      <h4>Beyond the Fairway</h4>
+      <p>Loch Ness, Urquhart Castle, Blair Castle, Scotland's Secret Bunker, the Hermitage at Dunkeld</p>
+    </div>
+    <div class="at-a-glance-item">
+      <h4>From</h4>
+      <p style="font-family:var(--font-serif); font-size:1.6rem;">£6,995<span style="font-size:0.95rem; font-family:var(--font-sans); color:var(--warm-grey);"> pp</span></p>
+      <p class="price-note">Based on a private group of 6–8 guests, twin/double occupancy. Final pricing confirmed on enquiry.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     INTRO
+══════════════════════════════════════════ -->
+<section class="section">
+  <div class="intro-text">
+    <p>There is a particular kind of Scottish morning — low light over a links course, the air still carrying last night's peat smoke — that golfers and whisky drinkers both recognise instantly. <em>Whisky & Fairways</em> is built around that feeling: nine days moving between championship golf and the distilleries that shaped Highland and Speyside whisky, with castles, lochs and a Cold War bunker woven through the gaps. Every round is on a course with genuine pedigree. Every distillery visit goes beyond the standard tour. This is Scotland for people who want their golf taken seriously and their whisky earned, not merely tasted.</p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     TIMELINE
+══════════════════════════════════════════ -->
+<section class="section" style="background:var(--white);">
+  <div class="section-header">
+    <h2>The Itinerary</h2>
+    <div class="section-rule"></div>
+  </div>
+
+  <div class="timeline">
+
+    <div class="day-block">
+      <div class="day-number">1<span>Edinburgh</span></div>
+      <div>
+        <h3 class="day-title">Arrival — St Andrews</h3>
+        <p>Met at Edinburgh Airport and driven north to St Andrews, the spiritual home of golf. Check in to the Old Course Hotel, Golf Resort & Spa, overlooking the 17th — the Road Hole — for the first of three nights. The evening is yours; settle in, and let the town's nine centuries of golfing history sink in before the clubs come out.</p>
+        <div class="day-tags"><span class="day-tag">Arrival</span></div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-number">2<span>St Andrews</span></div>
+      <div>
+        <h3 class="day-title">Duke's Course — Scotland's Secret Bunker</h3>
+        <p>A morning round at The Duke's, Peter Thomson's heathland design above the town, with views stretching to the coast and the Highlands beyond. In the afternoon, a short drive south to Scotland's Secret Bunker — a genuine Cold War command centre, 24,000 square feet of decontamination rooms, broadcasting studios and living quarters, hidden beneath an unremarkable farmhouse since the 1950s.</p>
+        <div class="day-tags"><span class="day-tag golf">Golf — Duke's Course</span></div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-number">3<span>St Andrews</span></div>
+      <div>
+        <h3 class="day-title">Eden Course — Eden Mill Distillery</h3>
+        <p>If the Old Course is dinner with royalty, the Eden Course — laid out by Harry Colt in 1914 — is its wilder, more spirited sibling: natural boundaries, fierce bunkering, real teeth. Afterwards, Eden Mill, Scotland's first combined gin, beer and whisky distillery, where the team's experimental streak (bourbon-aged oak gin among the more daring results) makes for one of the more interesting tasting rooms in Fife.</p>
+        <div class="day-tags"><span class="day-tag golf">Golf — Eden Course</span><span class="day-tag whisky">Eden Mill</span></div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-number">4<span>Speyside</span></div>
+      <div>
+        <h3 class="day-title">Carnoustie — Glenfiddich</h3>
+        <p>North to Carnoustie, regularly ranked among the hardest courses on the Open rota — Hogan's Alley at the 6th still carries the weight of its history. Lunch at the Fife Arms in Braemar, restored into one of Scotland's most talked-about hotels, before continuing to Glenfiddich — distilling since Christmas Day 1887, and the world's most awarded single malt. The signature tasting moves through the 12, 15 and 18 year expressions, finishing with the Grand Cru. Overnight in Speyside.</p>
+        <div class="day-tags"><span class="day-tag golf">Golf — Carnoustie Championship</span><span class="day-tag whisky">Glenfiddich</span></div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-number">5<span>Dornoch</span></div>
+      <div>
+        <h3 class="day-title">Byres Farm — Royal Dornoch, Struie Course</h3>
+        <p>A morning at Byres Farm on the banks of the Spey — barley grown here goes into The Glenlivet and Aberlour, and walking the fields with the farmer is as close as most people get to where whisky genuinely begins. Then north to Royal Dornoch for the Struie Course, before checking in for two nights at Dornoch Station.</p>
+        <div class="day-tags"><span class="day-tag whisky">Byres Farm</span><span class="day-tag golf">Golf — Struie Course</span></div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-number">6<span>Dornoch</span></div>
+      <div>
+        <h3 class="day-title">Royal Dornoch Championship Course — Loch Ness</h3>
+        <p>The Championship Course at Royal Dornoch — Old Tom Morris's design, later refined, and royally sanctioned since 1906 — is widely held among the finest links anywhere in the world; the natural dunes and ever-changing Highland weather make every round different. In the afternoon, a cruise on Loch Ness and a stop at the ruins of Urquhart Castle, perched above the water Nessie supposedly calls home.</p>
+        <div class="day-tags"><span class="day-tag golf">Golf — Championship Course</span></div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-number">7<span>Perthshire</span></div>
+      <div>
+        <h3 class="day-title">Rothiemurchus (Optional) — Blair Castle</h3>
+        <p>An optional morning at Rothiemurchus near Aviemore for those wanting Highland cattle safaris, clay shooting or quad trekking, before continuing to Blair Castle — seven centuries as home to the Atholl family, thirty rooms, and gardens including the nine-acre walled Hercules Garden. Overnight at Murrayshall Country House.</p>
+        <div class="day-tags"><span class="day-tag">Optional activity</span></div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-number">8<span>Perthshire</span></div>
+      <div>
+        <h3 class="day-title">Murrayshall Golf Course — The Hermitage, Dunkeld</h3>
+        <p>A final round on Murrayshall's championship parkland layout, threading through mature pines across 365 Perthshire acres. In the afternoon, the Hermitage Dunkeld walk — National Trust-managed forest, towering Douglas firs, and the Black Linn waterfall, with Ossian's Hall, an 18th-century folly, overlooking the falls.</p>
+        <div class="day-tags"><span class="day-tag golf">Golf — Murrayshall</span></div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-number">9<span>Departure</span></div>
+      <div>
+        <h3 class="day-title">Edinburgh Airport</h3>
+        <p>A private transfer returns you to Edinburgh Airport for onward travel — nine days, five rounds, and a working knowledge of how Scotland actually makes its whisky, not just how it bottles it.</p>
+        <div class="day-tags"><span class="day-tag">Departure</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     GALLERY
+══════════════════════════════════════════ -->
+<section class="section">
+  <div class="section-header">
+    <h2>Gallery</h2>
+    <div class="section-rule"></div>
+  </div>
+  <div class="gallery-strip">
+    <img src="/images/scotland-glenfinnan-viaduct.jpg" alt="Highland Scotland">
+    <img src="/images/scotland-whisky-bottles.jpg" alt="Speyside whisky">
+    <img src="/images/scotland-dalwhinnie-distillery.jpg" alt="Highland distillery">
+    <img src="/images/scotland-glencoe-cottage-wide.jpg" alt="Highland landscape">
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     INCLUSIONS
+══════════════════════════════════════════ -->
+<section class="section" style="background:var(--white);">
+  <div class="section-header">
+    <h2>What's Included</h2>
+    <div class="section-rule"></div>
+  </div>
+  <div class="inclusions-grid">
+    <div>
+      <h4 style="color:var(--green);">Included</h4>
+      <ul>
+        <li>8 nights' accommodation (Old Course Hotel St Andrews, The Station Hotel Speyside, Dornoch Station, Murrayshall Country House)</li>
+        <li>5 rounds of golf — green fees included throughout</li>
+        <li>Private airport transfers, Edinburgh to Edinburgh</li>
+        <li>Dedicated guide and private transport for the full itinerary</li>
+        <li>Meals as per itinerary, including lunch at the Fife Arms</li>
+        <li>Glenfiddich signature tasting, Eden Mill tour, Byres Farm experience</li>
+      </ul>
+    </div>
+    <div>
+      <h4 style="color:var(--rose);">Not Included</h4>
+      <ul>
+        <li>International and domestic flights</li>
+        <li>Travel insurance</li>
+        <li>Visas, where applicable</li>
+        <li>Personal expenses and gratuities</li>
+        <li>Rothiemurchus activities (optional, priced separately)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     CTA
+══════════════════════════════════════════ -->
+<section class="cta-band">
+  <h2>Begin Planning Your Whisky & Fairways Journey</h2>
+  <p>Every Lotus & Fairways itinerary is built around your group — dates, pace and pairing adjusted to suit. Tell us a little about what you have in mind and we'll come back within one business day.</p>
+  <a href="/index.html#enquire" class="btn btn-outline-light">Enquire Now →</a>
+</section>
+
+<!-- Scripts -->
+<script src="/components/footer.js"></script>
+<script src="/js/main.js"></script>
+
+</body>
+</html>
