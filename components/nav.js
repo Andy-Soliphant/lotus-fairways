@@ -43,8 +43,8 @@
 
   // ── CURRENCY SYSTEM ──────────────────────────────────────────
   // Exchange rates — update these periodically (approx. guidance only)
-  const RATES = { GBP: 1, USD: 1.27, SGD: 1.71 };
-  const SYMBOLS = { GBP: '£', USD: '$', SGD: 'S$' };
+  const RATES = { GBP: 1, EUR: 1.19, USD: 1.27, SGD: 1.71 };
+  const SYMBOLS = { GBP: '£', EUR: '€', USD: '$', SGD: 'S$' };
   let activeCurrency = sessionStorage.getItem('lf_currency') || 'GBP';
 
   function convertPrice(gbpAmount) {
@@ -123,6 +123,8 @@
         <li><a href="/journal/">Journal</a></li>
         <li class="nav-currency" aria-label="Select currency">
           <button class="lf-currency-btn ${activeCurrency==='GBP'?'active':''}" data-currency="GBP">£</button>
+          <span class="nav-currency-sep">·</span>
+          <button class="lf-currency-btn ${activeCurrency==='EUR'?'active':''}" data-currency="EUR">€</button>
           <span class="nav-currency-sep">·</span>
           <button class="lf-currency-btn ${activeCurrency==='USD'?'active':''}" data-currency="USD">$</button>
           <span class="nav-currency-sep">·</span>
