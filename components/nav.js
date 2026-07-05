@@ -57,15 +57,23 @@
 
   // Find and update all price elements on page
   function updatePrices() {
-    document.querySelectorAll('[data-price-gbp]').forEach(el => {
+    const symbol = SYMBOLS[activeCurrency];
+    const rate   = RATES[activeCurrency];
+    document.querySelectorAll('.lf-price[data-price-gbp]').forEach(el => {
       const gbp = parseInt(el.getAttribute('data-price-gbp'), 10);
-      el.textContent = formatPrice(convertPrice(gbp), activeCurrency);
-    });
-    // Also update simple text nodes matching £N,NNN or £NN,NNN pattern
-    document.querySelectorAll('[data-price-text]').forEach(el => {
-      const gbp = parseInt(el.getAttribute('data-price-gbp'), 10);
-      el.innerHTML = formatPrice(convertPrice(gbp), activeCurrency) +
-        (activeCurrency !== 'GBP' ? ' <span style="font-size:0.7em;color:#7a6e65;" title="Approximate — prices confirmed on enquiry">approx.</span>' : '');
+      el.textContent = symbol + Math.round(gbp * rate).toLocaleString();
+      let note = el.nextElementSibling;
+      if (activeCurrency !== 'GBP') {
+        if (!note || !note.classList.contains('lf-approx')) {
+          note = document.createElement('span');
+          note.className = 'lf-approx';
+          note.style.cssText = 'font-size:0.65em;opacity:0.6;margin-left:3px;';
+          note.textContent = 'approx.';
+          el.insertAdjacentElement('afterend', note);
+        }
+      } else {
+        if (note && note.classList.contains('lf-approx')) note.remove();
+      }
     });
   }
 
