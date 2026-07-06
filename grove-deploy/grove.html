@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Grove, Cromer | Golf East Anglia</title>
+<meta name="description" content="A country-house stay moments from Cromer's clifftops. Discover The Grove, Golf East Anglia's recommended North Norfolk coastal retreat.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+
+<!-- ================================================================
+     INSERT YOUR EXISTING SITE HEADER / NAV INCLUDE HERE
+     (this fragment starts from the page hero — swap in your shared
+     <header> component so nav/logo stay consistent site-wide)
+     ================================================================ -->
+
+<style>
+  :root{
+    --bg:#0d1f0f;
+    --gold:#b79d64;
+    --gold-soft:#d8c79a;
+    --text:#f2ede1;
+    --text-muted:#c9c2b1;
+  }
+  .grove-page{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Outfit',sans-serif;
+    font-weight:300;
+    line-height:1.7;
+  }
+  .grove-page h1, .grove-page h2, .grove-page h3{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:600;
+    color:var(--gold-soft);
+    letter-spacing:0.02em;
+  }
+  .grove-hero{
+    position:relative;
+    height:70vh;
+    min-height:420px;
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:flex-end;
+  }
+  .grove-hero::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to top, rgba(13,31,15,0.95) 0%, rgba(13,31,15,0.2) 60%);
+  }
+  .grove-hero-inner{
+    position:relative;
+    z-index:1;
+    padding:3rem 5vw;
+    max-width:900px;
+  }
+  .grove-hero h1{
+    font-size:clamp(2.2rem, 5vw, 3.4rem);
+    margin:0 0 0.5rem;
+  }
+  .grove-hero p.kicker{
+    text-transform:uppercase;
+    letter-spacing:0.2em;
+    font-size:0.8rem;
+    color:var(--gold);
+    margin:0 0 0.75rem;
+  }
+  .grove-section{
+    max-width:1000px;
+    margin:0 auto;
+    padding:4rem 5vw;
+  }
+  .grove-section h2{
+    font-size:2rem;
+    margin-bottom:1rem;
+  }
+  .grove-section p{
+    color:var(--text-muted);
+    max-width:65ch;
+  }
+  .grove-img-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1.5rem;
+    margin:2rem 0;
+  }
+  .grove-img-row img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:2px;
+  }
+  .grove-img-single{
+    margin:2rem 0;
+  }
+  .grove-img-single img{
+    width:100%;
+    border-radius:2px;
+  }
+  .grove-cta{
+    text-align:center;
+    padding:4rem 5vw;
+    border-top:1px solid rgba(183,157,100,0.25);
+    border-bottom:1px solid rgba(183,157,100,0.25);
+  }
+  .grove-cta h2{
+    font-size:1.8rem;
+  }
+  .grove-btn{
+    display:inline-block;
+    margin-top:1.5rem;
+    padding:0.9rem 2.2rem;
+    background:var(--gold);
+    color:var(--bg);
+    text-decoration:none;
+    font-family:'Outfit',sans-serif;
+    font-weight:500;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    font-size:0.85rem;
+    border-radius:1px;
+    transition:background 0.2s ease;
+  }
+  .grove-btn:hover{
+    background:var(--gold-soft);
+  }
+  .grove-links{
+    margin-top:1.2rem;
+    font-size:0.9rem;
+  }
+  .grove-links a{
+    color:var(--text-muted);
+    text-decoration:underline;
+  }
+  @media (max-width:700px){
+    .grove-img-row{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<main class="grove-page">
+
+  <section class="grove-hero" style="background-image:url('images/grove-exterior-daffodils.jpg');">
+    <div class="grove-hero-inner">
+      <p class="kicker">North Norfolk &middot; Recommended Stay</p>
+      <h1>The Grove, Cromer</h1>
+    </div>
+  </section>
+
+  <section class="grove-section">
+    <p>Set just moments from Cromer's clifftops, The Grove offers a warm, country-house welcome shaped by centuries of history. The Georgian house dates back some 250 years, and has been a guest house since 1936 &mdash; nine decades of hosting family holidays, golf breaks and quiet coastal escapes under family ownership. There's a calm that settles the moment you arrive, the kind that makes The Grove an easy fit for any type of stay, golf included.</p>
+  </section>
+
+  <section class="grove-section">
+    <h2>Set Within Four Acres</h2>
+    <p>The house sits within four acres of grounds, with a kitchen garden, woodland walks and an indoor heated pool for guests who want to unwind after a round. A short walk through the trees leads to the clifftop path and down to the beach &mdash; close enough to Cromer's town, pier and shops for an easy stroll, yet tucked away enough to feel genuinely restful.</p>
+    <div class="grove-img-single">
+      <img src="images/grove-kitchen-garden.jpg" alt="The Grove's Victorian greenhouse and kitchen garden, Cromer" loading="lazy">
+    </div>
+  </section>
+
+  <section class="grove-section">
+    <h2>Dining at The Garden Rooms</h2>
+    <p>The Garden Rooms restaurant is the heart of the house &mdash; light-filled, seasonal, and rooted in Norfolk produce. Menus change with what's grown, landed or produced nearby: Cromer crab at its best, garden vegetables picked hours before service, and local meats cooked simply and well. It's the kind of place where a post-round dinner or a relaxed breakfast both feel considered, without ever feeling fussy.</p>
+    <div class="grove-img-row">
+      <img src="images/grove-spring-menu-dish.jpg" alt="Seasonal dish at The Garden Rooms, The Grove Cromer" loading="lazy">
+      <img src="images/grove-langoustine.jpg" alt="Langoustine dish at The Garden Rooms, The Grove Cromer" loading="lazy">
+    </div>
+  </section>
+
+  <section class="grove-section">
+    <h2>Sundown</h2>
+    <p>Among the trees on the front lawn sits Sundown, The Grove's tipi restaurant &mdash; relaxed by day, atmospheric after dark, with festoon lights and easy conversation running long into the evening. Stone-baked pizzas, Norfolk tapas and laid-back cocktails make it a natural spot to end a day on the coast or the course.</p>
+    <div class="grove-img-row">
+      <img src="images/grove-sundown-day.jpg" alt="Sundown tipi restaurant by day, The Grove Cromer" loading="lazy">
+      <img src="images/grove-sundown-dusk.jpg" alt="Sundown tipi restaurant at dusk, The Grove Cromer" loading="lazy">
+    </div>
+  </section>
+
+  <section class="grove-section">
+    <h2>Rooms</h2>
+    <p>Rooms at The Grove mix period character with modern comfort &mdash; exposed brick, garden views, and quiet, well-appointed spaces to rest up between rounds.</p>
+    <div class="grove-img-row">
+      <img src="images/grove-room-beamed.jpg" alt="Beamed bedroom at The Grove, Cromer" loading="lazy">
+      <img src="images/grove-room-blue.jpg" alt="Bedroom at The Grove, Cromer" loading="lazy">
+    </div>
+  </section>
+
+  <section class="grove-section">
+    <h2>A Base for Golf in North Norfolk</h2>
+    <p>With Royal Cromer, Sheringham and the wider North Norfolk coast all close by, The Grove makes an ideal base for a golfing break &mdash; a relaxed, well-fed stay bookending days on some of England's finest links.</p>
+    <div class="grove-img-single">
+      <img src="images/grove-exterior-dusk.jpg" alt="The Grove, Cromer at dusk" loading="lazy">
+    </div>
+  </section>
+
+  <section class="grove-cta">
+    <h2>Plan Your Stay</h2>
+    <p>Speak to Golf East Anglia about building The Grove into your North Norfolk golf itinerary.</p>
+    <a class="grove-btn" href="/itineraries.html">View Itineraries</a>
+    <div class="grove-links">
+      <a href="/contact.html">Enquire directly</a> &middot; <a href="/blog/the-grove-90-years.html">Read our Grove feature on the blog</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================================================================
+     INSERT YOUR EXISTING SITE FOOTER INCLUDE HERE
+     ================================================================ -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LodgingBusiness",
+  "name": "The Grove, Cromer",
+  "description": "A country-house stay moments from Cromer's clifftops, recommended by Golf East Anglia for North Norfolk golf breaks.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Cromer",
+    "addressRegion": "Norfolk",
+    "addressCountry": "GB"
+  },
+  "amenityFeature": [
+    {"@type":"LocationFeatureSpecification","name":"Indoor heated pool"},
+    {"@type":"LocationFeatureSpecification","name":"Kitchen garden"},
+    {"@type":"LocationFeatureSpecification","name":"On-site restaurant"}
+  ]
+}
+</script>
+
+</body>
+</html>
