@@ -4,27 +4,16 @@
   publish = "."
 
 # Redirect old YLH pages once we're ready to switch over
-# (commented out until domains are confirmed)
 # [[redirects]]
 #   from = "https://yourluxuryholiday.co.uk/*"
 #   to = "https://lotusfairways.com/:splat"
 #   status = 301
 #   force = true
 
-# Clean URLs
+# Clean URL for journal index
 [[redirects]]
-  from = "/destinations"
-  to = "/destinations/"
-  status = 301
-
-[[redirects]]
-  from = "/golf-in-asia"
-  to = "/golf-in-asia/"
-  status = 301
-
-[[redirects]]
-  from = "/beyond"
-  to = "/beyond/"
+  from = "/journal"
+  to = "/journal/"
   status = 301
 
 # Headers for performance and security
