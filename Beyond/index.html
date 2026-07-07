@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beyond Asia — Scotland, South Africa & More | Lotus & Fairways</title>
+  <meta name="description" content="Luxury travel beyond Southeast Asia — Scotland golf and whisky, South Africa, Mauritius and the Indian Ocean. Signature experiences from Lotus & Fairways.">
+  <link rel="canonical" href="https://lotusfairways.com/beyond/">
+  <meta property="og:title" content="Beyond Asia — Lotus & Fairways">
+  <meta property="og:description" content="Scotland, South Africa, Mauritius and beyond. Lotus & Fairways extends beyond Southeast Asia for those who want more.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://lotusfairways.com/images/scotland-glenfinnan-viaduct.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css?v=3">
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <style>
+    .beyond-hero {
+      position: relative;
+      height: 70vh;
+      min-height: 480px;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+    }
+    .beyond-hero img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
+    .beyond-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(26,18,8,0.85) 0%, rgba(26,18,8,0.15) 55%, transparent 100%); }
+    .beyond-hero-content { position: relative; z-index: 1; max-width: var(--max-width); margin: 0 auto; padding: 0 var(--space-xl) var(--space-2xl); width: 100%; }
+    .beyond-hero-content .eyebrow { color: var(--bronze-light); margin-bottom: var(--space-md); }
+    .beyond-hero-content h1 { color: var(--white); font-size: clamp(2.2rem, 4.5vw, 3.8rem); max-width: 700px; line-height: 1.1; }
+    .beyond-hero-content p { color: var(--parchment-dark); max-width: 560px; margin-top: var(--space-md); font-size: 1.05rem; line-height: 1.7; }
+
+    .beyond-intro { max-width: 780px; margin: 0 auto; text-align: center; }
+    .beyond-intro p { font-size: 1.05rem; line-height: 1.9; color: var(--slate); margin-bottom: var(--space-md); }
+
+    .featured-experience {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      border-radius: 3px;
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+    }
+    @media (max-width: 760px) { .featured-experience { grid-template-columns: 1fr; } }
+    .featured-experience-image { position: relative; min-height: 480px; }
+    .featured-experience-image img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .featured-experience-content {
+      background: var(--green);
+      padding: var(--space-2xl);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .featured-experience-content .eyebrow { color: var(--bronze-light); margin-bottom: var(--space-md); }
+    .featured-experience-content h2 { color: var(--white); font-size: clamp(1.6rem, 3vw, 2.4rem); margin-bottom: var(--space-md); line-height: 1.2; }
+    .featured-experience-content p { color: var(--parchment-dark); line-height: 1.8; font-size: 0.95rem; margin-bottom: var(--space-md); }
+    .featured-experience-content .price { font-family: var(--font-serif); font-size: 1.4rem; color: var(--white); margin-bottom: var(--space-lg); }
+    .featured-experience-content .price span { font-family: var(--font-sans); font-size: 0.78rem; color: var(--parchment-dark); display: block; margin-top: 4px; }
+
+    .beyond-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-lg);
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+    @media (max-width: 900px) { .beyond-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 580px) { .beyond-grid { grid-template-columns: 1fr; } }
+
+    .beyond-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 3px;
+      height: 360px;
+    }
+    .beyond-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+    .beyond-card:hover img { transform: scale(1.04); }
+    .beyond-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(26,18,8,0.88) 0%, rgba(26,18,8,0.15) 55%, transparent 100%); }
+    .beyond-card-content { position: absolute; bottom: 0; left: 0; right: 0; padding: var(--space-lg); z-index: 1; }
+    .beyond-card-content .eyebrow { color: var(--bronze-light); margin-bottom: 8px; font-size: 0.62rem; }
+    .beyond-card-content h3 { color: var(--white); font-size: 1.5rem; font-weight: 400; margin-bottom: 8px; }
+    .beyond-card-content p { color: var(--parchment-dark); font-size: 0.84rem; line-height: 1.5; margin-bottom: 12px; }
+    .beyond-card-badge {
+      display: inline-block;
+      font-family: var(--font-sans);
+      font-size: 0.62rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--bronze-light);
+      border: 1px solid rgba(196,154,94,0.4);
+      padding: 4px 10px;
+      border-radius: 20px;
+    }
+
+    .combine-section {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      text-align: center;
+    }
+    .combine-section p { max-width: 680px; margin: 0 auto var(--space-xl); color: var(--slate); font-size: 1rem; line-height: 1.8; }
+    .combine-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-md); }
+    .combine-tag {
+      font-family: var(--font-sans);
+      font-size: 0.78rem;
+      color: var(--slate);
+      border: 1px solid var(--rule);
+      padding: 10px 20px;
+      border-radius: 20px;
+    }
+
+    .cta-band { background: var(--rose); text-align: center; padding: var(--space-3xl) var(--space-xl); }
+    .cta-band h2 { color: var(--white); margin-bottom: var(--space-md); }
+    .cta-band p { color: rgba(255,255,255,0.85); max-width: 520px; margin: 0 auto var(--space-lg); }
+  </style>
+</head>
+<body>
+
+<script src="/components/nav.js?v=2"></script>
+
+<!-- HERO -->
+<section class="beyond-hero">
+  <img src="/images/scotland-glenfinnan-viaduct.jpg" alt="Scotland — Beyond Asia">
+  <div class="beyond-hero-content">
+    <div class="eyebrow">— Beyond Asia —</div>
+    <h1>The world doesn't end at Southeast Asia.</h1>
+    <p>For those who want to extend their journey — or combine Asia with somewhere further afield — we work with trusted partners across Scotland, Africa and the Indian Ocean.</p>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="section">
+  <div class="beyond-intro">
+    <p>Lotus & Fairways was built on Southeast Asia — but our clients' passions aren't limited to one region, and neither are ours. Scotland has always been part of our story: the golf, the whisky, the landscapes that reward the same spirit of curiosity that drew us to Asia in the first place. South Africa and the Indian Ocean islands complete a picture of luxury travel that spans the world's great destinations without trying to be all things to all people.</p>
+    <p>Everything we do beyond Asia follows the same principle as everything we do within it: personal knowledge, genuine relationships, and honest advice about what's worth your time.</p>
+  </div>
+</section>
+
+<!-- FEATURED — WHISKY & FAIRWAYS -->
+<section class="section" style="background:var(--white);">
+  <div class="section-header">
+    <h2>Signature Experience</h2>
+    <div class="section-rule"></div>
+  </div>
+  <div class="featured-experience">
+    <div class="featured-experience-image">
+      <img src="/images/scotland-glenfinnan-viaduct.jpg" alt="Whisky & Fairways — Scotland">
+    </div>
+    <div class="featured-experience-content">
+      <div class="eyebrow">— Scotland —</div>
+      <h2>Whisky & Fairways</h2>
+      <p>Nine days through Scotland's most storied links and its oldest distilleries. St Andrews, Carnoustie and Royal Dornoch for golf. Glenfiddich, Eden Mill and Byres Farm for whisky. The Highlands, Loch Ness and Blair Castle for everything in between.</p>
+      <p>A private group journey for 6–8 guests — daily coaching with a PGA professional, sommelier evenings, and accommodation in the finest hotels on the route.</p>
+      <div class="price">
+        From <span class="lf-price" data-price-gbp="6995">£6,995</span>pp
+        <span>Based on a private group of 6–8 guests. Final pricing confirmed on enquiry.</span>
+      </div>
+      <a href="/whisky-and-fairways.html" class="btn btn-outline-light">View Full Itinerary →</a>
+    </div>
+  </div>
+</section>
+
+<!-- SCOTLAND IMAGE STRIP -->
+<div style="display:grid; grid-template-columns:repeat(4,1fr); gap:var(--space-sm); padding:0 var(--space-xl); max-width:var(--max-width); margin:0 auto var(--space-2xl);">
+  <img src="/images/scotland-whisky-bottles.jpg" alt="Speyside whisky" style="width:100%; height:180px; object-fit:cover; border-radius:2px;">
+  <img src="/images/scotland-dalwhinnie-distillery.jpg" alt="Dalwhinnie distillery" style="width:100%; height:180px; object-fit:cover; border-radius:2px;">
+  <img src="/images/scotland-glencoe-cottage-wide.jpg" alt="Glencoe, Scotland" style="width:100%; height:180px; object-fit:cover; border-radius:2px;">
+  <img src="/images/scotland-edinburgh-dean-village.jpg" alt="Edinburgh" style="width:100%; height:180px; object-fit:cover; border-radius:2px;">
+</div>
+
+<!-- OTHER DESTINATIONS -->
+<section class="section">
+  <div class="section-header">
+    <h2>Further Afield</h2>
+    <div class="section-rule"></div>
+  </div>
+  <div class="beyond-grid">
+
+    <div class="beyond-card">
+      <img src="/images/south-africa-cape-town-aerial.jpg" alt="South Africa">
+      <div class="beyond-card-content">
+        <div class="eyebrow">— Africa —</div>
+        <h3>South Africa</h3>
+        <p>Cape Town, the Garden Route, safari and some of the world's most scenic golf courses. A natural extension of an Asia journey for the adventurous traveller.</p>
+        <span class="beyond-card-badge">On Request</span>
+      </div>
+    </div>
+
+    <div class="beyond-card" style="background:var(--deep);">
+      <div class="beyond-card-content" style="bottom:50%; transform:translateY(50%);">
+        <div class="eyebrow">— Indian Ocean —</div>
+        <h3>Mauritius</h3>
+        <p>Combine a Southeast Asia journey with a final week in the Indian Ocean — championship golf, overwater villas and some of the finest beaches on earth.</p>
+        <span class="beyond-card-badge">On Request</span>
+      </div>
+    </div>
+
+    <div class="beyond-card" style="background:var(--deep);">
+      <div class="beyond-card-content" style="bottom:50%; transform:translateY(50%);">
+        <div class="eyebrow">— Americas —</div>
+        <h3>South America</h3>
+        <p>Peru, Argentina, Brazil — for clients who want to combine an Asia trip with something truly global. We work with specialist partners in the region.</p>
+        <span class="beyond-card-badge">On Request</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- COMBINE -->
+<section class="section" style="background:var(--white);">
+  <div class="combine-section">
+    <div class="section-header">
+      <h2>Combine & Connect</h2>
+      <div class="section-rule"></div>
+    </div>
+    <p>Many of our clients combine Southeast Asia with a Beyond Asia destination — finishing a Vietnam and Cambodia trip with a week in Scotland for golf, or extending a Thailand honeymoon with three nights in Mauritius. We build the connections carefully so the travel itself doesn't diminish either destination.</p>
+    <div class="combine-tags">
+      <span class="combine-tag">Thailand + Scotland</span>
+      <span class="combine-tag">Vietnam + Mauritius</span>
+      <span class="combine-tag">Cambodia + South Africa</span>
+      <span class="combine-tag">Multi-country Asia + Scotland</span>
+      <span class="combine-tag">Asia + Indian Ocean</span>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band">
+  <h2>Where Would You Like to Go?</h2>
+  <p>Tell us what you're dreaming of — even if it spans several continents — and we'll tell you honestly whether we can make it happen.</p>
+  <a href="/contact.html" class="btn btn-outline-light">Start a Conversation →</a>
+</section>
+
+<script src="/components/footer.js?v=2"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>

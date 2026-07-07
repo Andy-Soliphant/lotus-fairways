@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golf in Asia — Championship Courses & Bespoke Golf Holidays | Lotus & Fairways</title>
+  <meta name="description" content="Championship golf across Southeast Asia — Thailand, Vietnam and Cambodia. Courses designed by Nicklaus, Norman and Faldo. Caddies as standard. Sunshine you can plan around. Bespoke golf holidays from Lotus & Fairways.">
+  <link rel="canonical" href="https://lotusfairways.com/golf-in-asia/">
+  <meta property="og:title" content="Golf in Asia — Lotus & Fairways">
+  <meta property="og:description" content="Championship fairways. Asian soul. Courses designed by Nicklaus, Norman and Faldo — played with caddies, in sunshine you can plan around.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://lotusfairways.com/images/golf-thailand-black-mountain-aerial.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css?v=3">
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <style>
+    .golf-hero {
+      position: relative;
+      height: 80vh;
+      min-height: 520px;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+    }
+    .golf-hero img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 40%;
+    }
+    .golf-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(20,35,20,0.9) 0%, rgba(20,35,20,0.2) 55%, transparent 100%);
+    }
+    .golf-hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 var(--space-xl) var(--space-2xl);
+      width: 100%;
+    }
+    .golf-hero-content .eyebrow { color: var(--bronze-light); margin-bottom: var(--space-md); }
+    .golf-hero-content h1 { color: var(--white); font-size: clamp(2.5rem, 5vw, 4rem); max-width: 700px; line-height: 1.1; }
+    .golf-hero-content p { color: var(--parchment-dark); max-width: 580px; margin-top: var(--space-md); font-size: 1.05rem; line-height: 1.7; }
+
+    .golf-intro {
+      max-width: 820px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .golf-intro p { font-size: 1.05rem; line-height: 1.9; color: var(--slate); margin-bottom: var(--space-md); }
+    .golf-intro p:first-child { font-size: 1.18rem; color: var(--deep); font-family: var(--font-serif); font-style: italic; }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: var(--space-xl);
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+    .why-item {
+      border-top: 2px solid var(--green);
+      padding-top: var(--space-lg);
+    }
+    .why-item h4 { font-family: var(--font-serif); font-size: 1.15rem; font-weight: 400; color: var(--deep); margin-bottom: 10px; }
+    .why-item p { font-size: 0.9rem; color: var(--warm-grey); line-height: 1.7; }
+
+    .courses-section { max-width: var(--max-width); margin: 0 auto; }
+    .country-block { margin-bottom: var(--space-3xl); }
+    .country-block h3 {
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      font-weight: 400;
+      color: var(--deep);
+      margin-bottom: var(--space-lg);
+      padding-bottom: var(--space-md);
+      border-bottom: 1px solid var(--rule);
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .country-block h3 span {
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--warm-grey);
+    }
+
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--space-lg);
+    }
+    .course-card {
+      background: var(--white);
+      border-radius: 3px;
+      overflow: hidden;
+      border: 1px solid var(--rule);
+    }
+    .course-card img { width: 100%; height: 200px; object-fit: cover; display: block; }
+    .course-card-body { padding: var(--space-lg); }
+    .course-card-body .location { font-family: var(--font-sans); font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--bronze); margin-bottom: 8px; }
+    .course-card-body h4 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 400; color: var(--deep); margin-bottom: 8px; }
+    .course-card-body p { font-size: 0.85rem; color: var(--slate); line-height: 1.6; margin-bottom: var(--space-md); }
+    .course-card-body .price { font-family: var(--font-serif); font-size: 1.1rem; color: var(--green); }
+    .course-card-body .designer { font-size: 0.75rem; color: var(--warm-grey); font-style: italic; }
+
+    .golf-image-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-sm);
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+    .golf-image-strip img { width: 100%; height: 220px; object-fit: cover; border-radius: 2px; }
+    @media (max-width: 700px) { .golf-image-strip { grid-template-columns: repeat(2, 1fr); } }
+
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3xl); max-width: var(--max-width); margin: 0 auto; align-items: start; }
+    @media (max-width: 760px) { .two-col { grid-template-columns: 1fr; } }
+    .two-col img { width: 100%; height: 460px; object-fit: cover; border-radius: 2px; }
+    .two-col p { color: var(--slate); line-height: 1.85; margin-bottom: var(--space-md); font-size: 0.98rem; }
+
+    .highlights-list { list-style: none; padding: 0; margin: var(--space-lg) 0 0; }
+    .highlights-list li { padding: 12px 0; border-bottom: 1px solid var(--rule); font-size: 0.92rem; color: var(--slate); display: flex; gap: 12px; align-items: flex-start; }
+    .highlights-list li:last-child { border-bottom: none; }
+    .highlights-list li::before { content: '—'; color: var(--bronze); flex-shrink: 0; margin-top: 1px; }
+
+    .scotland-band {
+      background: var(--deep);
+      padding: var(--space-2xl) var(--space-xl);
+    }
+    .scotland-band-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-3xl);
+      align-items: center;
+    }
+    @media (max-width: 760px) { .scotland-band-inner { grid-template-columns: 1fr; } }
+    .scotland-band img { width: 100%; height: 380px; object-fit: cover; border-radius: 2px; }
+    .scotland-band h2 { color: var(--white); margin-bottom: var(--space-md); }
+    .scotland-band p { color: var(--parchment-dark); line-height: 1.8; font-size: 0.95rem; margin-bottom: var(--space-md); }
+
+    .cta-band { background: var(--green); text-align: center; padding: var(--space-3xl) var(--space-xl); }
+    .cta-band h2 { color: var(--white); margin-bottom: var(--space-md); }
+    .cta-band p { color: var(--parchment-dark); max-width: 520px; margin: 0 auto var(--space-lg); }
+  </style>
+</head>
+<body>
+
+<script src="/components/nav.js?v=2"></script>
+
+<!-- HERO -->
+<section class="golf-hero">
+  <img src="/images/golf-thailand-black-mountain-aerial.jpg" alt="Black Mountain Golf Club, Thailand">
+  <div class="golf-hero-content">
+    <div class="eyebrow">— Golf in Asia —</div>
+    <h1>Championship fairways.<br><em style="font-weight:300;">Asian soul.</em></h1>
+    <p>Courses designed by Nicklaus, Norman and Faldo. Caddies as standard. Sunshine you can plan around. And green fees that make European golf look expensive.</p>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="section">
+  <div class="golf-intro">
+    <p>Asia is the world's greatest undiscovered golf destination — undiscovered, that is, by European and American golfers who haven't yet played a championship course at sunrise with a caddie who knows every break on every green.</p>
+    <p>We have played the courses we recommend. Every one of them. We know which courses match their reputation and which ones trade on it, how to sequence a golf trip across multiple destinations so that no round feels like a lesser experience, and how to combine championship golf with the cultural experiences that justify the flight. Golf in Asia isn't just a holiday — it's a revelation about what the game can be when conditions, design, service and cost all work in your favour at the same time.</p>
+  </div>
+</section>
+
+<!-- WHY ASIA -->
+<section class="section" style="background:var(--white);">
+  <div class="section-header">
+    <h2>Why Golf in Asia?</h2>
+    <div class="section-rule"></div>
+  </div>
+  <div class="why-grid">
+    <div class="why-item">
+      <h4>World-class design</h4>
+      <p>Nicklaus, Norman, Faldo, Dye — the architects who shaped modern golf have all designed courses in Southeast Asia. The pedigree is genuine.</p>
+    </div>
+    <div class="why-item">
+      <h4>Caddies as standard</h4>
+      <p>Every course we recommend includes a caddie. Not a trolley, not a GPS watch — a person who knows the course intimately and wants you to score well.</p>
+    </div>
+    <div class="why-item">
+      <h4>Conditions you can count on</h4>
+      <p>Dry season in Southeast Asia means weeks of clear skies and warm mornings. No weather windows, no cancelled tee times, no frost delays.</p>
+    </div>
+    <div class="why-item">
+      <h4>Value without compromise</h4>
+      <p>Championship green fees in Asia cost a fraction of equivalent courses in Europe. The quality isn't lower — the economics are simply different.</p>
+    </div>
+    <div class="why-item">
+      <h4>More than golf</h4>
+      <p>Thailand, Vietnam and Cambodia offer extraordinary culture, food and experiences between rounds. Every day off the course earns its place in the itinerary.</p>
+    </div>
+    <div class="why-item">
+      <h4>Personal knowledge</h4>
+      <p>We have played every course we send you to. If we can't speak to it from personal experience, it doesn't appear in our recommendations.</p>
+    </div>
+  </div>
+</section>
+
+<!-- COURSES -->
+<section class="section">
+  <div class="section-header">
+    <h2>Our Recommended Courses</h2>
+    <div class="section-rule"></div>
+  </div>
+  <div class="courses-section">
+
+    <!-- Thailand -->
+    <div class="country-block">
+      <h3>Thailand <span>Phuket · Hua Hin · Chiang Mai</span></h3>
+      <div class="course-grid">
+        <div class="course-card">
+          <img src="/images/golf-thailand-black-mountain-aerial.jpg" alt="Black Mountain Golf Club">
+          <div class="course-card-body">
+            <div class="location">Hua Hin · Thailand</div>
+            <h4>Black Mountain Golf Club</h4>
+            <p>Consistently ranked among the top courses in Asia. Dramatic elevation changes, water features on 13 holes, and immaculate conditions year-round.</p>
+            <div class="price">From <span class="lf-price" data-price-gbp="1785">£1,785</span>pp</div>
+            <div class="designer">Designed by Hans Bauer</div>
+          </div>
+        </div>
+        <div class="course-card">
+          <img src="/images/golf-thailand-chiang-mai-dusk.jpg" alt="Chiang Mai Highlands">
+          <div class="course-card-body">
+            <div class="location">Chiang Mai · Thailand</div>
+            <h4>Chiang Mai Highlands</h4>
+            <p>Highland golf at its finest — cooler temperatures, stunning mountain scenery and a layout that rewards precision over power.</p>
+            <div class="price">On request</div>
+            <div class="designer">Designed by Lee Schmidt & Brian Curley</div>
+          </div>
+        </div>
+        <div class="course-card">
+          <img src="/images/golf-thailand-chiang-mai-lake.jpg" alt="Laguna Golf Phuket">
+          <div class="course-card-body">
+            <div class="location">Phuket · Thailand</div>
+            <h4>Laguna Golf Phuket</h4>
+            <p>Set within the Laguna Phuket resort complex — a beautifully maintained course with the beach just beyond the tree line.</p>
+            <div class="price">From <span class="lf-price" data-price-gbp="1655">£1,655</span>pp</div>
+            <div class="designer">Designed by Max Wexler</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vietnam -->
+    <div class="country-block">
+      <h3>Vietnam <span>Da Nang · Phan Thiet · Ho Tram</span></h3>
+      <div class="course-grid">
+        <div class="course-card">
+          <img src="/images/golf-vietnam-hoiana-shores-aerial.jpg" alt="Hoiana Shores Golf Club">
+          <div class="course-card-body">
+            <div class="location">Da Nang · Vietnam</div>
+            <h4>Hoiana Shores Golf Club</h4>
+            <p>Robert Trent Jones II's masterpiece on the central Vietnamese coast — dunes, ocean views and a finishing stretch that rivals anything in links golf.</p>
+            <div class="price">On request</div>
+            <div class="designer">Designed by Robert Trent Jones II</div>
+          </div>
+        </div>
+        <div class="course-card">
+          <img src="/images/golf-vietnam-ba-na-hills-aerial.jpg" alt="Ba Na Hills Golf Club">
+          <div class="course-card-body">
+            <div class="location">Da Nang · Vietnam</div>
+            <h4>Ba Na Hills Golf Club</h4>
+            <p>Luke Donald's design in the hills above Da Nang — cooler temperatures, dramatic terrain and one of the most visually striking layouts in Asia.</p>
+            <div class="price">From <span class="lf-price" data-price-gbp="1895">£1,895</span>pp</div>
+            <div class="designer">Designed by Luke Donald</div>
+          </div>
+        </div>
+        <div class="course-card">
+          <img src="/images/golf-vietnam-phan-thiet-coastal.jpg" alt="The Bluffs Ho Tram">
+          <div class="course-card-body">
+            <div class="location">Ho Tram · Vietnam</div>
+            <h4>The Bluffs Ho Tram Strip</h4>
+            <p>Greg Norman's design on Vietnam's southern coast — ranked among the top 100 courses in the world, with ocean views from virtually every hole.</p>
+            <div class="price">On request</div>
+            <div class="designer">Designed by Greg Norman</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cambodia -->
+    <div class="country-block">
+      <h3>Cambodia <span>Siem Reap</span></h3>
+      <div class="course-grid" style="max-width:400px;">
+        <div class="course-card">
+          <img src="/images/cambodia-angkor-wat-sunrise.jpg" alt="Phokeethra Country Club">
+          <div class="course-card-body">
+            <div class="location">Siem Reap · Cambodia</div>
+            <h4>Phokeethra Country Club</h4>
+            <p>Nick Faldo's design in the shadow of Angkor — championship conditions, an extraordinary setting and the finest golf experience in Cambodia.</p>
+            <div class="price">From <span class="lf-price" data-price-gbp="2175">£2,175</span>pp</div>
+            <div class="designer">Designed by Nick Faldo</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- IMAGE STRIP -->
+<div class="golf-image-strip" style="padding:0 var(--space-xl); margin-bottom:var(--space-2xl);">
+  <img src="/images/golf-vietnam-caddies.jpg" alt="Golf caddies Vietnam">
+  <img src="/images/golf-vietnam-ba-na-hills-fairway.jpg" alt="Ba Na Hills fairway">
+  <img src="/images/golf-vietnam-phan-thiet-island-green.jpg" alt="Phan Thiet island green">
+  <img src="/images/golf-vietnam-phan-thiet-waterfall.jpg" alt="Phan Thiet waterfall hole">
+</div>
+
+<!-- HOW WE BUILD A GOLF TRIP -->
+<section class="section" style="background:var(--white);">
+  <div class="two-col">
+    <img src="/images/golf-thailand-chiang-mai-dusk.jpg" alt="Golf at dusk, Chiang Mai">
+    <div>
+      <div class="eyebrow">— How We Build a Golf Trip —</div>
+      <h2>Every round earns its place.</h2>
+      <p>The best golf trips aren't just lists of great courses — they're sequenced carefully so that each round feels different, each day builds on the last, and the non-golf days are as rewarding as the rounds themselves.</p>
+      <p>We plan tee times around the light and the heat, match courses to handicap ranges, arrange caddies who speak enough English to give meaningful advice, and build in the cultural experiences — temples, food markets, river journeys — that make Southeast Asia worth the flight even without the golf.</p>
+      <p>We also know which courses to avoid. Reputation and reality don't always match in Asian golf, and we'd rather tell you that than send you somewhere disappointing.</p>
+      <ul class="highlights-list">
+        <li>Tee times arranged for optimal conditions — usually early morning</li>
+        <li>Caddies confirmed and briefed at all courses</li>
+        <li>Golf and cultural experiences sequenced to complement each other</li>
+        <li>Club transport, transfers and equipment storage arranged throughout</li>
+        <li>Multi-country golf trips — Thailand + Vietnam, Vietnam + Cambodia</li>
+        <li>Corporate golf days and group tournaments arranged on request</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SCOTLAND -->
+<div class="scotland-band">
+  <div class="scotland-band-inner">
+    <img src="/images/scotland-glenfinnan-viaduct.jpg" alt="Scotland — Whisky & Fairways">
+    <div>
+      <div class="eyebrow" style="color:var(--bronze-light);">— Beyond Asia —</div>
+      <h2>Golf in Scotland — Whisky & Fairways</h2>
+      <p>For those whose passion for the game extends beyond Southeast Asia, our signature Scottish journey takes small private groups through St Andrews, Carnoustie and Royal Dornoch — five rounds across nine days, with daily coaching and Speyside distillery visits woven between rounds.</p>
+      <p>From <strong style="color:var(--white); font-family:var(--font-serif); font-size:1.1rem;">£6,995pp</strong> based on a private group of 6–8 guests.</p>
+      <a href="/whisky-and-fairways.html" class="btn btn-outline-light" style="margin-top:var(--space-md);">Explore Whisky & Fairways →</a>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<section class="cta-band">
+  <h2>Plan Your Golf Journey</h2>
+  <p>Tell us your handicap, your preferred destinations and your dates — and we'll build an itinerary where every round earns its place.</p>
+  <a href="/contact.html" class="btn btn-outline-light">Start Planning →</a>
+</section>
+
+<script src="/components/footer.js?v=2"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>
