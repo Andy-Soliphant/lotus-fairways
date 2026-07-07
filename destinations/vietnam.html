@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vietnam — Luxury Holidays & Golf | Lotus & Fairways</title>
+  <meta name="description" content="Vietnam holidays built on genuine expertise — Hanoi, Ha Long Bay, Hoi An, Ho Chi Minh City and the coast. Championship golf at Da Nang and Phan Thiet. Bespoke itineraries from Lotus & Fairways.">
+  <link rel="canonical" href="https://lotusfairways.com/destinations/vietnam.html">
+  <meta property="og:title" content="Vietnam — Lotus & Fairways">
+  <meta property="og:description" content="Hanoi to Saigon — coastal golf and extraordinary history. Vietnam is the destination that changes people.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://lotusfairways.com/images/vietnam-hoi-an-lanterns.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css?v=3">
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <style>
+    .dest-hero { position:relative; height:80vh; min-height:520px; display:flex; align-items:flex-end; overflow:hidden; }
+    .dest-hero img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 40%; }
+    .dest-hero::after { content:''; position:absolute; inset:0; background:linear-gradient(to top, rgba(26,18,8,0.85) 0%, rgba(26,18,8,0.15) 55%, transparent 100%); }
+    .dest-hero-content { position:relative; z-index:1; max-width:var(--max-width); margin:0 auto; padding:0 var(--space-xl) var(--space-2xl); width:100%; }
+    .dest-hero-content .eyebrow { color:var(--bronze-light); margin-bottom:var(--space-md); }
+    .dest-hero-content h1 { color:var(--white); font-size:clamp(2.5rem,5vw,4rem); max-width:700px; line-height:1.1; }
+    .dest-hero-content p { color:var(--parchment-dark); max-width:560px; margin-top:var(--space-md); font-size:1.05rem; line-height:1.7; }
+
+    .dest-intro { max-width:820px; margin:0 auto; text-align:center; }
+    .dest-intro p { font-size:1.08rem; line-height:1.9; color:var(--slate); margin-bottom:var(--space-md); }
+    .dest-intro p:first-child { font-size:1.18rem; color:var(--deep); font-family:var(--font-serif); font-style:italic; }
+
+    .regions-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:var(--space-lg); max-width:var(--max-width); margin:0 auto; }
+    .region-card { position:relative; overflow:hidden; border-radius:3px; height:340px; display:block; text-decoration:none; }
+    .region-card img { width:100%; height:100%; object-fit:cover; transition:transform 0.5s ease; }
+    .region-card:hover img { transform:scale(1.04); }
+    .region-card::after { content:''; position:absolute; inset:0; background:linear-gradient(to top, rgba(26,18,8,0.82) 0%, rgba(26,18,8,0.1) 55%, transparent 100%); }
+    .region-card-content { position:absolute; bottom:0; left:0; right:0; padding:var(--space-lg); z-index:1; }
+    .region-card-content .eyebrow { color:var(--bronze-light); margin-bottom:8px; font-size:0.62rem; }
+    .region-card-content h3 { color:var(--white); font-size:1.4rem; margin-bottom:6px; }
+    .region-card-content p { color:var(--parchment-dark); font-size:0.84rem; line-height:1.5; }
+
+    .two-col { display:grid; grid-template-columns:1fr 1fr; gap:var(--space-3xl); max-width:var(--max-width); margin:0 auto; align-items:start; }
+    @media(max-width:760px){.two-col{grid-template-columns:1fr;}}
+    .two-col img { width:100%; height:460px; object-fit:cover; border-radius:2px; }
+    .two-col p { color:var(--slate); line-height:1.85; margin-bottom:var(--space-md); font-size:0.98rem; }
+
+    .highlights-list { list-style:none; padding:0; margin:var(--space-lg) 0 0; }
+    .highlights-list li { padding:12px 0; border-bottom:1px solid var(--rule); font-size:0.92rem; color:var(--slate); display:flex; gap:12px; align-items:flex-start; }
+    .highlights-list li:last-child { border-bottom:none; }
+    .highlights-list li::before { content:'—'; color:var(--bronze); flex-shrink:0; margin-top:1px; }
+
+    .golf-strip { background:var(--green); padding:var(--space-2xl) var(--space-xl); }
+    .golf-strip-inner { max-width:var(--max-width); margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:var(--space-3xl); align-items:center; }
+    @media(max-width:760px){.golf-strip-inner{grid-template-columns:1fr;}}
+    .golf-strip h2 { color:var(--white); margin-bottom:var(--space-md); }
+    .golf-strip p { color:var(--parchment-dark); line-height:1.8; font-size:0.95rem; margin-bottom:var(--space-md); }
+    .golf-courses { list-style:none; padding:0; margin:0; }
+    .golf-courses li { padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.15); font-size:0.88rem; color:var(--parchment-dark); display:flex; justify-content:space-between; }
+    .golf-courses li:last-child { border-bottom:none; }
+    .golf-courses li span { color:var(--bronze-light); font-size:0.8rem; }
+
+    .image-strip { display:grid; grid-template-columns:repeat(4,1fr); gap:var(--space-sm); }
+    .image-strip img { width:100%; height:220px; object-fit:cover; border-radius:2px; }
+    @media(max-width:700px){.image-strip{grid-template-columns:repeat(2,1fr);}}
+
+    .season-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:var(--space-lg); margin-top:var(--space-xl); }
+    @media(max-width:700px){.season-grid{grid-template-columns:1fr;}}
+    .season-card { padding:var(--space-lg); border-top:3px solid var(--rule); }
+    .season-card.best { border-top-color:var(--green); }
+    .season-card.good { border-top-color:var(--bronze); }
+    .season-card.avoid { border-top-color:var(--rose); }
+    .season-card h4 { font-family:var(--font-serif); font-size:1.1rem; font-weight:400; margin-bottom:8px; }
+    .season-card .months { font-family:var(--font-sans); font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--warm-grey); margin-bottom:10px; }
+    .season-card p { font-size:0.88rem; color:var(--slate); line-height:1.7; }
+
+    .cta-band { background:var(--rose); text-align:center; padding:var(--space-3xl) var(--space-xl); }
+    .cta-band h2 { color:var(--white); margin-bottom:var(--space-md); }
+    .cta-band p { color:rgba(255,255,255,0.85); max-width:520px; margin:0 auto var(--space-lg); }
+  </style>
+</head>
+<body>
+
+<script src="/components/nav.js?v=2"></script>
+
+<!-- HERO -->
+<section class="dest-hero">
+  <img src="/images/vietnam-hoi-an-lanterns.jpg" alt="Hoi An lanterns — Vietnam">
+  <div class="dest-hero-content">
+    <div class="eyebrow">— Destination —</div>
+    <h1>Vietnam</h1>
+    <p>Hanoi to Saigon — coastal golf, extraordinary history and the most memorable food in Southeast Asia. The destination that changes how people think about travel.</p>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="section">
+  <div class="dest-intro">
+    <p>Vietnam gets under your skin in a way that very few destinations manage.</p>
+    <p>We have been travelling to Vietnam since the late 1990s — watching Hanoi's Old Quarter evolve, following the central coast as it became one of Asia's finest golf destinations, eating our way through Hoi An long before it appeared on every best-restaurants list. Vietnam rewards curiosity more than almost anywhere on earth: the country stretches 1,650 kilometres from north to south, and every region has its own culture, cuisine and character. Getting it right requires knowing which parts of Vietnam to visit when, and in what order — and we have spent thirty years working it out.</p>
+  </div>
+</section>
+
+<!-- REGIONS -->
+<section class="section" style="background:var(--white);">
+  <div class="section-header">
+    <h2>Where We Send You</h2>
+    <div class="section-rule"></div>
+  </div>
+  <div class="regions-grid">
+    <div class="region-card">
+      <img src="/images/vietnam-ha-long-bay-panorama.jpg" alt="Ha Long Bay, Vietnam">
+      <div class="region-card-content">
+        <div class="eyebrow">— North Vietnam —</div>
+        <h3>Hanoi & Ha Long Bay</h3>
+        <p>The Old Quarter's streets, the Temple of Literature, and a junk cruise through Ha Long's 1,600 limestone islands.</p>
+      </div>
+    </div>
+    <div class="region-card">
+      <img src="/images/vietnam-hoi-an-lanterns.jpg" alt="Hoi An, Vietnam">
+      <div class="region-card-content">
+        <div class="eyebrow">— Central Vietnam —</div>
+        <h3>Hoi An & Da Nang</h3>
+        <p>The ancient trading port, championship golf courses, and the Hai Van Pass — the most beautiful stretch of coast in Vietnam.</p>
+      </div>
+    </div>
+    <div class="region-card">
+      <img src="/images/vietnam-ho-chi-minh-skyline.jpg" alt="Ho Chi Minh City, Vietnam">
+      <div class="region-card-content">
+        <div class="eyebrow">— South Vietnam —</div>
+        <h3>Saigon & The Delta</h3>
+        <p>The energy of Ho Chi Minh City, the Mekong Delta's waterways, and the coastal course at Phan Thiet.</p>
+      </div>
+    </div>
+    <div class="region-card">
+      <img src="/images/vietnam-sapa-aerial.jpg" alt="Sapa, Vietnam">
+      <div class="region-card-content">
+        <div class="eyebrow">— North Vietnam —</div>
+        <h3>Sapa & The Highlands</h3>
+        <p>Rice terraces, mountain villages and a side of Vietnam that most itineraries skip entirely. Worth every hour of travel.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GOLF -->
+<div class="golf-strip">
+  <div class="golf-strip-inner">
+    <div>
+      <div class="eyebrow" style="color:var(--bronze-light);">— Golf in Vietnam —</div>
+      <h2>The central coast has become one of Asia's great golf destinations.</h2>
+      <p>Da Nang and the surrounding coastline now hosts several world-class courses — BRG Da Nang, Hoiana Shores, Ba Na Hills — in a setting where the South China Sea is never far from the fairway. We have played them all, and we know how to build a golf trip around Vietnam that earns every green fee.</p>
+      <a href="/golf-in-asia/" class="btn btn-outline-light" style="margin-top:var(--space-md);">Explore Golf in Vietnam →</a>
+    </div>
+    <div>
+      <ul class="golf-courses">
+        <li>BRG Da Nang Golf Resort <span>from <span class="lf-price" data-price-gbp="1895">£1,895</span>pp</span></li>
+        <li>Hoiana Shores Golf Club <span>On request</span></li>
+        <li>Ba Na Hills Golf Club <span>On request</span></li>
+        <li>The Bluffs Ho Tram Strip <span>On request</span></li>
+        <li>Vietnam Golf & Country Club <span>On request</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- EXPERIENCES -->
+<section class="section">
+  <div class="two-col">
+    <img src="/images/vietnam-ha-long-bay-kayak.jpg" alt="Ha Long Bay kayaking">
+    <div>
+      <div class="eyebrow">— What We Arrange —</div>
+      <h2>Vietnam done properly.</h2>
+      <p>The difference between a good Vietnam trip and a great one is almost always the detail — the right junk boat on Ha Long Bay rather than the overcrowded option, the private cooking class with a Hoi An family rather than the tourist programme, the cycle through the rice fields at dawn before the tour groups arrive.</p>
+      <p>We arrange all of this through genuine relationships on the ground — built over decades, not through a booking platform.</p>
+      <ul class="highlights-list">
+        <li>Private luxury junk cruises on Ha Long and Lan Ha Bay</li>
+        <li>Hoi An lantern-making, cooking and tailoring experiences</li>
+        <li>Motorbike tours of the Hai Van Pass and My Son</li>
+        <li>Mekong Delta boat tours and overnight stays</li>
+        <li>Sapa trekking with local Hmong guides</li>
+        <li>Private Hanoi street food tours — Old Quarter and beyond</li>
+        <li>The Cham Tour — our signature coastal Vietnam journey</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- IMAGE STRIP -->
+<div class="image-strip" style="padding:0 var(--space-xl); max-width:var(--max-width); margin:0 auto var(--space-2xl);">
+  <img src="/images/vietnam-ha-long-bay-cliff.jpg" alt="Ha Long Bay">
+  <img src="/images/vietnam-hoi-an-coffee.jpg" alt="Hoi An coffee">
+  <img src="/images/golf-vietnam-hoiana-shores-aerial.jpg" alt="Hoiana Shores Golf">
+  <img src="/images/vietnam-ninh-binh-cave-boat.jpg" alt="Ninh Binh">
+</div>
+
+<!-- WHEN TO GO -->
+<section class="section" style="background:var(--white);">
+  <div style="max-width:var(--max-width); margin:0 auto;">
+    <div class="section-header">
+      <h2>When to Go</h2>
+      <div class="section-rule"></div>
+    </div>
+    <p style="color:var(--warm-grey); max-width:640px; margin-bottom:var(--space-xl);">Vietnam's length means weather varies dramatically by region. We always advise on timing based on which part of the country you're visiting — the below is a general guide.</p>
+    <div class="season-grid">
+      <div class="season-card best">
+        <h4>Best for the central coast</h4>
+        <div class="months">February — August</div>
+        <p>Dry and warm along the Da Nang coast — peak golf season. Hoi An is at its most photogenic in the early months before the summer heat arrives.</p>
+      </div>
+      <div class="season-card best">
+        <h4>Best for the north</h4>
+        <div class="months">October — April</div>
+        <p>Hanoi and Ha Long Bay are best in autumn and spring. Ha Long is year-round but November to March offers the clearest conditions.</p>
+      </div>
+      <div class="season-card good">
+        <h4>Best for the south</h4>
+        <div class="months">December — April</div>
+        <p>Saigon and the Mekong Delta in dry season. Hot, but manageable — and the Delta is extraordinary when the water levels are high.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band">
+  <h2>Plan Your Vietnam Journey</h2>
+  <p>From a first-time north-south traverse to a focused golf trip on the central coast — tell us what you have in mind and we'll build the right itinerary.</p>
+  <a href="/contact.html" class="btn btn-outline-light">Start Planning →</a>
+</section>
+
+<script src="/components/footer.js?v=2"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>

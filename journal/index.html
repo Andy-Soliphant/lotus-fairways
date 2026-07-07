@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Journal — Lotus & Fairways | Stories from Southeast Asia & Beyond</title>
+  <meta name="description" content="Thirty years of travel across Southeast Asia — stories from the islands, the fairways and the places the guidebooks haven't found yet. The Lotus & Fairways Journal.">
+  <link rel="canonical" href="https://lotusfairways.com/journal/">
+  <meta property="og:title" content="The Lotus & Fairways Journal">
+  <meta property="og:description" content="Thirty years of travel across Southeast Asia. Stories from the islands, the fairways and the places the guidebooks haven't found yet.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://lotusfairways.com/images/vietnam-hoi-an-lanterns.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css?v=3">
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <style>
+    /* ── JOURNAL HERO ── */
+    .journal-page-hero {
+      position: relative;
+      height: 55vh;
+      min-height: 380px;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+    }
+    .journal-page-hero img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 45%;
+    }
+    .journal-page-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(26,18,8,0.85) 0%, rgba(26,18,8,0.2) 55%, transparent 100%);
+    }
+    .journal-page-hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 var(--space-xl) var(--space-2xl);
+      width: 100%;
+    }
+    .journal-page-hero-content .eyebrow { color: var(--bronze-light); margin-bottom: var(--space-md); }
+    .journal-page-hero-content h1 { color: var(--white); font-size: clamp(2rem, 4vw, 3.2rem); max-width: 700px; }
+    .journal-page-hero-content p { color: var(--parchment-dark); max-width: 560px; margin-top: var(--space-md); font-size: 1rem; line-height: 1.7; }
+
+    /* ── FILTER TABS ── */
+    .journal-filters {
+      background: var(--white);
+      border-bottom: 1px solid var(--rule);
+      position: sticky;
+      top: 70px;
+      z-index: 10;
+    }
+    .journal-filters-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 var(--space-xl);
+      display: flex;
+      gap: 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .journal-filters-inner::-webkit-scrollbar { display: none; }
+    .filter-tab {
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--warm-grey);
+      padding: 16px 20px;
+      border: none;
+      background: none;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      white-space: nowrap;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .filter-tab:hover { color: var(--slate); }
+    .filter-tab.active { color: var(--rose); border-bottom-color: var(--rose); }
+
+    /* ── EDITORIAL GRID ── */
+    .journal-grid {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: var(--space-2xl) var(--space-xl);
+    }
+
+    /* Featured row — 1 large + 2 small */
+    .journal-featured {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: var(--space-lg);
+      margin-bottom: var(--space-lg);
+    }
+    @media (max-width: 760px) { .journal-featured { grid-template-columns: 1fr; } }
+
+    .journal-featured-right {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-lg);
+    }
+
+    /* Card base */
+    .j-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 3px;
+      display: block;
+      text-decoration: none;
+      background: var(--deep);
+    }
+    .j-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+      opacity: 0.88;
+    }
+    .j-card:hover img { transform: scale(1.04); opacity: 0.75; }
+    .j-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(26,18,8,0.88) 0%, rgba(26,18,8,0.1) 55%, transparent 100%);
+      pointer-events: none;
+    }
+    .j-card-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: var(--space-lg);
+      z-index: 1;
+    }
+    .j-card-tag {
+      display: inline-block;
+      font-family: var(--font-sans);
+      font-size: 0.62rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--bronze-light);
+      margin-bottom: 8px;
+    }
+    .j-card-title {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      color: var(--white);
+      line-height: 1.25;
+      margin-bottom: 8px;
+    }
+    .j-card-excerpt {
+      font-size: 0.84rem;
+      color: var(--parchment-dark);
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+    .j-card-meta {
+      font-family: var(--font-sans);
+      font-size: 0.68rem;
+      color: rgba(247,243,236,0.5);
+      letter-spacing: 0.06em;
+    }
+
+    /* Large featured card */
+    .j-card-large { height: 520px; }
+    .j-card-large .j-card-title { font-size: clamp(1.4rem, 2.5vw, 2rem); }
+    .j-card-large .j-card-content { padding: var(--space-xl); }
+
+    /* Small card */
+    .j-card-small { height: 240px; }
+    .j-card-small .j-card-title { font-size: 1.15rem; }
+    .j-card-small .j-card-excerpt { display: none; }
+
+    /* Standard grid below */
+    .journal-standard-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-lg);
+      margin-top: var(--space-lg);
+    }
+    @media (max-width: 900px) { .journal-standard-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px) { .journal-standard-grid { grid-template-columns: 1fr; } }
+
+    .j-card-standard { height: 300px; }
+    .j-card-standard .j-card-title { font-size: 1.1rem; }
+    .j-card-standard .j-card-excerpt { font-size: 0.8rem; }
+
+    /* Coming soon card */
+    .j-card-coming {
+      height: 300px;
+      background: var(--parchment-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      padding: var(--space-xl);
+      border-radius: 3px;
+      border: 1px dashed var(--rule);
+      text-decoration: none;
+      cursor: default;
+    }
+    .j-card-coming h4 {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: var(--slate);
+      margin-bottom: 8px;
+    }
+    .j-card-coming p {
+      font-size: 0.8rem;
+      color: var(--warm-grey);
+      line-height: 1.6;
+    }
+
+    /* Section divider */
+    .journal-section-label {
+      font-family: var(--font-sans);
+      font-size: 0.68rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--warm-grey);
+      padding-bottom: var(--space-md);
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: var(--space-lg);
+      margin-top: var(--space-2xl);
+    }
+
+    /* CTA band */
+    .journal-cta {
+      background: var(--deep);
+      text-align: center;
+      padding: var(--space-3xl) var(--space-xl);
+      margin-top: var(--space-3xl);
+    }
+    .journal-cta h2 { color: var(--white); margin-bottom: var(--space-md); }
+    .journal-cta p { color: var(--parchment-dark); max-width: 520px; margin: 0 auto var(--space-lg); font-size: 0.95rem; }
+  </style>
+</head>
+<body>
+
+<script src="/components/nav.js?v=2"></script>
+
+<!-- ══════════════════════════════════════════
+     HERO
+══════════════════════════════════════════ -->
+<section class="journal-page-hero">
+  <img src="/images/vietnam-hoi-an-lanterns.jpg" alt="Hoi An — The Lotus & Fairways Journal">
+  <div class="journal-page-hero-content">
+    <div class="eyebrow">— Journal —</div>
+    <h1>Stories from thirty years of going back.</h1>
+    <p>The places that changed how we travel, the people who showed us a different world, and the experiences that no itinerary could have predicted.</p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     FILTER TABS
+══════════════════════════════════════════ -->
+<div class="journal-filters">
+  <div class="journal-filters-inner">
+    <button class="filter-tab active" data-filter="all">All Stories</button>
+    <button class="filter-tab" data-filter="thailand">Thailand</button>
+    <button class="filter-tab" data-filter="vietnam">Vietnam</button>
+    <button class="filter-tab" data-filter="cambodia">Cambodia</button>
+    <button class="filter-tab" data-filter="scotland">Scotland</button>
+    <button class="filter-tab" data-filter="golf">Golf</button>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     EDITORIAL GRID
+══════════════════════════════════════════ -->
+<div class="journal-grid">
+
+  <!-- FEATURED ROW -->
+  <div class="journal-featured">
+
+    <!-- Large hero card — Koh Yao Yai -->
+    <a href="/journal/koh-yao-yai.html" class="j-card j-card-large" data-tags="thailand">
+      <img src="/images/destination-philippines.jpg" alt="Koh Yao Yai, Thailand">
+      <div class="j-card-content">
+        <span class="j-card-tag">Thailand · Koh Yao Yai</span>
+        <h2 class="j-card-title">The Island That Sent to the Mainland for Cheese</h2>
+        <p class="j-card-excerpt">No electricity. Monkeys in the trees. A beach fire after dark. And a request for wine and cheese that took two days, a boat, and the whole island to fulfil.</p>
+        <span class="j-card-meta">Early 2000s · 6 min read</span>
+      </div>
+    </a>
+
+    <!-- Right column — two coming soon cards -->
+    <div class="journal-featured-right">
+      <div class="j-card j-card-small" style="background:var(--parchment-dark); border:1px dashed var(--rule); display:flex; align-items:center; justify-content:center; text-align:center; padding:var(--space-lg);">
+        <div>
+          <div class="j-card-tag" style="color:var(--bronze);">Thailand · Coming Soon</div>
+          <h3 style="font-family:var(--font-serif); font-weight:400; font-size:1.1rem; color:var(--slate); line-height:1.3;">The Island That Didn't Use Money</h3>
+          <p style="font-size:0.78rem; color:var(--warm-grey); margin-top:8px; line-height:1.5;">A football shirt, offered in good faith, fed and watered us for a day.</p>
+        </div>
+      </div>
+      <div class="j-card j-card-small" style="background:var(--parchment-dark); border:1px dashed var(--rule); display:flex; align-items:center; justify-content:center; text-align:center; padding:var(--space-lg);">
+        <div>
+          <div class="j-card-tag" style="color:var(--bronze);">Vietnam · Coming Soon</div>
+          <h3 style="font-family:var(--font-serif); font-weight:400; font-size:1.1rem; color:var(--slate); line-height:1.3;">The Village That Had Never Met an Englishman</h3>
+          <p style="font-size:0.78rem; color:var(--warm-grey); margin-top:8px; line-height:1.5;">We were the subject of the photographs, not the scenery.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MORE STORIES LABEL -->
+  <div class="journal-section-label">More Stories — Coming Soon</div>
+
+  <!-- STANDARD GRID — placeholders for future articles -->
+  <div class="journal-standard-grid">
+
+    <div class="j-card-coming">
+      <div class="j-card-tag" style="color:var(--bronze); font-family:var(--font-sans); font-size:0.62rem; letter-spacing:0.14em; text-transform:uppercase; margin-bottom:10px;">Cambodia · Golf</div>
+      <h4>Phokeethra at Dawn</h4>
+      <p>Playing the finest course in Cambodia before the heat arrives — and what we found in Siem Reap afterwards.</p>
+    </div>
+
+    <div class="j-card-coming">
+      <div class="j-card-tag" style="color:var(--bronze); font-family:var(--font-sans); font-size:0.62rem; letter-spacing:0.14em; text-transform:uppercase; margin-bottom:10px;">Scotland · Whisky</div>
+      <h4>The Road to Royal Dornoch</h4>
+      <p>Why the northernmost championship links in the world is worth every mile of the drive to get there.</p>
+    </div>
+
+    <div class="j-card-coming">
+      <div class="j-card-tag" style="color:var(--bronze); font-family:var(--font-sans); font-size:0.62rem; letter-spacing:0.14em; text-transform:uppercase; margin-bottom:10px;">Vietnam · Food</div>
+      <h4>What Hoi An Taught Us About Eating</h4>
+      <p>Thirty years of meals across Southeast Asia, and this town still produces the best bowl of anything we have ever eaten.</p>
+    </div>
+
+    <div class="j-card-coming">
+      <div class="j-card-tag" style="color:var(--bronze); font-family:var(--font-sans); font-size:0.62rem; letter-spacing:0.14em; text-transform:uppercase; margin-bottom:10px;">Thailand · Golf</div>
+      <h4>Black Mountain at Its Best</h4>
+      <p>The course that made us stop telling people European golf is the world standard.</p>
+    </div>
+
+    <div class="j-card-coming">
+      <div class="j-card-tag" style="color:var(--bronze); font-family:var(--font-sans); font-size:0.62rem; letter-spacing:0.14em; text-transform:uppercase; margin-bottom:10px;">Cambodia · Culture</div>
+      <h4>Beyond Angkor Wat</h4>
+      <p>The temples most visitors walk past on their way to Angkor — and why they might be the better experience.</p>
+    </div>
+
+    <div class="j-card-coming">
+      <div class="j-card-tag" style="color:var(--bronze); font-family:var(--font-sans); font-size:0.62rem; letter-spacing:0.14em; text-transform:uppercase; margin-bottom:10px;">Vietnam · Family</div>
+      <h4>Taking Children to Vietnam</h4>
+      <p>What works, what doesn't, and the experiences that will stay with them long after the jet lag fades.</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     CTA
+══════════════════════════════════════════ -->
+<div class="journal-cta">
+  <h2>Have a story to suggest?</h2>
+  <p>If there's a destination, experience or question you'd like us to write about, we'd love to hear it. These stories are for you as much as they are for us.</p>
+  <a href="/contact.html" class="btn btn-outline-light">Get in Touch →</a>
+</div>
+
+<script src="/components/footer.js?v=2"></script>
+<script src="/js/main.js"></script>
+
+<script>
+  /* Filter tabs — show/hide cards by data-tags */
+  document.querySelectorAll('.filter-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>
