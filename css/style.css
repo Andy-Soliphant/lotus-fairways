@@ -1023,3 +1023,76 @@ footer {
   .dest-hero-stats { gap: 20px; }
   .trust-grid { grid-template-columns: 1fr 1fr; }
 }
+
+/* ── CURRENCY TOGGLE ── */
+.nav-currency {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0 4px;
+}
+.lf-currency-btn {
+  background: none;
+  border: none;
+  padding: 4px 6px;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--warm-grey);
+  cursor: pointer;
+  border-radius: 3px;
+  transition: color var(--transition), background var(--transition);
+}
+.lf-currency-btn:hover { color: var(--slate); background: var(--parchment-dark); }
+.lf-currency-btn.active { color: var(--bronze); font-weight: 600; }
+.nav-currency-sep { color: var(--rule); font-size: 0.7rem; user-select: none; }
+
+/* Transparent nav — currency buttons go light */
+.nav.transparent .lf-currency-btn { color: rgba(247,243,236,0.6); }
+.nav.transparent .lf-currency-btn:hover { color: var(--parchment); background: rgba(255,255,255,0.1); }
+.nav.transparent .lf-currency-btn.active { color: #c49a5e; }
+.nav.transparent .nav-currency-sep { color: rgba(247,243,236,0.25); }
+
+/* ── SIGNATURE EXPERIENCES SECTION ── */
+.sig-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+}
+@media (max-width: 700px) { .sig-grid { grid-template-columns: 1fr; } }
+.sig-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+  height: 420px;
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+}
+.sig-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.sig-card:hover img { transform: scale(1.04); }
+.sig-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(26,18,8,0.78) 0%, rgba(26,18,8,0.15) 55%, transparent 100%);
+}
+.sig-card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--space-xl);
+  z-index: 1;
+  color: var(--parchment);
+}
+.sig-card-content .eyebrow { color: var(--bronze-light); margin-bottom: 10px; }
+.sig-card-content h3 { color: var(--white); font-size: clamp(1.4rem, 2.5vw, 2rem); margin-bottom: 8px; }
+.sig-card-content p { color: var(--parchment-dark); font-size: 0.88rem; margin-bottom: 14px; }
+.sig-card-link { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--bronze-light); font-family: var(--font-sans); }
