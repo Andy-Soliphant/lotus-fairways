@@ -97,6 +97,7 @@
   // ── NAV HTML ─────────────────────────────────────────────────
   const path     = window.location.pathname;
   const isGolf   = path.includes('/golf-in-asia');
+  const isFW     = path.includes('/fairway-weekends');
   const isBeyond = path.includes('/beyond');
   const isDest   = path.includes('/destinations');
 
@@ -119,6 +120,7 @@
       <ul class="nav-links" id="nav-links" role="list">
         <li class="${isDest ? 'active' : ''}"><a href="/destinations/">Destinations</a></li>
         <li class="golf-link ${isGolf ? 'active' : ''}"><a href="/golf-in-asia/">Golf in Asia</a></li>
+        <li class="${isFW ? 'active' : ''}"><a href="/fairway-weekends/">Fairway Weekends</a></li>
         <li class="beyond-link ${isBeyond ? 'active' : ''}"><a href="/beyond/">Beyond Asia</a></li>
         <li><a href="/journal/">Journal</a></li>
         <li class="nav-currency" aria-label="Select currency">

@@ -61,4 +61,39 @@
 
   document.body.insertAdjacentHTML('beforeend', footerHTML);
 
+
+  // Ask a Specialist sidebar tab
+  const sidebarHTML = `
+    <a href="/contact.html" id="ask-specialist-tab" aria-label="Ask a Specialist" style="
+      position:fixed;
+      right:0;
+      top:50%;
+      transform:translateY(-50%);
+      background:#9b3a5a;
+      color:#fff;
+      writing-mode:vertical-rl;
+      text-orientation:mixed;
+      transform:rotate(180deg) translateY(50%);
+      padding:20px 12px;
+      font-family:'DM Sans',sans-serif;
+      font-size:0.68rem;
+      font-weight:500;
+      letter-spacing:0.1em;
+      text-transform:uppercase;
+      text-decoration:none;
+      border-radius:6px 0 0 6px;
+      box-shadow:-2px 0 12px rgba(0,0,0,0.15);
+      z-index:999;
+      transition:background 0.2s;
+    ">Ask a Specialist</a>`;
+
+  document.body.insertAdjacentHTML('beforeend', sidebarHTML);
+
+  document.getElementById('ask-specialist-tab').addEventListener('mouseenter', function() {
+    this.style.background = '#7a2a45';
+  });
+  document.getElementById('ask-specialist-tab').addEventListener('mouseleave', function() {
+    this.style.background = '#9b3a5a';
+  });
+
 })();
