@@ -73,4 +73,11 @@
     <priority>0.6</priority>
   </url>
 
+
+  <!-- Fairway Weekends -->
+  <url>
+    <loc>https://lotusfairways.com/fairway-weekends/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
 </urlset>

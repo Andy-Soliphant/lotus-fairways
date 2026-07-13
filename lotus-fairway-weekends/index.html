@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fairway Weekends — Short Break Golf Holidays in Asia | Lotus & Fairways</title>
+  <meta name="description" content="Championship golf, premium hotels and great evenings across Asia. Phuket, Bangkok, Hua Hin, Pattaya, Da Nang, Ho Chi Minh City and Hanoi — Fairway Weekends from Lotus & Fairways.">
+  <link rel="canonical" href="https://lotusfairways.com/fairway-weekends/">
+  <meta property="og:title" content="Fairway Weekends — Short Break Golf in Asia">
+  <meta property="og:description" content="3–5 nights of championship golf across Asia's finest destinations. Built for groups who take the game seriously and enjoy the evenings just as much.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://lotusfairways.com/images/golf-thailand-black-mountain-aerial.jpg">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QT9QGJB8ET"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-QT9QGJB8ET");
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css?v=3">
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <style>
+    .fw-hero {
+      position: relative;
+      height: 80vh;
+      min-height: 540px;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+    }
+    .fw-hero img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 40%;
+    }
+    .fw-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(20,35,20,0.92) 0%, rgba(20,35,20,0.3) 55%, transparent 100%);
+    }
+    .fw-hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 var(--space-xl) var(--space-2xl);
+      width: 100%;
+    }
+    .fw-hero-content .eyebrow { color: var(--bronze-light); margin-bottom: var(--space-md); }
+    .fw-hero-content h1 { color: var(--white); font-size: clamp(2.5rem,5vw,4rem); max-width: 720px; line-height: 1.1; margin-bottom: var(--space-md); }
+    .fw-hero-content p { color: var(--parchment-dark); max-width: 580px; font-size: 1.05rem; line-height: 1.7; margin-bottom: var(--space-xl); }
+    .fw-stats {
+      display: flex;
+      gap: var(--space-xl);
+      flex-wrap: wrap;
+    }
+    .fw-stat { font-family: var(--font-sans); font-size: 0.8rem; color: var(--parchment-dark); }
+    .fw-stat strong { display: block; font-family: var(--font-serif); font-size: 1.3rem; color: var(--white); font-weight: 400; margin-bottom: 2px; }
+
+    .fw-pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-xl);
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+    @media (max-width: 760px) { .fw-pillars { grid-template-columns: 1fr; } }
+    .fw-pillar { border-top: 2px solid var(--rose); padding-top: var(--space-lg); }
+    .fw-pillar h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 400; color: var(--deep); margin-bottom: 10px; }
+    .fw-pillar p { font-size: 0.9rem; color: var(--warm-grey); line-height: 1.7; }
+
+    .dest-tabs {
+      background: var(--white);
+      border-bottom: 1px solid var(--rule);
+      position: sticky;
+      top: 70px;
+      z-index: 10;
+    }
+    .dest-tabs-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 var(--space-xl);
+      display: flex;
+      overflow-x: auto;
+      scrollbar-width: none;
+      gap: 0;
+    }
+    .dest-tabs-inner::-webkit-scrollbar { display: none; }
+    .dest-tab {
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--warm-grey);
+      padding: 14px 20px;
+      border: none;
+      background: none;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      white-space: nowrap;
+      transition: color 0.2s, border-color 0.2s;
+      text-decoration: none;
+    }
+    .dest-tab:hover { color: var(--slate); }
+    .dest-tab.active { color: var(--green); border-bottom-color: var(--green); }
+
+    .dest-block {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-3xl);
+      align-items: start;
+      padding: var(--space-3xl) var(--space-xl);
+      border-bottom: 1px solid var(--rule);
+    }
+    @media (max-width: 760px) { .dest-block { grid-template-columns: 1fr; gap: var(--space-xl); } }
+    .dest-block:last-child { border-bottom: none; }
+    .dest-block.reverse { direction: rtl; }
+    .dest-block.reverse > * { direction: ltr; }
+
+    .dest-image {
+      position: relative;
+      border-radius: 3px;
+      overflow: hidden;
+      height: 420px;
+    }
+    .dest-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .dest-image-badge {
+      position: absolute;
+      top: var(--space-md);
+      left: var(--space-md);
+      background: rgba(26,18,8,0.75);
+      color: var(--bronze-light);
+      font-family: var(--font-sans);
+      font-size: 0.62rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 6px 12px;
+      border-radius: 20px;
+      backdrop-filter: blur(4px);
+    }
+
+    .dest-content .country { font-family: var(--font-sans); font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--bronze); margin-bottom: 8px; }
+    .dest-content h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 400; color: var(--deep); margin-bottom: var(--space-md); line-height: 1.2; }
+    .dest-content .intro { font-size: 1rem; line-height: 1.85; color: var(--slate); margin-bottom: var(--space-lg); }
+
+    .dest-detail-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-md);
+      margin-bottom: var(--space-lg);
+    }
+    .dest-detail h4 {
+      font-family: var(--font-sans);
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--warm-grey);
+      margin-bottom: 6px;
+    }
+    .dest-detail p {
+      font-size: 0.85rem;
+      color: var(--slate);
+      line-height: 1.6;
+    }
+
+    .dest-evening {
+      background: var(--parchment-dark);
+      border-left: 3px solid var(--bronze);
+      padding: var(--space-md) var(--space-lg);
+      border-radius: 0 3px 3px 0;
+      margin-bottom: var(--space-lg);
+    }
+    .dest-evening .label {
+      font-family: var(--font-sans);
+      font-size: 0.62rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--bronze);
+      margin-bottom: 6px;
+    }
+    .dest-evening p { font-size: 0.88rem; color: var(--slate); line-height: 1.6; margin: 0; }
+
+    .pricing-section {
+      background: var(--white);
+      padding: var(--space-3xl) var(--space-xl);
+    }
+    .pricing-inner { max-width: var(--max-width); margin: 0 auto; }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-md);
+      margin: var(--space-xl) 0;
+    }
+    @media (max-width: 700px) { .pricing-grid { grid-template-columns: repeat(2, 1fr); } }
+    .pricing-card {
+      border: 1px solid var(--rule);
+      border-radius: 3px;
+      padding: var(--space-lg);
+      text-align: center;
+      background: var(--parchment);
+    }
+    .pricing-card.featured {
+      border-color: var(--green);
+      border-width: 2px;
+      background: var(--white);
+    }
+    .pricing-card .group-label {
+      font-family: var(--font-sans);
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--warm-grey);
+      margin-bottom: 8px;
+    }
+    .pricing-card .group-size {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      color: var(--deep);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .pricing-card .group-size span { font-size: 0.9rem; }
+    .pricing-card .price-note {
+      font-size: 0.72rem;
+      color: var(--warm-grey);
+      line-height: 1.5;
+      margin-top: 8px;
+    }
+    .pricing-card.featured .group-label { color: var(--green); }
+    .pricing-card.featured .group-size { color: var(--green); }
+    .pricing-note {
+      font-size: 0.82rem;
+      color: var(--warm-grey);
+      line-height: 1.7;
+      font-style: italic;
+      max-width: 680px;
+    }
+
+    .inclusions-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-2xl);
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+    @media (max-width: 700px) { .inclusions-grid { grid-template-columns: 1fr; } }
+    .inclusions-grid h4 {
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: var(--space-md);
+    }
+    .inclusions-grid ul li {
+      padding: 10px 0;
+      border-bottom: 1px solid var(--rule);
+      font-size: 0.9rem;
+      color: var(--slate);
+      display: flex;
+      gap: 10px;
+    }
+    .inclusions-grid ul li:last-child { border-bottom: none; }
+    .inclusions-grid ul li::before { content: '—'; color: var(--bronze); flex-shrink: 0; }
+
+    .cta-band {
+      background: var(--green);
+      text-align: center;
+      padding: var(--space-3xl) var(--space-xl);
+    }
+    .cta-band h2 { color: var(--white); margin-bottom: var(--space-md); }
+    .cta-band p { color: var(--parchment-dark); max-width: 560px; margin: 0 auto var(--space-lg); font-size: 0.95rem; line-height: 1.8; }
+  </style>
+</head>
+<body>
+
+<script src="/components/nav.js?v=2"></script>
+
+<!-- HERO -->
+<section class="fw-hero">
+  <img src="/images/golf-thailand-black-mountain-aerial.jpg" alt="Fairway Weekends — championship golf across Asia">
+  <div class="fw-hero-content">
+    <div class="eyebrow">— Fairway Weekends —</div>
+    <h1>Championship golf. The right hotels. Great evenings.</h1>
+    <p>Three to five nights across Asia's finest golf destinations — built for groups who take the game seriously and enjoy everything that comes after the round just as much.</p>
+    <div class="fw-stats">
+      <div class="fw-stat"><strong>7 Destinations</strong>Thailand & Vietnam</div>
+      <div class="fw-stat"><strong>3–5 Nights</strong>Short break format</div>
+      <div class="fw-stat"><strong>2–12 Guests</strong>Couples to groups</div>
+      <div class="fw-stat"><strong>Caddies</strong>Included throughout</div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY FAIRWAY WEEKENDS -->
+<section class="section">
+  <div class="section-header">
+    <h2>Why Fairway Weekends</h2>
+    <div class="section-rule"></div>
+  </div>
+  <div class="fw-pillars">
+    <div class="fw-pillar">
+      <h3>The golf is serious</h3>
+      <p>Championship courses only — courses we have played and would play again. Caddies as standard. Tee times arranged for the right light, not the most convenient slot. No compromise on the round itself.</p>
+    </div>
+    <div class="fw-pillar">
+      <h3>The hotels earn their place</h3>
+      <p>We choose hotels for setting, service and the morning after a long day on the course — not for proximity to the nightlife strip. Premium properties at every destination, selected because we have stayed in them.</p>
+    </div>
+    <div class="fw-pillar">
+      <h3>The evenings are planned for</h3>
+      <p>Good golf groups play hard and enjoy the night. Asia does both extraordinarily well. We do not pretend the second does not happen — we plan for it, and we know which destinations do it best.</p>
+    </div>
+  </div>
+</section>
+
+<!-- DESTINATION TABS -->
+<div class="dest-tabs">
+  <div class="dest-tabs-inner">
+    <a href="#phuket" class="dest-tab active">Phuket</a>
+    <a href="#bangkok" class="dest-tab">Bangkok</a>
+    <a href="#hua-hin" class="dest-tab">Hua Hin</a>
+    <a href="#pattaya" class="dest-tab">Pattaya</a>
+    <a href="#da-nang" class="dest-tab">Da Nang</a>
+    <a href="#ho-chi-minh" class="dest-tab">Ho Chi Minh</a>
+    <a href="#hanoi" class="dest-tab">Hanoi</a>
+  </div>
+</div>
+
+<!-- DESTINATIONS -->
+<section style="background:var(--white);">
+
+  <!-- PHUKET -->
+  <div class="dest-block" id="phuket">
+    <div class="dest-image">
+      <img src="/images/thailand-phuket-pool-terrace.jpg" alt="Phuket, Thailand">
+      <span class="dest-image-badge">The Flagship</span>
+    </div>
+    <div class="dest-content">
+      <div class="country">Thailand</div>
+      <h2>Phuket — The Fairway Weekend Flagship</h2>
+      <p class="intro">Phuket has it all — championship courses, genuinely world-class hotels, the Andaman Sea, and the kind of evenings that golf groups return for. This is where we send first-timers and where regulars keep coming back. The island does luxury better than almost anywhere in Asia, and the golf matches it.</p>
+      <div class="dest-detail-grid">
+        <div class="dest-detail">
+          <h4>Golf</h4>
+          <p>Laguna Golf Phuket, Red Mountain, Blue Canyon (Canyon & Lakes), Phuket Country Club</p>
+        </div>
+        <div class="dest-detail">
+          <h4>Our hotels</h4>
+          <p>Amanpuri, Trisara, Banyan Tree Phuket, Rosewood Phuket, Anantara Mai Khao</p>
+        </div>
+        <div class="dest-detail">
+          <h4>Best for</h4>
+          <p>Mixed groups, couples, first-time Asia golfers, those who want beach alongside golf</p>
+        </div>
+        <div class="dest-detail">
+          <h4>When to go</h4>
+          <p>November to April. Dry season, calm seas, perfect morning tee times.</p>
+        </div>
+      </div>
+      <div class="dest-evening">
+        <div class="label">After the round</div>
+        <p>Patong and Bangla Road for those who want it. Surin and Kata for those who don't. Phuket accommodates both without forcing either. Sunset beach bars, private villa dinners, rooftop restaurants — the evening options are genuinely exceptional.</p>
+      </div>
+      <a href="/contact.html" class="btn btn-rose">Enquire about Phuket →</a>
+    </div>
+  </div>
+
+  <!-- BANGKOK -->
+  <div class="dest-block reverse" id="bangkok">
+    <div class="dest-image">
+      <img src="/images/thailand-bangkok-wat-arun.jpg" alt="Bangkok, Thailand">
+      <span class="dest-image-badge">Golf City</span>
+    </div>
+    <div class="dest-content">
+      <div class="country">Thailand</div>
+      <h2>Bangkok — Asia's Finest Golf City</h2>
+      <p class="intro">Bangkok is chronically underrated as a golf destination. Over 60 championship layouts sit within an hour of the city centre — courses that have hosted Asian Tour events and are maintained to a standard that would satisfy the most discerning player. Add one of the world's great cities as your backdrop and Bangkok becomes a Fairway Weekend in its own right, not just a stopover.</p>
+      <div class="dest-detail-grid">
+        <div class="dest-detail">
+          <h4>Golf</h4>
+          <p>Thai Country Club, Nikanti Golf Club, Subhapruek Golf Club, Alpine Golf & Sports Club, Royal Gems Golf City</p>
+        </div>
+        <div class="dest-detail">
+          <h4>Our hotels</h4>
+          <p>Capella Bangkok, Mandarin Oriental, Park Hyatt, Rosewood Bangkok, The Peninsula</p>
+        </div>
+        <div class="dest-detail">
+          <h4>Best for</h4>
+          <p>Serious golfers, groups combining with Hua Hin or Pattaya, cultural alongside sport</p>
+        </div>
+        <div class="dest-detail">
+          <h4>When to go</h4>
+          <p>November to April best. Bangkok plays year-round — rain falls fast and clears.</p>
+        </div>
+      </div>
+      <div class="dest-evening">
+        <div class="label">After the round</div>
+        <p>Bangkok's food scene is one of the world's best — from street-level Chinatown to rooftop restaurants above the Chao Phraya. The city's nightlife is legendary. Temples, markets and river bars for those who want something quieter. Bangkok does everything, and does it well.</p>
+      </div>
+      <a href="/contact.html" class="btn btn-rose">Enquire about Bangkok →</a>
+    </div>
+  </div>
+
+  <!-- HUA HIN -->
+  <div class="dest-block" id="hua-hin">
+    <div class="dest-image">
+      <img src="/images/golf-thailand-black-mountain-aerial.jpg" alt="Hua Hin golf, Thailand">
+      <span class="dest-image-badge">Best Pure Golf</span>
+    </div>
+    <div class="dest-content">
+      <div class="country">Thailand</div>
+      <h2>Hua Hin — The Golfer's Choice</h2>
+      <p class="intro">If the priority is the golf above everything else, Hua Hin is where you go. Black Mountain consistently ranks among the top ten courses in Asia — tour conditioning, extraordinary caddies and a layout that rewards every level of player. The royal town itself is relaxed and charming, two and a half hours south of Bangkok by road, making it a natural pairing with the capital for a four or five night break.</p>
+      <div class="dest-detail-grid">
+        <div class="dest-detail">
+          <h4>Golf</h4>
+          <p>Black Mountain Golf Club, Banyan Golf Club, Pineapple Valley, Majestic Creek</p>
+        </div>
+        <div class="dest-detail">
+          <h4>Our hotels</h4>
+          <p>Cape Nidhra, Hyatt Regency Hua Hin, Centara Grand, Rosewood Hua Hin</p>
+        </div>
+        <div class="dest-detail">
+          <h4>Best for</h4>
+          <p>Golf-first groups, Bangkok combinations, those wanting a quieter destination</p>
+        </div>
+        <div class="dest-detail">
+          <h4>When to go</h4>
+          <p>November to April. Hua Hin is sheltered and plays well throughout the dry season.</p>
+        </div>
+      </div>
+      <div class="dest-evening">
+        <div class="label">After the round</div>
+        <p>Hua Hin's night market is one of Thailand's best. The beach town has a good selection of restaurants and bars without the intensity of Phuket or Pattaya — ideal for groups who want a relaxed evening after a serious day on the course. Bangkok is an easy road transfer for those wanting more.</p>
+      </div>
+      <a href="/contact.html" class="btn btn-rose">Enquire about Hua Hin →</a>
+    </div>
+  </div>
+
+  <!-- PATTAYA -->
+  <div class="dest-block reverse" id="pattaya">
+    <div class="dest-image">
+      <img src="/images/golf-thailand-chiang-mai-lake.jpg" alt="Pattaya golf, Thailand">
+      <span class="dest-image-badge">Deepest Course Lineup</span>
+    </div>
+    <div class="dest-content">
+      <div class="country">Thailand</div>
+      <h2>Pattaya — The Most Courses in Asia</h2>
+      <p class="intro">No destination in Asia has the depth of Pattaya's golf course lineup. Siam Country Club, Laem Chabang, Chee Chan — courses that have hosted major Asian Tour events and offer some of the most challenging and rewarding golf in the region. Stay at the right hotel and Pattaya delivers a golf experience that rivals anywhere on the continent. Two hours from Bangkok by road, it combines naturally with the capital for a longer break.</p>
+      <div class="dest-detail-grid">
+        <div class="dest-detail">
+          <h4>Golf</h4>
+          <p>Siam Country Club (Plantation & Old), Laem Chabang International, Chee Chan Golf Resort, St Andrews 2000</p>
+        </div>
+        <div class="dest-detail">
+          <h4>Our hotels</h4>
+          <p>InterContinental Pattaya, Mövenpick Siam Hotel, Veranda Resort, Dusit Thani</p>
+        </div>
+        <div class="dest-detail">
+          <h4>Best for</h4>
+          <p>Serious golfers wanting course variety, Bangkok combinations, larger groups</p>
+        </div>
+        <div class="dest-detail">
+          <h4>When to go</h4>
+          <p>November to April. The east coast dry season aligns with the broader Thailand window.</p>
+        </div>
+      </div>
+      <div class="dest-evening">
+        <div class="label">After the round</div>
+        <p>Pattaya offers everything from beach clubs and rooftop bars to the full spectrum of the city's well-known nightlife. The premium hotel properties sit at a comfortable distance from the intensity of Walking Street — we place guests where the evening is on their terms, not the destination's.</p>
+      </div>
+      <a href="/contact.html" class="btn btn-rose">Enquire about Pattaya →</a>
+    </div>
+  </div>
+
+  <!-- DA NANG -->
+  <div class="dest-block" id="da-nang">
+    <div class="dest-image">
+      <img src="/images/golf-vietnam-hoiana-shores-aerial.jpg" alt="Da Nang golf, Vietnam">
+      <span class="dest-image-badge">Coastal Classic</span>
+    </div>
+    <div class="dest-content">
+      <div class="country">Vietnam</div>
+      <h2>Da Nang — Vietnam's Golf Coast</h2>
+      <p class="intro">The central Vietnamese coast has emerged as one of Asia's genuinely great golf destinations over the past decade. Hoiana Shores, designed by Robert Trent Jones II along the natural dunes, is a course that belongs in any serious golfer's life list. Ba Na Hills, Luke Donald's design in the cooler foothills above the city, offers a completely different experience. Stay at the Four Seasons The Nam Hai and spend your evenings in Hoi An — one of Southeast Asia's most beautiful towns, fifteen minutes away.</p>
+      <div class="dest-detail-grid">
+        <div class="dest-detail">
+          <h4>Golf</h4>
+          <p>Hoiana Shores Golf Club, Ba Na Hills Golf Club, BRG Da Nang Golf Resort, Montgomerie Links</p>
+        </div>
+        <div class="dest-detail">
+          <h4>Our hotels</h4>
+          <p>Four Seasons The Nam Hai, Naman Retreat, Fusion Maia, Anantara Hoi An</p>
+        </div>
+        <div class="dest-detail">
+          <h4>Best for</h4>
+          <p>Golfers wanting culture alongside sport, couples, those who haven't played Vietnam</p>
+        </div>
+        <div class="dest-detail">
+          <h4>When to go</h4>
+          <p>February to August. The central coast dry season is distinct from northern Vietnam.</p>
+        </div>
+      </div>
+      <div class="dest-evening">
+        <div class="label">After the round</div>
+        <p>Hoi An Ancient Town is fifteen minutes from most courses and hotels — lantern-lit streets, the Thu Bon River, the finest food in Vietnam, and the kind of evening atmosphere that stays with you long after the trip. Da Nang itself has a growing dining and bar scene along the Han River. The evenings here are genuinely special.</p>
+      </div>
+      <a href="/contact.html" class="btn btn-rose">Enquire about Da Nang →</a>
+    </div>
+  </div>
+
+  <!-- HO CHI MINH -->
+  <div class="dest-block reverse" id="ho-chi-minh">
+    <div class="dest-image">
+      <img src="/images/vietnam-ho-chi-minh-skyline.jpg" alt="Ho Chi Minh City and The Bluffs Ho Tram">
+      <span class="dest-image-badge">World Top 100</span>
+    </div>
+    <div class="dest-content">
+      <div class="country">Vietnam</div>
+      <h2>Ho Chi Minh City & The Bluffs Ho Tram</h2>
+      <p class="intro">The Bluffs Ho Tram Strip — Greg Norman's design on Vietnam's southern coast — is ranked among the top 100 courses in the world. Playing it is not optional for any serious golfer who comes to Southeast Asia. Based in Saigon, either as a day trip for those with limited time or an overnight stay for those who want to experience the resort properly, The Bluffs earns the journey entirely on its own. Ho Chi Minh City itself adds one of Asia's most energetic urban experiences alongside it.</p>
+      <div class="dest-detail-grid">
+        <div class="dest-detail">
+          <h4>Golf</h4>
+          <p>The Bluffs Ho Tram Strip (world top 100), Vietnam Golf & Country Club, Twin Doves Golf Club, Long Thanh Golf Club</p>
+        </div>
+        <div class="dest-detail">
+          <h4>Our hotels</h4>
+          <p>Park Hyatt Saigon, Capella Hanoi, The Reverie Saigon, The Grand Ho Tram Strip (overnight at The Bluffs)</p>
+        </div>
+        <div class="dest-detail">
+          <h4>Best for</h4>
+          <p>Serious golfers, those who want a bucket-list course, urban culture alongside golf</p>
+        </div>
+        <div class="dest-detail">
+          <h4>When to go</h4>
+          <p>December to April. Southern Vietnam dry season — hot, clear and consistent.</p>
+        </div>
+      </div>
+      <div class="dest-evening">
+        <div class="label">After the round</div>
+        <p>Saigon at night is one of Asia's great urban experiences — the energy, the street food, the rooftop bars above the city lights. We recommend at least one evening on the streets of District 1, and at least one dinner somewhere that takes the food seriously. Ho Chi Minh City delivers both without effort.</p>
+      </div>
+      <a href="/contact.html" class="btn btn-rose">Enquire about Ho Chi Minh →</a>
+    </div>
+  </div>
+
+  <!-- HANOI -->
+  <div class="dest-block" id="hanoi">
+    <div class="dest-image">
+      <img src="/images/vietnam-ha-long-bay-panorama.jpg" alt="Hanoi and northern Vietnam golf">
+      <span class="dest-image-badge">Northern Vietnam</span>
+    </div>
+    <div class="dest-content">
+      <div class="country">Vietnam</div>
+      <h2>Hanoi — Golf in the Capital</h2>
+      <p class="intro">Hanoi is less established as a golf destination than the central coast or the south — which means those who discover it find something still relatively uncrowded. Van Tri Golf Club is widely regarded as the finest course in northern Vietnam, and the surrounding region offers a range of layouts that make a four or five night golf break genuinely compelling. Combine with a night on Ha Long Bay and the trip becomes one of the most complete short breaks available anywhere in Southeast Asia.</p>
+      <div class="dest-detail-grid">
+        <div class="dest-detail">
+          <h4>Golf</h4>
+          <p>Van Tri Golf Club, Kings Island Golf Resort, BRG Kings Island, Hanoi Golf Club</p>
+        </div>
+        <div class="dest-detail">
+          <h4>Our hotels</h4>
+          <p>Sofitel Legend Metropole Hanoi, Capella Hanoi, JW Marriott Hanoi, Pan Pacific Hanoi</p>
+        </div>
+        <div class="dest-detail">
+          <h4>Best for</h4>
+          <p>Those combining golf with Ha Long Bay, returning Vietnam visitors, culture-first groups</p>
+        </div>
+        <div class="dest-detail">
+          <h4>When to go</h4>
+          <p>October to April. Hanoi's cool season makes for excellent playing conditions.</p>
+        </div>
+      </div>
+      <div class="dest-evening">
+        <div class="label">After the round</div>
+        <p>Hanoi's Old Quarter is one of Southeast Asia's most atmospheric evening destinations — the Hoan Kiem Lake area, the street food, the craft beer bars, the jazz clubs that appear on no list but reward the curious visitor. The Metropole's Bamboo Bar alone justifies the hotel choice. Hanoi takes its evenings seriously.</p>
+      </div>
+      <a href="/contact.html" class="btn btn-rose">Enquire about Hanoi →</a>
+    </div>
+  </div>
+
+</section>
+
+<!-- PRICING -->
+<section class="pricing-section">
+  <div class="pricing-inner">
+    <div class="section-header">
+      <h2>How We Price Fairway Weekends</h2>
+      <div class="section-rule"></div>
+    </div>
+    <p style="max-width:680px; color:var(--slate); line-height:1.8; margin-bottom:var(--space-xl);">Every Fairway Weekend is built from scratch around your group — destination, hotel tier, courses, dates and number of rounds. The per-person cost falls as the group grows. Below is a guide to how the economics work; final pricing is confirmed on enquiry.</p>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <div class="group-label">Couple</div>
+        <div class="group-size">2<span> guests</span></div>
+        <div class="price-note">Highest per-person cost. Private transfers, private tee times, full flexibility on dates and pacing.</div>
+      </div>
+      <div class="pricing-card">
+        <div class="group-label">Small group</div>
+        <div class="group-size">4<span> guests</span></div>
+        <div class="price-note">Costs begin to share meaningfully. Transfers and tee times split four ways.</div>
+      </div>
+      <div class="pricing-card featured">
+        <div class="group-label">Sweet spot</div>
+        <div class="group-size">8<span> guests</span></div>
+        <div class="price-note">Best balance of per-person cost and group dynamic. Our most popular Fairway Weekend size.</div>
+      </div>
+      <div class="pricing-card">
+        <div class="group-label">Full group</div>
+        <div class="group-size">12<span> guests</span></div>
+        <div class="price-note">Maximum value per person. Works well with a competition format across the rounds.</div>
+      </div>
+    </div>
+    <p class="pricing-note">Pricing varies significantly by destination, hotel tier and time of year. As a broad guide, a 4-night Phuket Fairway Weekend for a group of 8 in a premium hotel with 3 rounds of golf typically falls in the £1,400–£2,200pp range depending on hotel selection. Bangkok and Hua Hin tend to be more accessible; Da Nang at the Four Seasons The Nam Hai is at the higher end. We will always give you an honest range before you commit to anything.</p>
+  </div>
+</section>
+
+<!-- INCLUSIONS -->
+<section class="section">
+  <div class="section-header">
+    <h2>What's Included</h2>
+    <div class="section-rule"></div>
+  </div>
+  <div class="inclusions-grid">
+    <div>
+      <h4 style="color:var(--green);">Every Fairway Weekend includes</h4>
+      <ul>
+        <li>Accommodation at our selected premium hotel</li>
+        <li>Green fees at all courses included in the itinerary</li>
+        <li>Caddie fees throughout — no exceptions</li>
+        <li>Golf cart fees where applicable</li>
+        <li>Private airport and golf transfers</li>
+        <li>Pre-departure briefing and full course notes</li>
+        <li>In-destination support throughout the trip</li>
+        <li>Welcome dinner for groups of 6 or more</li>
+      </ul>
+    </div>
+    <div>
+      <h4 style="color:var(--rose);">Not included</h4>
+      <ul>
+        <li>International flights (we can assist with recommendations)</li>
+        <li>Travel insurance</li>
+        <li>Personal expenses and gratuities</li>
+        <li>Additional rounds beyond the itinerary</li>
+        <li>Spa, dining and excursion costs unless specified</li>
+        <li>Visas where applicable</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band">
+  <h2>Tell Us About Your Group</h2>
+  <p>Destination, dates, group size and how seriously you take the golf — that is all we need to start building your Fairway Weekend. We will come back within one working day with an honest assessment and a rough price range.</p>
+  <a href="/contact.html" class="btn btn-outline-light">Start Planning →</a>
+</section>
+
+<script src="/components/footer.js?v=2"></script>
+<script src="/js/main.js"></script>
+<script>
+  document.querySelectorAll('.dest-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.dest-tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>
