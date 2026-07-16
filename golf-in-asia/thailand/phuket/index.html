@@ -42,6 +42,16 @@
     .pkg-facts .f b { font-family:var(--font-serif); font-weight:400; font-size:1.5rem; color:var(--white); }
     .pkg-facts .f b.from { color:var(--bronze-light); }
 
+    /* stronger, more visible return path */
+    .trip-nav { background:var(--white); border-bottom:1px solid var(--rule); position:sticky; top:66px; z-index:10; }
+    .trip-nav-inner { max-width:var(--max-width); margin:0 auto; padding:0 var(--space-xl); display:flex; align-items:center; justify-content:space-between; gap:var(--space-md); flex-wrap:wrap; }
+    .trip-nav .tn-back { font-family:var(--font-sans); font-size:0.7rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--green); text-decoration:none; padding:14px 0; display:inline-flex; align-items:center; gap:8px; }
+    .trip-nav .tn-back:hover { color:var(--rose); }
+    .trip-nav .tn-others { display:flex; gap:var(--space-md); flex-wrap:wrap; }
+    .trip-nav .tn-others a { font-family:var(--font-sans); font-size:0.7rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--warm-grey); text-decoration:none; padding:14px 0; }
+    .trip-nav .tn-others a:hover { color:var(--green); }
+    @media(max-width:700px){ .trip-nav { position:static; } .trip-nav-inner { gap:0; } .trip-nav .tn-others a { padding:8px 0; } }
+
     .pkg-intro { max-width:var(--max-width); margin:0 auto; padding:var(--space-3xl) var(--space-xl) var(--space-2xl); }
     .pkg-kicker { font-family:var(--font-sans); font-size:0.68rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--rose); margin-bottom:var(--space-md); }
     .pkg-lead { font-family:var(--font-serif); font-size:1.7rem; line-height:1.45; color:var(--green); max-width:24ch; margin-bottom:var(--space-xl); font-weight:400; }
@@ -51,7 +61,7 @@
 
     .itin { background:var(--white); border-top:1px solid var(--rule); border-bottom:1px solid var(--rule); }
     .itin-inner { max-width:var(--max-width); margin:0 auto; padding:var(--space-3xl) var(--space-xl); }
-    .itin h2, .inc-wrap h2, .tiers-inner h2 { font-size:clamp(1.8rem,3vw,2.5rem); font-weight:400; color:var(--deep); margin-bottom:var(--space-sm); }
+    .itin h2, .inc-wrap h2, .tiers-inner h2, .more-trips h2 { font-size:clamp(1.8rem,3vw,2.5rem); font-weight:400; color:var(--deep); margin-bottom:var(--space-sm); }
     .itin .sub { color:var(--warm-grey); max-width:54ch; margin-bottom:var(--space-2xl); font-size:0.95rem; line-height:1.8; }
     .day { display:grid; grid-template-columns:96px 1fr; gap:var(--space-lg); padding:var(--space-lg) 0; border-top:1px solid var(--rule); }
     .day:first-of-type { border-top:none; }
@@ -71,6 +81,10 @@
     .inc li::before { content:''; position:absolute; left:0; top:17px; width:8px; height:8px; border-radius:50%; background:var(--bronze-light); }
     .inc.excl li::before { background:none; border:1px solid var(--rule); border-radius:50%; top:16px; width:9px; height:9px; }
 
+    .season-note { background:var(--parchment-dark); border-left:3px solid var(--rose); padding:var(--space-lg) var(--space-xl); border-radius:0 3px 3px 0; max-width:var(--max-width); margin:0 auto var(--space-2xl); }
+    .season-note .label { font-family:var(--font-sans); font-size:0.62rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--rose); margin-bottom:8px; }
+    .season-note p { font-size:0.95rem; color:var(--slate); line-height:1.8; margin:0; }
+
     .tiers { background:var(--green); }
     .tiers-inner { max-width:var(--max-width); margin:0 auto; padding:var(--space-3xl) var(--space-xl); }
     .tiers-inner h2 { color:var(--white); }
@@ -87,11 +101,30 @@
     .tier .price b { font-family:var(--font-serif); font-size:2rem; font-weight:400; color:var(--white); }
     .tier .price.poa b { font-size:1.15rem; color:var(--bronze-light); }
 
-    .pkg-cta { background:var(--parchment); text-align:center; padding:var(--space-3xl) var(--space-xl); }
+    /* ONWARD NAVIGATION */
+    .more-trips { background:var(--parchment); border-top:1px solid var(--rule); }
+    .more-trips-inner { max-width:var(--max-width); margin:0 auto; padding:var(--space-3xl) var(--space-xl); }
+    .more-trips .sub { color:var(--warm-grey); max-width:54ch; margin-bottom:var(--space-xl); font-size:0.95rem; line-height:1.8; }
+    .mt-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:var(--space-lg); }
+    @media(max-width:760px){ .mt-grid { grid-template-columns:1fr; } }
+    .mt-card { display:flex; flex-direction:column; background:var(--white); border:1px solid var(--rule); border-radius:3px; overflow:hidden; text-decoration:none; transition:transform var(--transition), box-shadow var(--transition); }
+    .mt-card:hover { transform:translateY(-4px); box-shadow:var(--shadow-md); }
+    .mt-img { height:160px; }
+    .mt-img img { width:100%; height:100%; object-fit:cover; display:block; }
+    .mt-body { padding:var(--space-lg); display:flex; flex-direction:column; flex:1; }
+    .mt-body h3 { font-family:var(--font-serif); font-size:1.4rem; font-weight:400; color:var(--green); margin-bottom:4px; }
+    .mt-courses { font-family:var(--font-sans); font-size:0.78rem; color:var(--warm-grey); margin-bottom:var(--space-md); }
+    .mt-foot { margin-top:auto; display:flex; align-items:flex-end; justify-content:space-between; padding-top:var(--space-md); border-top:1px solid var(--rule); }
+    .mt-price small { display:block; font-family:var(--font-sans); font-size:0.56rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--warm-grey); }
+    .mt-price b { font-family:var(--font-serif); font-size:1.3rem; color:var(--deep); font-weight:400; }
+    .mt-link { font-family:var(--font-sans); font-size:0.64rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--rose); }
+    .mt-footer { display:flex; gap:var(--space-xl); justify-content:center; margin-top:var(--space-xl); flex-wrap:wrap; }
+    .mt-footer a { font-family:var(--font-sans); font-size:0.72rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--green); text-decoration:none; border-bottom:1px solid var(--rule); padding-bottom:3px; }
+    .mt-footer a:hover { color:var(--rose); border-bottom-color:var(--rose); }
+
+    .pkg-cta { background:var(--white); text-align:center; padding:var(--space-3xl) var(--space-xl); border-top:1px solid var(--rule); }
     .pkg-cta h2 { font-size:clamp(1.8rem,3vw,2.5rem); font-weight:400; color:var(--green); margin-bottom:var(--space-md); }
     .pkg-cta p { color:var(--warm-grey); max-width:46ch; margin:0 auto var(--space-lg); font-size:0.95rem; line-height:1.8; }
-    .back-link { font-family:var(--font-sans); font-size:0.72rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--warm-grey); text-decoration:none; display:inline-flex; align-items:center; gap:6px; margin-bottom:var(--space-lg); }
-    .back-link:hover { color:var(--slate); }
   </style>
 </head>
 <body>
@@ -101,7 +134,7 @@
 <section class="pkg-hero">
   <img src="/images/thailand-phuket-beach-sunset.jpg" alt="Phuket golf trip">
   <div class="pkg-hero-content">
-    <div class="breadcrumb"><a href="/golf-in-asia/">Golf in Asia</a> · <a href="/golf-in-asia/thailand/">Thailand</a> · Phuket</div>
+    <div class="breadcrumb"><a href="/golf-in-asia/">Golf in Asia</a> &middot; <a href="/golf-in-asia/thailand/">Thailand</a> &middot; Phuket</div>
     <h1>Phuket Golf &mdash; Seven Nights</h1>
     <p class="pkg-hero-sub">Championship golf, the Andaman Sea, and evenings that groups come back for. The most complete way into Thailand golf.</p>
     <div class="pkg-facts">
@@ -113,8 +146,14 @@
   </div>
 </section>
 
+<div class="trip-nav">
+  <div class="trip-nav-inner">
+    <a href="/golf-in-asia/thailand/" class="tn-back">&larr; All Thailand trips</a>
+    <div class="tn-others"><a href="/golf-in-asia/thailand/hua-hin/">Hua Hin</a><a href="/golf-in-asia/thailand/bangkok/">Bangkok</a><a href="/golf-in-asia/thailand/chiang-mai/">Chiang Mai</a></div>
+  </div>
+</div>
+
 <div class="pkg-intro">
-  <a href="/golf-in-asia/thailand/" class="back-link">&larr; Back to Thailand</a>
   <div class="pkg-kicker">The Trip</div>
   <p class="pkg-lead">Three championship courses, a beach base of your choosing, and a week paced the way you'd actually want to play it.</p>
   <div class="pkg-cols">
@@ -127,7 +166,7 @@
   <div class="itin-inner">
     <h2>The Week</h2>
     <p class="sub">A suggested shape &mdash; every day flexes to your group, your handicaps and your pace. Nothing here is fixed in stone.</p>
-        <div class="day"><div class="day-no">Day<b>1</b></div><div><h4>Arrival</h4><p>Private transfer from Phuket International to your hotel. Evening at leisure to settle in &mdash; dinner recommendations arranged to taste.</p></div></div>
+    <div class="day"><div class="day-no">Day<b>1</b></div><div><h4>Arrival</h4><p>Private transfer from Phuket International to your hotel. Evening at leisure to settle in &mdash; dinner recommendations arranged to taste.</p></div></div>
     <div class="day"><div class="day-no">Day<b>2</b></div><div><h4>Laguna Golf Phuket <span class="round-pill">Round 1</span></h4><p>An accessible, beautifully conditioned resort course to open the week &mdash; flowing fairways set among lagoons, a gentle reintroduction to Phuket golf.</p></div></div>
     <div class="day"><div class="day-no">Day<b>3</b></div><div><h4>At leisure</h4><p>Beach, spa or exploring &mdash; Surin and Kata for the quieter side of the island, Patong if the group wants the noise.</p></div></div>
     <div class="day"><div class="day-no">Day<b>4</b></div><div><h4>Red Mountain Golf Club <span class="round-pill">Round 2</span></h4><p>Carved from a former tin mine, Red Mountain is Phuket's most dramatic round &mdash; bold elevation changes and one of the island's signature golfing days.</p></div></div>
@@ -188,6 +227,53 @@
         <p class="hnote">Amanpuri or Trisara &mdash; the island's benchmark private-villa addresses.</p>
         <div class="price poa"><small>From</small><b>On request</b></div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="more-trips">
+  <div class="more-trips-inner">
+    <div class="pkg-kicker">Keep Looking</div>
+    <h2>Other Thailand Trips</h2>
+    <p class="sub">Thailand is not one destination. Each of these runs on its own calendar and has its own character &mdash; and they combine well.</p>
+    <div class="mt-grid">
+      <a class="mt-card" href="/golf-in-asia/thailand/hua-hin/">
+        <div class="mt-img"><img src="/images/golf-thailand-black-mountain-aerial.jpg" alt="Hua Hin golf"></div>
+        <div class="mt-body">
+          <h3>Hua Hin</h3>
+          <div class="mt-courses">Black Mountain &middot; Banyan &middot; Majestic Creek</div>
+          <div class="mt-foot">
+            <div class="mt-price"><small>From</small><b><span class="lf-price" data-price-gbp="1785">&pound;1,785</span>pp</b></div>
+            <span class="mt-link">View trip &rarr;</span>
+          </div>
+        </div>
+      </a>
+      <a class="mt-card" href="/golf-in-asia/thailand/bangkok/">
+        <div class="mt-img"><img src="/images/thailand-bangkok-wat-arun.jpg" alt="Bangkok golf"></div>
+        <div class="mt-body">
+          <h3>Bangkok</h3>
+          <div class="mt-courses">Thai Country Club &middot; Nikanti &middot; Alpine</div>
+          <div class="mt-foot">
+            <div class="mt-price"><small>From</small><b><span class="lf-price" data-price-gbp="1450">&pound;1,450</span>pp</b></div>
+            <span class="mt-link">View trip &rarr;</span>
+          </div>
+        </div>
+      </a>
+      <a class="mt-card" href="/golf-in-asia/thailand/chiang-mai/">
+        <div class="mt-img"><img src="/images/golf-thailand-chiang-mai-dusk.jpg" alt="Chiang Mai golf"></div>
+        <div class="mt-body">
+          <h3>Chiang Mai</h3>
+          <div class="mt-courses">Highlands &middot; Alpine &middot; Summit Green Valley</div>
+          <div class="mt-foot">
+            <div class="mt-price"><small>From</small><b><span class="lf-price" data-price-gbp="1985">&pound;1,985</span>pp</b></div>
+            <span class="mt-link">View trip &rarr;</span>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="mt-footer">
+      <a href="/golf-in-asia/thailand/#how-to-combine">Combine two or three destinations &rarr;</a>
+      <a href="/golf-in-asia/">All of Golf in Asia &rarr;</a>
     </div>
   </div>
 </section>
