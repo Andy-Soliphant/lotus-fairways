@@ -110,7 +110,10 @@
     .courses-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: var(--space-lg); max-width: var(--max-width); margin: 0 auto; }
     @media(max-width:900px){ .courses-grid { grid-template-columns: repeat(2,1fr); } }
     @media(max-width:580px){ .courses-grid { grid-template-columns: 1fr; } }
-    .course-card { background: var(--white); border-radius: 3px; overflow: hidden; border: 1px solid var(--rule); }
+    .course-card { background: var(--white); border-radius: 3px; overflow: hidden; border: 1px solid var(--rule); display: block; text-decoration: none; color: inherit; transition: transform var(--transition), box-shadow var(--transition); }
+    .course-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+    .course-card:hover .card-cue { color: var(--rose); }
+    .card-cue { font-family: var(--font-sans); font-size: 0.66rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--warm-grey); transition: color var(--transition); }
     .course-card img { width: 100%; height: 180px; object-fit: cover; display: block; }
     .course-card-body { padding: var(--space-lg); }
     .course-card-body .loc { font-family: var(--font-sans); font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--bronze); margin-bottom: 6px; }
@@ -258,7 +261,7 @@
       <div class="country-card-body">
         <div class="region">Southeast Asia</div>
         <h2>Golf in Cambodia</h2>
-        <p>The destination most golfers have not discovered yet. Phokeethra in Siem Reap — Nick Faldo's championship design — is one of the finest courses in the region, and pairing it with the temples of Angkor creates a combination that genuinely cannot be found anywhere else.</p>
+        <p>The destination most golfers have not discovered yet. Phokeethra in Siem Reap — Cambodia's first championship course — is one of the finest in the region, and pairing it with the temples of Angkor creates a combination that genuinely cannot be found anywhere else.</p>
         <div class="country-card-meta">
           <div class="country-card-meta-item"><span class="label">Destinations</span><span class="value">Siem Reap · Phnom Penh</span></div>
           <div class="country-card-meta-item"><span class="label">Ideal duration</span><span class="value">7–10 nights</span></div>
@@ -300,7 +303,7 @@
   <p style="max-width:680px; margin:0 auto var(--space-2xl); color:var(--warm-grey); font-size:0.95rem; line-height:1.8;">Every course listed here has been played by our team. Prices shown are per-person guide rates for a 4-night break including accommodation, green fees, caddie and transfers — not just the green fee in isolation.</p>
   <div class="courses-grid">
 
-    <div class="course-card">
+    <a class="course-card" href="/golf-in-asia/thailand/hua-hin/">
       <img src="/images/golf-thailand-black-mountain-aerial.jpg" alt="Black Mountain Golf Club">
       <div class="course-card-body">
         <div class="loc">Hua Hin · Thailand</div>
@@ -308,15 +311,14 @@
         <p class="desc">Consistently ranked among Asia's top ten. Dramatic elevation changes, water on 13 holes, immaculate conditioning year-round. The course that converts sceptics about Thai golf.</p>
         <div class="price-line">
           <div>
-            <div class="price">From <span class="lf-price" data-price-gbp="1785">£1,785</span>pp</div>
             <div class="designer">Designed by Hans Bauer</div>
           </div>
-          <div class="price-includes">Includes accommodation<br>green fee, caddie & transfers</div>
+          <div class="card-cue">View the Hua Hin trip &rarr;</div>
         </div>
       </div>
-    </div>
+    </a>
 
-    <div class="course-card">
+    <a class="course-card" href="/golf-in-asia/vietnam/da-nang/">
       <img src="/images/golf-vietnam-hoiana-shores-aerial.jpg" alt="Hoiana Shores Golf Club">
       <div class="course-card-body">
         <div class="loc">Da Nang · Vietnam</div>
@@ -324,31 +326,29 @@
         <p class="desc">Robert Trent Jones II's masterpiece on Vietnam's central coast. Natural dunes, genuine links character, ocean views throughout. One of Asia's great courses by any measure.</p>
         <div class="price-line">
           <div>
-            <div class="price">From <span class="lf-price" data-price-gbp="1895">£1,895</span>pp</div>
             <div class="designer">Robert Trent Jones II</div>
           </div>
-          <div class="price-includes">Includes accommodation<br>green fee, caddie & transfers</div>
+          <div class="card-cue">View the Da Nang trip &rarr;</div>
         </div>
       </div>
-    </div>
+    </a>
 
-    <div class="course-card">
+    <a class="course-card" href="/golf-in-asia/cambodia/siem-reap/">
       <img src="/images/cambodia-angkor-wat-sunrise.jpg" alt="Phokeethra Country Club">
       <div class="course-card-body">
         <div class="loc">Siem Reap · Cambodia</div>
         <h4>Phokeethra Country Club</h4>
-        <p class="desc">Nick Faldo's championship design in the shadow of Angkor. Playing Phokeethra in the morning and visiting the temples at sunset in the same day is something no other destination can offer.</p>
+        <p class="desc">Cambodia's first championship course, host of the Johnnie Walker Classic and the Cambodian Open. Playing Phokeethra in the morning and visiting the temples at sunset in the same day is something no other destination can offer.</p>
         <div class="price-line">
           <div>
-            <div class="price">From <span class="lf-price" data-price-gbp="2175">£2,175</span>pp</div>
-            <div class="designer">Designed by Nick Faldo</div>
+            <div class="designer">Siem Reap</div>
           </div>
-          <div class="price-includes">Includes accommodation<br>green fee, caddie & transfers</div>
+          <div class="card-cue">View the Siem Reap trip &rarr;</div>
         </div>
       </div>
-    </div>
+    </a>
 
-    <div class="course-card">
+    <a class="course-card" href="/golf-in-asia/vietnam/#ho-chi-minh">
       <img src="/images/golf-vietnam-phan-thiet-coastal.jpg" alt="The Bluffs Ho Tram">
       <div class="course-card-body">
         <div class="loc">Ho Tram · Vietnam</div>
@@ -356,15 +356,14 @@
         <p class="desc">Greg Norman's design on Vietnam's southern coast — ranked among the top 100 courses in the world. Not optional for any serious golfer visiting Southeast Asia.</p>
         <div class="price-line">
           <div>
-            <div class="price">On request</div>
             <div class="designer">Designed by Greg Norman</div>
           </div>
-          <div class="price-includes">Includes accommodation<br>green fee, caddie & transfers</div>
+          <div class="card-cue">Explore Vietnam &rarr;</div>
         </div>
       </div>
-    </div>
+    </a>
 
-    <div class="course-card">
+    <a class="course-card" href="/golf-in-asia/thailand/phuket/">
       <img src="/images/golf-thailand-chiang-mai-dusk.jpg" alt="Laguna Golf Phuket">
       <div class="course-card-body">
         <div class="loc">Phuket · Thailand</div>
@@ -372,15 +371,14 @@
         <p class="desc">Set within the Laguna resort complex, with the Andaman Sea beyond the tree line. The island's most complete golf experience — beautifully maintained, consistently excellent conditions.</p>
         <div class="price-line">
           <div>
-            <div class="price">From <span class="lf-price" data-price-gbp="1655">£1,655</span>pp</div>
             <div class="designer">Designed by Max Wexler</div>
           </div>
-          <div class="price-includes">Includes accommodation<br>green fee, caddie & transfers</div>
+          <div class="card-cue">View the Phuket trip &rarr;</div>
         </div>
       </div>
-    </div>
+    </a>
 
-    <div class="course-card">
+    <a class="course-card" href="/golf-in-asia/vietnam/da-nang/">
       <img src="/images/golf-vietnam-ba-na-hills-aerial.jpg" alt="Ba Na Hills Golf Club">
       <div class="course-card-body">
         <div class="loc">Da Nang · Vietnam</div>
@@ -388,13 +386,12 @@
         <p class="desc">Luke Donald's design in the cooler hills above Da Nang. Dramatic terrain, extraordinary views, a completely different character from the coastal courses nearby. An outstanding complement to Hoiana Shores.</p>
         <div class="price-line">
           <div>
-            <div class="price">On request</div>
             <div class="designer">Designed by Luke Donald</div>
           </div>
-          <div class="price-includes">Includes accommodation<br>green fee, caddie & transfers</div>
+          <div class="card-cue">Explore Da Nang &rarr;</div>
         </div>
       </div>
-    </div>
+    </a>
 
   </div>
 </section>

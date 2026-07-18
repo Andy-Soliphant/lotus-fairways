@@ -1,100 +1,133 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <!-- Core pages -->
   <url>
     <loc>https://lotusfairways.com/</loc>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-07-17</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://lotusfairways.com/about.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://lotusfairways.com/contact.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Destinations -->
-  <url>
-    <loc>https://lotusfairways.com/destinations/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://lotusfairways.com/destinations/thailand.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://lotusfairways.com/destinations/vietnam.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://lotusfairways.com/destinations/cambodia.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Golf -->
-  <url>
-    <loc>https://lotusfairways.com/golf-in-asia/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Beyond Asia -->
-  <url>
-    <loc>https://lotusfairways.com/beyond/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Signature Experiences -->
-  <url>
-    <loc>https://lotusfairways.com/whisky-and-fairways.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Journal -->
-  <url>
-    <loc>https://lotusfairways.com/journal/</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://lotusfairways.com/Beyond/</loc>
+    <lastmod>2026-07-17</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lotusfairways.com/journal/koh-yao-yai.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://lotusfairways.com/about.html</loc>
+    <lastmod>2026-07-17</lastmod>
+    <priority>0.7</priority>
   </url>
-
-
-  <!-- Fairway Weekends -->
+  <url>
+    <loc>https://lotusfairways.com/contact.html</loc>
+    <lastmod>2026-07-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/destinations/Index.html</loc>
+    <lastmod>2026-07-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/destinations/cambodia.html</loc>
+    <lastmod>2026-07-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/destinations/thailand.html</loc>
+    <lastmod>2026-07-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/destinations/vietnam.html</loc>
+    <lastmod>2026-07-17</lastmod>
+    <priority>0.7</priority>
+  </url>
   <url>
     <loc>https://lotusfairways.com/fairway-weekends/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Golf in Asia country pages -->
-  <url>
-    <loc>https://lotusfairways.com/golf-in-asia/thailand/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-07-17</lastmod>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lotusfairways.com/golf-in-asia/vietnam/</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://lotusfairways.com/golf-in-asia/</loc>
+    <lastmod>2026-07-17</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lotusfairways.com/golf-in-asia/cambodia/</loc>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-07-17</lastmod>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/golf-in-asia/cambodia/phnom-penh/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/golf-in-asia/cambodia/siem-reap/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/golf-in-asia/thailand/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/golf-in-asia/thailand/bangkok/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/golf-in-asia/thailand/chiang-mai/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/golf-in-asia/thailand/hua-hin/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/golf-in-asia/thailand/phuket/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/golf-in-asia/vietnam/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/golf-in-asia/vietnam/da-nang/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/golf-in-asia/vietnam/hanoi/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/golf-in-asia/vietnam/ho-chi-minh/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/journal/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/journal/football-shirt-thailand.html</loc>
+    <lastmod>2026-07-17</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/journal/koh-yao-yai.html</loc>
+    <lastmod>2026-07-17</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/whisky-and-fairways.html</loc>
+    <lastmod>2026-07-17</lastmod>
+    <priority>0.7</priority>
   </url>
 </urlset>
