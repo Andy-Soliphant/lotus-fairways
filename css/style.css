@@ -274,8 +274,6 @@ p {
 
 /* ── BREADCRUMB ── */
 .breadcrumb {
-  background: var(--white);
-  border-bottom: 1px solid var(--rule);
   padding: 14px var(--space-xl);
   display: flex;
   align-items: center;
