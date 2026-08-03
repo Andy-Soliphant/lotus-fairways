@@ -32,7 +32,25 @@
     .dest-tab:hover, .dest-tab.active { color:var(--green); border-bottom-color:var(--bronze); }
     .dest-section { max-width:var(--max-width); margin:0 auto; padding:var(--space-2xl) var(--space-xl); }
     .dest-section h2 { font-size:2rem; color:var(--green); font-weight:400; }
-  </style>
+  
+.trips-band-removed{}
+.tb-inner{max-width:var(--max-width,1180px);margin:0 auto;padding:0 24px;}
+.tb-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:16px;}
+.tb-head h2{color:#f7f3ec;font-size:1.5rem;margin:0;}
+.tb-head span{font-size:.72rem;letter-spacing:.1em;color:#dcb684;}
+.tb-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;}
+.tb-card{display:flex;justify-content:space-between;align-items:baseline;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.16);border-radius:4px;padding:13px 15px;text-decoration:none;transition:background .15s;}
+.tb-card:hover{background:rgba(255,255,255,.10);}
+.tb-name{font-family:var(--font-serif,Georgia,serif);font-size:1.05rem;color:#f7f3ec;}
+.tb-price{font-size:.68rem;letter-spacing:.06em;color:rgba(247,243,236,.7);}
+
+.area-trip{display:flex;justify-content:space-between;align-items:center;gap:14px;background:var(--deep,#22301f);border-radius:5px;padding:15px 20px;margin:18px 0 6px;text-decoration:none;flex-wrap:wrap;}
+.area-trip:hover{background:#2c3f28;}
+.at-l{color:#f7f3ec;font-family:var(--font-serif,Georgia,serif);font-size:1.12rem;}
+.at-l small{display:block;font-family:var(--font-sans,sans-serif);font-size:.7rem;letter-spacing:.09em;color:#dcb684;text-transform:uppercase;margin-top:2px;}
+.at-r{color:#dcb684;font-size:.82rem;letter-spacing:.05em;white-space:nowrap;}
+.at-r b{color:#f7f3ec;font-size:1.05rem;}
+</style>
 </head>
 <body>
 
@@ -46,6 +64,7 @@
     <p>Championship golf beside the temples of Angkor — a small, exceptional collection of courses in one of the world&#x27;s great cultural landscapes.</p>
   </div>
 </section>
+
 
 <div class="dest-tabs">
   <div class="dest-tabs-inner">
@@ -96,6 +115,7 @@
     <div style="margin-bottom:var(--space-lg);">
       <div style="font-family:var(--font-sans); font-size:0.68rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--rose); margin-bottom:4px;">1 signature &middot; 3 courses</div>
       <h2>Phnom Penh</h2>
+<a class="area-trip" href="/golf-in-asia/cambodia/phnom-penh/"><span class="at-l">The Phnom Penh Golf Week<small>7 nights &middot; 3 rounds &middot; caddie &amp; buggy</small></span><span class="at-r">from <b>&pound;1,570</b> per person &rarr;</span></a>
       <p style="font-family:var(--font-serif); font-size:1.15rem; font-style:italic; line-height:1.6; color:var(--ink); max-width:64ch; margin-top:var(--space-sm);">The capital, and a course few have played. Vattanac &mdash; a top-class Faldo layout most golfers have never heard of &mdash; anchors the city, with the riverfront and the Cambodian capital's quiet charm between rounds.</p>
     </div>
     <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:var(--space-md); margin-bottom:var(--space-lg);">
@@ -128,6 +148,7 @@
     <div style="margin-bottom:var(--space-lg);">
       <div style="font-family:var(--font-sans); font-size:0.68rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--rose); margin-bottom:4px;">1 signature &middot; 2 courses</div>
       <h2>Siem Reap</h2>
+<a class="area-trip" href="/golf-in-asia/cambodia/siem-reap/"><span class="at-l">The Siem Reap Golf Week<small>7 nights &middot; 3 rounds &middot; caddie &amp; buggy</small></span><span class="at-r">from <b>&pound;1,400</b> per person &rarr;</span></a>
       <p style="font-family:var(--font-serif); font-size:1.15rem; font-style:italic; line-height:1.6; color:var(--ink); max-width:64ch; margin-top:var(--space-sm);">Golf in the shadow of Angkor. Nick Faldo's Angkor Golf Resort, the finest in Cambodia, beside the greatest temple complex on earth &mdash; a world-class round in the morning, sunrise over Angkor Wat to remember.</p>
     </div>
     <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:var(--space-md); margin-bottom:var(--space-lg);">

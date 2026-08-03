@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chiang Mai Golf &mdash; Seven Nights | Lotus &amp; Fairways</title>
-  <meta name="description" content="A seven-night Chiang Mai golf trip &mdash; Highlands, Alpine and Summit Green Valley. Highland courses, cool mountain air and Lanna culture. From &pound;1,985pp.">
+  <meta name="description" content="A seven-night Chiang Mai golf trip &mdash; Highlands, Alpine and Summit Green Valley. Highland courses, cool mountain air and Lanna culture. From &pound;1,550pp.">
   <link rel="canonical" href="https://lotusfairways.com/golf-in-asia/thailand/chiang-mai/">
   <meta property="og:title" content="Chiang Mai Golf &mdash; Seven Nights | Lotus &amp; Fairways">
   <meta property="og:type" content="website">
@@ -125,7 +125,84 @@
     .pkg-cta { background:var(--white); text-align:center; padding:var(--space-3xl) var(--space-xl); border-top:1px solid var(--rule); }
     .pkg-cta h2 { font-size:clamp(1.8rem,3vw,2.5rem); font-weight:400; color:var(--green); margin-bottom:var(--space-md); }
     .pkg-cta p { color:var(--warm-grey); max-width:46ch; margin:0 auto var(--space-lg); font-size:0.95rem; line-height:1.8; }
-  </style>
+  /* --- tier band: image + level definition, tightened --- */
+.tier { padding:0; overflow:hidden; }
+.tier-body { padding:var(--space-lg) var(--space-lg) var(--space-lg); display:flex; flex-direction:column; flex:1; }
+.tier-img { margin:0; line-height:0; background:rgba(255,255,255,0.06); }
+.tier-img img { width:100%; height:132px; object-fit:cover; display:block; }
+.tier .tname { margin-bottom:8px; }
+.tier .tdef { font-size:0.82rem; line-height:1.65; color:rgba(247,243,236,0.66); margin:0 0 12px; }
+.tier .hnote { font-size:0.92rem; color:var(--white); line-height:1.6; margin:0 0 var(--space-lg); min-height:0; padding-top:12px; border-top:1px solid rgba(255,255,255,0.10); }
+.tiers-inner .sub { margin-bottom:var(--space-xl); }
+@media (max-width:820px){ .tier-grid { grid-template-columns:1fr; } .tier-img img { height:150px; } }
+
+
+/* --- at a glance --- */
+.glance{background:var(--parchment-dark,#efe9dd);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);}
+.glance-inner{max-width:var(--max-width);margin:0 auto;padding:var(--space-lg);display:flex;flex-wrap:wrap;gap:var(--space-xl);align-items:center;}
+.g-item{display:flex;flex-direction:column;gap:3px;}
+.g-lab{font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--bronze);}
+.g-val{font-size:.9rem;color:var(--deep);}
+.g-cta{margin-left:auto;}
+.btn-glance{display:inline-block;background:var(--green);color:var(--white);padding:11px 22px;border-radius:3px;font-size:.8rem;letter-spacing:.06em;text-decoration:none;}
+.btn-glance:hover{background:var(--deep);}
+/* --- why --- */
+.why-inner{max-width:760px;margin:0 auto;padding:var(--space-3xl) var(--space-lg) var(--space-2xl);}
+.why h2{font-size:2rem;margin-bottom:var(--space-lg);}
+.why p{font-size:1.02rem;line-height:1.95;margin-bottom:var(--space-lg);color:var(--slate);}
+/* --- courses --- */
+.courses{background:var(--parchment);}
+.courses-inner{max-width:var(--max-width);margin:0 auto;padding:var(--space-2xl) var(--space-lg);}
+.courses h2{font-size:2rem;margin-bottom:var(--space-sm);}
+.courses .sub{color:var(--slate);margin-bottom:var(--space-xl);font-size:.94rem;}
+.course-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:var(--space-lg);}
+.course-card{background:#fff;border:1px solid var(--rule);border-radius:4px;padding:var(--space-lg);}
+.course-card h3{font-size:1.25rem;margin-bottom:10px;}
+.course-card p{font-size:.9rem;line-height:1.75;color:var(--slate);margin-bottom:var(--space-md);}
+.course-card a{font-size:.78rem;letter-spacing:.06em;color:var(--bronze);text-decoration:none;}
+.course-card a:hover{text-decoration:underline;}
+/* --- ultra tier: restraint, not decoration --- */
+.tier.tier-ultra{border:1px solid rgba(255,255,255,0.18);background:transparent;}
+.tier.tier-ultra .tier-body{padding-top:calc(var(--space-lg) + 4px);}
+.tier.tier-ultra .tname{position:relative;padding-bottom:10px;}
+.tier.tier-ultra .tname::after{content:"";position:absolute;left:0;bottom:0;width:34px;height:1px;background:var(--bronze-light,#dcb684);}
+@media(max-width:820px){.glance-inner{gap:var(--space-lg);}.g-cta{margin-left:0;width:100%;}.btn-glance{display:block;text-align:center;}}
+
+
+/* --- full-width image bands --- */
+.img-band{position:relative;line-height:0;}
+.img-band img{width:100%;height:360px;object-fit:cover;display:block;}
+.band-cap{position:absolute;bottom:14px;right:18px;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(247,243,236,.9);text-shadow:0 1px 10px rgba(0,0,0,.55);line-height:1.4;}
+@media(max-width:820px){.img-band img{height:210px;}}
+
+
+/* --- middle-of-page: two columns with a sticky trip rail --- */
+.mid-wrap{max-width:var(--max-width);margin:0 auto;}
+.mid-main{min-width:0;}
+.trip-rail{display:none;}
+@media(min-width:1100px){
+  .mid-wrap{display:grid;grid-template-columns:minmax(0,1fr) 264px;gap:56px;padding:0 var(--space-lg);}
+  .trip-rail{display:block;}
+  .rail-inner{position:sticky;top:28px;padding:var(--space-xl) 0;}
+}
+.rail-head{font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--bronze);margin-bottom:14px;}
+.rail-card{display:block;background:#fff;border:1px solid var(--rule);border-radius:6px;overflow:hidden;margin-bottom:14px;text-decoration:none;transition:transform .15s ease, box-shadow .15s ease;}
+.rail-card:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(34,48,31,.10);}
+.rail-card img{width:100%;height:110px;object-fit:cover;display:block;}
+.rc-body{display:flex;justify-content:space-between;align-items:baseline;padding:10px 12px;}
+.rc-name{font-family:var(--font-serif);font-size:1.02rem;color:var(--deep);}
+.rc-price{font-size:.7rem;letter-spacing:.06em;color:var(--slate);}
+.rail-all{display:block;font-size:.72rem;letter-spacing:.08em;color:var(--bronze);text-decoration:none;margin-top:4px;}
+.rail-all:hover{text-decoration:underline;}
+/* --- in-flow image band inside the itinerary --- */
+.band-mid{line-height:0;margin:var(--space-2xl) 0;position:relative;}
+.band-mid img{width:100%;height:280px;object-fit:cover;display:block;border-radius:6px;}
+@media(max-width:820px){.band-mid img{height:190px;}}
+/* --- contrast: Courses sits on white --- */
+.courses{background:#fff;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);}
+
+
+</style>
 </head>
 <body>
 
@@ -162,17 +239,28 @@
   </div>
 </div>
 
-<section class="itin">
+<section class="glance"><div class="glance-inner">
+<div class="g-item"><span class="g-lab">Courses</span><span class="g-val">Summit Green Valley &middot; Alpine Golf Resort Chiang Mai &middot; Chiang Mai Highlands</span></div>
+<div class="g-item"><span class="g-lab">Rounds</span><span class="g-val">3 &middot; caddie &amp; buggy included</span></div>
+<div class="g-item"><span class="g-lab">Nights</span><span class="g-val">7</span></div>
+<div class="g-item"><span class="g-lab">From</span><span class="g-val">&pound;1,550 per person</span></div>
+<div class="g-cta"><a href="#enquire" class="btn-glance">Start your enquiry</a></div>
+</div></section>
+<section class="why"><div class="why-inner"><h2>Why Chiang Mai</h2><p>The cool north. Mountain courses in the foothills, a gentler climate, and the cultural heart of old Lanna between rounds &mdash; a change of pace from the coasts and the capital.</p><p>Three rounds in a week is the right rhythm here &mdash; and we route them deliberately, opening easy and building to Chiang Mai Highlands, so the best golf meets your best swing.</p></div></section>
+<div class="mid-wrap"><div class="mid-main"><section class="itin">
   <div class="itin-inner">
     <h2>The Week</h2>
     <p class="sub">A suggested shape &mdash; every day flexes to your group, your handicaps and your pace. Nothing here is fixed in stone.</p>
     <div class="day"><div class="day-no">Day<b>1</b></div><div><h4>Arrival</h4><p>Private transfer from Chiang Mai International to your hotel. Evening at leisure in the old city, inside the moat &mdash; dinner recommendations arranged to taste.</p></div></div>
-    <div class="day"><div class="day-no">Day<b>2</b></div><div><h4>Chiang Mai Highlands <span class="round-pill">Round 1</span></h4><p>Twenty-seven holes at elevation in the foothills east of the city, designed by Lee Schmidt of Schmidt-Curley &mdash; the firm behind Blue Canyon and Siam Country Club. Immaculate paspalum fairways and the best conditioning in the north.</p></div></div>
-    <div class="day"><div class="day-no">Day<b>3</b></div><div><h4>At leisure</h4><p>Doi Suthep above the city, the old temples inside the moat, or a morning at an ethical elephant sanctuary &mdash; arranged privately.</p></div></div>
+    <div class="day"><div class="day-no">Day<b>6</b></div><div><h4>Summit Green Valley <span class="round-pill">Round 1</span></h4><p>Twenty-seven holes designed by Dennis Griffiths &mdash; the same architect as Thai Country Club in Bangkok &mdash; and among the best-kept courses in the north. Close to the city, with night golf if the group wants more.</p></div></div>
+    <div class="band-mid"><img src="/images/golf-thailand-chiang-mai-summit-green-valley.jpg" alt="" loading="lazy" onerror="this.closest('.band-mid').remove()"><div class="band-cap">Summit Green Valley</div></div>
+<div class="day"><div class="day-no">Day<b>3</b></div><div><h4>At leisure</h4><p>Doi Suthep above the city, the old temples inside the moat, or a morning at an ethical elephant sanctuary &mdash; arranged privately.</p></div></div>
     <div class="day"><div class="day-no">Day<b>4</b></div><div><h4>Alpine Golf Resort Chiang Mai <span class="round-pill">Round 2</span></h4><p>Sister course to Alpine in Bangkok, carved out of the San Kamphaeng forests. A championship layout at 7,541 yards from the tips, and host of the Chiang Mai Golf Classic.</p></div></div>
-    <div class="day"><div class="day-no">Day<b>5</b></div><div><h4>At leisure</h4><p>A cooking class with one of the city's finest chefs, the Sunday walking street, or the craft villages out towards San Kamphaeng.</p></div></div>
-    <div class="day"><div class="day-no">Day<b>6</b></div><div><h4>Summit Green Valley <span class="round-pill">Round 3</span></h4><p>Twenty-seven holes designed by Dennis Griffiths &mdash; the same architect as Thai Country Club in Bangkok &mdash; and among the best-kept courses in the north. Close to the city, with night golf if the group wants more.</p></div></div>
-    <div class="day"><div class="day-no">Day<b>7</b></div><div><h4>At leisure</h4><p>A final day at your own pace &mdash; the mountains, the markets, or a long lunch somewhere quiet.</p></div></div>
+    <div class="band-mid"><img src="/images/golf-thailand-chiang-mai-alpine-chiang-mai.jpg" alt="" loading="lazy" onerror="this.closest('.band-mid').remove()"><div class="band-cap">Alpine Golf Resort Chiang Mai</div></div>
+<div class="day"><div class="day-no">Day<b>5</b></div><div><h4>At leisure</h4><p>A cooking class with one of the city's finest chefs, the Sunday walking street, or the craft villages out towards San Kamphaeng.</p></div></div>
+    <div class="day"><div class="day-no">Day<b>2</b></div><div><h4>Chiang Mai Highlands <span class="round-pill">Round 3</span></h4><p>Twenty-seven holes at elevation in the foothills east of the city, designed by Lee Schmidt of Schmidt-Curley &mdash; the firm behind Blue Canyon and Siam Country Club. Immaculate paspalum fairways and the best conditioning in the north.</p></div></div>
+    <div class="band-mid"><img src="/images/golf-thailand-chiang-mai-chiang-mai-highlands.jpg" alt="" loading="lazy" onerror="this.closest('.band-mid').remove()"><div class="band-cap">Chiang Mai Highlands</div></div>
+<div class="day"><div class="day-no">Day<b>7</b></div><div><h4>At leisure</h4><p>A final day at your own pace &mdash; the mountains, the markets, or a long lunch somewhere quiet.</p></div></div>
     <div class="day"><div class="day-no">Day<b>8</b></div><div><h4>Departure</h4><p>Private transfer to Chiang Mai International in good time for your flight.</p></div></div>
   </div>
 </section>
@@ -186,7 +274,7 @@
       <ul>
         <li>7 nights' accommodation at your chosen hotel tier</li>
         <li>3 rounds of golf including green fees</li>
-        <li>Caddie for every round</li>
+        <li>Caddie and golf buggy for every round</li>
         <li>All private airport and course transfers</li>
         <li>Daily breakfast</li>
         <li>Personal itinerary planning and in-resort support</li>
@@ -196,7 +284,7 @@
       <h3>Not included</h3>
       <ul>
         <li>International flights &mdash; we can arrange on request</li>
-        <li>Golf carts and caddie gratuities</li>
+        <li>Caddie gratuities</li>
         <li>Lunches, dinners and drinks unless specified</li>
         <li>Travel insurance</li>
       </ul>
@@ -209,30 +297,13 @@
   <p><strong>We will not sell you Chiang Mai in March.</strong> From roughly mid-February to April, agricultural burning across northern Thailand and neighbouring countries fills the valley with smoke, and Chiang Mai sits in a mountain basin with nowhere for it to go. In March 2026 the city was ranked the most polluted in the world. Most operators will still happily take the booking, because the brochure says &ldquo;November to April&rdquo;. We won't. Come between November and early February for cool, clear mountain air &mdash; or come May to October, when the rains keep the air clean and the north is green. In March, we will send you to the coast instead, and the golf there is excellent.</p>
 </div>
 
+<section class="courses"><div class="courses-inner"><h2>The Courses</h2><p class="sub">Three rounds in the order the golf deserves &mdash; opening easy, building to Chiang Mai Highlands. Swap any of them; this is the routing we&rsquo;d start you with.</p><div class="course-grid"><div class="course-card"><h3>Summit Green Valley</h3><p>Twenty-seven holes designed by Dennis Griffiths &mdash; the same architect as Thai Country Club in Bangkok &mdash; and among the best-kept courses in the north. Close to the city, with night golf if the group wants more.</p><a href="/golf-in-asia/thailand/#chiang-mai">More on Chiang Mai&rsquo;s golf &rarr;</a></div><div class="course-card"><h3>Alpine Golf Resort Chiang Mai</h3><p>Sister course to Alpine in Bangkok, carved out of the San Kamphaeng forests. A championship layout at 7,541 yards from the tips, and host of the Chiang Mai Golf Classic.</p><a href="/golf-in-asia/thailand/#chiang-mai">More on Chiang Mai&rsquo;s golf &rarr;</a></div><div class="course-card"><h3>Chiang Mai Highlands</h3><p>Twenty-seven holes at elevation in the foothills east of the city, designed by Lee Schmidt of Schmidt-Curley &mdash; the firm behind Blue Canyon and Siam Country Club. Immaculate paspalum fairways and the best conditioning in the north.</p><a href="/golf-in-asia/thailand/#chiang-mai">More on Chiang Mai&rsquo;s golf &rarr;</a></div></div></div></section>
+</div><aside class="trip-rail"><div class="rail-inner"><div class="rail-head">More Thailand weeks</div><a class="rail-card" href="/golf-in-asia/thailand/bangkok/"><img src="/images/thailand-bangkok-wat-arun.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="rc-body"><span class="rc-name">Bangkok</span><span class="rc-price">from &pound;1,450</span></span></a><a class="rail-card" href="/golf-in-asia/thailand/hua-hin/"><img src="/images/golf-thailand-black-mountain-aerial.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="rc-body"><span class="rc-name">Hua Hin</span><span class="rc-price">from &pound;1,650</span></span></a><a class="rail-card" href="/golf-in-asia/thailand/phuket/"><img src="/images/thailand-phuket-beach-sunset.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="rc-body"><span class="rc-name">Phuket</span><span class="rc-price">from &pound;1,590</span></span></a><a class="rail-all" href="/golf-in-asia/">All nine golf cities &rarr;</a></div></aside></div>
 <section class="tiers">
   <div class="tiers-inner">
     <h2>Choose Your Level</h2>
-    <p class="sub">The same courses, the same rounds, the same care &mdash; the only thing that changes is where you rest your head. Pick the tier that fits the trip you want.</p>
-    <div class="tier-grid">
-      <div class="tier feat">
-        <div class="tname">Classic</div>
-        <h3>Refined comfort</h3>
-        <p class="hnote">Thai Akara &mdash; Lanna boutique, in the old city.</p>
-        <div class="price"><small>From</small><b><span class="lf-price" data-price-gbp="1985">&pound;1,985</span><span style="font-size:1rem">pp</span></b></div>
-      </div>
-      <div class="tier">
-        <div class="tname">Premium</div>
-        <h3>Elevated</h3>
-        <p class="hnote">Rachamankha &mdash; serene, architecturally exceptional, beside Wat Phra Singh.</p>
-        <div class="price poa"><small>From</small><b>On request</b></div>
-      </div>
-      <div class="tier">
-        <div class="tname">Ultra Luxury</div>
-        <h3>The finest</h3>
-        <p class="hnote">137 Pillars House or Anantara Chiang Mai &mdash; the city's two benchmark addresses.</p>
-        <div class="price poa"><small>From</small><b>On request</b></div>
-      </div>
-    </div>
+    <p class="sub">Same courses, same rounds, same care &mdash; the only thing that changes is where you rest your head.</p>
+    <div class="tier-grid"><div class="tier feat"><div class="tier-img"><img src="/images/hotel-thailand-chiang-mai-thai-akara.jpg" alt="" loading="lazy" onerror="this.closest('.tier-img').remove()"></div><div class="tier-body"><div class="tname">Classic</div><p class="tdef">Well-placed and full of character. Somewhere you&rsquo;d happily come back to, with everything where you expect it.</p><p class="hnote">Thai Akara</p><div class="price"><small>From</small><b>&pound;1,550<span>pp</span></b></div></div></div><div class="tier"><div class="tier-img"><img src="/images/hotel-thailand-chiang-mai-rachamankha.jpg" alt="" loading="lazy" onerror="this.closest('.tier-img').remove()"></div><div class="tier-body"><div class="tname">Premium</div><p class="tdef">A clear step up in address and finish &mdash; better rooms, a better outlook, a spa worth the time.</p><p class="hnote">Rachamankha</p><div class="price"><small>From</small><b>&pound;1,750<span>pp</span></b></div></div></div><div class="tier tier-ultra"><div class="tier-img"><img src="/images/hotel-thailand-chiang-mai-137-pillars-house.jpg" alt="" loading="lazy" onerror="this.closest('.tier-img').remove()"></div><div class="tier-body"><div class="tname">Ultra Luxury</div><p class="tdef">Landmark or design-led. Suites, service that anticipates, somewhere worth the trip on its own.</p><p class="hnote">137 Pillars House</p><div class="price"><small>From</small><b>&pound;1,990<span>pp</span></b></div></div></div></div>
   </div>
 </section>
 
@@ -283,7 +354,7 @@
   </div>
 </section>
 
-<section class="pkg-cta">
+<section id="enquire" class="pkg-cta">
   <h2>Plan Your Chiang Mai Week</h2>
   <p>Tell us your dates, group size and handicap range. We'll come back with an honest itinerary and pricing within one working day.</p>
   <a href="/contact.html" class="btn btn-rose">Start Planning &rarr;</a>

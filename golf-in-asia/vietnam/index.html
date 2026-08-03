@@ -32,7 +32,25 @@
     .dest-tab:hover, .dest-tab.active { color:var(--green); border-bottom-color:var(--bronze); }
     .dest-section { max-width:var(--max-width); margin:0 auto; padding:var(--space-2xl) var(--space-xl); }
     .dest-section h2 { font-size:2rem; color:var(--green); font-weight:400; }
-  </style>
+  
+.trips-band-removed{}
+.tb-inner{max-width:var(--max-width,1180px);margin:0 auto;padding:0 24px;}
+.tb-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:16px;}
+.tb-head h2{color:#f7f3ec;font-size:1.5rem;margin:0;}
+.tb-head span{font-size:.72rem;letter-spacing:.1em;color:#dcb684;}
+.tb-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;}
+.tb-card{display:flex;justify-content:space-between;align-items:baseline;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.16);border-radius:4px;padding:13px 15px;text-decoration:none;transition:background .15s;}
+.tb-card:hover{background:rgba(255,255,255,.10);}
+.tb-name{font-family:var(--font-serif,Georgia,serif);font-size:1.05rem;color:#f7f3ec;}
+.tb-price{font-size:.68rem;letter-spacing:.06em;color:rgba(247,243,236,.7);}
+
+.area-trip{display:flex;justify-content:space-between;align-items:center;gap:14px;background:var(--deep,#22301f);border-radius:5px;padding:15px 20px;margin:18px 0 6px;text-decoration:none;flex-wrap:wrap;}
+.area-trip:hover{background:#2c3f28;}
+.at-l{color:#f7f3ec;font-family:var(--font-serif,Georgia,serif);font-size:1.12rem;}
+.at-l small{display:block;font-family:var(--font-sans,sans-serif);font-size:.7rem;letter-spacing:.09em;color:#dcb684;text-transform:uppercase;margin-top:2px;}
+.at-r{color:#dcb684;font-size:.82rem;letter-spacing:.05em;white-space:nowrap;}
+.at-r b{color:#f7f3ec;font-size:1.05rem;}
+</style>
 </head>
 <body>
 
@@ -46,6 +64,7 @@
     <p>A coastline of world-class links and mountain courses by the game&#x27;s greatest designers — Norman, Faldo, Nicklaus, Jones — from the Mekong to the Chinese border.</p>
   </div>
 </section>
+
 
 <div class="dest-tabs">
   <div class="dest-tabs-inner">
@@ -124,6 +143,7 @@
     <div style="margin-bottom:var(--space-lg);">
       <div style="font-family:var(--font-sans); font-size:0.68rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--rose); margin-bottom:4px;">3 signature &middot; 7 courses</div>
       <h2>Central Vietnam</h2>
+<a class="area-trip" href="/golf-in-asia/vietnam/da-nang/"><span class="at-l">The Da Nang Golf Week<small>7 nights &middot; 3 rounds &middot; caddie &amp; buggy</small></span><span class="at-r">from <b>&pound;1,500</b> per person &rarr;</span></a>
       <p style="font-family:var(--font-serif); font-size:1.15rem; font-style:italic; line-height:1.6; color:var(--ink); max-width:64ch; margin-top:var(--space-sm);">Vietnam's golf coast, and the heart of any trip here. A run of world-class courses along one stretch of shore &mdash; Hoiana Shores, for many the finest in Asia, then Ba Na Hills in the clouds and Laguna Lang Co by the sea &mdash; with the lantern-lit beauty of Hoi An to finish each day.</p>
     </div>
     <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:var(--space-md); margin-bottom:var(--space-lg);">
@@ -178,6 +198,7 @@
     <div style="margin-bottom:var(--space-lg);">
       <div style="font-family:var(--font-sans); font-size:0.68rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--rose); margin-bottom:4px;">1 signature &middot; 5 courses</div>
       <h2>Ho Chi Minh City</h2>
+<a class="area-trip" href="/golf-in-asia/vietnam/ho-chi-minh/"><span class="at-l">The Ho Chi Minh City Golf Week<small>7 nights &middot; 3 rounds &middot; caddie &amp; buggy</small></span><span class="at-r">from <b>&pound;1,450</b> per person &rarr;</span></a>
       <p style="font-family:var(--font-serif); font-size:1.15rem; font-style:italic; line-height:1.6; color:var(--ink); max-width:64ch; margin-top:var(--space-sm);">The energy of the south, and a coast that hides a giant. Saigon itself for the buzz, then The Bluffs at Ho Tram &mdash; Greg Norman's links among the world's top 100 &mdash; an hour down the coast. A great city, and a bucket-list round beside it.</p>
     </div>
     <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:var(--space-md); margin-bottom:var(--space-lg);">
@@ -245,6 +266,7 @@
     <div style="margin-bottom:var(--space-lg);">
       <div style="font-family:var(--font-sans); font-size:0.68rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--rose); margin-bottom:4px;">1 signature &middot; 6 courses</div>
       <h2>Hanoi</h2>
+<a class="area-trip" href="/golf-in-asia/vietnam/hanoi/"><span class="at-l">The Hanoi Golf Week<small>7 nights &middot; 3 rounds &middot; caddie &amp; buggy</small></span><span class="at-r">from <b>&pound;1,450</b> per person &rarr;</span></a>
       <p style="font-family:var(--font-serif); font-size:1.15rem; font-style:italic; line-height:1.6; color:var(--ink); max-width:64ch; margin-top:var(--space-sm);">The capital, and the north's proving ground. Van Tri, widely rated the finest course in the north, anchors a growing spread of golf around the city &mdash; with the Old Quarter, the lake and the street food between rounds.</p>
     </div>
     <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:var(--space-md); margin-bottom:var(--space-lg);">

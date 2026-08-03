@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hua Hin Golf &mdash; Seven Nights | Lotus &amp; Fairways</title>
-  <meta name="description" content="A seven-night Hua Hin golf trip built around Black Mountain, one of Asia's finest courses. From &pound;1,785pp, with your choice of hotel.">
+  <meta name="description" content="A seven-night Hua Hin golf trip built around Black Mountain, one of Asia's finest courses. From &pound;1,650pp, with your choice of hotel.">
   <link rel="canonical" href="https://lotusfairways.com/golf-in-asia/thailand/hua-hin/">
   <meta property="og:title" content="Hua Hin Golf &mdash; Seven Nights | Lotus &amp; Fairways">
   <meta property="og:type" content="website">
@@ -55,7 +55,7 @@
     .pkg-intro { max-width:var(--max-width); margin:0 auto; padding:var(--space-3xl) var(--space-xl) var(--space-2xl); }
     .pkg-kicker { font-family:var(--font-sans); font-size:0.68rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--rose); margin-bottom:var(--space-md); }
     .pkg-lead { font-family:var(--font-serif); font-size:1.7rem; line-height:1.45; color:var(--green); max-width:24ch; margin-bottom:var(--space-xl); font-weight:400; }
-    .pkg-cols { display:grid; grid-template-columns:1fr 1.05fr; gap:var(--space-2xl); align-items:start; }
+    .pkg-cols { display:grid; grid-template-columns:1fr 1.05fr; gap:var(--space-2xl);  }
     .pkg-cols p { font-size:1.02rem; line-height:1.9; color:var(--slate); margin-bottom:var(--space-md); }
     @media(max-width:760px){ .pkg-cols { grid-template-columns:1fr; gap:var(--space-lg); } }
 
@@ -125,7 +125,84 @@
     .pkg-cta { background:var(--white); text-align:center; padding:var(--space-3xl) var(--space-xl); border-top:1px solid var(--rule); }
     .pkg-cta h2 { font-size:clamp(1.8rem,3vw,2.5rem); font-weight:400; color:var(--green); margin-bottom:var(--space-md); }
     .pkg-cta p { color:var(--warm-grey); max-width:46ch; margin:0 auto var(--space-lg); font-size:0.95rem; line-height:1.8; }
-  </style>
+  
+/* --- tier band: image + level definition, tightened --- */
+.tier { padding:0; overflow:hidden; }
+.tier-body { padding:var(--space-lg) var(--space-lg) var(--space-lg); display:flex; flex-direction:column; flex:1; }
+.tier-img { margin:0; line-height:0; background:rgba(255,255,255,0.06); }
+.tier-img img { width:100%; height:132px; object-fit:cover; display:block; }
+.tier .tname { margin-bottom:8px; }
+.tier .tdef { font-size:0.82rem; line-height:1.65; color:rgba(247,243,236,0.66); margin:0 0 12px; }
+.tier .hnote { font-size:0.92rem; color:var(--white); line-height:1.6; margin:0 0 var(--space-lg); min-height:0; padding-top:12px; border-top:1px solid rgba(255,255,255,0.10); }
+.tiers-inner .sub { margin-bottom:var(--space-xl); }
+@media (max-width:820px){ .tier-grid { grid-template-columns:1fr; } .tier-img img { height:150px; } }
+
+
+/* --- at a glance --- */
+.glance{background:var(--parchment-dark,#efe9dd);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);}
+.glance-inner{max-width:var(--max-width);margin:0 auto;padding:var(--space-lg);display:flex;flex-wrap:wrap;gap:var(--space-xl);align-items:center;}
+.g-item{display:flex;flex-direction:column;gap:3px;}
+.g-lab{font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--bronze);}
+.g-val{font-size:.9rem;color:var(--deep);}
+.g-cta{margin-left:auto;}
+.btn-glance{display:inline-block;background:var(--green);color:var(--white);padding:11px 22px;border-radius:3px;font-size:.8rem;letter-spacing:.06em;text-decoration:none;}
+.btn-glance:hover{background:var(--deep);}
+/* --- why --- */
+.why-inner{max-width:760px;margin:0 auto;padding:var(--space-3xl) var(--space-lg) var(--space-2xl);}
+.why h2{font-size:2rem;margin-bottom:var(--space-lg);}
+.why p{font-size:1.02rem;line-height:1.95;margin-bottom:var(--space-lg);color:var(--slate);}
+/* --- courses --- */
+.courses{background:var(--parchment);}
+.courses-inner{max-width:var(--max-width);margin:0 auto;padding:var(--space-2xl) var(--space-lg);}
+.courses h2{font-size:2rem;margin-bottom:var(--space-sm);}
+.courses .sub{color:var(--slate);margin-bottom:var(--space-xl);font-size:.94rem;}
+.course-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:var(--space-lg);}
+.course-card{background:#fff;border:1px solid var(--rule);border-radius:4px;padding:var(--space-lg);}
+.course-card h3{font-size:1.25rem;margin-bottom:10px;}
+.course-card p{font-size:.9rem;line-height:1.75;color:var(--slate);margin-bottom:var(--space-md);}
+.course-card a{font-size:.78rem;letter-spacing:.06em;color:var(--bronze);text-decoration:none;}
+.course-card a:hover{text-decoration:underline;}
+/* --- ultra tier: restraint, not decoration --- */
+.tier.tier-ultra{border:1px solid rgba(255,255,255,0.18);background:transparent;}
+.tier.tier-ultra .tier-body{padding-top:calc(var(--space-lg) + 4px);}
+.tier.tier-ultra .tname{position:relative;padding-bottom:10px;}
+.tier.tier-ultra .tname::after{content:"";position:absolute;left:0;bottom:0;width:34px;height:1px;background:var(--bronze-light,#dcb684);}
+@media(max-width:820px){.glance-inner{gap:var(--space-lg);}.g-cta{margin-left:0;width:100%;}.btn-glance{display:block;text-align:center;}}
+
+
+/* --- full-width image bands --- */
+.img-band{position:relative;line-height:0;}
+.img-band img{width:100%;height:360px;object-fit:cover;display:block;}
+.band-cap{position:absolute;bottom:14px;right:18px;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(247,243,236,.9);text-shadow:0 1px 10px rgba(0,0,0,.55);line-height:1.4;}
+@media(max-width:820px){.img-band img{height:210px;}}
+
+
+/* --- middle-of-page: two columns with a sticky trip rail --- */
+.mid-wrap{max-width:var(--max-width);margin:0 auto;}
+.mid-main{min-width:0;}
+.trip-rail{display:none;}
+@media(min-width:1100px){
+  .mid-wrap{display:grid;grid-template-columns:minmax(0,1fr) 264px;gap:56px;padding:0 var(--space-lg);}
+  .trip-rail{display:block;}
+  .rail-inner{position:sticky;top:28px;padding:var(--space-xl) 0;}
+}
+.rail-head{font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--bronze);margin-bottom:14px;}
+.rail-card{display:block;background:#fff;border:1px solid var(--rule);border-radius:6px;overflow:hidden;margin-bottom:14px;text-decoration:none;transition:transform .15s ease, box-shadow .15s ease;}
+.rail-card:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(34,48,31,.10);}
+.rail-card img{width:100%;height:110px;object-fit:cover;display:block;}
+.rc-body{display:flex;justify-content:space-between;align-items:baseline;padding:10px 12px;}
+.rc-name{font-family:var(--font-serif);font-size:1.02rem;color:var(--deep);}
+.rc-price{font-size:.7rem;letter-spacing:.06em;color:var(--slate);}
+.rail-all{display:block;font-size:.72rem;letter-spacing:.08em;color:var(--bronze);text-decoration:none;margin-top:4px;}
+.rail-all:hover{text-decoration:underline;}
+/* --- in-flow image band inside the itinerary --- */
+.band-mid{line-height:0;margin:var(--space-2xl) 0;position:relative;}
+.band-mid img{width:100%;height:280px;object-fit:cover;display:block;border-radius:6px;}
+@media(max-width:820px){.band-mid img{height:190px;}}
+/* --- contrast: Courses sits on white --- */
+.courses{background:#fff;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);}
+
+</style>
 </head>
 <body>
 
@@ -141,7 +218,7 @@
       <div class="f"><small>Duration</small><b>7 nights</b></div>
       <div class="f"><small>Golf</small><b>3 rounds</b></div>
       <div class="f"><small>Basis</small><b>Twin share</b></div>
-      <div class="f"><small>From</small><b class="from"><span class="lf-price" data-price-gbp="1785">&pound;1,785</span>pp</b></div>
+      <div class="f"><small>From</small><b class="from"><span class="lf-price" data-price-gbp="1785">&pound;1,650</span>pp</b></div>
     </div>
   </div>
 </section>
@@ -158,22 +235,124 @@
   <p class="pkg-lead">Thailand's finest pure golf, a relaxed beach town, and a week where the course is the point.</p>
   <div class="pkg-cols">
     <div><p>When the priority is the golf above everything else, Hua Hin is the answer. Black Mountain consistently ranks among the top ten courses in Asia &mdash; tour conditioning, extraordinary caddies and a layout that rewards every level of player.</p></div>
-    <div><p>Three rounds across Black Mountain, Banyan and Majestic Creek, wrapped in a relaxed royal town that keeps its evenings gentle. Green fees, caddies and private transfers all handled; you choose where you stay.</p><p>Easily paired with Bangkok, two and a half hours up the road &mdash; ask us about combining the two.</p></div>
+    <div><p>Three rounds across Black Mountain, Pineapple Valley and Majestic Creek, wrapped in a relaxed royal town that keeps its evenings gentle. Green fees, caddies and private transfers all handled; you choose where you stay.</p><p>Easily paired with Bangkok, two and a half hours up the road &mdash; ask us about combining the two.</p></div>
   </div>
 </div>
 
-<section class="itin">
+<section class="glance">
+  <div class="glance-inner">
+    <div class="g-item"><span class="g-lab">Courses</span><span class="g-val">Majestic Creek &middot; Pineapple Valley &middot; Black Mountain</span></div>
+    <div class="g-item"><span class="g-lab">Rounds</span><span class="g-val">3 &middot; caddie &amp; buggy included</span></div>
+    <div class="g-item"><span class="g-lab">Nights</span><span class="g-val">7</span></div>
+    <div class="g-item"><span class="g-lab">From</span><span class="g-val">&pound;1,650 per person</span></div>
+    <div class="g-cta"><a href="#enquire" class="btn-glance">Start your enquiry</a></div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="why-inner">
+    <h2>Why Hua Hin</h2>
+    <p>Hua Hin was Thailand&rsquo;s first beach resort, and it still behaves like one. The royal family have summered here since the 1920s, and that single fact has shaped everything since &mdash; the town grew up quietly, on its own terms, and never turned into the sort of place you have to apologise for booking. The old railway station is still there. So is the night market. It is a working Thai town that happens to have a beach, rather than a beach that had a town built around it.</p>
+    <p>For golf, that matters more than it sounds. The courses sit inland among the hills, ten to thirty minutes from the seafront, which means you play somewhere genuinely rural and sleep somewhere with restaurants and a proper evening. You are not marooned at a resort, and you are not fighting traffic to reach a tee.</p>
+    <p>Three courses in a week is the right rhythm here. Black Mountain alone justifies the trip &mdash; and the week is routed to build to it, opening at Majestic Creek and stepping up through Pineapple Valley, with the days between the rounds the point rather than the filler. Bangkok is a straightforward drive north, and Chiang Mai is a direct flight, so Hua Hin also works as the opening or closing leg of something longer.</p>
+  </div>
+</section>
+
+<div class="mid-wrap"><div class="mid-main"><section class="itin">
   <div class="itin-inner">
     <h2>The Week</h2>
     <p class="sub">A suggested shape &mdash; every day flexes to your group, your handicaps and your pace. Nothing here is fixed in stone.</p>
-    <div class="day"><div class="day-no">Day<b>1</b></div><div><h4>Arrival</h4><p>Private transfer to Hua Hin. Evening at leisure &mdash; the night market and beachfront restaurants are a short hop away.</p></div></div>
-    <div class="day"><div class="day-no">Day<b>2</b></div><div><h4>Black Mountain Golf Club <span class="round-pill">Round 1</span></h4><p>Asia's top-ten benchmark, and the reason most golfers come to Hua Hin. Tour conditioning and a layout that rewards good golf.</p></div></div>
-    <div class="day"><div class="day-no">Day<b>3</b></div><div><h4>At leisure</h4><p>A slow day by the beach, a spa afternoon, or the famous Hua Hin night market come evening.</p></div></div>
-    <div class="day"><div class="day-no">Day<b>4</b></div><div><h4>Banyan Golf Club <span class="round-pill">Round 2</span></h4><p>A rolling, scenic layout with real variety &mdash; consistently rated among Thailand's best resort courses.</p></div></div>
-    <div class="day"><div class="day-no">Day<b>5</b></div><div><h4>At leisure</h4><p>Time to explore the royal town, the vineyards inland, or simply rest between rounds.</p></div></div>
-    <div class="day"><div class="day-no">Day<b>6</b></div><div><h4>Majestic Creek Country Club <span class="round-pill">Round 3</span></h4><p>Wide, generous fairways and a calm finish to the week's golf, out among the hills.</p></div></div>
-    <div class="day"><div class="day-no">Day<b>7</b></div><div><h4>At leisure</h4><p>A final day at your own pace &mdash; beach, spa, or a farewell dinner on the seafront.</p></div></div>
-    <div class="day"><div class="day-no">Day<b>8</b></div><div><h4>Departure</h4><p>Private transfer back to Bangkok's airports in good time for your flight.</p></div></div>
+    <div class="day"><div class="day-no">Day<b>1</b></div><div><h4>Arrival</h4><p>Private transfer down from Bangkok, roughly three hours with a stop if you want one. Nothing is asked of you today. The night market runs the length of Dechanuchit Road and is the easiest possible introduction to the town &mdash; grilled seafood, cheap beer, and no need to have booked anything.</p></div></div>
+    <div class="day"><div class="day-no">Day<b>2</b></div><div><h4>Majestic Creek Golf Club <span class="round-pill">Round 1</span></h4><p>The week opens easy, and that&rsquo;s the strategy. Majestic Creek &mdash; newly renovated, out in the foothills &mdash; is wide, generous and forgiving of a swing still shaking off the flight. Scores tend to be good here, confidence arrives early, and the week has somewhere to build to.</p></div></div>
+    <div class="band-mid"><img src="/images/golf-thailand-hua-hin-majestic-creek.jpg" alt="" loading="lazy" onerror="this.closest('.band-mid').remove()"><div class="band-cap">Majestic Creek</div></div>
+<div class="day"><div class="day-no">Day<b>3</b></div><div><h4>At leisure</h4><p>Deliberately empty, and well placed &mdash; the opening round played, the serious golf still ahead. Hua Hin rewards a slow day better than most golf destinations &mdash; the beach is long enough to walk properly, the spas are good and absurdly cheap, and the vineyards inland make a decent half-day if anyone is restless. We can arrange any of it, or none of it.</p></div></div>
+    <div class="day"><div class="day-no">Day<b>4</b></div><div><h4>Pineapple Valley Golf Club <span class="round-pill">Round 2</span></h4><p>Pineapple Valley is the step up, and the one people are surprised by. The name is literal &mdash; laid out over old plantation land &mdash; and it rolls far more than you expect from a Thai resort course, with variety that holds your attention right through the back nine. Asia&rsquo;s Best New Course of 2009, and it has aged well.</p></div></div>
+    <div class="band-mid"><img src="/images/golf-thailand-hua-hin-pineapple-valley.jpg" alt="" loading="lazy" onerror="this.closest('.band-mid').remove()"><div class="band-cap">Pineapple Valley</div></div>
+<div class="day"><div class="day-no">Day<b>5</b></div><div><h4>At leisure</h4><p>Another open day, and the one most groups use properly. The royal town is small enough to walk &mdash; the railway station is worth twenty minutes on its own &mdash; and the fishing pier at the north end of the beach is where to eat if you want the version of Hua Hin the guidebooks skip.</p></div></div>
+    <div class="day"><div class="day-no">Day<b>6</b></div><div><h4>Black Mountain Country Club <span class="round-pill">Round 3</span></h4><p>The course the whole week has been building to. Black Mountain is why golfers come to Hua Hin &mdash; an Asian PGA Tour venue with tour conditioning, room off the tee and proper questions on approach. Take the early tee time for the temperature as much as the light, and let lunch at the clubhouse close the golf properly.</p></div></div>
+    <div class="band-mid"><img src="/images/golf-thailand-hua-hin-black-mountain.jpg" alt="" loading="lazy" onerror="this.closest('.band-mid').remove()"><div class="band-cap">Black Mountain &middot; Asian PGA Tour venue</div></div>
+<div class="day"><div class="day-no">Day<b>7</b></div><div><h4>At leisure</h4><p>Yours entirely. Most groups play the morning again somewhere, or don&rsquo;t, and spend the last evening on the seafront. We&rsquo;ll book the table wherever you want it.</p></div></div>
+    <div class="day"><div class="day-no">Day<b>8</b></div><div><h4>Departure</h4><p>Private transfer back to either Bangkok airport, timed around your flight rather than a fixed departure. If you are continuing to Chiang Mai or the islands, we build that in instead.</p></div></div>
+  </div>
+</section>
+
+<section class="courses">
+  <div class="courses-inner">
+    <h2>The Courses</h2>
+    <p class="sub">Three rounds in the order the golf deserves &mdash; opening easy, building to Black Mountain. Swap any of them; this is the routing we&rsquo;d start you with.</p>
+    <div class="course-grid">
+      <div class="course-card">
+        <h3>Majestic Creek Country Club</h3>
+        <p>Where the week begins. Newly renovated out in the foothills &mdash; wide, generous, and the round that finds your swing before the serious tests arrive.</p>
+        <a href="/golf-in-asia/thailand/#hua-hin">More on Hua Hin golf &rarr;</a>
+      </div>
+      <div class="course-card">
+        <h3>Pineapple Valley Golf Club</h3>
+        <p>The mid-week step up. Old plantation land that rolls far more than you expect &mdash; Asia&rsquo;s Best New Course of 2009, and a fairer test than Black Mountain when handicaps are spread.</p>
+        <a href="/golf-in-asia/thailand/#hua-hin">More on Hua Hin golf &rarr;</a>
+      </div>
+      <div class="course-card">
+        <h3>Black Mountain Golf Club</h3>
+        <p>The crescendo. Asian PGA Tour venue, tour conditioning, and the reason most golfers come to Hua Hin. We route the week so you arrive here playing your best golf.</p>
+        <a href="/golf-in-asia/thailand/#hua-hin">More on Hua Hin golf &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+<aside class="trip-rail">
+  <div class="rail-inner">
+    <div class="rail-head">More Thailand weeks</div>
+    <a class="rail-card" href="/golf-in-asia/thailand/bangkok/">
+      <img src="/images/thailand-bangkok-wat-arun.jpg" alt="" loading="lazy" onerror="this.remove()">
+      <span class="rc-body"><span class="rc-name">Bangkok</span><span class="rc-price">from &pound;1,450</span></span>
+    </a>
+    <a class="rail-card" href="/golf-in-asia/thailand/chiang-mai/">
+      <img src="/images/golf-thailand-chiang-mai-dusk.jpg" alt="" loading="lazy" onerror="this.remove()">
+      <span class="rc-body"><span class="rc-name">Chiang Mai</span><span class="rc-price">from &pound;1,550</span></span>
+    </a>
+    <a class="rail-card" href="/golf-in-asia/thailand/phuket/">
+      <img src="/images/thailand-phuket-beach-sunset.jpg" alt="" loading="lazy" onerror="this.remove()">
+      <span class="rc-body"><span class="rc-name">Phuket</span><span class="rc-price">from &pound;1,590</span></span>
+    </a>
+    <a class="rail-all" href="/golf-in-asia/">All nine golf cities &rarr;</a>
+  </div>
+</aside>
+</div>
+<section class="tiers">
+  <div class="tiers-inner">
+    <h2>Choose Your Level</h2>
+    <p class="sub">Same courses, same rounds, same care &mdash; the only thing that changes is where you rest your head.</p>
+    <div class="tier-grid">
+      <div class="tier feat">
+        <div class="tier-img"><img src="/images/hotel-thailand-hua-hin-centara-grand.jpg" alt="" loading="lazy" onerror="this.closest('.tier-img').remove()"></div>
+        <div class="tier-body">
+          <div class="tname">Classic</div>
+          <p class="tdef">Well-placed and full of character. Somewhere you&rsquo;d happily come back to, with everything where you expect it.</p>
+          <p class="hnote">Centara Grand Beach Resort &mdash; established five-star, right on the beach.</p>
+          <div class="price"><small>From</small><b><span class="lf-price" data-price-gbp="1785">&pound;1,650</span><span style="font-size:1rem">pp</span></b></div>
+        </div>
+      </div>
+      <div class="tier">
+        <div class="tier-img"><img src="/images/hotel-thailand-hua-hin-hyatt-regency.jpg" alt="" loading="lazy" onerror="this.closest('.tier-img').remove()"></div>
+        <div class="tier-body">
+          <div class="tname">Premium</div>
+          <p class="tdef">A clear step up in address and finish — better rooms, better outlook, a spa worth the time.</p>
+          <p class="hnote">Hyatt Regency Hua Hin &mdash; strong beach position, excellent facilities.</p>
+          <div class="price"><small>From</small><b>&pound;1,725<span>pp</span></b></div>
+        </div>
+      </div>
+      <div class="tier tier-ultra">
+        <div class="tier-img"><img src="/images/hotel-thailand-hua-hin-cape-nidhra.jpg" alt="" loading="lazy" onerror="this.closest('.tier-img').remove()"></div>
+        <div class="tier-body">
+          <div class="tname">Ultra Luxury</div>
+          <p class="tdef">Landmark or design-led. Suites, service that anticipates, somewhere worth the trip on its own.</p>
+          <p class="hnote">Cape Nidhra &mdash; design-led all-suite boutique, on the seafront.</p>
+          <div class="price"><small>From</small><b>&pound;1,950<span>pp</span></b></div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -186,7 +365,7 @@
       <ul>
         <li>7 nights' accommodation at your chosen hotel tier</li>
         <li>3 rounds of golf including green fees</li>
-        <li>Caddie for every round</li>
+        <li>Caddie and golf buggy for every round</li>
         <li>All private airport and course transfers</li>
         <li>Daily breakfast</li>
         <li>Personal itinerary planning and in-resort support</li>
@@ -196,7 +375,7 @@
       <h3>Not included</h3>
       <ul>
         <li>International flights &mdash; we can arrange on request</li>
-        <li>Golf carts and caddie gratuities</li>
+        <li>Caddie gratuities</li>
         <li>Lunches, dinners and drinks unless specified</li>
         <li>Travel insurance</li>
       </ul>
@@ -204,32 +383,7 @@
   </div>
 </div>
 
-<section class="tiers">
-  <div class="tiers-inner">
-    <h2>Choose Your Level</h2>
-    <p class="sub">The same courses, the same rounds, the same care &mdash; the only thing that changes is where you rest your head. Pick the tier that fits the trip you want.</p>
-    <div class="tier-grid">
-      <div class="tier feat">
-        <div class="tname">Classic</div>
-        <h3>Refined comfort</h3>
-        <p class="hnote">Centara Grand Beach Resort &mdash; established five-star, right on the beach.</p>
-        <div class="price"><small>From</small><b><span class="lf-price" data-price-gbp="1785">&pound;1,785</span><span style="font-size:1rem">pp</span></b></div>
-      </div>
-      <div class="tier">
-        <div class="tname">Premium</div>
-        <h3>Elevated</h3>
-        <p class="hnote">Hyatt Regency Hua Hin &mdash; strong beach position, excellent facilities.</p>
-        <div class="price poa"><small>From</small><b>On request</b></div>
-      </div>
-      <div class="tier">
-        <div class="tname">Ultra Luxury</div>
-        <h3>Boutique flagship</h3>
-        <p class="hnote">Cape Nidhra &mdash; design-led all-suite boutique, on the seafront.</p>
-        <div class="price poa"><small>From</small><b>On request</b></div>
-      </div>
-    </div>
-  </div>
-</section>
+
 
 <section class="more-trips">
   <div class="more-trips-inner">
@@ -278,7 +432,7 @@
   </div>
 </section>
 
-<section class="pkg-cta">
+<section id="enquire" class="pkg-cta">
   <h2>Plan Your Hua Hin Week</h2>
   <p>Tell us your dates, group size and handicap range. We'll come back with an honest itinerary and pricing within one working day.</p>
   <a href="/contact.html" class="btn btn-rose">Start Planning &rarr;</a>

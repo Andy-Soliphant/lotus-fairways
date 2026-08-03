@@ -32,7 +32,25 @@
     .dest-tab:hover, .dest-tab.active { color:var(--green); border-bottom-color:var(--bronze); }
     .dest-section { max-width:var(--max-width); margin:0 auto; padding:var(--space-2xl) var(--space-xl); }
     .dest-section h2 { font-size:2rem; color:var(--green); font-weight:400; }
-  </style>
+  
+.trips-band-removed{}
+.tb-inner{max-width:var(--max-width,1180px);margin:0 auto;padding:0 24px;}
+.tb-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:16px;}
+.tb-head h2{color:#f7f3ec;font-size:1.5rem;margin:0;}
+.tb-head span{font-size:.72rem;letter-spacing:.1em;color:#dcb684;}
+.tb-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;}
+.tb-card{display:flex;justify-content:space-between;align-items:baseline;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.16);border-radius:4px;padding:13px 15px;text-decoration:none;transition:background .15s;}
+.tb-card:hover{background:rgba(255,255,255,.10);}
+.tb-name{font-family:var(--font-serif,Georgia,serif);font-size:1.05rem;color:#f7f3ec;}
+.tb-price{font-size:.68rem;letter-spacing:.06em;color:rgba(247,243,236,.7);}
+
+.area-trip{display:flex;justify-content:space-between;align-items:center;gap:14px;background:var(--deep,#22301f);border-radius:5px;padding:15px 20px;margin:18px 0 6px;text-decoration:none;flex-wrap:wrap;}
+.area-trip:hover{background:#2c3f28;}
+.at-l{color:#f7f3ec;font-family:var(--font-serif,Georgia,serif);font-size:1.12rem;}
+.at-l small{display:block;font-family:var(--font-sans,sans-serif);font-size:.7rem;letter-spacing:.09em;color:#dcb684;text-transform:uppercase;margin-top:2px;}
+.at-r{color:#dcb684;font-size:.82rem;letter-spacing:.05em;white-space:nowrap;}
+.at-r b{color:#f7f3ec;font-size:1.05rem;}
+</style>
 </head>
 <body>
 
@@ -46,6 +64,7 @@
     <p>Asia&#x27;s most established golf destination — championship courses, expert caddies, and the culture that changes how you think about the game. Built around you, over ten to fourteen nights.</p>
   </div>
 </section>
+
 
 <div class="dest-tabs">
   <div class="dest-tabs-inner">
@@ -139,6 +158,7 @@
     <div style="margin-bottom:var(--space-lg);">
       <div style="font-family:var(--font-sans); font-size:0.68rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--rose); margin-bottom:4px;">4 signature &middot; 13 courses</div>
       <h2>Bangkok</h2>
+<a class="area-trip" href="/golf-in-asia/thailand/bangkok/"><span class="at-l">The Bangkok Golf Week<small>7 nights &middot; 3 rounds &middot; caddie &amp; buggy</small></span><span class="at-r">from <b>&pound;1,450</b> per person &rarr;</span></a>
       <p style="font-family:var(--font-serif); font-size:1.15rem; font-style:italic; line-height:1.6; color:var(--ink); max-width:64ch; margin-top:var(--space-sm);">Asia's great golf capital. More than fifty courses lie within reach of the city &mdash; we've played most, and show you the ones we return to. Championship layouts by day; one of the world's most exciting cities by night.</p>
     </div>
     <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:var(--space-md); margin-bottom:var(--space-lg);">
@@ -224,6 +244,7 @@
     <div style="margin-bottom:var(--space-lg);">
       <div style="font-family:var(--font-sans); font-size:0.68rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--rose); margin-bottom:4px;">2 signature &middot; 8 courses</div>
       <h2>Hua Hin</h2>
+<a class="area-trip" href="/golf-in-asia/thailand/hua-hin/"><span class="at-l">The Hua Hin Golf Week<small>7 nights &middot; 3 rounds &middot; caddie &amp; buggy</small></span><span class="at-r">from <b>&pound;1,650</b> per person &rarr;</span></a>
       <p style="font-family:var(--font-serif); font-size:1.15rem; font-style:italic; line-height:1.6; color:var(--ink); max-width:64ch; margin-top:var(--space-sm);">The royal resort town, and Thailand's most relaxed golf. A dozen courses along this stretch of coast &mdash; from Black Mountain's tour-conditioned fairways to the hills behind town. Where the golf comes first and the pace stays gentle.</p>
     </div>
     <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:var(--space-md); margin-bottom:var(--space-lg);">
@@ -234,7 +255,7 @@
         <div style="font-size:0.72rem;color:var(--green);background:#eef3ec;border:1px solid var(--rule);border-radius:2px;padding:7px 11px;margin:var(--space-sm) 0;line-height:1.5;">Host of the True Thailand Classic (co-sanctioned Asian &amp; European Tour) and the Black Mountain Masters; regularly ranked among Thailand&#x27;s very best.</div>
       </div>
       <div style="background:var(--parchment); border:1px solid var(--rule); border-top:3px solid var(--bronze); border-radius:3px; padding:var(--space-lg);">
-        <h4 style="font-family:var(--font-serif); font-size:1.5rem; font-weight:400; color:var(--green); margin-bottom:2px;">Pineapple Valley Golf Club <span style="font-size:0.6rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--warm-grey);font-style:italic;">(formerly Banyan Golf Club)</span></h4>
+        <h4 style="font-family:var(--font-serif); font-size:1.5rem; font-weight:400; color:var(--green); margin-bottom:2px;">Pineapple Valley Golf Club <span style="font-size:0.6rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--warm-grey);font-style:italic;">(formerly Pineapple Valley Golf Club)</span></h4>
         <div style="font-family:var(--font-sans); font-size:0.72rem; letter-spacing:0.03em; color:var(--warm-grey); margin-bottom:var(--space-sm);">Pirapon Namatra &middot; 18 holes &middot; par 72</div>
         <p style="font-family:var(--font-serif); font-style:italic; font-size:1.1rem; line-height:1.5; color:var(--ink); margin-bottom:6px;">&ldquo;Pineapple, formerly known as Banyan. The name changed, the quality didn&#x27;t.&rdquo;</p>
         <div style="font-size:0.72rem;color:var(--green);background:#eef3ec;border:1px solid var(--rule);border-radius:2px;padding:7px 11px;margin:var(--space-sm) 0;line-height:1.5;">Voted Thailand&#x27;s Best Golf Club 2023 by 15,000 golfers; Rolex Top-1,000 in the world; Golf Digest Thailand&#x27;s 6th best (2022).</div>
@@ -344,6 +365,7 @@
     <div style="margin-bottom:var(--space-lg);">
       <div style="font-family:var(--font-sans); font-size:0.68rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--rose); margin-bottom:4px;">3 signature &middot; 8 courses</div>
       <h2>Phuket</h2>
+<a class="area-trip" href="/golf-in-asia/thailand/phuket/"><span class="at-l">The Phuket Golf Week<small>7 nights &middot; 3 rounds &middot; caddie &amp; buggy</small></span><span class="at-r">from <b>&pound;1,590</b> per person &rarr;</span></a>
       <p style="font-family:var(--font-serif); font-size:1.15rem; font-style:italic; line-height:1.6; color:var(--ink); max-width:64ch; margin-top:var(--space-sm);">Island golf at its finest. A handful of genuinely world-class courses across the island &mdash; Blue Canyon's championship pedigree, Red Mountain's drama, Aquella's coastal calm &mdash; then the Andaman beaches to finish.</p>
     </div>
     <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:var(--space-md); margin-bottom:var(--space-lg);">
@@ -403,6 +425,7 @@
     <div style="margin-bottom:var(--space-lg);">
       <div style="font-family:var(--font-sans); font-size:0.68rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--rose); margin-bottom:4px;">2 signature &middot; 8 courses</div>
       <h2>Chiang Mai</h2>
+<a class="area-trip" href="/golf-in-asia/thailand/chiang-mai/"><span class="at-l">The Chiang Mai Golf Week<small>7 nights &middot; 3 rounds &middot; caddie &amp; buggy</small></span><span class="at-r">from <b>&pound;1,550</b> per person &rarr;</span></a>
       <p style="font-family:var(--font-serif); font-size:1.15rem; font-style:italic; line-height:1.6; color:var(--ink); max-width:64ch; margin-top:var(--space-sm);">The cool north. Mountain courses in the foothills, a gentler climate, and the cultural heart of old Lanna between rounds &mdash; a change of pace from the coasts and the capital.</p>
     </div>
     <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:var(--space-md); margin-bottom:var(--space-lg);">
