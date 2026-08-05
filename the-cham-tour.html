@@ -49,7 +49,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(to top, rgba(20,26,20,0.86) 0%, rgba(20,26,20,0.3) 52%, rgba(20,26,20,0.12) 100%);
+      background: linear-gradient(to top, rgba(26,18,8,0.82) 0%, rgba(26,18,8,0.25) 50%, rgba(26,18,8,0.1) 100%);
     }
     .signature-hero-content {
       position: relative;
@@ -60,32 +60,118 @@
       width: 100%;
       color: var(--parchment);
     }
-    .signature-hero-content .eyebrow { color: var(--bronze); }
+    .signature-hero-content .eyebrow { color: var(--bronze-light); margin-bottom: var(--space-md); }
+    .signature-hero-content h1 { color: var(--white); margin-bottom: var(--space-md); max-width: 800px; }
     .signature-hero-meta {
       display: flex;
+      gap: var(--space-xl);
       flex-wrap: wrap;
-      gap: var(--space-lg) var(--space-2xl);
       margin-top: var(--space-lg);
-    }
-    .signature-hero-meta div {
+      font-family: var(--font-sans);
       font-size: 0.85rem;
-      color: var(--parchment-dark);
-      line-height: 1.6;
     }
-    .signature-hero-meta strong {
-      display: block;
-      font-family: var(--font-serif);
-      font-size: 1.5rem;
-      font-weight: 400;
-      color: var(--parchment);
-      letter-spacing: 0.01em;
+    .signature-hero-meta strong { display: block; font-family: var(--font-serif); font-size: 1.4rem; font-weight: 400; }
+
+    .at-a-glance {
+      background: var(--white);
+      border-radius: 4px;
+      box-shadow: var(--shadow-md);
+      padding: var(--space-xl);
+      margin-top: -90px;
+      position: relative;
+      z-index: 2;
+      max-width: var(--max-width);
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .at-a-glance-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--space-lg);
+    }
+    .at-a-glance-item h4 { color: var(--bronze); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 6px; font-family: var(--font-sans); font-weight: 500; }
+    .at-a-glance-item p { font-size: 0.95rem; color: var(--deep); margin: 0; line-height: 1.5; }
+
+    .price-note {
+      font-size: 0.75rem;
+      color: var(--warm-grey);
+      font-style: italic;
+      margin-top: var(--space-sm);
     }
 
-    /* The water thread — the three waters this journey travels */
+    .intro-text {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .intro-text p { font-size: 1.1rem; line-height: 1.9; }
+
+    .timeline { max-width: 880px; margin: 0 auto; }
+    .day-block {
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      gap: var(--space-lg);
+      padding: var(--space-xl) 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .day-block:last-child { border-bottom: none; }
+    .day-number {
+      font-family: var(--font-serif);
+      font-size: 2.2rem;
+      color: var(--bronze);
+      line-height: 1;
+    }
+    .day-number span { display: block; font-family: var(--font-sans); font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--warm-grey); margin-top: 6px; }
+    .day-title { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 400; margin-bottom: 10px; color: var(--deep); }
+    .day-block p { margin-bottom: 12px; }
+    .day-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+    .day-tag {
+      font-size: 0.68rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 20px;
+      background: var(--rose-pale);
+      color: var(--rose);
+      font-family: var(--font-sans);
+    }
+    .day-tag.golf { background: #e8efe9; color: var(--green); }
+    .day-tag.whisky { background: #f3ead9; color: var(--bronze); }
+
+    .inclusions-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-2xl);
+      max-width: 880px;
+      margin: 0 auto;
+    }
+    @media (max-width: 700px) { .inclusions-grid { grid-template-columns: 1fr; gap: var(--space-xl); } }
+    .inclusions-grid h4 { font-family: var(--font-sans); font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: var(--space-md); }
+    .inclusions-grid ul li { font-size: 0.92rem; padding: 8px 0; border-bottom: 1px solid var(--rule); color: var(--slate); }
+    .inclusions-grid ul li:last-child { border-bottom: none; }
+
+    .gallery-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-sm);
+    }
+    .gallery-strip img { width: 100%; height: 200px; object-fit: cover; border-radius: 2px; }
+    @media (max-width: 700px) { .gallery-strip { grid-template-columns: repeat(2, 1fr); } }
+
+    .cta-band {
+      background: var(--green);
+      color: var(--parchment);
+      text-align: center;
+      padding: var(--space-3xl) var(--space-xl);
+    }
+    .cta-band h2 { color: var(--white); margin-bottom: var(--space-md); }
+    .cta-band p { color: var(--parchment-dark); max-width: 560px; margin: 0 auto var(--space-lg); font-size: 1rem; }
+  
+    /* ── Page-local additions for The Cham Tour ── */
     .waters-band {
       background: var(--green);
       color: var(--parchment);
-      padding: var(--space-lg) var(--space-xl);
+      padding: var(--space-xl) var(--space-xl);
       text-align: center;
     }
     .waters-band .waters-inner {
@@ -99,52 +185,42 @@
       font-size: 0.72rem;
       letter-spacing: 0.24em;
       text-transform: uppercase;
+      color: var(--parchment);
     }
     .waters-band .sep { color: var(--bronze); }
     .waters-band .note {
       display: block;
-      max-width: var(--max-width);
+      max-width: 640px;
       margin: 0.9rem auto 0;
       font-family: var(--font-serif);
       font-style: italic;
-      font-size: 1.15rem;
+      font-size: 1.2rem;
       letter-spacing: 0;
       text-transform: none;
       color: var(--parchment-dark);
     }
 
-    /* Stop tags — page-local, self-contained so they don't rely on .golf/.whisky */
-    .day-tag.water {
-      background: rgba(196, 154, 94, 0.16);
-      color: #8a6524;
-      border: 1px solid rgba(196, 154, 94, 0.5);
-    }
-    .day-tag.stay {
-      background: rgba(155, 58, 90, 0.09);
-      color: var(--rose);
-      border: 1px solid rgba(155, 58, 90, 0.32);
-    }
+    /* Stop tags — self-contained, no reliance on .golf / .whisky */
+    .day-tag.water { background: #f3ead9; color: #8a6524; }
+    .day-tag.stay  { background: #f5e7ec; color: var(--rose); }
 
     .invitation-band {
       background: var(--green);
       color: var(--parchment);
       padding: var(--space-3xl) var(--space-xl);
     }
-    .invitation-band .inner {
-      max-width: 720px;
-      margin: 0 auto;
-    }
-    .invitation-band .eyebrow { color: var(--bronze); }
-    .invitation-band h2 {
-      color: var(--parchment);
-      margin-bottom: var(--space-md);
-    }
-    .invitation-band p { color: var(--parchment-dark); }
+    .invitation-band .inner { max-width: 720px; margin: 0 auto; }
+    .invitation-band .eyebrow { color: var(--bronze); margin-bottom: var(--space-md); }
+    .invitation-band h2 { color: var(--white); margin-bottom: var(--space-md); }
+    .invitation-band p { color: var(--parchment-dark); font-size: 1.05rem; line-height: 1.8; }
 
-    @media (max-width: 640px) {
-      .signature-hero { height: 68vh; }
-      .signature-hero-meta { gap: var(--space-md) var(--space-lg); }
+    @media (max-width: 700px) {
+      .at-a-glance { margin-top: -50px; padding: var(--space-lg); }
+      .waters-band { padding: var(--space-lg) var(--space-md); }
+      .waters-band .waters-inner { gap: 0.5rem 1.2rem; font-size: 0.66rem; }
+      .invitation-band { padding: var(--space-2xl) var(--space-md); }
     }
+
   </style>
 </head>
 <body>
@@ -170,16 +246,6 @@
 </section>
 
 <!-- ══════════════════════════════════════════
-     WATER THREAD
-══════════════════════════════════════════ -->
-<div class="waters-band">
-  <div class="waters-inner">
-    <span>Chao Phraya</span><span class="sep">·</span><span>Mekong</span><span class="sep">·</span><span>South China Sea</span>
-  </div>
-  <span class="note">A story told on water, so it is travelled on water.</span>
-</div>
-
-<!-- ══════════════════════════════════════════
      AT A GLANCE
 ══════════════════════════════════════════ -->
 <div class="at-a-glance">
@@ -202,6 +268,16 @@
       <p class="price-note">One inaugural departure, ten to twelve guests. Price confirmed on enquiry. Register your interest and we will come to you first.</p>
     </div>
   </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     WATER THREAD
+══════════════════════════════════════════ -->
+<div class="waters-band">
+  <div class="waters-inner">
+    <span>Chao Phraya</span><span class="sep">·</span><span>Mekong</span><span class="sep">·</span><span>South China Sea</span>
+  </div>
+  <span class="note">A story told on water, so it is travelled on water.</span>
 </div>
 
 <!-- ══════════════════════════════════════════
