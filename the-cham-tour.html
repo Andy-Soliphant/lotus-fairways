@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Cham Tour — A Journey Through the Lost Kingdom of Champa | Lotus &amp; Fairways</title>
+  <meta name="description" content="Fifteen nights following the Cham, the seafaring kingdom that ran the trade of Southeast Asia and then almost vanished. Bangkok, Angkor, the Mekong, Ninh Thuan and My Son. An inaugural small-group journey, March 2027.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://lotusfairways.com/the-cham-tour.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="The Cham Tour — Lotus &amp; Fairways">
+  <meta property="og:description" content="In 1177 they sailed up the Mekong and took Angkor. Fifteen nights following a civilisation that ran the sea trade of Asia — and then almost vanished.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lotusfairways.com/the-cham-tour.html">
+  <meta property="og:image" content="https://lotusfairways.com/images/vietnam-hoi-an-lanterns.jpg">
+  <meta property="og:site_name" content="Lotus &amp; Fairways">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+
+  <style>
+    /* ── Page-specific additions, built on existing tokens ── */
+    .signature-hero {
+      position: relative;
+      height: 78vh;
+      min-height: 520px;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+    }
+    .signature-hero img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .signature-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(20,26,20,0.86) 0%, rgba(20,26,20,0.3) 52%, rgba(20,26,20,0.12) 100%);
+    }
+    .signature-hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 var(--space-xl) var(--space-2xl);
+      width: 100%;
+      color: var(--parchment);
+    }
+    .signature-hero-content .eyebrow { color: var(--bronze); }
+    .signature-hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-lg) var(--space-2xl);
+      margin-top: var(--space-lg);
+    }
+    .signature-hero-meta div {
+      font-size: 0.85rem;
+      color: var(--parchment-dark);
+      line-height: 1.6;
+    }
+    .signature-hero-meta strong {
+      display: block;
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--parchment);
+      letter-spacing: 0.01em;
+    }
+
+    /* The water thread — the three waters this journey travels */
+    .waters-band {
+      background: var(--green);
+      color: var(--parchment);
+      padding: var(--space-lg) var(--space-xl);
+      text-align: center;
+    }
+    .waters-band .waters-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.6rem 2.2rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+    }
+    .waters-band .sep { color: var(--bronze); }
+    .waters-band .note {
+      display: block;
+      max-width: var(--max-width);
+      margin: 0.9rem auto 0;
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1.15rem;
+      letter-spacing: 0;
+      text-transform: none;
+      color: var(--parchment-dark);
+    }
+
+    /* Stop tags — page-local, self-contained so they don't rely on .golf/.whisky */
+    .day-tag.water {
+      background: rgba(196, 154, 94, 0.16);
+      color: #8a6524;
+      border: 1px solid rgba(196, 154, 94, 0.5);
+    }
+    .day-tag.stay {
+      background: rgba(155, 58, 90, 0.09);
+      color: var(--rose);
+      border: 1px solid rgba(155, 58, 90, 0.32);
+    }
+
+    .invitation-band {
+      background: var(--green);
+      color: var(--parchment);
+      padding: var(--space-3xl) var(--space-xl);
+    }
+    .invitation-band .inner {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .invitation-band .eyebrow { color: var(--bronze); }
+    .invitation-band h2 {
+      color: var(--parchment);
+      margin-bottom: var(--space-md);
+    }
+    .invitation-band p { color: var(--parchment-dark); }
+
+    @media (max-width: 640px) {
+      .signature-hero { height: 68vh; }
+      .signature-hero-meta { gap: var(--space-md) var(--space-lg); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Nav injected by component -->
+<script src="/components/nav.js"></script>
+
+<!-- ══════════════════════════════════════════
+     HERO
+══════════════════════════════════════════ -->
+<section class="signature-hero">
+  <img src="/images/vietnam-hoi-an-lanterns.jpg" alt="The Cham Tour — Thailand, Cambodia and Vietnam">
+  <div class="signature-hero-content">
+    <div class="eyebrow">— Thailand · Cambodia · Vietnam —</div>
+    <h1>The Cham Tour</h1>
+    <p style="font-size:1.1rem; color:var(--parchment-dark); max-width:640px;">In 1177 they sailed up the Mekong and took Angkor. Fifteen nights following a civilisation that ran the sea trade of Asia — and then almost vanished.</p>
+    <div class="signature-hero-meta">
+      <div><strong>15 Nights</strong>Bangkok to Hoi An</div>
+      <div><strong>Three Countries</strong>Thailand, Cambodia, Vietnam</div>
+      <div><strong>10–12 Guests</strong>Inaugural departure, March 2027</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     WATER THREAD
+══════════════════════════════════════════ -->
+<div class="waters-band">
+  <div class="waters-inner">
+    <span>Chao Phraya</span><span class="sep">·</span><span>Mekong</span><span class="sep">·</span><span>South China Sea</span>
+  </div>
+  <span class="note">A story told on water, so it is travelled on water.</span>
+</div>
+
+<!-- ══════════════════════════════════════════
+     AT A GLANCE
+══════════════════════════════════════════ -->
+<div class="at-a-glance">
+  <div class="at-a-glance-grid">
+    <div class="at-a-glance-item">
+      <h4>The Route</h4>
+      <p>Bangkok, Siem Reap, Phnom Penh, the Mekong crossing, Ninh Thuan, Quy Nhon, Hoi An</p>
+    </div>
+    <div class="at-a-glance-item">
+      <h4>The History</h4>
+      <p>My Son at first light, the Bayon reliefs, Po Klong Garai, the towers of Vijaya, and the Cham communities still living along the Mekong</p>
+    </div>
+    <div class="at-a-glance-item">
+      <h4>Where You Stay</h4>
+      <p>Capella Bangkok, Raffles Grand Hotel d'Angkor, Raffles Hotel Le Royal, Amanoi, Anantara Quy Nhon Villas, Four Seasons The Nam Hai</p>
+    </div>
+    <div class="at-a-glance-item">
+      <h4>Departure</h4>
+      <p style="font-family:var(--font-serif); font-size:1.6rem;">March 2027</p>
+      <p class="price-note">One inaugural departure, ten to twelve guests. Price confirmed on enquiry. Register your interest and we will come to you first.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     INTRO
+══════════════════════════════════════════ -->
+<section class="section">
+  <div class="intro-text">
+    <p>For three centuries the Cham controlled the trade in spices and silk between China, India, the islands of Indonesia and Abbasid Baghdad. They were seafarers, and when it suited them, pirates. Their kingdom ran down the coast of what is now central Vietnam from the second century until the fifteenth — brick and sandstone towers, Shiva, Sanskrit, and a script they invented for their own language. The oldest surviving text in any Southeast Asian language is Cham.</p>
+    <p>Then it went. Vijaya, the capital, fell in 1471 — sixty thousand killed, thirty thousand taken as slaves, the city obliterated. The last remnant held on until 1832. What survives is a scatter of towers along the Vietnamese coast, the finest collection of Cham sculpture in the world in a museum in Da Nang, and communities still living, still Cham, in Ninh Thuan and along the Cambodian Mekong.</p>
+    <p><em>Most travellers pass the towers on the road to somewhere else. This journey is the somewhere else.</em></p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     THE ROUTE
+══════════════════════════════════════════ -->
+<section class="section" style="background:var(--white);">
+  <div class="section-header">
+    <h2>The Journey</h2>
+    <div class="section-rule"></div>
+  </div>
+
+  <div class="timeline">
+
+    <div class="day-block">
+      <div class="day-number">1<span>Bangkok</span></div>
+      <div>
+        <h3 class="day-title">The Welcome — Two Nights on the River</h3>
+        <p>The group gathers on the Chao Phraya. A day on the water and out to Ayutthaya, the trading capital the Cham knew from the other end of the voyage — a Cham inscription records Siamese merchants sailing to Champa, alongside Khmer, Javanese and Bengali traders. Dinner together, and the shape of the fortnight ahead.</p>
+        <div class="day-tags"><span class="day-tag water">Chao Phraya</span><span class="day-tag stay">Capella Bangkok</span></div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-number">2<span>Siem Reap</span></div>
+      <div>
+        <h3 class="day-title">The War — Two Nights at Angkor</h3>
+        <p>The Bayon carries the record of it in stone: Cham warships driven up the Mekong into the Tonlé Sap, the Khmer king killed, Angkor sacked. They fought with Chinese siege crossbows, taught to them six years earlier. Jayavarman VII drove them out in 1181. Every visitor to Angkor walks past those panels. You will arrive knowing exactly what you are looking at.</p>
+        <div class="day-tags"><span class="day-tag stay">Raffles Grand Hotel d'Angkor</span></div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-number">3<span>Phnom Penh</span></div>
+      <div>
+        <h3 class="day-title">The Exile — Two Nights on the Mekong</h3>
+        <p>A full day on the river to the Cham communities who have lived along it since their kingdom fell — Muslim, Cham-speaking, and still here. This is the quietest part of the journey and, for most people, the one they talk about afterwards.</p>
+        <div class="day-tags"><span class="day-tag water">Mekong</span><span class="day-tag stay">Raffles Hotel Le Royal</span></div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-number">4<span>Can Tho</span></div>
+      <div>
+        <h3 class="day-title">The Crossing — One Night in the Delta</h3>
+        <p>Down the Mekong and across the border by boat, the way the Cham went when they left. A night in the delta before the coast — the only transfer on this journey that is also the point of it.</p>
+        <div class="day-tags"><span class="day-tag water">Mekong crossing</span></div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-number">5<span>Ninh Thuan</span></div>
+      <div>
+        <h3 class="day-title">The Survivors — Three Nights on the Coast</h3>
+        <p>Po Klong Garai, still in active worship after seven centuries, raised by the king who traded two provinces for a Vietnamese princess and died months after the wedding. Po Nagar at Nha Trang, burned by Javanese raiders in 774. And two gravestones cut in Kufic Arabic, dated 1039, marking the tomb of a merchant named Abu Kamil — buried here nine hundred years before anyone called this place Vietnam. The largest Cham population in the country still lives in these villages, Hindu and Muslim both.</p>
+        <div class="day-tags"><span class="day-tag stay">Amanoi, Vinh Hy Bay</span></div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-number">6<span>Quy Nhon</span></div>
+      <div>
+        <h3 class="day-title">The Last Capital — Two Nights</h3>
+        <p>Vijaya, and the towers at Banh It standing above the rice. This is where it ended in 1471, and almost nobody comes.</p>
+        <div class="day-tags"><span class="day-tag stay">Anantara Quy Nhon Villas</span></div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-number">7<span>Hoi An</span></div>
+      <div>
+        <h3 class="day-title">The Sacred Heart — Three Nights, and the Sea</h3>
+        <p>My Son at first light, before the gates open to anyone else — the sanctuary where Champa began and where, after everything else, this journey ends. Then the Museum of Cham Sculpture in Da Nang, and two days on the South China Sea: the sea they ruled, and time enough to let fifteen nights settle before anyone flies home.</p>
+        <div class="day-tags"><span class="day-tag water">South China Sea</span><span class="day-tag stay">Four Seasons Resort The Nam Hai</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     WHO LEADS IT
+══════════════════════════════════════════ -->
+<section class="section">
+  <div class="intro-text">
+    <div class="eyebrow" style="margin-bottom:14px;">— The Company —</div>
+    <p>An inaugural small-group journey, led throughout by our founder, with Cham historians joining in Cambodia and in Vietnam to give their own country's account of the same history. They do not always agree. That is the point.</p>
+    <p>The group is ten to twelve people. That is not a marketing number — it is set by the smallest place we stay.</p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     BY INVITATION
+══════════════════════════════════════════ -->
+<div class="invitation-band">
+  <div class="inner">
+    <div class="eyebrow">— By Invitation —</div>
+    <h2>Or take it privately</h2>
+    <p>The same route, your own dates, your own party. It begins differently: Chakrabongse Villas on the Chao Phraya — seven rooms in a prince's riverside house, the whole property yours.</p>
+    <p>A Cham historian travels with you throughout rather than meeting you along the way, My Son opens early, and the river crossing runs the full length of the delta at the pace it deserves.</p>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     CTA
+══════════════════════════════════════════ -->
+<section class="cta-band">
+  <h2>Register Your Interest</h2>
+  <p>The inaugural departure is being built now. Tell us you would like to be on it and we will come to you first — with dates, the full itinerary and the price, before it goes anywhere else.</p>
+  <a href="/index.html#enquiry" class="btn btn-outline-light">Register Your Interest →</a>
+</section>
+
+<!-- Scripts -->
+<script src="/components/footer.js"></script>
+<script src="/js/main.js"></script>
+
+</body>
+</html>
