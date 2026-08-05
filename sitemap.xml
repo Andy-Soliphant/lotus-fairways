@@ -1,32 +1,154 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage -->
   <url>
     <loc>https://lotusfairways.com/</loc>
-    <lastmod>2026-07-17</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <priority>1.0</priority>
   </url>
+
+  <!-- Golf in Asia — hub and regions -->
   <url>
-    <loc>https://lotusfairways.com/Beyond/</loc>
-    <lastmod>2026-07-17</lastmod>
-    <priority>0.7</priority>
+    <loc>https://lotusfairways.com/golf-in-asia/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://lotusfairways.com/about.html</loc>
-    <lastmod>2026-07-17</lastmod>
-    <priority>0.7</priority>
+    <loc>https://lotusfairways.com/golf-in-asia/thailand/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://lotusfairways.com/contact.html</loc>
-    <lastmod>2026-07-17</lastmod>
-    <priority>0.7</priority>
+    <loc>https://lotusfairways.com/golf-in-asia/vietnam/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://lotusfairways.com/destinations/Index.html</loc>
-    <lastmod>2026-07-17</lastmod>
-    <priority>0.7</priority>
+    <loc>https://lotusfairways.com/golf-in-asia/cambodia/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Seven-night trip pages -->
+  <url>
+    <loc>https://lotusfairways.com/golf-in-asia/thailand/bangkok/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://lotusfairways.com/destinations/cambodia.html</loc>
+    <loc>https://lotusfairways.com/golf-in-asia/thailand/chiang-mai/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/golf-in-asia/thailand/hua-hin/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/golf-in-asia/thailand/phuket/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/golf-in-asia/vietnam/hanoi/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/golf-in-asia/vietnam/da-nang/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/golf-in-asia/vietnam/ho-chi-minh/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/golf-in-asia/cambodia/phnom-penh/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/golf-in-asia/cambodia/siem-reap/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Fairway Tours — ENTIRELY ABSENT from the previous sitemap -->
+  <url>
+    <loc>https://lotusfairways.com/fairway-tours/</loc>
+    <lastmod>2026-07-29</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/fairway-tours/the-grand-indochine/</loc>
+    <lastmod>2026-07-29</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/fairway-tours/the-indochine/</loc>
+    <lastmod>2026-07-29</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/fairway-tours/the-grand-thai/</loc>
+    <lastmod>2026-07-29</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/fairway-tours/north-to-south-vietnam/</loc>
+    <lastmod>2026-07-29</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/fairway-tours/fairways-and-the-mekong/</loc>
+    <lastmod>2026-07-29</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/fairway-tours/the-gulf-and-mountains/</loc>
+    <lastmod>2026-07-29</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/fairway-tours/the-island-finish/</loc>
+    <lastmod>2026-07-29</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/fairway-tours/the-northern-blend/</loc>
+    <lastmod>2026-07-29</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/fairway-tours/the-southern-sweep/</loc>
+    <lastmod>2026-07-29</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/fairway-tours/the-two-coasts/</loc>
+    <lastmod>2026-07-29</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/fairway-tours/two-kingdoms/</loc>
+    <lastmod>2026-07-29</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Fairway Weekends -->
+  <url>
+    <loc>https://lotusfairways.com/fairway-weekends/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Destinations -->
+  <url>
+    <loc>https://lotusfairways.com/destinations/</loc>
     <lastmod>2026-07-17</lastmod>
     <priority>0.7</priority>
   </url>
@@ -41,82 +163,42 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lotusfairways.com/fairway-weekends/</loc>
+    <loc>https://lotusfairways.com/destinations/cambodia.html</loc>
     <lastmod>2026-07-17</lastmod>
     <priority>0.7</priority>
   </url>
+
+  <!-- Beyond Asia -->
   <url>
-    <loc>https://lotusfairways.com/golf-in-asia/</loc>
+    <loc>https://lotusfairways.com/beyond/</loc>
     <lastmod>2026-07-17</lastmod>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Signature -->
+  <url>
+    <loc>https://lotusfairways.com/whisky-and-fairways.html</loc>
+    <lastmod>2026-07-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Company -->
+  <url>
+    <loc>https://lotusfairways.com/about.html</loc>
+    <lastmod>2026-07-17</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://lotusfairways.com/golf-in-asia/cambodia/</loc>
+    <loc>https://lotusfairways.com/contact.html</loc>
     <lastmod>2026-07-17</lastmod>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://lotusfairways.com/golf-in-asia/cambodia/phnom-penh/</loc>
-    <lastmod>2026-07-17</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://lotusfairways.com/golf-in-asia/cambodia/siem-reap/</loc>
-    <lastmod>2026-07-17</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://lotusfairways.com/golf-in-asia/thailand/</loc>
-    <lastmod>2026-07-17</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://lotusfairways.com/golf-in-asia/thailand/bangkok/</loc>
-    <lastmod>2026-07-17</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://lotusfairways.com/golf-in-asia/thailand/chiang-mai/</loc>
-    <lastmod>2026-07-17</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://lotusfairways.com/golf-in-asia/thailand/hua-hin/</loc>
-    <lastmod>2026-07-17</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://lotusfairways.com/golf-in-asia/thailand/phuket/</loc>
-    <lastmod>2026-07-17</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://lotusfairways.com/golf-in-asia/vietnam/</loc>
-    <lastmod>2026-07-17</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://lotusfairways.com/golf-in-asia/vietnam/da-nang/</loc>
-    <lastmod>2026-07-17</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://lotusfairways.com/golf-in-asia/vietnam/hanoi/</loc>
-    <lastmod>2026-07-17</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://lotusfairways.com/golf-in-asia/vietnam/ho-chi-minh/</loc>
-    <lastmod>2026-07-17</lastmod>
-    <priority>0.9</priority>
-  </url>
+
+  <!-- Journal — indexable articles only. The migrated YLH pieces carry
+       noindex and are deliberately excluded: listing a noindex page in a
+       sitemap sends Google two contradictory instructions. -->
   <url>
     <loc>https://lotusfairways.com/journal/</loc>
-    <lastmod>2026-07-17</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://lotusfairways.com/journal/football-shirt-thailand.html</loc>
     <lastmod>2026-07-17</lastmod>
     <priority>0.5</priority>
   </url>
@@ -126,8 +208,17 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://lotusfairways.com/whisky-and-fairways.html</loc>
+    <loc>https://lotusfairways.com/journal/football-shirt-thailand.html</loc>
     <lastmod>2026-07-17</lastmod>
-    <priority>0.7</priority>
+    <priority>0.5</priority>
   </url>
+
+  <!-- Signature journey -->
+  <url>
+    <loc>https://lotusfairways.com/the-cham-tour.html</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
 </urlset>
