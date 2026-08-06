@@ -5,7 +5,8 @@
     "tier": "classic | premium | ultra. Tier means CHARACTER, not star rating — Andy runs a 4-star boutique (La Siesta) as Classic in two cities.",
     "why": "the carrot: why this property earns its place on a page",
     "verdict": "reserved for Andy's own words, as with the golf star verdicts",
-    "warning": "This is a public-facing data file. Supplier pricing of any kind must never appear here."
+    "warning": "This is a public-facing data file. Supplier pricing of any kind must never appear here.",
+    "prose": "Public-facing paragraph for the hotel page. `why` remains the INTERNAL commercial rationale and must never be published."
   },
   "trip_prices_provisional_gbp_pp": {
     "_status": "PROVISIONAL — Andy is reworking these after the Golfasian benchmark (31 Jul). Do not publish.",
@@ -73,7 +74,8 @@
       "why": "A Bensley original and the strongest conservation story in the region.",
       "verdict": "",
       "image": "",
-      "source": "ylh"
+      "source": "ylh",
+      "prose": ""
     },
     {
       "slug": "royal-sands-koh-rong",
@@ -92,7 +94,8 @@
       "why": "",
       "verdict": "",
       "image": "",
-      "source": "ylh"
+      "source": "ylh",
+      "prose": ""
     },
     {
       "slug": "song-saa",
@@ -111,7 +114,8 @@
       "why": "A private island is the clearest possible By Invitation signal.",
       "verdict": "",
       "image": "",
-      "source": ""
+      "source": "",
+      "prose": ""
     },
     {
       "slug": "palace-gate-phnom-penh",
@@ -129,10 +133,11 @@
       "room_types": [],
       "character": "Mealea restaurant on site.",
       "why": "",
-      "verdict": "",
+      "verdict": "Entry level: no airs or graces, just a good option. Raffles, Rosewood and the Hyatt are all elevated to a higher level and standard.",
       "image": "",
       "source": "andy/trip-page-assignments-31jul",
-      "_note": "RETIERED from premium to CLASSIC by Andy — it is the Phnom Penh lead-in."
+      "_note": "RETIERED from premium to CLASSIC by Andy — it is the Phnom Penh lead-in.",
+      "prose": ""
     },
     {
       "slug": "raffles-le-royal",
@@ -149,9 +154,10 @@
       "room_types": [],
       "character": "Opened 1929, in the colonial quarter.",
       "why": "",
-      "verdict": "",
+      "verdict": "A case of old against new. Many would be impressed by the newer addresses and their views over the city. But for those who want the grandeur, Raffles wins every time. More a hotel feel, with simple access instead of elevators.",
       "image": "",
-      "source": "+andy/picks-1aug"
+      "source": "+andy/picks-1aug",
+      "prose": "A 1929 hotel in the colonial quarter that has been present for most of what has happened to this city since. That is the reason it is here rather than a newer address. The Cambodian days of this journey include the Cham communities of the Mekong and what was done to them in the 1970s, and a hotel woven into the same century holds that weight better than a glass tower would."
     },
     {
       "slug": "rosewood-phnom-penh",
@@ -163,6 +169,7 @@
       "tier_confirmed": true,
       "preferred": false,
       "tags": [
+        "golf",
         "leisure"
       ],
       "room_types": [],
@@ -170,7 +177,8 @@
       "why": "",
       "verdict": "",
       "image": "",
-      "source": "+andy/picks-1aug"
+      "source": "+andy/picks-1aug",
+      "prose": ""
     },
     {
       "slug": "amansara",
@@ -182,14 +190,16 @@
       "tier_confirmed": true,
       "preferred": false,
       "tags": [
+        "golf",
         "leisure"
       ],
       "room_types": [],
       "character": "Built in 1962 as the royal guesthouse of King Norodom Sihanouk. Twenty-four suites, minutes from the Angkor gate.",
       "why": "The definitive Angkor address, and the natural home of a before-hours temple morning.",
-      "verdict": "",
+      "verdict": "Amansara has limited room choices. Not always a negative, but in some cases it is.",
       "image": "",
-      "source": "+andy/picks-1aug"
+      "source": "+andy/picks-1aug",
+      "prose": ""
     },
     {
       "slug": "aviary-siem-reap",
@@ -207,10 +217,11 @@
       "room_types": [],
       "character": "",
       "why": "",
-      "verdict": "",
+      "verdict": "A great central location, with an excellent team running the hotel. Lovely rooms. And again, the location.",
       "image": "",
       "source": "andy/trip-page-assignments-31jul",
-      "_note": "Andy's Siem Reap lead-in."
+      "_note": "Andy's Siem Reap lead-in.",
+      "prose": ""
     },
     {
       "slug": "heritage-suites-siem-reap",
@@ -228,10 +239,11 @@
       "room_types": [],
       "character": "",
       "why": "",
-      "verdict": "",
+      "verdict": "Peace and quiet, with amazing bungalow accommodation, set a few moments out of the heartbeat but not so far you cannot feel a pulse.",
       "image": "",
       "source": "ylh",
-      "_note": "Tier UNCONFIRMED against the new Siem Reap structure — Andy has not said which property fills Premium."
+      "_note": "Tier UNCONFIRMED against the new Siem Reap structure — Andy has not said which property fills Premium.",
+      "prose": ""
     },
     {
       "slug": "phum-baitang",
@@ -250,7 +262,8 @@
       "why": "",
       "verdict": "",
       "image": "",
-      "source": ""
+      "source": "",
+      "prose": ""
     },
     {
       "slug": "raffles-grand-angkor",
@@ -267,9 +280,10 @@
       "room_types": [],
       "character": "Opened 1932. Original cage lift still in service.",
       "why": "",
-      "verdict": "",
+      "verdict": "Raffles has the history, and offers an insight into times gone by. Sitting here you can well imagine a time when travel was itself a luxury.",
       "image": "",
-      "source": "+andy/picks-1aug"
+      "source": "+andy/picks-1aug",
+      "prose": "Opened in 1932, when Angkor was still being cleared, mapped and argued over, and the original cage lift still runs. There is a particular pleasure in staying inside the chapter of the story you have come to hear: the hotel and the rediscovery of Angkor belong to the same moment. It also has the terraces and public rooms a travelling group naturally gathers in, which matters more than it sounds."
     },
     {
       "slug": "shinta-mani-angkor",
@@ -288,7 +302,8 @@
       "why": "",
       "verdict": "",
       "image": "",
-      "source": ""
+      "source": "",
+      "prose": ""
     },
     {
       "slug": "aman-nai-lert-bangkok",
@@ -307,7 +322,8 @@
       "why": "The Aman name is the strongest single ultra signal in the range.",
       "verdict": "",
       "image": "",
-      "source": ""
+      "source": "",
+      "prose": ""
     },
     {
       "slug": "anantara-riverside-bangkok",
@@ -325,9 +341,10 @@
       "room_types": [],
       "character": "On the Chao Phraya.",
       "why": "",
-      "verdict": "",
+      "verdict": "A touch more class and luxury alongside the riverside, and it is more relaxing for it.",
       "image": "",
-      "source": "andy/trip-page-assignments-31jul"
+      "source": "andy/trip-page-assignments-31jul",
+      "prose": ""
     },
     {
       "slug": "capella-bangkok",
@@ -345,9 +362,10 @@
       "room_types": [],
       "character": "On the Chao Phraya. Restaurant Stella on site.",
       "why": "Consistently ranked among the world's leading hotels.",
-      "verdict": "",
+      "verdict": "Capella does things just that bit better, and with some areas reserved for hotel guests only, you truly feel special. If you are seeking something subtle, it is not quite for you.",
       "image": "",
-      "source": "ats/itinerary + andy/trip-page-assignments-31jul"
+      "source": "ats/itinerary + andy/trip-page-assignments-31jul",
+      "prose": "The journey begins on the Chao Phraya, which is the only honest way to begin it. Champa was a maritime kingdom, and the river that carried Siamese merchants east to its ports is the same water you look at from your suite on the first evening. A river-facing hotel where every room is a suite, chosen for the opening night because a group of strangers becomes a group over dinner, and because nobody wants to arrive from a long flight into a city hotel with no view of anything."
     },
     {
       "slug": "chakrabongse-villas",
@@ -366,7 +384,8 @@
       "why": "A private residence rather than a hotel.",
       "verdict": "",
       "image": "",
-      "source": "ylh"
+      "source": "ylh",
+      "prose": ""
     },
     {
       "slug": "four-seasons-bangkok",
@@ -385,7 +404,8 @@
       "why": "The safe ultra choice for guests who want a brand they know.",
       "verdict": "",
       "image": "",
-      "source": ""
+      "source": "",
+      "prose": ""
     },
     {
       "slug": "mandarin-oriental-bangkok",
@@ -404,7 +424,8 @@
       "why": "The most storied hotel in Thailand. Instant credibility.",
       "verdict": "",
       "image": "",
-      "source": ""
+      "source": "",
+      "prose": ""
     },
     {
       "slug": "rosewood-bangkok",
@@ -423,7 +444,8 @@
       "why": "The city-side alternative when the river isn't the priority.",
       "verdict": "",
       "image": "",
-      "source": ""
+      "source": "",
+      "prose": ""
     },
     {
       "slug": "nysa-bangkok",
@@ -441,9 +463,10 @@
       "room_types": [],
       "character": "",
       "why": "",
-      "verdict": "",
+      "verdict": "Just steps away from the restaurants, the bars and the heart of downtown Bangkok. If you want to be in the middle of the city rather than looking at it from the river, this is the one.",
       "image": "",
-      "source": "andy/trip-page-assignments-31jul"
+      "source": "andy/trip-page-assignments-31jul",
+      "prose": ""
     },
     {
       "slug": "peninsula-bangkok",
@@ -462,7 +485,8 @@
       "why": "",
       "verdict": "",
       "image": "",
-      "source": ""
+      "source": "",
+      "prose": ""
     },
     {
       "slug": "salil-hotel-riverside",
@@ -481,7 +505,8 @@
       "why": "",
       "verdict": "",
       "image": "",
-      "source": "ylh"
+      "source": "ylh",
+      "prose": ""
     },
     {
       "slug": "the-siam-bangkok",
@@ -500,7 +525,8 @@
       "why": "Bensley again - pairs beautifully with Shinta Mani Wild as a design thread through a trip.",
       "verdict": "",
       "image": "",
-      "source": ""
+      "source": "",
+      "prose": ""
     },
     {
       "slug": "137-pillars-house",
@@ -512,6 +538,7 @@
       "tier_confirmed": true,
       "preferred": false,
       "tags": [
+        "golf",
         "leisure"
       ],
       "room_types": [],
@@ -519,7 +546,8 @@
       "why": "",
       "verdict": "",
       "image": "",
-      "source": "+andy/picks-1aug"
+      "source": "+andy/picks-1aug",
+      "prose": ""
     },
     {
       "slug": "anantara-chiang-mai",
@@ -538,7 +566,8 @@
       "why": "",
       "verdict": "",
       "image": "",
-      "source": ""
+      "source": "",
+      "prose": ""
     },
     {
       "slug": "four-seasons-chiang-mai",
@@ -557,7 +586,8 @@
       "why": "The property Black Tomato leads with for northern Thailand.",
       "verdict": "",
       "image": "",
-      "source": ""
+      "source": "",
+      "prose": ""
     },
     {
       "slug": "rachamankha",
@@ -569,14 +599,16 @@
       "tier_confirmed": true,
       "preferred": false,
       "tags": [
+        "golf",
         "leisure"
       ],
       "room_types": [],
       "character": "Inside the old city walls, beside Wat Phra Singh.",
       "why": "The connoisseur's choice - small, quiet, architecturally serious.",
-      "verdict": "",
+      "verdict": "My favourite in Chiang Mai, and has been since it opened. A great location, lovely simplistic design, and a feeling of coming home. And perhaps my favourite eggs Benedict anywhere.",
       "image": "",
-      "source": "+andy/picks-1aug"
+      "source": "+andy/picks-1aug",
+      "prose": ""
     },
     {
       "slug": "raya-heritage",
@@ -595,7 +627,8 @@
       "why": "",
       "verdict": "",
       "image": "",
-      "source": ""
+      "source": "",
+      "prose": ""
     },
     {
       "slug": "anantara-golden-triangle",
@@ -614,7 +647,8 @@
       "why": "",
       "verdict": "",
       "image": "",
-      "source": ""
+      "source": "",
+      "prose": ""
     },
     {
       "slug": "fs-tented-camp-golden-triangle",
@@ -633,7 +667,8 @@
       "why": "A genuine trip-maker and a region golf doesn't reach. Strong By Invitation anchor.",
       "verdict": "",
       "image": "",
-      "source": ""
+      "source": "",
+      "prose": ""
     },
     {
       "slug": "anantara-hua-hin",
@@ -653,7 +688,8 @@
       "why": "",
       "verdict": "",
       "image": "",
-      "source": ""
+      "source": "",
+      "prose": ""
     },
     {
       "slug": "cape-nidhra-hua-hin",
@@ -671,9 +707,10 @@
       "room_types": [],
       "character": "Design-led all-suite boutique, on the seafront.",
       "why": "",
-      "verdict": "",
+      "verdict": "Prime beachfront location, with pool suites, stunning style, and moments from the top golf courses.",
       "image": "",
-      "source": "lf/trip-page"
+      "source": "lf/trip-page",
+      "prose": ""
     },
     {
       "slug": "centara-grand-hua-hin",
@@ -693,7 +730,8 @@
       "why": "",
       "verdict": "",
       "image": "",
-      "source": "lf/trip-page"
+      "source": "lf/trip-page",
+      "prose": ""
     },
     {
       "slug": "chiva-som",
@@ -705,15 +743,15 @@
       "tier_confirmed": false,
       "preferred": false,
       "tags": [
-        "leisure",
-        "golf"
+        "leisure"
       ],
       "room_types": [],
       "character": "Destination wellness resort on the beach at Hua Hin. Programme-based stays.",
       "why": "Wellness is the fastest-growing ultra motivation and this is the region's landmark.",
-      "verdict": "",
+      "verdict": "A health and wellness retreat, and only that. Not a hotel for a golf week.",
       "image": "",
-      "source": ""
+      "source": "",
+      "prose": ""
     },
     {
       "slug": "hyatt-regency-hua-hin",
@@ -733,7 +771,8 @@
       "why": "",
       "verdict": "",
       "image": "",
-      "source": "lf/trip-page"
+      "source": "lf/trip-page",
+      "prose": ""
     },
     {
       "slug": "aleenta-phuket-phang-nga",
@@ -752,7 +791,8 @@
       "why": "",
       "verdict": "",
       "image": "",
-      "source": ""
+      "source": "",
+      "prose": ""
     },
     {
       "slug": "the-sarojin",
@@ -771,7 +811,8 @@
       "why": "Khao Lak is leisure-only territory - no golf competition for it.",
       "verdict": "",
       "image": "",
-      "source": ""
+      "source": "",
+      "prose": ""
     },
     {
       "slug": "soneva-kiri",
@@ -790,7 +831,8 @@
       "why": "Private-plane access is exactly the ultra marker the range currently lacks.",
       "verdict": "",
       "image": "",
-      "source": ""
+      "source": "",
+      "prose": ""
     },
     {
       "slug": "four-seasons-koh-samui",
@@ -809,7 +851,8 @@
       "why": "",
       "verdict": "",
       "image": "",
-      "source": ""
+      "source": "",
+      "prose": ""
     },
     {
       "slug": "six-senses-samui",
@@ -828,7 +871,8 @@
       "why": "",
       "verdict": "",
       "image": "",
-      "source": ""
+      "source": "",
+      "prose": ""
     },
     {
       "slug": "six-senses-yao-noi",
@@ -847,7 +891,8 @@
       "why": "The most recognisable island name in southern Thailand at this tier.",
       "verdict": "",
       "image": "",
-      "source": "ats/itinerary"
+      "source": "ats/itinerary",
+      "prose": ""
     },
     {
       "slug": "banyan-tree-krabi",
@@ -866,7 +911,8 @@
       "why": "",
       "verdict": "",
       "image": "",
-      "source": ""
+      "source": "",
+      "prose": ""
     },
     {
       "slug": "phulay-bay-krabi",
@@ -885,7 +931,8 @@
       "why": "",
       "verdict": "",
       "image": "",
-      "source": ""
+      "source": "",
+      "prose": ""
     },
     {
       "slug": "rayavadee",
@@ -904,7 +951,8 @@
       "why": "Boat-only access is the kind of detail that sells a page.",
       "verdict": "",
       "image": "",
-      "source": ""
+      "source": "",
+      "prose": ""
     },
     {
       "slug": "amanpuri",
@@ -916,6 +964,7 @@
       "tier_confirmed": true,
       "preferred": false,
       "tags": [
+        "golf",
         "leisure"
       ],
       "room_types": [],
@@ -923,7 +972,8 @@
       "why": "The original Aman. If one name says ultra to this buyer, it is this one.",
       "verdict": "",
       "image": "",
-      "source": "+andy/picks-1aug"
+      "source": "+andy/picks-1aug",
+      "prose": ""
     },
     {
       "slug": "banyan-tree-phuket",
@@ -943,7 +993,8 @@
       "why": "Already used on the golf side - the natural bridge property between golf and leisure.",
       "verdict": "",
       "image": "",
-      "source": ""
+      "source": "",
+      "prose": ""
     },
     {
       "slug": "keemala",
@@ -962,7 +1013,8 @@
       "why": "",
       "verdict": "",
       "image": "",
-      "source": ""
+      "source": "",
+      "prose": ""
     },
     {
       "slug": "rosewood-phuket",
@@ -981,7 +1033,8 @@
       "why": "",
       "verdict": "",
       "image": "",
-      "source": ""
+      "source": "",
+      "prose": ""
     },
     {
       "slug": "trisara",
@@ -1000,7 +1053,8 @@
       "why": "A Michelin star on site is a rare, concrete proof point.",
       "verdict": "",
       "image": "",
-      "source": ""
+      "source": "",
+      "prose": ""
     },
     {
       "slug": "chicland-da-nang",
@@ -1018,10 +1072,11 @@
       "room_types": [],
       "character": "",
       "why": "",
-      "verdict": "",
+      "verdict": "A great entry-level hotel offering beach views, and it does all you require very well. Not ground breaking, not budget breaking either.",
       "image": "",
       "source": "andy/trip-page-assignments-31jul",
-      "_note": "REPLACES the hotel currently on the page, which has rebranded to 'TIA'. Andy chose Chicland instead."
+      "_note": "REPLACES the hotel currently on the page, which has rebranded to 'TIA'. Andy chose Chicland instead.",
+      "prose": ""
     },
     {
       "slug": "intercontinental-danang",
@@ -1029,8 +1084,8 @@
       "destination": "vietnam",
       "area": "da-nang",
       "tier": "ultra",
-      "confirmed": false,
-      "tier_confirmed": false,
+      "confirmed": true,
+      "tier_confirmed": true,
       "preferred": false,
       "tags": [
         "leisure",
@@ -1041,7 +1096,8 @@
       "why": "",
       "verdict": "",
       "image": "",
-      "source": ""
+      "source": "",
+      "prose": ""
     },
     {
       "slug": "namia-riverside-da-nang",
@@ -1059,9 +1115,10 @@
       "room_types": [],
       "character": "",
       "why": "",
-      "verdict": "",
+      "verdict": "A great addition to the hotels here, with spa treatments included. The perfect tonic after any day, or any round.",
       "image": "",
-      "source": "andy/trip-page-assignments-31jul"
+      "source": "andy/trip-page-assignments-31jul",
+      "prose": ""
     },
     {
       "slug": "capella-hanoi",
@@ -1079,10 +1136,11 @@
       "room_types": [],
       "character": "Beside the Opera House. Designed by Bill Bensley around an operatic theme.",
       "why": "",
-      "verdict": "",
+      "verdict": "The new kid on the block, literally. It offers up style and luxury effortlessly.",
       "image": "",
       "source": "andy/trip-page-assignments-31jul",
-      "_note": "ANDY TO CHOOSE: Capella OR Sofitel Legend Metropole for the Hanoi Ultra slot."
+      "_note": "ANDY TO CHOOSE: Capella OR Sofitel Legend Metropole for the Hanoi Ultra slot.",
+      "prose": ""
     },
     {
       "slug": "la-siesta-hanoi",
@@ -1102,7 +1160,8 @@
       "why": "Andy's benchmark for character over star rating.",
       "verdict": "",
       "image": "",
-      "source": "andy/trip-page-assignments-31jul"
+      "source": "andy/trip-page-assignments-31jul",
+      "prose": ""
     },
     {
       "slug": "sheraton-hanoi",
@@ -1122,7 +1181,8 @@
       "why": "",
       "verdict": "",
       "image": "",
-      "source": "andy/trip-page-assignments-31jul"
+      "source": "andy/trip-page-assignments-31jul",
+      "prose": ""
     },
     {
       "slug": "metropole-hanoi",
@@ -1140,10 +1200,11 @@
       "room_types": [],
       "character": "Opened 1901 in the French Quarter. Historic wing and the wartime bomb shelter beneath the hotel.",
       "why": "The most storied address in Vietnam.",
-      "verdict": "",
+      "verdict": "Hanoi's Old Lady. It is all about the history of this fine hotel, and it offers a glimpse into Hanoi's own.",
       "image": "",
       "source": "andy/trip-page-assignments-31jul",
-      "_note": "Confirmed-deliverable ALTERNATE — not the page slot (Andy's picks 1 Aug: Capella Hanoi / The Reverie)."
+      "_note": "Confirmed-deliverable ALTERNATE — not the page slot (Andy's picks 1 Aug: Capella Hanoi / The Reverie).",
+      "prose": ""
     },
     {
       "slug": "hotel-des-arts-saigon",
@@ -1163,7 +1224,8 @@
       "why": "",
       "verdict": "",
       "image": "",
-      "source": "andy/trip-page-assignments-31jul"
+      "source": "andy/trip-page-assignments-31jul",
+      "prose": ""
     },
     {
       "slug": "la-siesta-saigon",
@@ -1183,7 +1245,8 @@
       "why": "",
       "verdict": "",
       "image": "",
-      "source": "andy/trip-page-assignments-31jul"
+      "source": "andy/trip-page-assignments-31jul",
+      "prose": ""
     },
     {
       "slug": "park-hyatt-saigon",
@@ -1201,10 +1264,11 @@
       "room_types": [],
       "character": "Lam Son Square, facing the Opera House. Restrained and beautiful.",
       "why": "",
-      "verdict": "",
+      "verdict": "Built on history, and less is more in the design. So elegant and peaceful. Simply hard to resist.",
       "image": "",
       "source": "andy/trip-page-assignments-31jul",
-      "_note": "Confirmed-deliverable ALTERNATE — not the page slot (Andy's picks 1 Aug: Capella Hanoi / The Reverie)."
+      "_note": "Confirmed-deliverable ALTERNATE — not the page slot (Andy's picks 1 Aug: Capella Hanoi / The Reverie).",
+      "prose": ""
     },
     {
       "slug": "the-reverie-saigon",
@@ -1222,10 +1286,11 @@
       "room_types": [],
       "character": "Times Square building on Nguyen Hue. Opulent, Italian-furnished.",
       "why": "",
-      "verdict": "",
+      "verdict": "Online it can look a mismatch of styles. Walk through their doors and you are blown away with it all: modern, but not pretentious in any way, with captivating views of Saigon all around.",
       "image": "",
       "source": "andy/trip-page-assignments-31jul",
-      "_note": "ANDY TO CHOOSE: The Reverie OR Park Hyatt for the Saigon Ultra slot."
+      "_note": "ANDY TO CHOOSE: The Reverie OR Park Hyatt for the Saigon Ultra slot.",
+      "prose": ""
     },
     {
       "slug": "four-seasons-nam-hai",
@@ -1242,28 +1307,32 @@
       "room_types": [],
       "character": "Ha My Beach between Hoi An and Da Nang. Villas on three tiers above the sea.",
       "why": "The best-known luxury address on the central coast - and beside your strongest golf region.",
-      "verdict": "",
+      "verdict": "Has always been the benchmark of Vietnamese luxury and still remains so. Simple, elegant and captivating.",
       "image": "",
-      "source": "+andy/picks-1aug"
+      "source": "+andy/picks-1aug",
+      "prose": "Ha My Beach, villas rising on three tiers above the water. The journey opened on the Chao Phraya, crossed the Mekong, and finishes looking at the South China Sea, the sea the Cham ran and the reason there was ever a kingdom to follow. It is also simply where you need to be after twelve nights of temples, a lost civilisation and a difficult modern chapter. Somewhere to swim, and to talk about what you have seen."
     },
     {
       "slug": "amanoi",
       "name": "Amanoi",
       "destination": "vietnam",
-      "area": "nha-trang",
+      "area": "ninh-thuan",
       "tier": "ultra",
-      "confirmed": false,
-      "tier_confirmed": false,
+      "confirmed": true,
+      "tier_confirmed": true,
       "preferred": false,
       "tags": [
-        "leisure"
+        "cam-ranh",
+        "leisure",
+        "nha-trang"
       ],
       "room_types": [],
-      "character": "Nui Chua National Park, above Vinh Hy Bay.",
+      "character": "Nui Chua National Park, above Vinh Hy Bay in Ninh Thuan. Flying into Cam Ranh / Nha Trang.",
       "why": "The second Aman in the range and almost unknown to UK buyers - genuine discovery.",
-      "verdict": "",
+      "verdict": "The views and the service in equal measure. A stunning example of what can be done.",
       "image": "",
-      "source": ""
+      "source": "",
+      "prose": "Above Vinh Hy Bay in Nui Chua National Park, and the reason the journey stops in Ninh Thuan for three nights rather than passing through. This is the Cham heartland. Po Klong Garai stands nearby, the largest surviving Cham population lives here, and two Kufic gravestones from 1039 mark the tomb of a Muslim trader called Abu Kamil, the hardest evidence anywhere of how far this kingdom's trade reached. Very few British travellers have heard of any of it."
     },
     {
       "slug": "six-senses-ninh-van-bay",
@@ -1282,7 +1351,8 @@
       "why": "Boat-only again - a reliable ultra signal.",
       "verdict": "",
       "image": "",
-      "source": ""
+      "source": "",
+      "prose": ""
     },
     {
       "slug": "anantara-quy-nhon",
@@ -1290,8 +1360,8 @@
       "destination": "vietnam",
       "area": "quy-nhon",
       "tier": "ultra",
-      "confirmed": false,
-      "tier_confirmed": false,
+      "confirmed": true,
+      "tier_confirmed": true,
       "preferred": false,
       "tags": [
         "leisure"
@@ -1299,9 +1369,10 @@
       "room_types": [],
       "character": "Private bay south of Quy Nhon, all villas.",
       "why": "Almost no UK operator sells this - a differentiator.",
-      "verdict": "",
+      "verdict": "Sat on a private beach, or it feels that way. Simply stunning, and peaceful because it is still so unknown. Away from the crowds is truly special.",
       "image": "",
-      "source": ""
+      "source": "",
+      "prose": "A private bay south of Quy Nhon, all villas, and almost nobody from Britain comes here. Quy Nhon was Vijaya, the last Cham capital, and in 1471 it was destroyed so completely that the kingdom effectively ended with it. You stand at Banh It in the morning, and in the afternoon you are on an empty bay in the same place. The journey needs somewhere quiet at exactly this point."
     },
     {
       "slug": "thai-akara",
@@ -1319,9 +1390,10 @@
       "room_types": [],
       "character": "Lanna boutique in the old city.",
       "why": "",
-      "verdict": "",
+      "verdict": "A simple property doing nothing wrong. A great entry to a lovely city.",
       "image": "",
-      "source": "lf/live-page+andy"
+      "source": "lf/live-page+andy",
+      "prose": ""
     },
     {
       "slug": "rosewood-luang-prabang",
@@ -1340,7 +1412,28 @@
       "why": "The Laos anchor of the Bensley Journey.",
       "verdict": "",
       "image": "",
-      "source": "andy/bensley-journey-1aug"
+      "source": "andy/bensley-journey-1aug",
+      "prose": ""
+    },
+    {
+      "slug": "legacy-mekong-can-tho",
+      "name": "Legacy Mekong, Can Tho, Autograph Collection",
+      "destination": "vietnam",
+      "area": "can-tho",
+      "tier": "ultra",
+      "confirmed": true,
+      "tier_confirmed": true,
+      "preferred": false,
+      "tags": [
+        "leisure"
+      ],
+      "room_types": [],
+      "character": "On Au Islet in the Hau River, reached only by boat. Eight hectares of gardens, around sixty rooms with bungalows and villas. One MICHELIN Key.",
+      "why": "Boat-only access is an ultra transfer marker the range lacked, and it anchors the Can Tho night on the Cham Tour.",
+      "verdict": "It is about the stunning islet location, and a sense of serenity and exclusivity.",
+      "image": "",
+      "source": "andy/6aug + verified",
+      "prose": "A private island in the middle of the Mekong, and the middle chapter of a journey whose organising idea is water. You cross the river from Cambodia following the route the Cham took after 1471, and you sleep on the river itself. No road, no arrival forecourt, just a boat. Created by Adrian Zecha, who invented this kind of hotel."
     }
   ]
 }
