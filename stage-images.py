@@ -72,6 +72,10 @@ STAGING = os.path.expanduser("~/Downloads/lf-images-in")
 MIN_WIDTH = 1600
 THUMBNAIL_WIDTH = 800
 TINY_BYTES = 60_000     # below this it is a thumbnail; judged without opening the file
+# Subfolders that reliably hold the WRONG kind of picture for a hotel hero.
+# Their images are still usable, but only after everything in the main folder.
+BACK_OF_HOUSE = ("spa", "wellness", "gym", "fitness", "travel craft", "travel",
+                 "meeting", "wedding", "yoga", "map", "thumb")
 MAX_WIDTH = 2000        # anything wider is resampled DOWN. Never up.
 JPEG_QUALITY = 76
 MIN_SCORE = 0.5         # at least half the hotel's own name must appear
@@ -346,9 +350,11 @@ def main():
             unmatched.append((rel, "too small to be a usable photograph"))
             continue
 
+        sub = normalise(os.path.basename(os.path.dirname(rel)))
+        back = any(w in sub for w in BACK_OF_HOUSE) and sub != normalise(matched_on)
         candidates.append({"rel": rel, "src": src, "hotel": best,
                            "explicit": explicit_n, "bytes": nbytes, "w": 0, "h": 0,
-                           "folder": matched_on})
+                           "back": back, "folder": matched_on})
 
     # Largest image becomes the hero unless the filename said otherwise.
     by_hotel = {}
@@ -365,7 +371,9 @@ def main():
             print("     These are probably different properties. Skipped - tell "
                   "Claude which one is the right one.\n")
             continue
-        group.sort(key=lambda c: -c["bytes"])
+        # Main-folder pictures first; spa, gym and thumbnail folders only if
+        # there is nothing better. Size decides within each band.
+        group.sort(key=lambda c: (c["back"], -c["bytes"]))
         seen = set()
         for c in group:                      # group is already largest-first
             if c["explicit"] and c["explicit"] in seen:
