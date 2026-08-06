@@ -72,8 +72,8 @@ STAGING = os.path.expanduser("~/Downloads/lf-images-in")
 MIN_WIDTH = 1600
 THUMBNAIL_WIDTH = 800
 TINY_BYTES = 60_000     # below this it is a thumbnail; judged without opening the file
-MAX_WIDTH = 2400        # anything wider is resampled down before filing
-JPEG_QUALITY = 82
+MAX_WIDTH = 2000        # anything wider is resampled DOWN. Never up.
+JPEG_QUALITY = 76
 MIN_SCORE = 0.5         # at least half the hotel's own name must appear
 STOPWORDS = {"hotel", "resort", "the", "a", "and", "villas", "collection",
              "img", "dsc", "photo", "image", "copy", "final", "edit"}
@@ -171,8 +171,55 @@ def match(filename, hotels):
     return best, second, n
 
 
+def reprocess():
+    """Re-compress the hotel images already in images/. Shrink only."""
+    import glob
+    files = sorted(glob.glob(os.path.join(IMAGES, "hotel-*.jpg")))
+    if not files:
+        sys.exit("No hotel images found in images/")
+    print(f"\n  Re-optimising {len(files)} image(s). Shrink only, never enlarge.\n")
+    before_total = after_total = 0
+    for f in files:
+        before = os.path.getsize(f)
+        dims = dimensions(f)
+        w = dims[0] if dims else 0
+        tmp = f + ".tmp.jpg"
+        args = ["-s", "format", "jpeg", "-s", "formatOptions", str(JPEG_QUALITY)]
+        if w > MAX_WIDTH:
+            args = ["-Z", str(MAX_WIDTH)] + args
+        r = sips(f, *args, "--out", tmp)
+        if not r or r.returncode != 0:
+            try:
+                from PIL import Image
+                with Image.open(f) as im:
+                    im = im.convert("RGB")
+                    if im.width > MAX_WIDTH:
+                        im = im.resize((MAX_WIDTH,
+                                        round(im.height * MAX_WIDTH / im.width)),
+                                       Image.LANCZOS)
+                    im.save(tmp, "JPEG", quality=JPEG_QUALITY, optimize=True)
+            except Exception as e:
+                print(f"      skipped {os.path.basename(f)} ({e})")
+                continue
+        after = os.path.getsize(tmp)
+        if after < before:
+            os.replace(tmp, f)
+        else:
+            os.remove(tmp)
+            after = before
+        before_total += before
+        after_total += after
+    mb = (before_total - after_total) / 1_048_576
+    print(f"  Done. {before_total/1_048_576:.0f}MB -> {after_total/1_048_576:.0f}MB "
+          f"({mb:.0f}MB saved).\n")
+    print("  Check a few look fine, then commit:\n")
+    print('      git add -A && git commit -m "Optimise hotel images for the web" && git push\n')
+
+
 def main():
     global STAGING
+    if "--reprocess" in sys.argv:
+        return reprocess()
     auto = "--yes" in sys.argv
 
     # --from lets you read straight out of the OneDrive folder on this Mac,
@@ -380,20 +427,26 @@ def main():
             sys.exit("  Nothing done.")
 
     filed, saved = 0, 0
+    widths = {c["rel"]: c["w"] for c in candidates}
     for f, src, h, n, tgt, _ in plan:
         dst = os.path.join(IMAGES, tgt)
         before = os.path.getsize(src)
+        c_width = widths.get(f, 0)
 
         # Originals from a media pack are often 5-15MB. A web hero needs
         # nothing like that, and a git repo really does not want it.
-        r = sips(src, "-Z", str(MAX_WIDTH), "-s", "format", "jpeg",
-                 "-s", "formatOptions", str(JPEG_QUALITY), "--out", dst)
+        # NEVER upscale: sips -Z resizes in BOTH directions, so a 1280px source
+        # would be blown up to 2400px - a bigger file with no extra detail.
+        args = ["-s", "format", "jpeg", "-s", "formatOptions", str(JPEG_QUALITY)]
+        if c_width and c_width > MAX_WIDTH:
+            args = ["-Z", str(MAX_WIDTH)] + args
+        r = sips(src, *args, "--out", dst)
         if not r or r.returncode != 0:
             try:                                    # fallback if sips is absent
                 from PIL import Image
                 with Image.open(src) as im:
                     im = im.convert("RGB")
-                    if im.width > MAX_WIDTH:
+                    if im.width > MAX_WIDTH:      # shrink only, never enlarge
                         im = im.resize((MAX_WIDTH,
                                         round(im.height * MAX_WIDTH / im.width)),
                                        Image.LANCZOS)
