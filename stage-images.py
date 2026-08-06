@@ -14,6 +14,13 @@ waits for you to say yes.
 HOW TO USE IT
 
 1. Make a staging folder:        mkdir -p ~/Downloads/lf-images-in
+   OR, if OneDrive is installed on this Mac, skip all copying and read it
+   directly - nothing is downloaded, zipped or moved:
+
+       python3 stage-images.py --from "/Users/you/Library/CloudStorage/OneDrive-Personal/.../Hotels/Cambodia"
+
+   (Drag the folder from Finder onto the Terminal window to get its path.)
+
 2. Copy images into it from OneDrive - COPY, do not move. Keep your originals.
 3. EITHER put images in a folder named after the hotel - the easiest way,
    and it works straight from a OneDrive download:
@@ -38,6 +45,9 @@ It will show each file, the property it matched, and the final filename,
 then ask before doing anything. Nothing is deployed and nothing is deleted.
 
 ALSO HANDLED
+  - Everything is resampled to 2400px wide and re-encoded as JPEG. Media-pack
+    originals are often 5-15MB each; a web hero needs a fraction of that, and
+    a git repo really does not want the difference.
   - HEIC and PNG files are converted to JPG (browsers do not show HEIC).
   - Images narrower than 1600px are flagged, not silently accepted.
   - Portrait images are flagged, because they crop badly in a hero band.
@@ -61,6 +71,10 @@ STAGING = os.path.expanduser("~/Downloads/lf-images-in")
 
 MIN_WIDTH = 1600
 THUMBNAIL_WIDTH = 800
+TINY_BYTES = 60_000     # below this it is a thumbnail; judged without opening the file
+MAX_WIDTH = 2400        # anything wider is resampled down before filing
+JPEG_QUALITY = 82
+MIN_SCORE = 0.5         # at least half the hotel's own name must appear
 STOPWORDS = {"hotel", "resort", "the", "a", "and", "villas", "collection",
              "img", "dsc", "photo", "image", "copy", "final", "edit"}
 
@@ -104,6 +118,15 @@ def target_name(hotel, n):
     return f"{base}.jpg" if n == 1 else f"{base}-{n}.jpg"
 
 
+def place_names(hotels):
+    out = set()
+    for h in hotels:
+        out.add(normalise(h["area"].replace("-", " ")))
+        out.add(normalise(h["destination"].replace("-", " ")))
+    out |= {"north", "central", "south", "east", "west", "hotels", "images", "asia"}
+    return out
+
+
 def match(filename, hotels):
     """Score every property against the filename and return the best two."""
     stem = os.path.splitext(filename)[0]
@@ -119,13 +142,28 @@ def match(filename, hotels):
 
     scored = []
     for h in hotels:
-        have = tokens(h["name"]) | tokens(h["slug"]) | tokens(h["area"])
-        if not have:
+        # The hotel's OWN name is what qualifies a match. The area may only
+        # break a tie - never make one. Without this, a folder called
+        # "Emeralda Ninh Binh" matches Amanoi purely on the word "Ninh".
+        # Strip the area out of BOTH name and slug: "Royal Sands Koh Rong" must
+        # not be matchable by a folder called "Koh Rong Map".
+        named = (tokens(h["name"]) | tokens(h["slug"])) - tokens(h["area"])
+        if not named:
+            named = tokens(h["name"]) | tokens(h["slug"])
+        if not named:
             continue
-        overlap = len(want & have)
-        if not overlap:
+        hits = want & named
+        if not hits:
             continue
-        scored.append((overlap / len(want | have) + overlap * 0.1, h))
+        # Score on how much of the HOTEL's own name is present, not on overlap
+        # with the whole folder name - folders carry extra words ("Siem Reap",
+        # "Hotel", "Resort") that should not dilute a confident match.
+        score = len(hits) / len(named)
+        if want & tokens(h["area"]):
+            score += 0.02
+        if score < MIN_SCORE:
+            continue
+        scored.append((score, h))
 
     scored.sort(key=lambda x: -x[0])
     best = scored[0] if scored else (0, None)
@@ -134,7 +172,29 @@ def match(filename, hotels):
 
 
 def main():
+    global STAGING
     auto = "--yes" in sys.argv
+
+    # --from lets you read straight out of the OneDrive folder on this Mac,
+    # so nothing has to be downloaded, zipped or copied first.
+    src_arg = None
+    for i, a in enumerate(sys.argv):
+        if a == "--from":
+            if i + 1 >= len(sys.argv):
+                sys.exit("--from needs a folder after it. Tip: drag the folder "
+                         "from Finder onto the Terminal window.")
+            src_arg = sys.argv[i + 1]
+            break
+        if a.startswith("--from"):          # --from=/path or --from/path, no space
+            src_arg = a[len("--from"):].lstrip("=")
+            if src_arg:
+                break
+            src_arg = None
+    if src_arg:
+        STAGING = os.path.expanduser(src_arg.rstrip("/"))
+        if not os.path.isdir(STAGING):
+            sys.exit(f"No folder at:\n  {STAGING}")
+        print(f"\n  Reading from: {STAGING}")
 
     for path, what in ((IMAGES, "images folder"), (DATA, "data/hotels.json")):
         if not os.path.exists(path):
@@ -144,8 +204,8 @@ def main():
     if not os.path.isdir(STAGING):
         os.makedirs(STAGING, exist_ok=True)
         sys.exit(f"Created a staging folder for you:\n  {STAGING}\n\n"
-                 "Copy your images in there from OneDrive, give each one a name "
-                 "with the hotel in it, then run this again.")
+                 "Copy images in there, or point at OneDrive directly with:\n"
+                 "  python3 stage-images.py --from <folder>")
 
     zips = [z for z in os.listdir(STAGING) if z.lower().endswith(".zip")]
     if zips:
@@ -157,6 +217,18 @@ def main():
     data = json.load(open(DATA))
     hotels = data["hotels"]
 
+    country = None
+    here = normalise(os.path.basename(STAGING))
+    for h in data["hotels"]:
+        if normalise(h["destination"]) == here:
+            country = h["destination"]
+            break
+    if country:
+        hotels = [h for h in data["hotels"] if h["destination"] == country]
+        print(f"  Only matching {country.title()} properties "
+              f"({len(hotels)} in hotels.json).")
+    places = place_names(data["hotels"])
+
     files = []
     for root, dirs, names in os.walk(STAGING):
         dirs[:] = [d for d in dirs if not d.startswith(".")]
@@ -167,13 +239,19 @@ def main():
     if not files:
         sys.exit(f"No images found in {STAGING}")
 
-    print(f"\n  {len(files)} image(s) found.\n")
+    print(f"\n  {len(files)} image(s) found.")
+    print("  Matching them up - this part is quick.\n")
 
     plan, unmatched, candidates = [], [], []
+    checked = 0
     for src in files:
+        checked += 1
+        if checked % 25 == 0 or checked == len(files):
+            print(f"      {checked} of {len(files)}...", flush=True)
         f = os.path.basename(src)
+        matched_on = ""
         try:
-            (best_score, best), (second_score, _), explicit_n = match(f, hotels)
+                (best_score, best), (second_score, _), explicit_n = match(f, hotels)
         except Exception as e:
             unmatched.append((os.path.relpath(src, STAGING), f"could not read this one ({e})"))
             continue
@@ -182,36 +260,48 @@ def main():
             # fall back to the folder name, nearest parent first
             rel = os.path.relpath(os.path.dirname(src), STAGING)
             parts = [] if rel == "." else rel.split(os.sep)
+            matched_on = ""
             for parent in reversed(parts):
+                if normalise(parent) in places:      # a region, not a property
+                    continue
                 (bs, b), (ss, _), _ = match(parent, hotels)
                 if b:
                     best, best_score, second_score = b, bs, ss
+                    matched_on = parent
                     break
         if not best:
-            unmatched.append((f, "no property recognised in the filename"))
+            unmatched.append((os.path.relpath(src, STAGING),
+                              "not a property in hotels.json"))
             continue
         twins = [h for h in hotels
                  if normalise(h["name"]) == normalise(best["name"])]
         if len(twins) > 1 and not (tokens(f) & set().union(
                 *(tokens(t["area"]) for t in twins))):
             names = " or ".join(t["area"] for t in twins)
-            unmatched.append((f, f'"{best["name"]}" exists in more than one place - '
-                                 f'add the city to the filename ({names})'))
+            unmatched.append((os.path.relpath(src, STAGING),
+                              f'"{best["name"]}" exists in more than one place - '
+                              f'say which ({names})'))
             continue
         if second_score and best_score - second_score < 0.08:
-            unmatched.append((f, "ambiguous - could be more than one property"))
+            unmatched.append((os.path.relpath(src, STAGING),
+                              "ambiguous - could be more than one property"))
             continue
 
         rel = os.path.relpath(src, STAGING)
-        dims = dimensions(src)
-        w, h = dims if dims else (0, 0)
-
-        if dims and w < THUMBNAIL_WIDTH:
-            unmatched.append((rel, f"only {w}px wide - this is a thumbnail, not usable"))
+        # os.path.getsize works on a OneDrive placeholder WITHOUT downloading it.
+        # Reading pixel dimensions does not - so that is deferred until we know
+        # which three images per property we actually want.
+        try:
+            nbytes = os.path.getsize(src)
+        except OSError:
+            nbytes = 0
+        if nbytes and nbytes < TINY_BYTES:
+            unmatched.append((rel, "too small to be a usable photograph"))
             continue
 
         candidates.append({"rel": rel, "src": src, "hotel": best,
-                           "explicit": explicit_n, "w": w, "h": h})
+                           "explicit": explicit_n, "bytes": nbytes, "w": 0, "h": 0,
+                           "folder": matched_on})
 
     # Largest image becomes the hero unless the filename said otherwise.
     by_hotel = {}
@@ -219,8 +309,23 @@ def main():
         by_hotel.setdefault(c["hotel"]["slug"], []).append(c)
 
     for slug, group in by_hotel.items():
-        group.sort(key=lambda c: -c["w"])
-        taken = {c["explicit"] for c in group if c["explicit"]}
+        folders = sorted({c["folder"] for c in group if c["folder"]})
+        if len(folders) > 1:
+            print(f"  !! {len(folders)} different folders both look like "
+                  f"\"{group[0]['hotel']['name']}\":")
+            for fo in folders:
+                print(f"       {fo}")
+            print("     These are probably different properties. Skipped - tell "
+                  "Claude which one is the right one.\n")
+            continue
+        group.sort(key=lambda c: -c["bytes"])
+        seen = set()
+        for c in group:                      # group is already largest-first
+            if c["explicit"] and c["explicit"] in seen:
+                c["explicit"] = 0
+            elif c["explicit"]:
+                seen.add(c["explicit"])
+        taken = seen
         nxt = (n for n in (1, 2, 3) if n not in taken)
         for c in group:
             c["n"] = c["explicit"] or next(nxt, None)
@@ -228,6 +333,12 @@ def main():
             if c["n"] is None:
                 unmatched.append((c["rel"], "only three images per property - "
                                             "this one was not among the largest three"))
+                continue
+            dims = dimensions(c["src"])          # only the chosen few get read
+            c["w"], c["h"] = dims if dims else (0, 0)
+            if c["w"] and c["w"] < THUMBNAIL_WIDTH:
+                unmatched.append((c["rel"],
+                                  f"only {c['w']}px wide - a thumbnail, not usable"))
                 continue
             warns = []
             if c["w"] and c["w"] < MIN_WIDTH:
@@ -238,10 +349,18 @@ def main():
                          target_name(c["hotel"], c["n"]), warns))
 
     if unmatched:
-        print("  COULD NOT PLACE THESE - rename them with the hotel name and rerun:\n")
+        byfolder = {}
         for f, why in unmatched:
-            print(f"      {f}\n        {why}")
-        print()
+            key = (os.path.dirname(f) or "(loose files)", why)
+            byfolder.setdefault(key, []).append(f)
+        print("  NOT FILED:\n")
+        for (folder, why), fs in sorted(byfolder.items()):
+            n = len(fs)
+            print(f"      {folder}   ({n} image{'s' if n != 1 else ''})")
+            print(f"        {why}")
+        print("\n  Properties above that are not in hotels.json are expected - "
+              "your library is larger than the site. Tell Claude if any should "
+              "be added.\n")
 
     if not plan:
         sys.exit("  Nothing to file.\n")
@@ -260,24 +379,42 @@ def main():
         if input("  File these? [y/N] ").strip().lower() not in ("y", "yes"):
             sys.exit("  Nothing done.")
 
-    filed = 0
+    filed, saved = 0, 0
     for f, src, h, n, tgt, _ in plan:
         dst = os.path.join(IMAGES, tgt)
-        if src.lower().endswith((".png", ".heic")):
-            r = sips(src, "-s", "format", "jpeg", "--out", dst)
-            if not r or r.returncode != 0:
-                print(f"      could not convert {f} - skipped")
+        before = os.path.getsize(src)
+
+        # Originals from a media pack are often 5-15MB. A web hero needs
+        # nothing like that, and a git repo really does not want it.
+        r = sips(src, "-Z", str(MAX_WIDTH), "-s", "format", "jpeg",
+                 "-s", "formatOptions", str(JPEG_QUALITY), "--out", dst)
+        if not r or r.returncode != 0:
+            try:                                    # fallback if sips is absent
+                from PIL import Image
+                with Image.open(src) as im:
+                    im = im.convert("RGB")
+                    if im.width > MAX_WIDTH:
+                        im = im.resize((MAX_WIDTH,
+                                        round(im.height * MAX_WIDTH / im.width)),
+                                       Image.LANCZOS)
+                    im.save(dst, "JPEG", quality=JPEG_QUALITY, optimize=True)
+            except Exception as e:
+                print(f"      could not process {f} ({e}) - skipped")
                 continue
-        else:
-            shutil.copy2(src, dst)
+
+        saved += before - os.path.getsize(dst)
         if n == 1:
             h["image"] = f"/images/{tgt}"
         filed += 1
 
     json.dump(data, open(DATA, "w"), indent=2, ensure_ascii=False)
 
+    mb = saved / 1_048_576
     print(f"\n  Filed {filed} image(s) into images/ and updated hotels.json.")
-    print("  Your originals in the staging folder are untouched.\n")
+    print("  Nothing in the source folder was changed.")
+    if mb > 1:
+        print(f"  Resized for the web - {mb:.0f}MB smaller than the originals.")
+
     print("  Check what changed, then commit:\n")
     print("      git status")
     print('      git add -A && git commit -m "Add hotel photography" && git push\n')

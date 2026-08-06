@@ -2,3 +2,5 @@
 **/.DS_Store
 Thumbs.db
 *.zip
+stage-images.py
+check-hotel-images.py

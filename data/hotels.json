@@ -73,7 +73,7 @@
       "character": "Tented camp in the Cardamom Mountains. Wildlife Alliance ranger patrols, foraging with the chef, the Boulder Spa.",
       "why": "A Bensley original and the strongest conservation story in the region.",
       "verdict": "",
-      "image": "",
+      "image": "/images/hotel-cambodia-cardamom-mountains-shinta-mani-wild.jpg",
       "source": "ylh",
       "prose": ""
     },
@@ -93,7 +93,7 @@
       "character": "Koh Rong Archipelago, 40-45 minutes by speedboat from Sihanoukville.",
       "why": "",
       "verdict": "",
-      "image": "",
+      "image": "/images/hotel-cambodia-koh-rong-royal-sands-koh-rong.jpg",
       "source": "ylh",
       "prose": ""
     },
@@ -113,7 +113,7 @@
       "character": "Two private islands in the Koh Rong archipelago, joined by a footbridge.",
       "why": "A private island is the clearest possible By Invitation signal.",
       "verdict": "",
-      "image": "",
+      "image": "/images/hotel-cambodia-koh-rong-song-saa.jpg",
       "source": "",
       "prose": ""
     },
@@ -155,7 +155,7 @@
       "character": "Opened 1929, in the colonial quarter.",
       "why": "",
       "verdict": "A case of old against new. Many would be impressed by the newer addresses and their views over the city. But for those who want the grandeur, Raffles wins every time. More a hotel feel, with simple access instead of elevators.",
-      "image": "",
+      "image": "/images/hotel-cambodia-phnom-penh-raffles-le-royal.jpg",
       "source": "+andy/picks-1aug",
       "prose": "A 1929 hotel in the colonial quarter that has been present for most of what has happened to this city since. That is the reason it is here rather than a newer address. The Cambodian days of this journey include the Cham communities of the Mekong and what was done to them in the 1970s, and a hotel woven into the same century holds that weight better than a glass tower would."
     },
@@ -176,7 +176,7 @@
       "character": "Upper floors of Vattanac Capital Tower, in the city centre.",
       "why": "",
       "verdict": "",
-      "image": "",
+      "image": "/images/hotel-cambodia-phnom-penh-rosewood-phnom-penh.jpg",
       "source": "+andy/picks-1aug",
       "prose": ""
     },
@@ -197,7 +197,7 @@
       "character": "Built in 1962 as the royal guesthouse of King Norodom Sihanouk. Twenty-four suites, minutes from the Angkor gate.",
       "why": "The definitive Angkor address, and the natural home of a before-hours temple morning.",
       "verdict": "Amansara has limited room choices. Not always a negative, but in some cases it is.",
-      "image": "",
+      "image": "/images/hotel-cambodia-siem-reap-amansara.jpg",
       "source": "+andy/picks-1aug",
       "prose": ""
     },
@@ -218,7 +218,7 @@
       "character": "",
       "why": "",
       "verdict": "A great central location, with an excellent team running the hotel. Lovely rooms. And again, the location.",
-      "image": "",
+      "image": "/images/hotel-cambodia-siem-reap-aviary-siem-reap.jpg",
       "source": "andy/trip-page-assignments-31jul",
       "_note": "Andy's Siem Reap lead-in.",
       "prose": ""
@@ -261,7 +261,7 @@
       "character": "Village-style resort in rice paddies outside town, all stilted wooden villas.",
       "why": "",
       "verdict": "",
-      "image": "",
+      "image": "/images/hotel-cambodia-siem-reap-phum-baitang.jpg",
       "source": "",
       "prose": ""
     },
@@ -281,7 +281,7 @@
       "character": "Opened 1932. Original cage lift still in service.",
       "why": "",
       "verdict": "Raffles has the history, and offers an insight into times gone by. Sitting here you can well imagine a time when travel was itself a luxury.",
-      "image": "",
+      "image": "/images/hotel-cambodia-siem-reap-raffles-grand-angkor.jpg",
       "source": "+andy/picks-1aug",
       "prose": "Opened in 1932, when Angkor was still being cleared, mapped and argued over, and the original cage lift still runs. There is a particular pleasure in staying inside the chapter of the story you have come to hear: the hotel and the rediscovery of Angkor belong to the same moment. It also has the terraces and public rooms a travelling group naturally gathers in, which matters more than it sounds."
     },
@@ -301,8 +301,48 @@
       "character": "In the French Quarter, designed by Bill Bensley.",
       "why": "",
       "verdict": "",
-      "image": "",
+      "image": "/images/hotel-cambodia-siem-reap-shinta-mani-angkor.jpg",
       "source": "",
+      "prose": ""
+    },
+    {
+      "slug": "bensley-collection-shinta-mani-siem-reap",
+      "name": "Bensley Collection Shinta Mani Siem Reap",
+      "destination": "cambodia",
+      "area": "siem-reap",
+      "tier": "premium",
+      "confirmed": false,
+      "tier_confirmed": false,
+      "preferred": false,
+      "tags": [
+        "leisure"
+      ],
+      "room_types": [],
+      "character": "",
+      "why": "",
+      "verdict": "",
+      "image": "/images/hotel-cambodia-siem-reap-bensley-collection-shinta-mani-siem-reap.jpg",
+      "source": "andy/6aug - split",
+      "prose": ""
+    },
+    {
+      "slug": "shinta-mani-shack",
+      "name": "Shinta Mani Shack",
+      "destination": "cambodia",
+      "area": "siem-reap",
+      "tier": "premium",
+      "confirmed": false,
+      "tier_confirmed": false,
+      "preferred": false,
+      "tags": [
+        "leisure"
+      ],
+      "room_types": [],
+      "character": "",
+      "why": "",
+      "verdict": "",
+      "image": "/images/hotel-cambodia-siem-reap-shinta-mani-shack.jpg",
+      "source": "andy/6aug - split",
       "prose": ""
     },
     {
@@ -1143,8 +1183,8 @@
       "prose": ""
     },
     {
-      "slug": "la-siesta-hanoi",
-      "name": "La Siesta",
+      "slug": "la-siesta-premium-hang-be",
+      "name": "La Siesta Premium Hang Be",
       "destination": "vietnam",
       "area": "hanoi",
       "tier": "classic",
@@ -1160,7 +1200,49 @@
       "why": "Andy's benchmark for character over star rating.",
       "verdict": "",
       "image": "",
-      "source": "andy/trip-page-assignments-31jul",
+      "source": "andy/6aug - split",
+      "prose": ""
+    },
+    {
+      "slug": "la-siesta-classic-hang-than",
+      "name": "La Siesta Classic Hang Than",
+      "destination": "vietnam",
+      "area": "hanoi",
+      "tier": "classic",
+      "confirmed": false,
+      "tier_confirmed": false,
+      "preferred": true,
+      "tags": [
+        "golf",
+        "leisure"
+      ],
+      "room_types": [],
+      "character": "",
+      "why": "",
+      "verdict": "",
+      "image": "",
+      "source": "andy/6aug - split",
+      "prose": ""
+    },
+    {
+      "slug": "la-siesta-ma-may",
+      "name": "La Siesta Ma May",
+      "destination": "vietnam",
+      "area": "hanoi",
+      "tier": "classic",
+      "confirmed": false,
+      "tier_confirmed": false,
+      "preferred": true,
+      "tags": [
+        "golf",
+        "leisure"
+      ],
+      "room_types": [],
+      "character": "",
+      "why": "",
+      "verdict": "",
+      "image": "",
+      "source": "andy/6aug - split",
       "prose": ""
     },
     {
@@ -1316,18 +1398,17 @@
       "slug": "amanoi",
       "name": "Amanoi",
       "destination": "vietnam",
-      "area": "ninh-thuan",
+      "area": "cam-ranh",
       "tier": "ultra",
       "confirmed": true,
       "tier_confirmed": true,
       "preferred": false,
       "tags": [
-        "cam-ranh",
         "leisure",
-        "nha-trang"
+        "ninh-thuan"
       ],
       "room_types": [],
-      "character": "Nui Chua National Park, above Vinh Hy Bay in Ninh Thuan. Flying into Cam Ranh / Nha Trang.",
+      "character": "Nui Chua National Park, above Vinh Hy Bay. Flying into Cam Ranh.",
       "why": "The second Aman in the range and almost unknown to UK buyers - genuine discovery.",
       "verdict": "The views and the service in equal measure. A stunning example of what can be done.",
       "image": "",
@@ -1434,6 +1515,27 @@
       "image": "",
       "source": "andy/6aug + verified",
       "prose": "A private island in the middle of the Mekong, and the middle chapter of a journey whose organising idea is water. You cross the river from Cambodia following the route the Cham took after 1471, and you sleep on the river itself. No road, no arrival forecourt, just a boat. Created by Adrian Zecha, who invented this kind of hotel."
+    },
+    {
+      "slug": "hyatt-regency-phnom-penh",
+      "name": "Hyatt Regency Phnom Penh",
+      "destination": "cambodia",
+      "area": "phnom-penh",
+      "tier": "premium",
+      "confirmed": false,
+      "tier_confirmed": false,
+      "preferred": false,
+      "tags": [
+        "golf",
+        "leisure"
+      ],
+      "room_types": [],
+      "character": "",
+      "why": "Named by Andy 6 Aug alongside Raffles and Rosewood.",
+      "verdict": "",
+      "prose": "",
+      "image": "/images/hotel-cambodia-phnom-penh-hyatt-regency-phnom-penh.jpg",
+      "source": "andy/6aug"
     }
   ]
 }
