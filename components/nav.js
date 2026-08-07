@@ -97,6 +97,7 @@
   // ── NAV HTML ─────────────────────────────────────────────────
   const path     = window.location.pathname;
   const isGolf   = path.includes('/golf-in-asia');
+  const isHotels = path.startsWith('/hotels');
   const isFairwayTours = path.includes('/fairway-tours');
   const isFW     = path.includes('/fairway-weekends');
   const isBeyond = path.includes('/beyond');
@@ -124,6 +125,7 @@
         <li class="${isFairwayTours ? 'active' : ''}"><a href="/fairway-tours/">Fairway Tours</a></li>
         <li class="${isFW ? 'active' : ''}"><a href="/fairway-weekends/">Fairway Weekends</a></li>
         <li class="beyond-link ${isBeyond ? 'active' : ''}"><a href="/beyond/">Beyond Asia</a></li>
+        <li class="${isHotels ? 'active' : ''}"><a href="/hotels/">The Houses</a></li>
         <li><a href="/journal/">Journal</a></li>
         <li class="nav-currency" aria-label="Select currency">
           <button class="lf-currency-btn ${activeCurrency==='GBP'?'active':''}" data-currency="GBP">£</button>
