@@ -13,7 +13,7 @@
   <meta property="og:description" content="One man designed all of them. Sixteen nights through the hotels of Bill Bensley, across four countries.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://lotusfairways.com/the-architects-asia.html">
-  <meta property="og:image" content="https://lotusfairways.com/images/hotel-cambodia-cardamom-mountains-shinta-mani-wild.jpg">
+  <meta property="og:image" content="https://lotusfairways.com/images/hotel-cambodia-cardamom-mountains-shinta-mani-wild-3.jpg">
   <meta property="og:site_name" content="Lotus &amp; Fairways">
   <meta name="twitter:card" content="summary_large_image">
 
@@ -49,16 +49,17 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(to top, rgba(26,18,8,0.82) 0%, rgba(26,18,8,0.25) 50%, rgba(26,18,8,0.1) 100%);
+      background: linear-gradient(to top, rgba(26,18,8,0.90) 0%, rgba(26,18,8,0.66) 42%, rgba(26,18,8,0.48) 100%);
     }
     .signature-hero-content {
       position: relative;
       z-index: 1;
       max-width: var(--max-width);
       margin: 0 auto;
-      padding: 0 var(--space-xl) var(--space-2xl);
+      padding: 0 var(--space-xl) calc(var(--space-2xl) + 72px);
       width: 100%;
       color: var(--parchment);
+      text-shadow: 0 1px 18px rgba(26,18,8,0.55);
     }
     .signature-hero-content .eyebrow { color: var(--bronze-light); margin-bottom: var(--space-md); }
     .signature-hero-content h1 { color: var(--white); margin-bottom: var(--space-md); max-width: 800px; }
@@ -221,6 +222,20 @@
       .invitation-band { padding: var(--space-2xl) var(--space-md); }
     }
 
+
+    /* ── The Work strip: four of his hotels, shown rather than described ── */
+    .work-strip { background: var(--deep); padding: var(--space-2xl) var(--space-xl); }
+    .work-strip .inner { max-width: var(--max-width); margin: 0 auto; }
+    .work-strip .eyebrow { color: var(--bronze); text-align: center; margin-bottom: var(--space-md); }
+    .work-strip h2 { color: var(--white); text-align: center; margin-bottom: var(--space-sm); font-size: 2rem; }
+    .work-strip .lede { color: var(--parchment-dark); text-align: center; max-width: 620px; margin: 0 auto var(--space-xl); font-size: 1rem; line-height: 1.8; }
+    .work-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-md); }
+    .work-item figure { margin: 0; }
+    .work-item img { width: 100%; aspect-ratio: 3/4; object-fit: cover; display: block; border-radius: 2px; }
+    .work-item figcaption { color: var(--parchment-dark); font-family: var(--font-sans); font-size: 0.72rem; letter-spacing: 0.04em; margin-top: 10px; line-height: 1.5; }
+    .work-item figcaption strong { display: block; color: var(--bronze-light); font-family: var(--font-serif); font-size: 1rem; font-weight: 400; letter-spacing: 0; margin-bottom: 2px; }
+    @media (max-width: 900px) { .work-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 480px) { .work-grid { grid-template-columns: 1fr; } .work-strip { padding: var(--space-xl) var(--space-md); } }
   </style>
 </head>
 <body>
@@ -232,7 +247,7 @@
      HERO
 ══════════════════════════════════════════ -->
 <section class="signature-hero">
-  <img src="/images/hotel-cambodia-cardamom-mountains-shinta-mani-wild.jpg" alt="The Architect's Asia — the hotels of Bill Bensley across Thailand, Laos, Cambodia and Vietnam">
+  <img src="/images/hotel-cambodia-cardamom-mountains-shinta-mani-wild-3.jpg" alt="The Architect's Asia — the hotels of Bill Bensley across Thailand, Laos, Cambodia and Vietnam">
   <div class="signature-hero-content">
     <div class="eyebrow">— Thailand · Laos · Cambodia · Vietnam —</div>
     <h1>The Architect's Asia</h1>
@@ -290,6 +305,35 @@
     <p><em>This journey is not about luxury. It is about what happens when one person is allowed to finish the thought.</em></p>
   </div>
 </section>
+
+<!-- ══════════════════════════════════════════
+     THE WORK
+══════════════════════════════════════════ -->
+<div class="work-strip">
+  <div class="inner">
+    <div class="eyebrow">— The Work —</div>
+    <h2>Four of the six</h2>
+    <p class="lede">Nothing here is a style applied to a building. Each one starts as a story, and everything down to the door handles is made to serve it.</p>
+    <div class="work-grid">
+      <div class="work-item"><figure>
+        <img src="/images/hotel-thailand-bangkok-the-siam-bangkok.jpg" alt="The Siam, Bangkok" loading="lazy">
+        <figcaption><strong>The Siam</strong>Bangkok &middot; black and white, art deco, and a family's antiques through every room</figcaption>
+      </figure></div>
+      <div class="work-item"><figure>
+        <img src="/images/hotel-cambodia-siem-reap-bensley-collection-shinta-mani-siem-reap.jpg" alt="Bensley Collection Pool Villas, Siem Reap" loading="lazy">
+        <figcaption><strong>Bensley Collection</strong>Siem Reap &middot; ten pool villas in their own enclave, taken in full by the group</figcaption>
+      </figure></div>
+      <div class="work-item"><figure>
+        <img src="/images/hotel-cambodia-cardamom-mountains-shinta-mani-wild-2.jpg" alt="Shinta Mani Wild, Cardamom Mountains" loading="lazy">
+        <figcaption><strong>Shinta Mani Wild</strong>Cardamom Mountains &middot; no road in, and the land was going to be logged</figcaption>
+      </figure></div>
+      <div class="work-item"><figure>
+        <img src="/images/hotel-vietnam-da-nang-intercontinental-danang.jpg" alt="InterContinental Danang" loading="lazy">
+        <figcaption><strong>InterContinental Danang</strong>Son Tra &middot; four terraces cut into a headland, a funicular running down them</figcaption>
+      </figure></div>
+    </div>
+  </div>
+</div>
 
 <!-- ══════════════════════════════════════════
      THE ROUTE
@@ -361,7 +405,7 @@
       <div>
         <h3 class="day-title">The Coast &mdash; Two Nights, and the Sea</h3>
         <p>Cut into the Son Tra peninsula across four terraces in black and white, with a funicular running down through them to the sand. After the Cardamoms it is somewhere to swim, eat well and let sixteen nights settle. The last of the six, and the one that sends you home slowly.</p>
-        <div class="day-tags"><span class="day-tag water">South China Sea</span><span class="day-tag stay">InterContinental Danang</span></div>
+        <div class="day-tags"><span class="day-tag water">Da Nang Bay</span><span class="day-tag stay">InterContinental Danang</span></div>
       </div>
     </div>
 
