@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Architect's Asia — Sixteen Nights Through the Hotels of Bill Bensley | Lotus &amp; Fairways</title>
+  <meta name="description" content="Sixteen nights through the hotels of Bill Bensley — The Siam, the Four Seasons Tented Camp, Rosewood Luang Prabang, Shinta Mani Wild and InterContinental Danang. Thailand, Laos, Cambodia and Vietnam. An inaugural small-group journey.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://lotusfairways.com/the-architects-asia.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="The Architect's Asia — Lotus &amp; Fairways">
+  <meta property="og:description" content="One man designed all of them. Sixteen nights through the hotels of Bill Bensley, across four countries.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lotusfairways.com/the-architects-asia.html">
+  <meta property="og:image" content="https://lotusfairways.com/images/hotel-cambodia-cardamom-mountains-shinta-mani-wild.jpg">
+  <meta property="og:site_name" content="Lotus &amp; Fairways">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+
+  <style>
+    /* ── Page-specific additions, built on existing tokens ── */
+    .signature-hero {
+      position: relative;
+      height: 78vh;
+      min-height: 520px;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+    }
+    .signature-hero img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .signature-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(26,18,8,0.82) 0%, rgba(26,18,8,0.25) 50%, rgba(26,18,8,0.1) 100%);
+    }
+    .signature-hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 var(--space-xl) var(--space-2xl);
+      width: 100%;
+      color: var(--parchment);
+    }
+    .signature-hero-content .eyebrow { color: var(--bronze-light); margin-bottom: var(--space-md); }
+    .signature-hero-content h1 { color: var(--white); margin-bottom: var(--space-md); max-width: 800px; }
+    .signature-hero-meta {
+      display: flex;
+      gap: var(--space-xl);
+      flex-wrap: wrap;
+      margin-top: var(--space-lg);
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+    }
+    .signature-hero-meta strong { display: block; font-family: var(--font-serif); font-size: 1.4rem; font-weight: 400; }
+
+    .at-a-glance {
+      background: var(--white);
+      border-radius: 4px;
+      box-shadow: var(--shadow-md);
+      padding: var(--space-xl);
+      margin-top: -90px;
+      position: relative;
+      z-index: 2;
+      max-width: var(--max-width);
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .at-a-glance-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--space-lg);
+    }
+    .at-a-glance-item h4 { color: var(--bronze); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 6px; font-family: var(--font-sans); font-weight: 500; }
+    .at-a-glance-item p { font-size: 0.95rem; color: var(--deep); margin: 0; line-height: 1.5; }
+
+    .price-note {
+      font-size: 0.75rem;
+      color: var(--warm-grey);
+      font-style: italic;
+      margin-top: var(--space-sm);
+    }
+
+    .intro-text {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .intro-text p { font-size: 1.1rem; line-height: 1.9; }
+
+    .timeline { max-width: 880px; margin: 0 auto; }
+    .day-block {
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      gap: var(--space-lg);
+      padding: var(--space-xl) 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .day-block:last-child { border-bottom: none; }
+    .day-number {
+      font-family: var(--font-serif);
+      font-size: 2.2rem;
+      color: var(--bronze);
+      line-height: 1;
+    }
+    .day-number span { display: block; font-family: var(--font-sans); font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--warm-grey); margin-top: 6px; }
+    .day-title { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 400; margin-bottom: 10px; color: var(--deep); }
+    .day-block p { margin-bottom: 12px; }
+    .day-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+    .day-tag {
+      font-size: 0.68rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 20px;
+      background: var(--rose-pale);
+      color: var(--rose);
+      font-family: var(--font-sans);
+    }
+    .day-tag.golf { background: #e8efe9; color: var(--green); }
+    .day-tag.whisky { background: #f3ead9; color: var(--bronze); }
+
+    .inclusions-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-2xl);
+      max-width: 880px;
+      margin: 0 auto;
+    }
+    @media (max-width: 700px) { .inclusions-grid { grid-template-columns: 1fr; gap: var(--space-xl); } }
+    .inclusions-grid h4 { font-family: var(--font-sans); font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: var(--space-md); }
+    .inclusions-grid ul li { font-size: 0.92rem; padding: 8px 0; border-bottom: 1px solid var(--rule); color: var(--slate); }
+    .inclusions-grid ul li:last-child { border-bottom: none; }
+
+    .gallery-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-sm);
+    }
+    .gallery-strip img { width: 100%; height: 200px; object-fit: cover; border-radius: 2px; }
+    @media (max-width: 700px) { .gallery-strip { grid-template-columns: repeat(2, 1fr); } }
+
+    .cta-band {
+      background: var(--green);
+      color: var(--parchment);
+      text-align: center;
+      padding: var(--space-3xl) var(--space-xl);
+    }
+    .cta-band h2 { color: var(--white); margin-bottom: var(--space-md); }
+    .cta-band p { color: var(--parchment-dark); max-width: 560px; margin: 0 auto var(--space-lg); font-size: 1rem; }
+  
+    /* ── Page-local additions for The Cham Tour ── */
+    .range-band {
+      background: var(--green);
+      color: var(--parchment);
+      padding: var(--space-xl) var(--space-xl);
+      text-align: center;
+    }
+    .range-band .range-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.6rem 2.2rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--parchment);
+    }
+    .range-band .sep { color: var(--bronze); }
+    .range-band .note {
+      display: block;
+      max-width: 640px;
+      margin: 0.9rem auto 0;
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1.2rem;
+      letter-spacing: 0;
+      text-transform: none;
+      color: var(--parchment-dark);
+    }
+
+    /* Stop tags — self-contained, no reliance on .golf / .whisky */
+    .day-tag.water { background: #f3ead9; color: #8a6524; }
+    .day-tag.stay  { background: #f5e7ec; color: var(--rose); }
+
+    .invitation-band {
+      background: var(--green);
+      color: var(--parchment);
+      padding: var(--space-3xl) var(--space-xl);
+    }
+    .invitation-band .inner { max-width: 720px; margin: 0 auto; }
+    .invitation-band .eyebrow { color: var(--bronze); margin-bottom: var(--space-md); }
+    .invitation-band h2 { color: var(--white); margin-bottom: var(--space-md); }
+    .invitation-band p { color: var(--parchment-dark); font-size: 1.05rem; line-height: 1.8; }
+
+    @media (max-width: 700px) {
+      .at-a-glance { margin-top: -50px; padding: var(--space-lg); }
+      .range-band { padding: var(--space-lg) var(--space-md); }
+      .range-band .range-inner { gap: 0.5rem 1.2rem; font-size: 0.66rem; }
+      .invitation-band { padding: var(--space-2xl) var(--space-md); }
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- Nav injected by component -->
+<script src="/components/nav.js"></script>
+
+<!-- ══════════════════════════════════════════
+     HERO
+══════════════════════════════════════════ -->
+<section class="signature-hero">
+  <img src="/images/hotel-cambodia-cardamom-mountains-shinta-mani-wild.jpg" alt="The Architect's Asia — the hotels of Bill Bensley across Thailand, Laos, Cambodia and Vietnam">
+  <div class="signature-hero-content">
+    <div class="eyebrow">— Thailand · Laos · Cambodia · Vietnam —</div>
+    <h1>The Architect's Asia</h1>
+    <p style="font-size:1.1rem; color:var(--parchment-dark); max-width:640px;">Sixteen nights through the hotels of Bill Bensley. One imagination, four countries, and the only way to see the range of it is to sleep in it.</p>
+    <div class="signature-hero-meta">
+      <div><strong>16 Nights</strong>Bangkok to Da Nang</div>
+      <div><strong>Four Countries</strong>Thailand, Laos, Cambodia, Vietnam</div>
+      <div><strong>10&ndash;12 Guests</strong>Inaugural departure</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     AT A GLANCE
+══════════════════════════════════════════ -->
+<div class="at-a-glance">
+  <div class="at-a-glance-grid">
+    <div class="at-a-glance-item">
+      <h4>The Route</h4>
+      <p>Bangkok, the Golden Triangle, three nights on the Mekong, Luang Prabang, Siem Reap, the Cardamom Mountains, Da Nang</p>
+    </div>
+    <div class="at-a-glance-item">
+      <h4>The Work</h4>
+      <p>A riverside house of antiques, a tented camp above three borders, a jungle camp reached by zipline, and a resort cut into a headland in black and white</p>
+    </div>
+    <div class="at-a-glance-item">
+      <h4>Where You Stay</h4>
+      <p>The Siam, Four Seasons Tented Camp Golden Triangle, Rosewood Luang Prabang, Bensley Collection Pool Villas, Shinta Mani Wild, InterContinental Danang</p>
+    </div>
+    <div class="at-a-glance-item">
+      <h4>Departure</h4>
+      <p style="font-family:var(--font-serif); font-size:1.6rem;">Winter 2027/28</p>
+      <p class="price-note">One inaugural departure, ten to twelve guests. Guide price confirmed on enquiry. Register your interest and we will come to you first with dates, the full itinerary and the price.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     THE RANGE
+══════════════════════════════════════════ -->
+<div class="range-band">
+  <div class="range-inner">
+    <span>City</span><span class="sep">·</span><span>Camp</span><span class="sep">·</span><span>River</span><span class="sep">·</span><span>Town</span><span class="sep">·</span><span>Temple</span><span class="sep">·</span><span>Jungle</span><span class="sep">·</span><span>Coast</span>
+  </div>
+  <span class="note">Seven kinds of place. One imagination.</span>
+</div>
+
+<!-- ══════════════════════════════════════════
+     INTRO
+══════════════════════════════════════════ -->
+<section class="section">
+  <div class="intro-text">
+    <p>Most hotels are decorated. Bill Bensley's are written. Each one begins with a story &mdash; a fictional collector, a lost expedition, a family that never existed &mdash; and then the building, the gardens, the furniture and the uniforms are all made to serve it. He has worked out of Bangkok for decades, and the results are scattered across Southeast Asia in places most itineraries pass at speed.</p>
+    <p>You cannot see the range of it in one hotel. A single stay reads as extravagance. Six of them, in sequence, read as an argument &mdash; because the same imagination produces a prince's townhouse on the Chao Phraya, a camp where elephants walk past the tent at dawn, and a jungle lodge built on land that was going to be logged until the camp bought the concession instead.</p>
+    <p><em>This journey is not about luxury. It is about what happens when one person is allowed to finish the thought.</em></p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     THE ROUTE
+══════════════════════════════════════════ -->
+<section class="section" style="background:var(--white);">
+  <div class="section-header">
+    <h2>The Journey</h2>
+    <div class="section-rule"></div>
+  </div>
+
+  <div class="timeline">
+
+    <div class="day-block">
+      <div class="day-number">1<span>Bangkok</span></div>
+      <div>
+        <h3 class="day-title">The Collector &mdash; Two Nights on the River</h3>
+        <p>The group gathers at The Siam, on the Chao Phraya in quiet Dusit rather than the hotel district. Black and white, art deco, and the owning family's collection of antiques through every public room. It is the clearest statement of the house style you will see all fortnight, and the right place to begin an argument about one man's work.</p>
+        <div class="day-tags"><span class="day-tag water">Chao Phraya</span><span class="day-tag stay">The Siam</span></div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-number">2<span>Golden Triangle</span></div>
+      <div>
+        <h3 class="day-title">The Camp &mdash; Two Nights Above Three Borders</h3>
+        <p>Tents in the hills where Thailand, Laos and Myanmar meet, looking out over the Mekong. Canvas, brass and campaign furniture, pitched as though an expedition arrived and never left. The elephants here are the reason most people come, and the reason to be careful about how that is arranged &mdash; we will tell you exactly what happens before you book.</p>
+        <div class="day-tags"><span class="day-tag stay">Four Seasons Tented Camp</span></div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-number">3<span>The Mekong</span></div>
+      <div>
+        <h3 class="day-title">The River &mdash; Three Nights Downstream</h3>
+        <p>The one leg not of his making, and the journey needs it. Three days on the water between the camp and Luang Prabang, through gorges and villages with no road to them, at the speed the river decides. It is the pause between two very loud rooms, and by the end of it the group knows each other.</p>
+        <div class="day-tags"><span class="day-tag water">Mekong</span><span class="day-tag stay">River cruise</span></div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-number">4<span>Luang Prabang</span></div>
+      <div>
+        <h3 class="day-title">The Town &mdash; Two Nights in the Hills</h3>
+        <p>Tents and villas around a waterfall outside the old royal capital, French colonial by way of a nineteenth-century explorer's imagination. Luang Prabang itself is a UNESCO town of monasteries and morning alms, and the contrast between the two is the point of stopping here.</p>
+        <div class="day-tags"><span class="day-tag stay">Rosewood Luang Prabang</span></div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-number">5<span>Siem Reap</span></div>
+      <div>
+        <h3 class="day-title">The Temples &mdash; Two Nights, Ten Villas</h3>
+        <p>Ten pool villas in their own enclave, taken in full by this group &mdash; which is the whole of it, so the enclave is yours. Angkor in the morning, and an afternoon to understand why a designer who builds fantasies chose to build a foundation here as well.</p>
+        <div class="day-tags"><span class="day-tag stay">Bensley Collection Pool Villas</span></div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-number">6<span>Cardamom Mountains</span></div>
+      <div>
+        <h3 class="day-title">The Wild &mdash; Three Nights, and You Arrive by Zipline</h3>
+        <p>There is no road in. You come down a wire over the river to the camp, and the tents are strung along the water below. The land was scheduled for logging until the camp took on the concession; rangers patrol from here, and you can go out with them. It is the most theatrical arrival on the route and the most serious thing on it, at the same time.</p>
+        <div class="day-tags"><span class="day-tag water">Preak Tachan</span><span class="day-tag stay">Shinta Mani Wild</span></div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-number">7<span>Da Nang</span></div>
+      <div>
+        <h3 class="day-title">The Coast &mdash; Two Nights, and the Sea</h3>
+        <p>Cut into the Son Tra peninsula across four terraces in black and white, with a funicular running down through them to the sand. After the Cardamoms it is somewhere to swim, eat well and let sixteen nights settle. The last of the six, and the one that sends you home slowly.</p>
+        <div class="day-tags"><span class="day-tag water">South China Sea</span><span class="day-tag stay">InterContinental Danang</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     WHO LEADS IT
+══════════════════════════════════════════ -->
+<section class="section">
+  <div class="intro-text">
+    <p>Our founder leads this journey personally, as he does the Cham Tour. Thirty years working in Southeast Asia, and a working relationship with several of these properties that goes back long before they became a route.</p>
+    <p>Ten to twelve guests, and the number is set by the smallest place on it &mdash; ten villas in Siem Reap. That is not a marketing device. It is arithmetic, and it is why the group stays this size.</p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     BY INVITATION
+══════════════════════════════════════════ -->
+<div class="invitation-band">
+  <div class="inner">
+    <div class="eyebrow">— By Invitation —</div>
+    <h2>Or take it privately</h2>
+    <p>The same route, your own dates, your own party &mdash; and three more of his hotels that will not fit inside a fixed departure. Capella Hanoi, where the theatre runs from the lobby to the lift doors. Capella Ubud, tents above the Wos river valley. And as long as you like at any of them.</p>
+    <p>The private version travels at a different pace: the camp for four nights instead of two, the river without a schedule, and the Cardamoms until you have actually seen the forest rather than visited it.</p>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     CTA
+══════════════════════════════════════════ -->
+<section class="cta-band">
+  <h2>Register Your Interest</h2>
+  <p>The inaugural departure is being built now. Tell us you would like to be on it and we will come to you first &mdash; with dates, the full itinerary and the price, before it goes anywhere else.</p>
+  <a href="/index.html#enquiry" class="btn btn-outline-light">Register Your Interest &rarr;</a>
+</section>
+
+<!-- Scripts -->
+<script src="/components/footer.js"></script>
+<script src="/js/main.js"></script>
+
+</body>
+</html>
