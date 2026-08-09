@@ -221,6 +221,11 @@
       .invitation-band { padding: var(--space-2xl) var(--space-md); }
     }
 
+
+    /* ── Waitlist form, sits inside the dark CTA band ── */
+    .waitlist-form { max-width: 540px; margin: var(--space-lg) auto 0; text-align: left; }
+    .waitlist-form .btn-submit { width: 100%; margin-top: var(--space-sm); }
+    .waitlist-form .form-note { text-align: center; margin-top: var(--space-md); color: rgba(247,243,236,0.5); font-size: 0.7rem; letter-spacing: 0.06em; }
   </style>
 </head>
 <body>
@@ -397,7 +402,58 @@
 <section class="cta-band">
   <h2>Register Your Interest</h2>
   <p>The inaugural departure is being built now. Tell us you would like to be on it and we will come to you first — with dates, the full itinerary and the price, before it goes anywhere else.</p>
-  <a href="/index.html#enquiry" class="btn btn-outline-light">Register Your Interest →</a>
+  <form name="waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html" class="waitlist-form">
+    <input type="hidden" name="form-name" value="waitlist">
+    <input type="hidden" name="journey" value="The Cham Tour">
+    <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
+
+    <div class="form-grid">
+      <div class="form-row">
+        <label for="wl-first">First Name</label>
+        <input type="text" id="wl-first" name="first-name" placeholder="Your first name" required>
+      </div>
+      <div class="form-row">
+        <label for="wl-last">Last Name</label>
+        <input type="text" id="wl-last" name="last-name" placeholder="Your last name" required>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <label for="wl-email">Email Address</label>
+      <input type="email" id="wl-email" name="email" placeholder="your@email.com" required>
+    </div>
+
+    <div class="form-grid">
+      <div class="form-row">
+        <label for="wl-party">How Many Travelling</label>
+        <select id="wl-party" name="party-size">
+          <option value="">Select</option>
+          <option>Just me</option>
+          <option>Two of us</option>
+          <option>Three or four</option>
+          <option>A larger group</option>
+          <option>Not sure yet</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="wl-window">Which Departure</label>
+        <select id="wl-window" name="departure">
+          <option value="">Select</option>
+            <option>The inaugural departure, March 2027</option>
+            <option>A later departure</option>
+            <option>Privately, on my own dates</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <label for="wl-note">Anything We Should Know</label>
+      <textarea id="wl-note" name="message" rows="2" placeholder="Optional — dates that suit, who you'd be travelling with, anything you'd want us to plan around..."></textarea>
+    </div>
+
+    <button type="submit" class="btn-submit">Register My Interest &rarr;</button>
+    <p class="form-note">No obligation &middot; We come to you before it goes anywhere else</p>
+  </form>
 </section>
 
 <!-- Scripts -->
