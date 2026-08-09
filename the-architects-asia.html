@@ -447,6 +447,7 @@
   <p>The inaugural departure is being built now. Tell us you would like to be on it and we will come to you first &mdash; with dates, the full itinerary and the price, before it goes anywhere else.</p>
 <form name="waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html" class="waitlist-form">
     <input type="hidden" name="form-name" value="waitlist">
+      <input type="hidden" name="source-page" value="">
     <input type="hidden" name="journey" value="The Architect's Asia">
     <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
 
@@ -503,5 +504,25 @@
 <script src="/components/footer.js"></script>
 <script src="/js/main.js"></script>
 
+
+<script>
+/* Source tracking: records which page sent the visitor to this form.
+   Reads ?ref= if present, otherwise the same-origin referrer path. */
+(function () {
+  function label() {
+    var q = new URLSearchParams(window.location.search).get('ref');
+    if (q) return q;
+    var r = document.referrer;
+    if (!r) return 'direct';
+    try {
+      var u = new URL(r);
+      if (u.hostname !== window.location.hostname) return 'external: ' + u.hostname;
+      return u.pathname === '/' ? 'homepage' : u.pathname;
+    } catch (e) { return 'unknown'; }
+  }
+  var v = label();
+  document.querySelectorAll('input[name="source-page"]').forEach(function (el) { el.value = v; });
+})();
+</script>
 </body>
 </html>
