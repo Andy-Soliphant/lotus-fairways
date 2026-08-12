@@ -19,6 +19,10 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 OUT_DIR = os.path.join(ROOT, "hotels")
 OUT = os.path.join(OUT_DIR, "index.html")
 
+# Page hero for The Houses. Chosen 11 Aug 2026 — 2000x1091 (ratio 1.83), the only
+# filed image wide enough for a full-bleed band, and it shows actual houses.
+PAGE_HERO = "/images/hotel-cambodia-siem-reap-phum-baitang.jpg"
+
 TIER_ORDER = {"ultra": 0, "premium": 1, "classic": 2}
 TIER_LABEL = {"ultra": "Ultra Luxury", "premium": "Premium", "classic": "Classic"}
 
@@ -205,7 +209,8 @@ def build():
         filters="\n          ".join(filters),
         tier_filters="\n          ".join(tier_filters),
         cards=cards,
-        hero_image=live[0]["_images"][0] if live else "",
+        hero_image=PAGE_HERO,
+        page_hero=PAGE_HERO,
     )
 
     os.makedirs(OUT_DIR, exist_ok=True)
@@ -251,7 +256,10 @@ TEMPLATE = """<!DOCTYPE html>
   <link rel="stylesheet" href="/css/style.css?v=3">
   <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
   <style>
-    .hh-head {{ background:var(--green); color:var(--parchment); padding:var(--space-3xl) var(--space-xl) var(--space-2xl); }}
+    .hh-head {{ position:relative; background:var(--green); color:var(--parchment);
+      background-image:linear-gradient(180deg, rgba(42,74,46,0.70) 0%, rgba(42,74,46,0.86) 55%, rgba(42,74,46,0.96) 100%), url('{page_hero}');
+      background-size:cover; background-position:center 62%; background-repeat:no-repeat;
+      padding:var(--space-3xl) var(--space-xl) var(--space-2xl); }}
     .hh-head-inner {{ max-width:var(--max-width); margin:0 auto; }}
     .hh-head .breadcrumb {{ font-family:var(--font-sans); font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,243,236,0.55); margin-bottom:var(--space-md); }}
     .hh-head .breadcrumb a {{ color:rgba(247,243,236,0.55); text-decoration:none; }}
