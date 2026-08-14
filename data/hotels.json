@@ -1479,6 +1479,48 @@
       "prose": ""
     },
     {
+      "slug": "the-bayview-pattaya",
+      "name": "The Bayview Pattaya",
+      "destination": "thailand",
+      "area": "pattaya",
+      "tier": "classic",
+      "confirmed": true,
+      "tier_confirmed": true,
+      "preferred": false,
+      "tags": [
+        "golf",
+        "leisure"
+      ],
+      "room_types": [],
+      "character": "On Beach Road, Pattaya Bay.",
+      "why": "Our entry level in Pattaya and a contracted house.",
+      "verdict": "",
+      "image": "",
+      "source": "lf/contract-2627",
+      "prose": ""
+    },
+    {
+      "slug": "siam-bayshore-pattaya",
+      "name": "Siam Bayshore",
+      "destination": "thailand",
+      "area": "pattaya",
+      "tier": "premium",
+      "confirmed": true,
+      "tier_confirmed": true,
+      "preferred": false,
+      "tags": [
+        "golf",
+        "leisure"
+      ],
+      "room_types": [],
+      "character": "Gardens on the bay at the southern end of Pattaya Beach.",
+      "why": "The better of our two contracted Pattaya houses, and the one we lead with.",
+      "verdict": "",
+      "image": "",
+      "source": "lf/contract-2627",
+      "prose": ""
+    },
+    {
       "slug": "rosewood-luang-prabang",
       "name": "Rosewood Luang Prabang",
       "destination": "laos",
