@@ -21,9 +21,9 @@
       "ultra": 1990
     },
     "hua-hin": {
-      "classic": 1650,
-      "premium": 1725,
-      "ultra": 1950
+      "classic": 895,
+      "premium": 1250,
+      "ultra": 1195
     },
     "phuket": {
       "classic": 1590,
@@ -54,7 +54,8 @@
       "classic": 1400,
       "premium": 1680,
       "ultra": 2100
-    }
+    },
+    "_hua_hin_note": "Hua Hin is NO LONGER provisional — rebuilt 14 Aug 2026 from held contracts at 25% margin, 8 golfers, entry room, low season. Classic = The Rock at 8 nights for the price of 7; Ultra = Cape Nidhra at 7 nights; Premium = Anantara at 7 nights. Ultra sits BELOW Premium deliberately. Every other city in this block is still provisional."
   },
   "hotels": [
     {
@@ -696,20 +697,20 @@
       "destination": "thailand",
       "area": "hua-hin",
       "tier": "premium",
-      "confirmed": false,
-      "tier_confirmed": false,
+      "confirmed": true,
+      "tier_confirmed": true,
       "preferred": false,
       "tags": [
         "leisure",
         "golf"
       ],
       "room_types": [],
-      "character": "",
-      "why": "",
+      "character": "Thai pavilions in mature gardens on the beach, north of the town centre.",
+      "why": "The name most people already know in Hua Hin, which makes it the honest comparison point for anyone who has been quoted elsewhere.",
       "verdict": "",
-      "image": "",
-      "source": "",
-      "prose": ""
+      "image": "/images/hotel-thailand-hua-hin-anantara-hua-hin.jpg",
+      "source": "lf/contract-2627",
+      "prose": "The established address in Hua Hin and the hotel most weeks here are quoted on, ours included. Low Thai pavilions, lily ponds and gardens that have had thirty years to grow in, with the beach at the end of them. If someone has a Hua Hin price in hand from another operator, this is very likely the hotel behind it."
     },
     {
       "slug": "cape-nidhra-hua-hin",
@@ -726,11 +727,11 @@
       ],
       "room_types": [],
       "character": "Design-led all-suite boutique, on the seafront.",
-      "why": "",
+      "why": "Our own contracted house and the one we lead with in Hua Hin — the best week we sell there, at no more than the tier below.",
       "verdict": "Prime beachfront location, with pool suites, stunning style, and moments from the top golf courses.",
-      "image": "",
+      "image": "/images/hotel-thailand-hua-hin-cape-nidhra-hua-hin.jpg",
       "source": "lf/trip-page",
-      "prose": ""
+      "prose": "An all-suite boutique on the seafront in town, and the reason our Hua Hin week reads the way it does. Every room is a suite, most with a private pool, and the beach cabanas at the front of the property are where the evenings happen. Ten minutes from the night market, twenty to thirty from the golf."
     },
     {
       "slug": "centara-grand-hua-hin",
@@ -793,6 +794,27 @@
       "image": "/images/hotel-thailand-hua-hin-hyatt-regency-hua-hin.jpg",
       "source": "lf/trip-page",
       "prose": "A generous beach resort with the space groups need, and a set of pool-access rooms that give it something the older properties along this coast don't have."
+    },
+    {
+      "slug": "the-rock-hua-hin",
+      "name": "The Rock Hua Hin",
+      "destination": "thailand",
+      "area": "hua-hin",
+      "tier": "classic",
+      "confirmed": true,
+      "tier_confirmed": true,
+      "preferred": false,
+      "tags": [
+        "golf",
+        "leisure"
+      ],
+      "room_types": [],
+      "character": "Beachfront at Khao Takiab, jacuzzi pool suites, and the quieter end of Hua Hin.",
+      "why": "Our entry level in Hua Hin and a contracted house, which is why the week runs to eight nights there rather than seven.",
+      "verdict": "",
+      "image": "/images/hotel-thailand-hua-hin-the-rock-hua-hin.jpg",
+      "source": "lf/contract-2627",
+      "prose": "Khao Takiab sits a few minutes south of the town proper, which is the point of it — the beach is quieter, the road behind it is calmer, and the courses are no further away. The rooms run from garden deluxe up to jacuzzi pool terraces and a pool villa, and the pool itself runs to the sand. It is where we start people in Hua Hin when the golf is the reason for the trip and the hotel is the place to come back to."
     },
     {
       "slug": "aleenta-phuket-phang-nga",
