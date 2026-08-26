@@ -59,6 +59,8 @@
     @media(max-width:640px)  { .hh-grid { grid-template-columns:1fr; } }
 
     .h-card { display:flex; flex-direction:column; }
+    .h-link { color:inherit; text-decoration:none; border-bottom:1px solid var(--rule); transition:color var(--transition), border-color var(--transition); }
+    .h-link:hover { color:var(--rose); border-bottom-color:var(--rose); }
     .h-card.is-hidden { display:none; }
     .h-img { position:relative; aspect-ratio:16/10; overflow:hidden; background:var(--parchment-dark); }
     .h-img img { width:100%; height:100%; object-fit:cover; display:block; transition:transform .7s cubic-bezier(.2,.7,.3,1); }
@@ -148,7 +150,7 @@
         </div>
         <div class="h-body">
           <div class="h-place">Bangkok &middot; Thailand</div>
-          <h3>Capella Bangkok <span class="h-pref" title="A property we hold direct terms with">Preferred</span></h3>
+          <h3><a class="h-link" href="/hotels/capella-bangkok/">Capella Bangkok</a> <span class="h-pref" title="A property we hold direct terms with">Preferred</span></h3>
           <p class="h-character">On the Chao Phraya. Restaurant Stella on site.</p>
           <blockquote class="h-verdict"><p>Capella does things just that bit better, and with some areas reserved for hotel guests only, you truly feel special. If you are seeking something subtle, it is not quite for you.</p><cite>Our founder</cite></blockquote>
           <a class="h-trip" href="/golf-in-asia/thailand/bangkok/">The Bangkok golf week &rarr;</a>
@@ -163,7 +165,7 @@
         </div>
         <div class="h-body">
           <div class="h-place">Bangkok &middot; Thailand</div>
-          <h3>Chakrabongse Villas </h3>
+          <h3><a class="h-link" href="/hotels/chakrabongse-villas/">Chakrabongse Villas</a> </h3>
           <p class="h-character">Riverside Bangkok, looking across to Wat Arun.</p>
           <blockquote class="h-verdict"><p>A fine example of how life used to be in Thailand. Wasted on anyone after modern and contemporary — they should stay elsewhere.</p><cite>Our founder</cite></blockquote>
           <a class="h-trip" href="/golf-in-asia/thailand/bangkok/">The Bangkok golf week &rarr;</a>
@@ -178,7 +180,7 @@
         </div>
         <div class="h-body">
           <div class="h-place">Bangkok &middot; Thailand</div>
-          <h3>Mandarin Oriental Bangkok </h3>
+          <h3><a class="h-link" href="/hotels/mandarin-oriental-bangkok/">Mandarin Oriental Bangkok</a> </h3>
           <p class="h-character">Riverside. Trading since 1876; the Authors&#x27; Wing survives from the original hotel.</p>
           <blockquote class="h-verdict"><p>This is how a luxury hotel should be run.</p><cite>Our founder</cite></blockquote>
           <a class="h-trip" href="/golf-in-asia/thailand/bangkok/">The Bangkok golf week &rarr;</a>
@@ -193,7 +195,7 @@
         </div>
         <div class="h-body">
           <div class="h-place">Bangkok &middot; Thailand</div>
-          <h3>The Peninsula Bangkok </h3>
+          <h3><a class="h-link" href="/hotels/peninsula-bangkok/">The Peninsula Bangkok</a> </h3>
           <p class="h-character">Thonburi bank, with river shuttle to the city side.</p>
           <blockquote class="h-verdict"><p>I love this hotel. The pool area is stunning, and being on the other side of the river gives you the best view. Personally I&#x27;d stay here over anything else nearby.</p><cite>Our founder</cite></blockquote>
           <a class="h-trip" href="/golf-in-asia/thailand/bangkok/">The Bangkok golf week &rarr;</a>
@@ -208,7 +210,7 @@
         </div>
         <div class="h-body">
           <div class="h-place">Bangkok &middot; Thailand</div>
-          <h3>The Siam </h3>
+          <h3><a class="h-link" href="/hotels/the-siam-bangkok/">The Siam</a> </h3>
           <p class="h-character">Dusit district, on the Chao Phraya. Designed by Bill Bensley. All suites and pool villas.</p>
           <blockquote class="h-verdict"><p>The location is part of the charm: a getaway that is still close by. You reach the city from the river, as people used to.</p><cite>Our founder</cite></blockquote>
           <a class="h-trip" href="/golf-in-asia/thailand/bangkok/">The Bangkok golf week &rarr;</a>
@@ -223,7 +225,7 @@
         </div>
         <div class="h-body">
           <div class="h-place">Bangkok &middot; Thailand</div>
-          <h3>The Salil Hotel Riverside </h3>
+          <h3><a class="h-link" href="/hotels/salil-hotel-riverside/">The Salil Hotel Riverside</a> </h3>
           <p class="h-character">Riverside Bangkok. NAVA restaurant, rooftop pool &#x27;Rabbit Moon&#x27;.</p>
           <blockquote class="h-verdict"><p>A modern take on hotels, and it does it well — but it is for the right person. We like it, and the location works.</p><cite>Our founder</cite></blockquote>
           <a class="h-trip" href="/golf-in-asia/thailand/bangkok/">The Bangkok golf week &rarr;</a>
@@ -238,7 +240,7 @@
         </div>
         <div class="h-body">
           <div class="h-place">Chiang Mai &middot; Thailand</div>
-          <h3>137 Pillars House </h3>
+          <h3><a class="h-link" href="/hotels/137-pillars-house/">137 Pillars House</a> </h3>
           <p class="h-character">Wat Ket, built around a restored 19th-century teak house.</p>
           <blockquote class="h-verdict"><p>The location of this over Four Seasons, and the quality over Anantara. A bit like the porridge from the three bears.</p><cite>Our founder</cite></blockquote>
           <a class="h-trip" href="/golf-in-asia/thailand/chiang-mai/">The Chiang Mai golf week &rarr;</a>
@@ -253,7 +255,7 @@
         </div>
         <div class="h-body">
           <div class="h-place">Chiang Mai &middot; Thailand</div>
-          <h3>Rachamankha </h3>
+          <h3><a class="h-link" href="/hotels/rachamankha/">Rachamankha</a> </h3>
           <p class="h-character">Inside the old city walls, beside Wat Phra Singh.</p>
           <blockquote class="h-verdict"><p>My favourite in Chiang Mai, and has been since it opened. A great location, lovely simplistic design, and a feeling of coming home. And perhaps my favourite eggs Benedict anywhere.</p><cite>Our founder</cite></blockquote>
           <a class="h-trip" href="/golf-in-asia/thailand/chiang-mai/">The Chiang Mai golf week &rarr;</a>
@@ -268,7 +270,7 @@
         </div>
         <div class="h-body">
           <div class="h-place">Chiang Mai &middot; Thailand</div>
-          <h3>Raya Heritage </h3>
+          <h3><a class="h-link" href="/hotels/raya-heritage/">Raya Heritage</a> </h3>
           <p class="h-character">On the Ping river, built around northern Thai craft traditions.</p>
           <blockquote class="h-verdict"><p>I pick Rachamankha for its premium location in the city, and Raya for those who want to be away from it. It isn&#x27;t right or wrong — it&#x27;s which is right for you.</p><cite>Our founder</cite></blockquote>
           <a class="h-trip" href="/golf-in-asia/thailand/chiang-mai/">The Chiang Mai golf week &rarr;</a>
@@ -283,7 +285,7 @@
         </div>
         <div class="h-body">
           <div class="h-place">Chiang Mai &middot; Thailand</div>
-          <h3>Thai Akara </h3>
+          <h3><a class="h-link" href="/hotels/thai-akara/">Thai Akara</a> </h3>
           <p class="h-character">Lanna boutique in the old city.</p>
           <blockquote class="h-verdict"><p>A simple property doing nothing wrong. A great entry to a lovely city.</p><cite>Our founder</cite></blockquote>
           <a class="h-trip" href="/golf-in-asia/thailand/chiang-mai/">The Chiang Mai golf week &rarr;</a>
@@ -298,7 +300,7 @@
         </div>
         <div class="h-body">
           <div class="h-place">Hua Hin &middot; Thailand</div>
-          <h3>Cape Nidhra </h3>
+          <h3><a class="h-link" href="/hotels/cape-nidhra-hua-hin/">Cape Nidhra</a> </h3>
           <p class="h-character">Design-led all-suite boutique, on the seafront.</p>
           <blockquote class="h-verdict"><p>Prime beachfront location, with pool suites, stunning style, and moments from the top golf courses.</p><cite>Our founder</cite></blockquote>
           <a class="h-trip" href="/golf-in-asia/thailand/hua-hin/">The Hua Hin golf week &rarr;</a>
@@ -328,7 +330,7 @@
         </div>
         <div class="h-body">
           <div class="h-place">Hua Hin &middot; Thailand</div>
-          <h3>Hyatt Regency Hua Hin </h3>
+          <h3><a class="h-link" href="/hotels/hyatt-regency-hua-hin/">Hyatt Regency Hua Hin</a> </h3>
           <p class="h-character">Strong beach position, excellent facilities.</p>
           <blockquote class="h-verdict"><p>The newer kid on the block, and the pool-access rooms are a genuinely new offering in a lovely setting.</p><cite>Our founder</cite></blockquote>
           <a class="h-trip" href="/golf-in-asia/thailand/hua-hin/">The Hua Hin golf week &rarr;</a>
@@ -343,7 +345,7 @@
         </div>
         <div class="h-body">
           <div class="h-place">Hua Hin &middot; Thailand</div>
-          <h3>Centara Grand Beach Resort </h3>
+          <h3><a class="h-link" href="/hotels/centara-grand-hua-hin/">Centara Grand Beach Resort</a> </h3>
           <p class="h-character">Established five-star, right on the beach.</p>
           <blockquote class="h-verdict"><p>A great location, sea views and easy access into town. The right location for so many.</p><cite>Our founder</cite></blockquote>
           <a class="h-trip" href="/golf-in-asia/thailand/hua-hin/">The Hua Hin golf week &rarr;</a>
@@ -373,7 +375,7 @@
         </div>
         <div class="h-body">
           <div class="h-place">Khao Lak &middot; Thailand</div>
-          <h3>The Sarojin </h3>
+          <h3><a class="h-link" href="/hotels/the-sarojin/">The Sarojin</a> </h3>
           <p class="h-character">Adults-only, on Khao Lak&#x27;s beach.</p>
           <blockquote class="h-verdict"><p>A brilliant hotel with an incredible story. We love to visit — we just have to do it without the children. Not such a bad thing sometimes.</p><cite>Our founder</cite></blockquote>
           
@@ -403,7 +405,7 @@
         </div>
         <div class="h-body">
           <div class="h-place">Krabi &middot; Thailand</div>
-          <h3>Rayavadee </h3>
+          <h3><a class="h-link" href="/hotels/rayavadee/">Rayavadee</a> </h3>
           <p class="h-character">Railay peninsula, among limestone karsts. Reached only by boat. Pavilions in coconut groves.</p>
           <blockquote class="h-verdict"><p>The day visitors can be a pain on the beach, but the hotel itself is one to marvel at.</p><cite>Our founder</cite></blockquote>
           
@@ -418,7 +420,7 @@
         </div>
         <div class="h-body">
           <div class="h-place">Phuket &middot; Thailand</div>
-          <h3>Amanpuri </h3>
+          <h3><a class="h-link" href="/hotels/amanpuri/">Amanpuri</a> </h3>
           <p class="h-character">Pansea Beach. Aman&#x27;s first property, opened 1988, designed by Ed Tuttle. Pavilions and villas.</p>
           <blockquote class="h-verdict"><p>Both are special, but the size of Amanpuri and needing a buggy everywhere just isn&#x27;t for me. The villas, though, are amazing. For my own money, Trisara wins.</p><cite>Our founder</cite></blockquote>
           <a class="h-trip" href="/golf-in-asia/thailand/phuket/">The Phuket golf week &rarr;</a>
@@ -433,7 +435,7 @@
         </div>
         <div class="h-body">
           <div class="h-place">Phuket &middot; Thailand</div>
-          <h3>Trisara </h3>
+          <h3><a class="h-link" href="/hotels/trisara/">Trisara</a> </h3>
           <p class="h-character">Private bay on the north-west coast. All pool villas and residences. Restaurant PRU holds a Michelin star and sources heavily from its own farm.</p>
           <blockquote class="h-verdict"><p>Amazing views, amazing service, stunning villas. When can I go back?</p><cite>Our founder</cite></blockquote>
           <a class="h-trip" href="/golf-in-asia/thailand/phuket/">The Phuket golf week &rarr;</a>
@@ -448,7 +450,7 @@
         </div>
         <div class="h-body">
           <div class="h-place">Phuket &middot; Thailand</div>
-          <h3>Keemala </h3>
+          <h3><a class="h-link" href="/hotels/keemala/">Keemala</a> </h3>
           <p class="h-character">Kamala hillside. Themed cottages and tented pool villas.</p>
           <blockquote class="h-verdict"><p>A modern masterpiece, for those who appreciate design perhaps above other things.</p><cite>Our founder</cite></blockquote>
           <a class="h-trip" href="/golf-in-asia/thailand/phuket/">The Phuket golf week &rarr;</a>
@@ -463,7 +465,7 @@
         </div>
         <div class="h-body">
           <div class="h-place">Cam Ranh &middot; Vietnam</div>
-          <h3>Amanoi </h3>
+          <h3><a class="h-link" href="/hotels/amanoi/">Amanoi</a> </h3>
           <p class="h-character">Nui Chua National Park, above Vinh Hy Bay. Flying into Cam Ranh.</p>
           <blockquote class="h-verdict"><p>The views and the service in equal measure. A stunning example of what can be done.</p><cite>Our founder</cite></blockquote>
           
@@ -478,7 +480,7 @@
         </div>
         <div class="h-body">
           <div class="h-place">Da Nang &middot; Vietnam</div>
-          <h3>InterContinental Danang Sun Peninsula Resort </h3>
+          <h3><a class="h-link" href="/hotels/intercontinental-danang/">InterContinental Danang Sun Peninsula Resort</a> </h3>
           <p class="h-character">Son Tra peninsula, designed by Bill Bensley across four levelled terraces. La Maison 1888 on site.</p>
           <blockquote class="h-verdict"><p>The remote setting means it&#x27;s a place to finish once the exploring is done. Great rooms, great views — a little too remote for a long stay, for me.</p><cite>Our founder</cite></blockquote>
           <a class="h-trip" href="/golf-in-asia/vietnam/da-nang/">The Da Nang golf week &rarr;</a>
@@ -493,7 +495,7 @@
         </div>
         <div class="h-body">
           <div class="h-place">Da Nang &middot; Vietnam</div>
-          <h3>Namia Riverside </h3>
+          <h3><a class="h-link" href="/hotels/namia-riverside-da-nang/">Namia Riverside</a> </h3>
           
           <blockquote class="h-verdict"><p>A great addition to the hotels here, with spa treatments included. The perfect tonic after any day, or any round.</p><cite>Our founder</cite></blockquote>
           <a class="h-trip" href="/golf-in-asia/vietnam/da-nang/">The Da Nang golf week &rarr;</a>
@@ -508,7 +510,7 @@
         </div>
         <div class="h-body">
           <div class="h-place">Da Nang &middot; Vietnam</div>
-          <h3>Chicland Hotel </h3>
+          <h3><a class="h-link" href="/hotels/chicland-da-nang/">Chicland Hotel</a> </h3>
           
           <blockquote class="h-verdict"><p>A great entry-level hotel offering beach views, and it does all you require very well. Not ground breaking, not budget breaking either.</p><cite>Our founder</cite></blockquote>
           <a class="h-trip" href="/golf-in-asia/vietnam/da-nang/">The Da Nang golf week &rarr;</a>
@@ -523,7 +525,7 @@
         </div>
         <div class="h-body">
           <div class="h-place">Hanoi &middot; Vietnam</div>
-          <h3>Capella Hanoi </h3>
+          <h3><a class="h-link" href="/hotels/capella-hanoi/">Capella Hanoi</a> </h3>
           <p class="h-character">Beside the Opera House. Designed by Bill Bensley around an operatic theme.</p>
           <blockquote class="h-verdict"><p>The new kid on the block, literally. It offers up style and luxury effortlessly.</p><cite>Our founder</cite></blockquote>
           <a class="h-trip" href="/golf-in-asia/vietnam/hanoi/">The Hanoi golf week &rarr;</a>
@@ -538,7 +540,7 @@
         </div>
         <div class="h-body">
           <div class="h-place">Hanoi &middot; Vietnam</div>
-          <h3>Sofitel Legend Metropole Hanoi </h3>
+          <h3><a class="h-link" href="/hotels/metropole-hanoi/">Sofitel Legend Metropole Hanoi</a> </h3>
           <p class="h-character">Opened 1901 in the French Quarter. Historic wing and the wartime bomb shelter beneath the hotel.</p>
           <blockquote class="h-verdict"><p>Hanoi&#x27;s Old Lady. It is all about the history of this fine hotel, and it offers a glimpse into Hanoi&#x27;s own.</p><cite>Our founder</cite></blockquote>
           <a class="h-trip" href="/golf-in-asia/vietnam/hanoi/">The Hanoi golf week &rarr;</a>
@@ -546,30 +548,30 @@
       </article>
       <article class="h-card" data-country="vietnam" data-tier="classic">
         <div class="h-img">
-          <img src="/images/hotel-vietnam-hanoi-la-siesta-classic-hang-than.jpg" alt="La Siesta Classic Hang Than, Hanoi" loading="lazy" decoding="async"
+          <img src="/images/hotel-vietnam-hanoi-la-siesta-classic-hang-thung.jpg" alt="La Siesta Classic Hang Thung, Hanoi" loading="lazy" decoding="async"
                onerror="this.closest('.h-card').remove()">
-          <div class="h-dots"><button type="button" class="h-dot is-on" data-src="/images/hotel-vietnam-hanoi-la-siesta-classic-hang-than.jpg" aria-label="View image 1 of La Siesta Classic Hang Than"></button><button type="button" class="h-dot" data-src="/images/hotel-vietnam-hanoi-la-siesta-classic-hang-than-2.jpg" aria-label="View image 2 of La Siesta Classic Hang Than"></button><button type="button" class="h-dot" data-src="/images/hotel-vietnam-hanoi-la-siesta-classic-hang-than-3.jpg" aria-label="View image 3 of La Siesta Classic Hang Than"></button></div>
+          <div class="h-dots"><button type="button" class="h-dot is-on" data-src="/images/hotel-vietnam-hanoi-la-siesta-classic-hang-thung.jpg" aria-label="View image 1 of La Siesta Classic Hang Thung"></button><button type="button" class="h-dot" data-src="/images/hotel-vietnam-hanoi-la-siesta-classic-hang-thung-2.jpg" aria-label="View image 2 of La Siesta Classic Hang Thung"></button><button type="button" class="h-dot" data-src="/images/hotel-vietnam-hanoi-la-siesta-classic-hang-thung-3.jpg" aria-label="View image 3 of La Siesta Classic Hang Thung"></button></div>
           <span class="h-tier h-tier-classic">Classic</span>
         </div>
         <div class="h-body">
           <div class="h-place">Hanoi &middot; Vietnam</div>
-          <h3>La Siesta Classic Hang Than <span class="h-pref" title="A property we hold direct terms with">Preferred</span></h3>
-          
+          <h3><a class="h-link" href="/hotels/la-siesta-classic-hang-thung/">La Siesta Classic Hang Thung</a> <span class="h-pref" title="A property we hold direct terms with">Preferred</span></h3>
+          <p class="h-character">No 21 Hang Thung Street, Old Quarter. Seventy rooms over twelve floors, pool, Red Bean Central restaurant.</p>
           <blockquote class="h-verdict"><p>All the La Siesta hotels are very similar, which is a good thing. The only real difference is location, and even those are close. Stay at any of them and you&#x27;ll leave smiling.</p><cite>Our founder</cite></blockquote>
           <a class="h-trip" href="/golf-in-asia/vietnam/hanoi/">The Hanoi golf week &rarr;</a>
         </div>
       </article>
       <article class="h-card" data-country="vietnam" data-tier="classic">
         <div class="h-img">
-          <img src="/images/hotel-vietnam-hanoi-la-siesta-ma-may.jpg" alt="La Siesta Ma May, Hanoi" loading="lazy" decoding="async"
+          <img src="/images/hotel-vietnam-hanoi-la-siesta-ma-may.jpg" alt="La Siesta Classic Ma May, Hanoi" loading="lazy" decoding="async"
                onerror="this.closest('.h-card').remove()">
-          <div class="h-dots"><button type="button" class="h-dot is-on" data-src="/images/hotel-vietnam-hanoi-la-siesta-ma-may.jpg" aria-label="View image 1 of La Siesta Ma May"></button><button type="button" class="h-dot" data-src="/images/hotel-vietnam-hanoi-la-siesta-ma-may-2.jpg" aria-label="View image 2 of La Siesta Ma May"></button><button type="button" class="h-dot" data-src="/images/hotel-vietnam-hanoi-la-siesta-ma-may-3.jpg" aria-label="View image 3 of La Siesta Ma May"></button></div>
+          <div class="h-dots"><button type="button" class="h-dot is-on" data-src="/images/hotel-vietnam-hanoi-la-siesta-ma-may.jpg" aria-label="View image 1 of La Siesta Classic Ma May"></button><button type="button" class="h-dot" data-src="/images/hotel-vietnam-hanoi-la-siesta-ma-may-2.jpg" aria-label="View image 2 of La Siesta Classic Ma May"></button><button type="button" class="h-dot" data-src="/images/hotel-vietnam-hanoi-la-siesta-ma-may-3.jpg" aria-label="View image 3 of La Siesta Classic Ma May"></button></div>
           <span class="h-tier h-tier-classic">Classic</span>
         </div>
         <div class="h-body">
           <div class="h-place">Hanoi &middot; Vietnam</div>
-          <h3>La Siesta Ma May <span class="h-pref" title="A property we hold direct terms with">Preferred</span></h3>
-          
+          <h3><a class="h-link" href="/hotels/la-siesta-ma-may/">La Siesta Classic Ma May</a> <span class="h-pref" title="A property we hold direct terms with">Preferred</span></h3>
+          <p class="h-character">Ma May Street, in the Old Quarter. The group&#x27;s Classic tier.</p>
           <blockquote class="h-verdict"><p>All the La Siesta hotels are very similar, which is a good thing. The only real difference is location, and even those are close. Stay at any of them and you&#x27;ll leave smiling.</p><cite>Our founder</cite></blockquote>
           <a class="h-trip" href="/golf-in-asia/vietnam/hanoi/">The Hanoi golf week &rarr;</a>
         </div>
@@ -583,7 +585,7 @@
         </div>
         <div class="h-body">
           <div class="h-place">Hanoi &middot; Vietnam</div>
-          <h3>La Siesta Premium Hang Be <span class="h-pref" title="A property we hold direct terms with">Preferred</span></h3>
+          <h3><a class="h-link" href="/hotels/la-siesta-premium-hang-be/">La Siesta Premium Hang Be</a> <span class="h-pref" title="A property we hold direct terms with">Preferred</span></h3>
           <p class="h-character">Boutique, in the Old Quarter.</p>
           <blockquote class="h-verdict"><p>A benchmark at its level. Great service and local charm at a brilliant price.</p><cite>Our founder</cite></blockquote>
           <a class="h-trip" href="/golf-in-asia/vietnam/hanoi/">The Hanoi golf week &rarr;</a>
@@ -598,7 +600,7 @@
         </div>
         <div class="h-body">
           <div class="h-place">Ho Chi Minh City &middot; Vietnam</div>
-          <h3>Park Hyatt Saigon </h3>
+          <h3><a class="h-link" href="/hotels/park-hyatt-saigon/">Park Hyatt Saigon</a> </h3>
           <p class="h-character">Lam Son Square, facing the Opera House. Restrained and beautiful.</p>
           <blockquote class="h-verdict"><p>Built on history, and less is more in the design. So elegant and peaceful. Simply hard to resist.</p><cite>Our founder</cite></blockquote>
           <a class="h-trip" href="/golf-in-asia/vietnam/ho-chi-minh/">The Ho Chi Minh City golf week &rarr;</a>
@@ -613,7 +615,7 @@
         </div>
         <div class="h-body">
           <div class="h-place">Ho Chi Minh City &middot; Vietnam</div>
-          <h3>The Reverie Saigon </h3>
+          <h3><a class="h-link" href="/hotels/the-reverie-saigon/">The Reverie Saigon</a> </h3>
           <p class="h-character">Times Square building on Nguyen Hue. Opulent, Italian-furnished.</p>
           <blockquote class="h-verdict"><p>Online it can look a mismatch of styles. Walk through their doors and you are blown away with it all: modern, but not pretentious in any way, with captivating views of Saigon all around.</p><cite>Our founder</cite></blockquote>
           <a class="h-trip" href="/golf-in-asia/vietnam/ho-chi-minh/">The Ho Chi Minh City golf week &rarr;</a>
@@ -628,7 +630,7 @@
         </div>
         <div class="h-body">
           <div class="h-place">Ho Chi Minh City &middot; Vietnam</div>
-          <h3>Hotel des Arts Saigon </h3>
+          <h3><a class="h-link" href="/hotels/hotel-des-arts-saigon/">Hotel des Arts Saigon</a> </h3>
           
           <blockquote class="h-verdict"><p>Des Arts sits just below The Reverie. Given the choice I&#x27;d spend my time at The Reverie — brilliant location, service on point, and stunning views.</p><cite>Our founder</cite></blockquote>
           <a class="h-trip" href="/golf-in-asia/vietnam/ho-chi-minh/">The Ho Chi Minh City golf week &rarr;</a>
@@ -643,7 +645,7 @@
         </div>
         <div class="h-body">
           <div class="h-place">Hoi An &middot; Vietnam</div>
-          <h3>Four Seasons Resort The Nam Hai </h3>
+          <h3><a class="h-link" href="/hotels/four-seasons-nam-hai/">Four Seasons Resort The Nam Hai</a> </h3>
           <p class="h-character">Ha My Beach between Hoi An and Da Nang. Villas on three tiers above the sea.</p>
           <blockquote class="h-verdict"><p>Has always been the benchmark of Vietnamese luxury and still remains so. Simple, elegant and captivating.</p><cite>Our founder</cite></blockquote>
           
@@ -658,7 +660,7 @@
         </div>
         <div class="h-body">
           <div class="h-place">Koh Rong &middot; Cambodia</div>
-          <h3>Song Saa Private Island </h3>
+          <h3><a class="h-link" href="/hotels/song-saa/">Song Saa Private Island</a> </h3>
           <p class="h-character">Two private islands in the Koh Rong archipelago, joined by a footbridge.</p>
           <blockquote class="h-verdict"><p>A stunning escape, and a real island getaway from the world. Few of these exist globally.</p><cite>Our founder</cite></blockquote>
           
@@ -673,7 +675,7 @@
         </div>
         <div class="h-body">
           <div class="h-place">Koh Rong &middot; Cambodia</div>
-          <h3>Royal Sands Koh Rong </h3>
+          <h3><a class="h-link" href="/hotels/royal-sands-koh-rong/">Royal Sands Koh Rong</a> </h3>
           <p class="h-character">Koh Rong Archipelago, 40-45 minutes by speedboat from Sihanoukville.</p>
           <blockquote class="h-verdict"><p>Song Saa is an island destination, for those seeking a Maldives feel — though the beach isn&#x27;t comparable. Royal Sands is the one where you can wander around and visit local life at ease.</p><cite>Our founder</cite></blockquote>
           
@@ -688,7 +690,7 @@
         </div>
         <div class="h-body">
           <div class="h-place">Phnom Penh &middot; Cambodia</div>
-          <h3>Raffles Hotel Le Royal </h3>
+          <h3><a class="h-link" href="/hotels/raffles-le-royal/">Raffles Hotel Le Royal</a> </h3>
           <p class="h-character">Opened 1929, in the colonial quarter.</p>
           <blockquote class="h-verdict"><p>A case of old against new. Many would be impressed by the newer addresses and their views over the city. But for those who want the grandeur, Raffles wins every time. More a hotel feel, with simple access instead of elevators.</p><cite>Our founder</cite></blockquote>
           <a class="h-trip" href="/golf-in-asia/cambodia/phnom-penh/">The Phnom Penh golf week &rarr;</a>
@@ -703,7 +705,7 @@
         </div>
         <div class="h-body">
           <div class="h-place">Phnom Penh &middot; Cambodia</div>
-          <h3>Rosewood Phnom Penh </h3>
+          <h3><a class="h-link" href="/hotels/rosewood-phnom-penh/">Rosewood Phnom Penh</a> </h3>
           <p class="h-character">Upper floors of Vattanac Capital Tower, in the city centre.</p>
           <blockquote class="h-verdict"><p>The leading light here, in more than one way. A headline on the city&#x27;s skyline, and a new era in luxury.</p><cite>Our founder</cite></blockquote>
           <a class="h-trip" href="/golf-in-asia/cambodia/phnom-penh/">The Phnom Penh golf week &rarr;</a>
@@ -718,7 +720,7 @@
         </div>
         <div class="h-body">
           <div class="h-place">Phnom Penh &middot; Cambodia</div>
-          <h3>Hyatt Regency Phnom Penh </h3>
+          <h3><a class="h-link" href="/hotels/hyatt-regency-phnom-penh/">Hyatt Regency Phnom Penh</a> </h3>
           
           <blockquote class="h-verdict"><p>A great option for those seeking simple luxury without going to excess.</p><cite>Our founder</cite></blockquote>
           <a class="h-trip" href="/golf-in-asia/cambodia/phnom-penh/">The Phnom Penh golf week &rarr;</a>
@@ -733,7 +735,7 @@
         </div>
         <div class="h-body">
           <div class="h-place">Phnom Penh &middot; Cambodia</div>
-          <h3>Palace Gate Hotel &amp; Resort </h3>
+          <h3><a class="h-link" href="/hotels/palace-gate-phnom-penh/">Palace Gate Hotel &amp; Resort</a> </h3>
           <p class="h-character">Mealea restaurant on site.</p>
           <blockquote class="h-verdict"><p>Entry level: no airs or graces, just a good option. Raffles, Rosewood and the Hyatt are all elevated to a higher level and standard.</p><cite>Our founder</cite></blockquote>
           <a class="h-trip" href="/golf-in-asia/cambodia/phnom-penh/">The Phnom Penh golf week &rarr;</a>
@@ -748,7 +750,7 @@
         </div>
         <div class="h-body">
           <div class="h-place">Siem Reap &middot; Cambodia</div>
-          <h3>Amansara </h3>
+          <h3><a class="h-link" href="/hotels/amansara/">Amansara</a> </h3>
           <p class="h-character">Built in 1962 as the royal guesthouse of King Norodom Sihanouk. Twenty-four suites, minutes from the Angkor gate.</p>
           <blockquote class="h-verdict"><p>Amansara has limited room choices. Not always a negative, but in some cases it is.</p><cite>Our founder</cite></blockquote>
           <a class="h-trip" href="/golf-in-asia/cambodia/siem-reap/">The Siem Reap golf week &rarr;</a>
@@ -763,7 +765,7 @@
         </div>
         <div class="h-body">
           <div class="h-place">Siem Reap &middot; Cambodia</div>
-          <h3>Phum Baitang </h3>
+          <h3><a class="h-link" href="/hotels/phum-baitang/">Phum Baitang</a> </h3>
           <p class="h-character">Village-style resort in rice paddies outside town, all stilted wooden villas.</p>
           <blockquote class="h-verdict"><p>Out of town, and that needs explaining before anyone books it. Those who go tend to love it.</p><cite>Our founder</cite></blockquote>
           <a class="h-trip" href="/golf-in-asia/cambodia/siem-reap/">The Siem Reap golf week &rarr;</a>
@@ -778,7 +780,7 @@
         </div>
         <div class="h-body">
           <div class="h-place">Siem Reap &middot; Cambodia</div>
-          <h3>Raffles Grand Hotel d&#x27;Angkor </h3>
+          <h3><a class="h-link" href="/hotels/raffles-grand-angkor/">Raffles Grand Hotel d&#x27;Angkor</a> </h3>
           <p class="h-character">Opened 1932. Original cage lift still in service.</p>
           <blockquote class="h-verdict"><p>Raffles has the history, and offers an insight into times gone by. Sitting here you can well imagine a time when travel was itself a luxury.</p><cite>Our founder</cite></blockquote>
           <a class="h-trip" href="/golf-in-asia/cambodia/siem-reap/">The Siem Reap golf week &rarr;</a>
@@ -808,7 +810,7 @@
         </div>
         <div class="h-body">
           <div class="h-place">Siem Reap &middot; Cambodia</div>
-          <h3>Heritage Suites </h3>
+          <h3><a class="h-link" href="/hotels/heritage-suites-siem-reap/">Heritage Suites</a> </h3>
           
           <blockquote class="h-verdict"><p>Peace and quiet, with amazing bungalow accommodation, set a few moments out of the heartbeat but not so far you cannot feel a pulse.</p><cite>Our founder</cite></blockquote>
           <a class="h-trip" href="/golf-in-asia/cambodia/siem-reap/">The Siem Reap golf week &rarr;</a>
@@ -823,8 +825,8 @@
         </div>
         <div class="h-body">
           <div class="h-place">Siem Reap &middot; Cambodia</div>
-          <h3>Shinta Mani Angkor </h3>
-          <p class="h-character">In the French Quarter, designed by Bill Bensley.</p>
+          <h3><a class="h-link" href="/hotels/shinta-mani-angkor/">Shinta Mani Angkor</a> </h3>
+          <p class="h-character">In the Royal District, designed by Bill Bensley.</p>
           <blockquote class="h-verdict"><p>Bill Bensley captures the essence, and the locals finish the welcome.</p><cite>Our founder</cite></blockquote>
           <a class="h-trip" href="/golf-in-asia/cambodia/siem-reap/">The Siem Reap golf week &rarr;</a>
         </div>
@@ -838,7 +840,7 @@
         </div>
         <div class="h-body">
           <div class="h-place">Siem Reap &middot; Cambodia</div>
-          <h3>Aviary Hotel </h3>
+          <h3><a class="h-link" href="/hotels/aviary-siem-reap/">Aviary Hotel</a> </h3>
           
           <blockquote class="h-verdict"><p>A great central location, with an excellent team running the hotel. Lovely rooms. And again, the location.</p><cite>Our founder</cite></blockquote>
           <a class="h-trip" href="/golf-in-asia/cambodia/siem-reap/">The Siem Reap golf week &rarr;</a>
@@ -853,7 +855,7 @@
         </div>
         <div class="h-body">
           <div class="h-place">The Cardamom Mountains &middot; Cambodia</div>
-          <h3>Shinta Mani Wild </h3>
+          <h3><a class="h-link" href="/hotels/shinta-mani-wild/">Shinta Mani Wild</a> </h3>
           <p class="h-character">Tented camp in the Cardamom Mountains. Wildlife Alliance ranger patrols, foraging with the chef, the Boulder Spa.</p>
           <blockquote class="h-verdict"><p>An entrance that can only be usurped by the property itself. It is an experience from start to finish. Just visit.</p><cite>Our founder</cite></blockquote>
           

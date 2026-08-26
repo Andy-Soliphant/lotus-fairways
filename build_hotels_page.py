@@ -133,6 +133,12 @@ def card(h, idx):
             % (h["destination"], h["area"], area)
         )
 
+    # A property page exists only where there is an image AND a verdict.
+    # Linking to one that was never generated is worse than not linking.
+    title = name
+    if h.get("verdict"):
+        title = '<a class="h-link" href="/hotels/%s/">%s</a>' % (h["slug"], name)
+
     flag = ""
     if h.get("preferred"):
         flag = '<span class="h-pref" title="A property we hold direct terms with">Preferred</span>'
@@ -147,7 +153,7 @@ def card(h, idx):
         </div>
         <div class="h-body">
           <div class="h-place">{area} &middot; {country}</div>
-          <h3>{name} {flag}</h3>
+          <h3>{title} {flag}</h3>
           {character}
           {verdict}
           {trip}
@@ -158,6 +164,7 @@ def card(h, idx):
         tier_label=TIER_LABEL.get(tier, tier.title()),
         hero=imgs[0],
         name=name,
+        title=title,
         area=e(area),
         country=e(country),
         loading=loading,
@@ -288,6 +295,8 @@ TEMPLATE = """<!DOCTYPE html>
     @media(max-width:640px)  {{ .hh-grid {{ grid-template-columns:1fr; }} }}
 
     .h-card {{ display:flex; flex-direction:column; }}
+    .h-link {{ color:inherit; text-decoration:none; border-bottom:1px solid var(--rule); transition:color var(--transition), border-color var(--transition); }}
+    .h-link:hover {{ color:var(--rose); border-bottom-color:var(--rose); }}
     .h-card.is-hidden {{ display:none; }}
     .h-img {{ position:relative; aspect-ratio:16/10; overflow:hidden; background:var(--parchment-dark); }}
     .h-img img {{ width:100%; height:100%; object-fit:cover; display:block; transition:transform .7s cubic-bezier(.2,.7,.3,1); }}

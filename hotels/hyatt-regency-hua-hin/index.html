@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hyatt Regency Hua Hin, Hua Hin | Lotus &amp; Fairways</title>
+  <meta name="description" content="Strong beach position, excellent facilities.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://lotusfairways.com/hotels/hyatt-regency-hua-hin/">
+
+  <meta property="og:title" content="Hyatt Regency Hua Hin | Lotus &amp; Fairways">
+  <meta property="og:description" content="Strong beach position, excellent facilities.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lotusfairways.com/hotels/hyatt-regency-hua-hin/">
+  <meta property="og:image" content="https://lotusfairways.com/images/hotel-thailand-hua-hin-hyatt-regency-hua-hin.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&amp;family=DM+Sans:wght@300;400;500&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css?v=3">
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+
+  <style>
+  
+    /* ── Page-specific additions, built on existing tokens ── */
+    .signature-hero {
+      position: relative;
+      height: 78vh;
+      min-height: 520px;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+    }
+    .signature-hero img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .signature-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(26,18,8,0.82) 0%, rgba(26,18,8,0.25) 50%, rgba(26,18,8,0.1) 100%);
+    }
+    .signature-hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 var(--space-xl) var(--space-2xl);
+      width: 100%;
+      color: var(--parchment);
+    }
+    .signature-hero-content .eyebrow { color: var(--bronze-light); margin-bottom: var(--space-md); }
+    .signature-hero-content h1 { color: var(--white); margin-bottom: var(--space-md); max-width: 800px; }
+    .signature-hero-meta {
+      display: flex;
+      gap: var(--space-xl);
+      flex-wrap: wrap;
+      margin-top: var(--space-lg);
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+    }
+    .signature-hero-meta strong { display: block; font-family: var(--font-serif); font-size: 1.4rem; font-weight: 400; }
+
+    .at-a-glance {
+      background: var(--white);
+      border-radius: 4px;
+      box-shadow: var(--shadow-md);
+      padding: var(--space-xl);
+      margin-top: -90px;
+      position: relative;
+      z-index: 2;
+      max-width: var(--max-width);
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .at-a-glance-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--space-lg);
+    }
+    .at-a-glance-item h4 { color: var(--bronze); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 6px; font-family: var(--font-sans); font-weight: 500; }
+    .at-a-glance-item p { font-size: 0.95rem; color: var(--deep); margin: 0; line-height: 1.5; }
+
+    .price-note {
+      font-size: 0.75rem;
+      color: var(--warm-grey);
+      font-style: italic;
+      margin-top: var(--space-sm);
+    }
+
+    .intro-text {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .intro-text p { font-size: 1.1rem; line-height: 1.9; }
+
+    .timeline { max-width: 880px; margin: 0 auto; }
+    .day-block {
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      gap: var(--space-lg);
+      padding: var(--space-xl) 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .day-block:last-child { border-bottom: none; }
+    .day-number {
+      font-family: var(--font-serif);
+      font-size: 2.2rem;
+      color: var(--bronze);
+      line-height: 1;
+    }
+    .day-number span { display: block; font-family: var(--font-sans); font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--warm-grey); margin-top: 6px; }
+    .day-title { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 400; margin-bottom: 10px; color: var(--deep); }
+    .day-block p { margin-bottom: 12px; }
+    .day-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+    .day-tag {
+      font-size: 0.68rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 20px;
+      background: var(--rose-pale);
+      color: var(--rose);
+      font-family: var(--font-sans);
+    }
+    .day-tag.golf { background: #e8efe9; color: var(--green); }
+    .day-tag.whisky { background: #f3ead9; color: var(--bronze); }
+
+    .inclusions-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-2xl);
+      max-width: 880px;
+      margin: 0 auto;
+    }
+    @media (max-width: 700px) { .inclusions-grid { grid-template-columns: 1fr; gap: var(--space-xl); } }
+    .inclusions-grid h4 { font-family: var(--font-sans); font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: var(--space-md); }
+    .inclusions-grid ul li { font-size: 0.92rem; padding: 8px 0; border-bottom: 1px solid var(--rule); color: var(--slate); }
+    .inclusions-grid ul li:last-child { border-bottom: none; }
+
+    .gallery-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-sm);
+    }
+    .gallery-strip img { width: 100%; height: 200px; object-fit: cover; border-radius: 2px; }
+    @media (max-width: 700px) { .gallery-strip { grid-template-columns: repeat(2, 1fr); } }
+
+    .cta-band {
+      background: var(--green);
+      color: var(--parchment);
+      text-align: center;
+      padding: var(--space-3xl) var(--space-xl);
+    }
+    .cta-band h2 { color: var(--white); margin-bottom: var(--space-md); }
+    .cta-band p { color: var(--parchment-dark); max-width: 560px; margin: 0 auto var(--space-lg); font-size: 1rem; }
+  
+
+    /* ── HOTEL PAGE additions ────────────────────────────────── */
+    .tier-badge {
+      display:inline-block; font-family:var(--font-sans); font-size:0.62rem;
+      letter-spacing:0.16em; text-transform:uppercase; padding:5px 14px;
+      border-radius:20px; background:rgba(247,243,236,0.16);
+      border:1px solid var(--bronze-light); color:var(--bronze-light);
+      margin-bottom:var(--space-md);
+    }
+    .hotel-locale { font-family:var(--font-sans); font-size:1rem; color:var(--parchment-dark); margin:0; }
+
+    /* The at-a-glance card floats up 90px over the hero, so the hero carries
+       no meta row on this page type and keeps real clearance below the title. */
+    .signature-hero-content { padding-bottom:150px; }
+
+    .verdict-band { background:var(--parchment-dark); }
+    .verdict {
+      max-width:820px; margin:0 auto; text-align:center;
+      border-top:2px solid var(--bronze-light); border-bottom:2px solid var(--bronze-light);
+      padding:var(--space-xl) var(--space-lg);
+    }
+    .verdict blockquote {
+      font-family:var(--font-serif); font-size:2rem; line-height:1.4;
+      font-weight:300; font-style:italic; color:var(--deep); margin:0 0 var(--space-lg);
+    }
+    .verdict cite {
+      font-family:var(--font-sans); font-size:0.7rem; letter-spacing:0.18em;
+      text-transform:uppercase; color:var(--bronze); font-style:normal;
+    }
+
+    .hotel-prose { max-width:720px; margin:0 auto; }
+    .hotel-prose p { font-size:1.08rem; line-height:1.9; }
+
+    .where-used { max-width:820px; margin:0 auto; }
+    .where-used a.journey-line {
+      display:block; text-decoration:none; padding:var(--space-lg) 0;
+      border-bottom:1px solid var(--rule); color:var(--deep);
+    }
+    .where-used a.journey-line:last-child { border-bottom:none; }
+    .where-used a.journey-line:hover .jl-title { color:var(--rose); }
+    .jl-eyebrow { font-family:var(--font-sans); font-size:0.66rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--bronze); }
+    .jl-title { font-family:var(--font-serif); font-size:1.4rem; margin:6px 0 4px; transition:color var(--transition); }
+    .jl-note { font-size:0.9rem; color:var(--warm-grey); margin:0; }
+
+    @media (max-width:700px) {
+      .signature-hero { height:auto; min-height:62vh; }
+      .signature-hero-content { padding-bottom:var(--space-2xl); }
+      .at-a-glance { margin-top:var(--space-lg); padding:var(--space-lg); border-radius:0; }
+      .at-a-glance-grid { grid-template-columns:1fr; gap:var(--space-md); }
+      .verdict blockquote { font-size:1.45rem; }
+    }
+
+  </style>
+</head>
+<body>
+
+<script src="/components/nav.js"></script>
+
+<section class="signature-hero">
+  <img src="/images/hotel-thailand-hua-hin-hyatt-regency-hua-hin.jpg" alt="Hyatt Regency Hua Hin, Hua Hin">
+  <div class="signature-hero-content">
+    <div class="tier-badge">Premium</div>
+    <h1>Hyatt Regency Hua Hin</h1>
+    <p class="hotel-locale">Hua Hin, Thailand</p>
+  </div>
+</section>
+
+<div class="at-a-glance">
+  <div class="at-a-glance-grid">
+    <div class="at-a-glance-item">
+      <h4>Where</h4>
+      <p>Hua Hin, Thailand</p>
+    </div>
+    <div class="at-a-glance-item">
+      <h4>What marks it out</h4>
+      <p>Strong beach position, excellent facilities.</p>
+    </div>
+    <div class="at-a-glance-item">
+      <h4>We send</h4>
+      <p>Families and golf groups who want the beach and the facilities in one place</p>
+    </div>
+  </div>
+</div>
+
+<section class="section verdict-band">
+  <div class="verdict">
+    <blockquote>&ldquo;The newer kid on the block, and the pool-access rooms are a genuinely new offering in a lovely setting.&rdquo;</blockquote>
+    <cite>Our founder</cite>
+  </div>
+</section>
+
+
+<section class="section" style="background:var(--white);">
+  <div class="hotel-prose">
+    <p>A generous beach resort with the space groups need, and a set of pool-access rooms that give it something the older properties along this coast don&#x27;t have.</p>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+    <div class="gallery-strip" style="grid-template-columns:repeat(1,1fr);">
+      <img src="/images/hotel-thailand-hua-hin-hyatt-regency-hua-hin-3.jpg" alt="Hyatt Regency Hua Hin" loading="lazy" decoding="async">
+    </div>
+  </div>
+</section>
+
+
+<section class="section" style="background:var(--white);">
+  <div class="section-header"><h2>Where we use it</h2></div>
+  <div class="where-used">
+    <a class="journey-line" href="/golf-in-asia/thailand/hua-hin/">
+      <div class="jl-eyebrow">&mdash; Golf Week &mdash;</div>
+      <div class="jl-title">The Hua Hin golf week</div>
+      <p class="jl-note">Seven nights, played and stayed</p>
+    </a>
+    <a class="journey-line" href="/hotels/">
+      <div class="jl-eyebrow">&mdash; The Collection &mdash;</div>
+      <div class="jl-title">The Houses</div>
+      <p class="jl-note">Every property we put people in, and what we think of each</p>
+    </a>
+  </div>
+</section>
+
+<section class="cta-band">
+  <h2>Every great holiday starts with a conversation</h2>
+  <p>Tell us when you want to travel and who is coming, and we will tell you whether this
+     is the right place for you &mdash; and where else to look if it is not.</p>
+  <a href="/contact.html" class="btn btn-primary">Start the conversation</a>
+</section>
+
+<script src="/components/footer.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>
