@@ -131,6 +131,55 @@ def place_names(hotels):
     return out
 
 
+# ── FOLDER OVERRIDES ────────────────────────────────────────────────────────
+# The scorer strips a property's AREA out of its name so a folder called
+# "Emeralda Ninh Binh" cannot match Amanoi on the word "Ninh". That rule breaks
+# for hotels whose distinguishing words ARE their area: strip "golden" and
+# "triangle" from "Anantara Golden Triangle Elephant Camp & Resort" and only
+# "anantara" is left, which loses to every other Anantara. Rather than loosen
+# the scorer and risk silent misfiling elsewhere, name the exceptions here.
+# Key = folder name as it appears in OneDrive. Value = slug in hotels.json.
+FOLDER_OVERRIDES = {
+    "anantara golden triangle chiang rai": "anantara-golden-triangle",
+    "four seasons tented camp golden triangle": "fs-tented-camp-golden-triangle",
+    "the legend bouqitue": "the-legend-chiang-rai",          # folder is misspelt in OneDrive
+    "the legend boutique": "the-legend-chiang-rai",
+    # Strip the area and "Rosewood Luang Prabang" reduces to "rosewood",
+    # which ties with Rosewood Bangkok and Rosewood Phnom Penh.
+    "rosewood luang prabang": "rosewood-luang-prabang",
+}
+
+
+def folder_override(src, hotels):
+    """Return (hotel, folder_that_matched) for an explicitly assigned path.
+
+    The folder name matters: images inside "Rosewood Luang Prabang/Spa and
+    Wellness" must be credited to the Rosewood FOLDER, not to "Spa and
+    Wellness", or the two-folders-one-property guard below sees a conflict
+    and skips the property.
+    """
+    by_slug = {h["slug"]: h for h in hotels}
+    for part in os.path.normpath(src).split(os.sep):
+        slug = FOLDER_OVERRIDES.get(normalise(part).strip())
+        if slug and slug in by_slug:
+            return by_slug[slug], part
+    return None, ""
+
+
+# ── IMAGE PINS ──────────────────────────────────────────────────────────────
+# Normally the three largest files win. File size is a poor proxy for a good
+# hero: at Rosewood Luang Prabang the biggest file was a PORTRAIT, which crops
+# to a strip in a full-bleed hero band. Where a property is pinned, these exact
+# files are used in this exact order and size is ignored. Filename only, no path.
+IMAGE_PINS = {
+    "rosewood-luang-prabang": [
+        "the-great-house-008_WIDE-LARGE-16-9.jpg",
+        "hilltop-tent-007_WIDE-LARGE-16-9.jpg",
+        "waterfall-pool-villa-bedroom-001_WIDE-LARGE-16-9.jpg",
+    ],
+}
+
+
 def match(filename, hotels):
     """Score every property against the filename and return the best two."""
     stem = os.path.splitext(filename)[0]
@@ -301,9 +350,18 @@ def main():
             print(f"      {checked} of {len(files)}...", flush=True)
         f = os.path.basename(src)
         matched_on = ""
-        try:
+        forced, forced_folder = folder_override(src, hotels)
+        if forced:
+            best, best_score, second_score = forced, 1.0, 0.0
+            matched_on = forced_folder
+            explicit_n = 0
+            m = re.search(r"[-_ ]([23])$", os.path.splitext(f)[0].strip())
+            if m:
+                explicit_n = int(m.group(1))
+        else:
+          try:
                 (best_score, best), (second_score, _), explicit_n = match(f, hotels)
-        except Exception as e:
+          except Exception as e:
             unmatched.append((os.path.relpath(src, STAGING), f"could not read this one ({e})"))
             continue
 
@@ -333,7 +391,7 @@ def main():
                               f'"{best["name"]}" exists in more than one place - '
                               f'say which ({names})'))
             continue
-        if second_score and best_score - second_score < 0.08:
+        if not forced and second_score and best_score - second_score < 0.08:
             unmatched.append((os.path.relpath(src, STAGING),
                               "ambiguous - could be more than one property"))
             continue
@@ -373,6 +431,21 @@ def main():
             continue
         # Main-folder pictures first; spa, gym and thumbnail folders only if
         # there is nothing better. Size decides within each band.
+        pinned = IMAGE_PINS.get(slug)
+        if pinned:
+            order = {nm: i for i, nm in enumerate(pinned)}
+            keep = [c for c in group if os.path.basename(c["rel"]) in order]
+            missing = [nm for nm in pinned
+                       if nm not in {os.path.basename(c["rel"]) for c in keep}]
+            for nm in missing:
+                print(f"  !! pinned file not found for {slug}: {nm}")
+            for c in group:
+                if c not in keep:
+                    unmatched.append((c["rel"], "not one of the pinned three"))
+            keep.sort(key=lambda c: order[os.path.basename(c["rel"])])
+            for i, c in enumerate(keep, 1):
+                c["explicit"] = i
+            group = keep
         group.sort(key=lambda c: (c["back"], -c["bytes"]))
         seen = set()
         for c in group:                      # group is already largest-first

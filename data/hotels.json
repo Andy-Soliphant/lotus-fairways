@@ -327,19 +327,20 @@
       "destination": "cambodia",
       "area": "siem-reap",
       "tier": "premium",
-      "confirmed": false,
-      "tier_confirmed": false,
+      "confirmed": true,
+      "tier_confirmed": true,
       "preferred": false,
       "tags": [
         "leisure"
       ],
       "room_types": [],
-      "character": "",
+      "character": "Ten private pool villas in their own enclave, attached to the main hotel.",
       "why": "",
-      "verdict": "",
+      "verdict": "The pool villas are more exclusive, for those who want that little bit more.",
       "image": "/images/hotel-cambodia-siem-reap-bensley-collection-shinta-mani-siem-reap.jpg",
       "source": "andy/6aug - split",
-      "prose": "Ten private pool villas in their own enclave, attached to the main hotel but run at a different pitch entirely. For guests who want Bensley's design at close quarters and their own water to swim in."
+      "prose": "Ten private pool villas in their own enclave, attached to the main hotel but run at a different pitch entirely. For guests who want Bensley's design at close quarters and their own water to swim in.",
+      "we_send": "Guests who want that little bit more, and their own water to swim in"
     },
     {
       "slug": "aman-nai-lert-bangkok",
@@ -691,7 +692,7 @@
       "character": "Overlooking the meeting of Thailand, Laos and Myanmar. Elephant camp on site.",
       "why": "",
       "verdict": "",
-      "image": "",
+      "image": "/images/hotel-thailand-golden-triangle-anantara-golden-triangle.jpg",
       "source": "",
       "prose": ""
     },
@@ -701,19 +702,20 @@
       "destination": "thailand",
       "area": "golden-triangle",
       "tier": "ultra",
-      "confirmed": false,
-      "tier_confirmed": false,
+      "confirmed": true,
+      "tier_confirmed": true,
       "preferred": false,
       "tags": [
         "leisure"
       ],
       "room_types": [],
-      "character": "All-inclusive tented camp above the Ruak and Mekong rivers, with a resident elephant programme.",
+      "character": "Fifteen Bensley-designed tents and a two-bedroom lodge above the Ruak River, where Thailand, Laos and Myanmar meet. The only all-inclusive Four Seasons, with rescued elephants on the property.",
       "why": "A genuine trip-maker and a region golf doesn't reach. Strong By Invitation anchor.",
-      "verdict": "",
-      "image": "",
+      "verdict": "Exit your luxury tent and be amidst the jungle and the elephants. This is a place we love, and love to be at. So will you.",
+      "image": "/images/hotel-thailand-golden-triangle-fs-tented-camp-golden-triangle.jpg",
       "source": "",
-      "prose": ""
+      "prose": "Arrival is by longtail boat up the Ruak, and that is usually the moment guests understand what they have booked. The tents are scattered along half a mile of bamboo hillside, each looking across the river into Laos and Myanmar, with copper baths and outdoor showers under thatch. The rate covers everything — meals, drinks, the spa on its open platform above the valley, the time with the elephants — so nobody spends the week reading a menu. The elephants are rescues, cared for through the foundation the camp works with, and the hours spent with them are the reason to come rather than a diversion from it.",
+      "we_send": "Guests who want the elephants at the centre of the stay, and everything else taken care of"
     },
     {
       "slug": "anantara-hua-hin",
@@ -731,10 +733,11 @@
       "room_types": [],
       "character": "Thai pavilions in mature gardens on the beach, north of the town centre.",
       "why": "The name most people already know in Hua Hin, which makes it the honest comparison point for anyone who has been quoted elsewhere.",
-      "verdict": "",
+      "verdict": "Anantara has the style and location you will love! It was one of the first here and still one of the best.",
       "image": "/images/hotel-thailand-hua-hin-anantara-hua-hin.jpg",
       "source": "lf/contract-2627",
-      "prose": "The established address in Hua Hin and the hotel most weeks here are quoted on, ours included. Low Thai pavilions, lily ponds and gardens that have had thirty years to grow in, with the beach at the end of them. If someone has a Hua Hin price in hand from another operator, this is very likely the hotel behind it."
+      "prose": "The established address in Hua Hin and the hotel most weeks here are quoted on, ours included. Low Thai pavilions, lily ponds and gardens that have had thirty years to grow in, with the beach at the end of them. If someone has a Hua Hin price in hand from another operator, this is very likely the hotel behind it.",
+      "we_send": "Guests who want mature gardens, Thai pavilions and the beach at the end of them"
     },
     {
       "slug": "cape-nidhra-hua-hin",
@@ -838,10 +841,11 @@
       "room_types": [],
       "character": "Beachfront at Khao Takiab, jacuzzi pool suites, and the quieter end of Hua Hin.",
       "why": "Our entry level in Hua Hin and a contracted house, which is why the week runs to eight nights there rather than seven.",
-      "verdict": "",
+      "verdict": "A great entry-level hotel, for those who would rather spend more while they are there.",
       "image": "/images/hotel-thailand-hua-hin-the-rock-hua-hin.jpg",
       "source": "lf/contract-2627",
-      "prose": "Khao Takiab sits a few minutes south of the town proper, which is the point of it — the beach is quieter, the road behind it is calmer, and the courses are no further away. The rooms run from garden deluxe up to jacuzzi pool terraces and a pool villa, and the pool itself runs to the sand. It is where we start people in Hua Hin when the golf is the reason for the trip and the hotel is the place to come back to."
+      "prose": "Khao Takiab sits a few minutes south of the town proper, which is the point of it — the beach is quieter, the road behind it is calmer, and the courses are no further away. The rooms run from garden deluxe up to jacuzzi pool terraces and a pool villa, and the pool itself runs to the sand. It is where we start people in Hua Hin when the golf is the reason for the trip and the hotel is the place to come back to.",
+      "we_send": "Golfers who want a comfortable base and their money spent on the days, not the room"
     },
     {
       "slug": "aleenta-phuket-phang-nga",
@@ -890,8 +894,8 @@
       "destination": "thailand",
       "area": "koh-kood",
       "tier": "ultra",
-      "confirmed": false,
-      "tier_confirmed": false,
+      "confirmed": true,
+      "tier_confirmed": true,
       "preferred": false,
       "tags": [
         "leisure"
@@ -899,10 +903,11 @@
       "room_types": [],
       "character": "Koh Kood, reached by the resort's own aircraft from Bangkok. Treepod dining.",
       "why": "Private-plane access is exactly the ultra marker the range currently lacks.",
-      "verdict": "",
+      "verdict": "A private flight and an exclusive location — one to tick off the wish list for sure.",
       "image": "",
       "source": "",
-      "prose": "Reached on the resort's own aircraft from Bangkok, which is the detail that settles it for most people who book. Koh Kood sits near the Cambodian border and is almost undeveloped. Dinner can be taken in a pod hoisted into the tree canopy — silly on paper, and genuinely unlike anywhere else."
+      "prose": "Reached on the resort's own aircraft from Bangkok, which is the detail that settles it for most people who book. Koh Kood sits near the Cambodian border and is almost undeveloped. Dinner can be taken in a pod hoisted into the tree canopy — silly on paper, and genuinely unlike anywhere else.",
+      "we_send": "Guests who want a private flight in and an island almost nobody reaches"
     },
     {
       "slug": "four-seasons-koh-samui",
@@ -1581,12 +1586,13 @@
         "leisure"
       ],
       "room_types": [],
-      "character": "Bill Bensley design of tented villas and hilltop pavilions above a waterfall.",
+      "character": "Twenty-three rooms, villas and hilltop tents on a wooded estate ten minutes from the old town, built around a waterfall. Bensley's Laotian hill station.",
       "why": "The Laos anchor of the Bensley Journey.",
-      "verdict": "",
-      "image": "",
+      "verdict": "Stay in style — nothing else like this exists in Laos, for sure. Peace and serenity combined with luxury and service.",
+      "image": "/images/hotel-laos-luang-prabang-rosewood-luang-prabang.jpg",
       "source": "andy/bensley-journey-1aug",
-      "prose": ""
+      "prose": "A hill station as Bensley imagines one: a wooded estate ten minutes out of town with a waterfall running through the middle of it and a bar built across the river on what was once an elephant bridge. Twenty-three places to sleep and no two alike — riverside rooms and suites near the Great House, villas with plunge pools beside the falls, and tents up on the hillside for anyone who wants the view more than the short walk back. Luang Prabang itself is a UNESCO town and close enough to reach whenever you want it.",
+      "we_send": "Guests who want Luang Prabang from a hillside estate with a waterfall running through it"
     },
     {
       "slug": "legacy-mekong-can-tho",
@@ -1629,6 +1635,22 @@
       "image": "/images/hotel-cambodia-phnom-penh-hyatt-regency-phnom-penh.jpg",
       "source": "andy/6aug",
       "we_send": "Guests who want simple luxury done well, and a pool in the middle of the city"
+    },
+    {
+      "slug": "the-legend-chiang-rai",
+      "name": "The Legend Chiang Rai",
+      "destination": "thailand",
+      "area": "chiang-rai",
+      "tier": "classic",
+      "confirmed": true,
+      "tier_confirmed": true,
+      "preferred": false,
+      "character": "",
+      "prose": "",
+      "verdict": "A great downtown hotel that does all it should.",
+      "we_send": "Guests who want a comfortable, well-run base in the middle of Chiang Rai",
+      "image": "/images/hotel-thailand-chiang-rai-the-legend-chiang-rai.jpg",
+      "why": ""
     }
   ]
 }
