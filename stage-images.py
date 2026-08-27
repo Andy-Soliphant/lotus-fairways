@@ -171,6 +171,17 @@ def folder_override(src, hotels):
 # hero: at Rosewood Luang Prabang the biggest file was a PORTRAIT, which crops
 # to a strip in a full-bleed hero band. Where a property is pinned, these exact
 # files are used in this exact order and size is ignored. Filename only, no path.
+# ── PROTECTED PROPERTIES ────────────────────────────────────────────────────
+# Some heroes were chosen by hand because the automatic pick was poor. Re-running
+# a CITY folder re-files every property in it, which would quietly undo that work.
+# 137 Pillars is the standing example: its OneDrive set is weak and full of food
+# shots, and the images on the site were placed by hand. A run will not touch
+# anything named here - it says so in the plan rather than skipping silently.
+PROTECTED = {
+    "137-pillars-house",
+}
+
+
 IMAGE_PINS = {
     "rosewood-luang-prabang": [
         "the-great-house-008_WIDE-LARGE-16-9.jpg",
@@ -178,6 +189,82 @@ IMAGE_PINS = {
         "waterfall-pool-villa-bedroom-001_WIDE-LARGE-16-9.jpg",
     ],
 }
+
+
+# ── STRUCTURAL FOLDERS ──────────────────────────────────────────────────────
+# Media kits nest images under scaffolding: "MEDIA KIT", "IMAGE - HI RES",
+# "02 SUITES", "01 HOTEL OVERVIEW". Those folder names score against real
+# properties - "02 SUITES" hits Heritage Suites at 0.5, which passes MIN_SCORE.
+# A folder made ENTIRELY of words like these names no property, so it is
+# skipped and the walk continues outward to the folder that does.
+# One distinctive word is enough to keep a folder in play, which is why
+# "137 Pillars House" and "Bensley Collection" survive this list.
+STRUCTURAL = {
+    "image", "images", "img", "photo", "photos", "photography", "picture",
+    "pictures", "pic", "pics", "gallery", "galleries", "media", "kit",
+    "press", "brand", "logo", "logos", "factsheet", "fact", "sheet", "deck",
+    "presentation", "download", "downloads", "file", "files", "folder", "new",
+    "final", "web", "print", "hi", "low", "high", "res", "resolution", "large",
+    "small", "original", "originals", "edited", "raw", "misc", "general", "all",
+    "overview", "exterior", "exteriors", "interior", "interiors", "aerial",
+    "drone", "night", "day", "main", "detail", "details",
+    "suite", "suites", "room", "rooms", "bedroom", "bedrooms", "bathroom",
+    "lounge", "terrace", "balcony", "view", "views", "deluxe", "premium",
+    "superior", "standard", "grand", "master", "junior", "studio", "apartment",
+    "dining", "restaurant", "restaurants", "bar", "bars", "kitchen", "food",
+    "breakfast", "lunch", "dinner", "cuisine", "pool", "pools", "beach",
+    "garden", "gardens", "grounds", "lobby", "reception", "entrance",
+    "facility", "facilities", "activity", "activities", "experience",
+    "experiences", "meeting", "meetings", "event", "events", "wedding",
+    "weddings", "conference", "gym", "fitness", "yoga", "kids", "club",
+    "map", "maps", "thumb", "thumbs", "thumbnail", "sales", "marketing",
+}
+
+
+def structural(folder):
+    """True when a folder name carries no word capable of naming a property."""
+    t = tokens(folder)
+    if not t:
+        return True
+    return all(w in STRUCTURAL or w.isdigit() for w in t)
+
+
+def folder_match(src, hotels, places):
+    """Identify the property from the FOLDER TREE, nearest parent outward.
+
+    Returns (hotel, folder_that_matched, score, second_score).
+
+    This runs BEFORE the filename is consulted. A media kit's filenames say
+    "Suite" and "Gate"; its folder says "137 Pillars Chiang Mai". The folder
+    is the reliable one, so it decides, and the filename cannot override it.
+    """
+    rel = os.path.relpath(os.path.dirname(src), STAGING)
+    parts = [] if rel == "." else rel.split(os.sep)
+    hits = []                                   # nearest first
+    for parent in reversed(parts):
+        if normalise(parent) in places:         # a region, not a property
+            continue
+        if structural(parent):                  # scaffolding, not a property
+            continue
+        (bs, b), (ss, _), _ = match(parent, hotels)
+        if b:
+            hits.append((b, parent, bs, ss))
+    if not hits:
+        return None, "", 0, 0
+
+    # The nearest folder wins, because a property nested inside another
+    # property's folder is the more specific answer.
+    best, parent, bs, ss = hits[0]
+
+    # But a media kit names the property TWICE on one path - "137 Pillars
+    # Chiang Mai/MEDIA KIT - 137 PILLARS HOUSE CHIANG MAI/...". Reporting the
+    # nearest for one file and the outer for another makes the two-folders-
+    # one-property guard read a conflict where there is none, and the whole
+    # property gets skipped. Where several folders on the SAME path resolve to
+    # the SAME hotel, report the outermost consistently.
+    same = [h for h in hits if h[0]["slug"] == best["slug"]]
+    parent = same[-1][1]
+    return best, parent, bs, ss
 
 
 def match(filename, hotels):
@@ -350,38 +437,55 @@ def main():
             print(f"      {checked} of {len(files)}...", flush=True)
         f = os.path.basename(src)
         matched_on = ""
+        # The -2/-3 suffix always comes from the filename, whoever wins below.
+        explicit_n = 0
+        _m = re.search(r"[-_ ]([23])$", os.path.splitext(f)[0].strip())
+        if _m:
+            explicit_n = int(_m.group(1))
+
+        best, best_score, second_score = None, 0, 0
+        from_folder = False
+
+        # 1. An explicit entry in FOLDER_OVERRIDES always wins.
         forced, forced_folder = folder_override(src, hotels)
         if forced:
             best, best_score, second_score = forced, 1.0, 0.0
             matched_on = forced_folder
-            explicit_n = 0
-            m = re.search(r"[-_ ]([23])$", os.path.splitext(f)[0].strip())
-            if m:
-                explicit_n = int(m.group(1))
-        else:
-          try:
-                (best_score, best), (second_score, _), explicit_n = match(f, hotels)
-          except Exception as e:
-            unmatched.append((os.path.relpath(src, STAGING), f"could not read this one ({e})"))
-            continue
+            from_folder = True
 
+        # 2. THE FOLDER TREE. This runs BEFORE the filename, which is the whole
+        #    point: a media kit's filenames say "Suite" and "Gate" while its
+        #    folder says "137 Pillars Chiang Mai". The folder is the honest one.
         if not best:
-            # fall back to the folder name, nearest parent first
-            rel = os.path.relpath(os.path.dirname(src), STAGING)
-            parts = [] if rel == "." else rel.split(os.sep)
-            matched_on = ""
-            for parent in reversed(parts):
-                if normalise(parent) in places:      # a region, not a property
-                    continue
-                (bs, b), (ss, _), _ = match(parent, hotels)
-                if b:
-                    best, best_score, second_score = b, bs, ss
-                    matched_on = parent
-                    break
+            try:
+                b, parent, bs, ss = folder_match(src, hotels, places)
+            except Exception as e:
+                unmatched.append((os.path.relpath(src, STAGING),
+                                  f"could not read this one ({e})"))
+                continue
+            if b:
+                best, best_score, second_score = b, bs, ss
+                matched_on = parent
+                from_folder = True
+
+        # 3. Only now the filename - for loose files with no folder to go on.
+        if not best:
+            try:
+                (best_score, best), (second_score, _), explicit_n = match(f, hotels)
+            except Exception as e:
+                unmatched.append((os.path.relpath(src, STAGING),
+                                  f"could not read this one ({e})"))
+                continue
         if not best:
             unmatched.append((os.path.relpath(src, STAGING),
                               "not a property in hotels.json"))
             continue
+        if best["slug"] in PROTECTED:
+            unmatched.append((os.path.relpath(src, STAGING),
+                              f'{best["name"]} is protected - its images were '
+                              f'placed by hand. Nothing here will be touched.'))
+            continue
+
         twins = [h for h in hotels
                  if normalise(h["name"]) == normalise(best["name"])]
         if len(twins) > 1 and not (tokens(f) & set().union(
@@ -391,7 +495,7 @@ def main():
                               f'"{best["name"]}" exists in more than one place - '
                               f'say which ({names})'))
             continue
-        if not forced and second_score and best_score - second_score < 0.08:
+        if not from_folder and second_score and best_score - second_score < 0.08:
             unmatched.append((os.path.relpath(src, STAGING),
                               "ambiguous - could be more than one property"))
             continue
