@@ -244,6 +244,8 @@
   <!-- Hotel pages -->
 
   <!-- Hotel pages -->
+
+  <!-- Hotel pages -->
   <url>
     <loc>https://lotusfairways.com/hotels/137-pillars-house/</loc>
     <changefreq>monthly</changefreq>
@@ -271,6 +273,11 @@
   </url>
   <url>
     <loc>https://lotusfairways.com/hotels/anantara-hua-hin/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/hotels/anantara-riverside-bangkok/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

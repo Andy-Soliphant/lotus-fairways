@@ -70,6 +70,9 @@ DATA = os.path.join(REPO, "data", "hotels.json")
 STAGING = os.path.expanduser("~/Downloads/lf-images-in")
 
 MIN_WIDTH = 1600
+# Two folders claiming one property are only truly ambiguous when their scores
+# are this close. A perfect match against a half match is a winner, not a tie.
+AMBIGUITY_GAP = 0.25
 THUMBNAIL_WIDTH = 800
 TINY_BYTES = 60_000     # below this it is a thumbnail; judged without opening the file
 # Subfolders that reliably hold the WRONG kind of picture for a hotel hero.
@@ -227,6 +230,29 @@ def structural(folder):
     if not t:
         return True
     return all(w in STRUCTURAL or w.isdigit() for w in t)
+
+
+def contradicted_by_city(src, hotel, area_tokens):
+    """True when the path names a city that is not this property's area.
+
+    "Park Hyatt/Park-Hyatt-Bangkok-Pool.jpeg" names bangkok; a match on
+    Park Hyatt SAIGON is therefore wrong however well it scored, because the
+    scorer never saw the city - it strips the area out of the hotel name
+    before scoring, which is what lets one brand match itself across Asia.
+
+    Only a DIFFERENT city counts. A path naming the property's own area, or
+    naming no city at all, is no contradiction.
+    """
+    own = {normalise(hotel["area"].replace("-", " "))}
+    own |= set(tokens(hotel["area"].replace("-", " ")))
+    words = set()
+    for part in os.path.relpath(src, STAGING).replace(os.sep, " ").split():
+        words |= set(tokens(part))
+    named = {w for w in words if w in area_tokens}
+    foreign = named - own
+    if foreign and not (named & own):
+        return sorted(foreign)[0]
+    return None
 
 
 def folder_match(src, hotels, places):
@@ -415,6 +441,12 @@ def main():
         print(f"  Only matching {country.title()} properties "
               f"({len(hotels)} in hotels.json).")
     places = place_names(data["hotels"])
+    # Every word that names an AREA - used only to catch a path that names one
+    # city while the match points at another. Destination names are deliberately
+    # excluded: "Thailand/Bangkok/..." must not read as a contradiction.
+    area_tokens = set()
+    for h in data["hotels"]:
+        area_tokens |= set(tokens(h["area"].replace("-", " ")))
 
     files = []
     for root, dirs, names in os.walk(STAGING):
@@ -480,6 +512,13 @@ def main():
             unmatched.append((os.path.relpath(src, STAGING),
                               "not a property in hotels.json"))
             continue
+        clash = contradicted_by_city(src, best, area_tokens)
+        if clash:
+            unmatched.append((os.path.relpath(src, STAGING),
+                              f'names {clash}, but the only match was '
+                              f'{best["name"]} in {best["area"]} - refusing'))
+            continue
+
         if best["slug"] in PROTECTED:
             unmatched.append((os.path.relpath(src, STAGING),
                               f'{best["name"]} is protected - its images were '
@@ -516,7 +555,8 @@ def main():
         back = any(w in sub for w in BACK_OF_HOUSE) and sub != normalise(matched_on)
         candidates.append({"rel": rel, "src": src, "hotel": best,
                            "explicit": explicit_n, "bytes": nbytes, "w": 0, "h": 0,
-                           "back": back, "folder": matched_on})
+                           "back": back, "folder": matched_on,
+                           "score": best_score})
 
     # Largest image becomes the hero unless the filename said otherwise.
     by_hotel = {}
@@ -526,13 +566,41 @@ def main():
     for slug, group in by_hotel.items():
         folders = sorted({c["folder"] for c in group if c["folder"]})
         if len(folders) > 1:
-            print(f"  !! {len(folders)} different folders both look like "
-                  f"\"{group[0]['hotel']['name']}\":")
-            for fo in folders:
-                print(f"       {fo}")
-            print("     These are probably different properties. Skipped - tell "
-                  "Claude which one is the right one.\n")
-            continue
+            # Two folders naming one property is USUALLY two different
+            # properties - but not always. "Anantara Riverside" scores 1.0
+            # against "Anantara Riverside Bangkok" while "Chatrium Riverside"
+            # scores 0.5, matching on the shared word "riverside" alone,
+            # because the scorer strips the area out of the hotel name first.
+            # That is not ambiguity, it is one clear winner and one near miss.
+            # Only skip when the best two are genuinely close; otherwise take
+            # the strongest folder and drop the rest, saying so.
+            byfolder = {}
+            for c in group:
+                if c["folder"]:
+                    byfolder.setdefault(c["folder"], []).append(c)
+            ranked = sorted(byfolder.items(),
+                            key=lambda kv: max(x["score"] for x in kv[1]),
+                            reverse=True)
+            top = max(x["score"] for x in ranked[0][1])
+            second = max(x["score"] for x in ranked[1][1])
+            if top - second < AMBIGUITY_GAP:
+                print(f"  !! {len(folders)} different folders both look like "
+                      f"\"{group[0]['hotel']['name']}\":")
+                for fo in folders:
+                    print(f"       {fo}")
+                print("     These are probably different properties. Skipped - tell "
+                      "Claude which one is the right one.\n")
+                continue
+            winner = ranked[0][0]
+            for fo, cs in ranked[1:]:
+                for c in cs:
+                    unmatched.append(
+                        (c["rel"], f'folder "{fo}" only weakly resembles '
+                                   f'{group[0]["hotel"]["name"]} '
+                                   f'({max(x["score"] for x in cs):.2f} against '
+                                   f'{top:.2f} for "{winner}") - probably a '
+                                   f'different property, so not filed'))
+            group = byfolder[winner]
         # Main-folder pictures first; spa, gym and thumbnail folders only if
         # there is nothing better. Size decides within each band.
         pinned = IMAGE_PINS.get(slug)
@@ -575,6 +643,24 @@ def main():
             warns = []
             if c["w"] and c["w"] < MIN_WIDTH:
                 warns.append(f"only {c['w']}px wide, wanted {MIN_WIDTH}+")
+
+            # Never trade a live image for a smaller one. The floor above is a
+            # warning; this is a rule. A property with no image may still take
+            # an undersized first photograph - something beats nothing - but a
+            # REPLACEMENT has to be at least as wide as what it displaces.
+            existing = os.path.join(IMAGES, target_name(c["hotel"], c["n"]))
+            if c["w"] and os.path.exists(existing):
+                try:
+                    from PIL import Image as _I
+                    with _I.open(existing) as _im:
+                        ew = _im.size[0]
+                    if c["w"] < ew:
+                        unmatched.append(
+                            (c["rel"], f'{c["w"]}px would replace a live '
+                                       f'{ew}px image - refusing'))
+                        continue
+                except Exception:
+                    pass
             if c["h"] > c["w"] > 0:
                 warns.append("portrait - will crop badly in the hero")
             plan.append((c["rel"], c["src"], c["hotel"], c["n"],
