@@ -13,11 +13,12 @@ UNCONFIRMED PROPERTIES get the page but carry <meta robots="noindex, follow">
 and are kept out of the sitemap, per the verified-content-only rule. They are
 reachable and linkable; they are simply not offered to Google until cleared.
 
-Prints a sitemap fragment at the end for pasting into sitemap.xml.
+Writes the hotel URLs straight into sitemap.xml.
 """
 
 import json
 import os
+import re
 import html
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -316,10 +317,43 @@ def main():
     print("\nSKIPPED %d — these need content, not code:" % len(skipped))
     for s, r in skipped:
         print("  %-44s %s" % (s, r))
-    print("\n--- SITEMAP FRAGMENT (confirmed properties only) ---")
-    for s in indexable:
-        print("  <url><loc>https://lotusfairways.com/hotels/%s/</loc>"
-              "<changefreq>monthly</changefreq><priority>0.6</priority></url>" % s)
+    write_sitemap(indexable)
+
+
+def write_sitemap(indexable):
+    """Rewrite the /hotels/<slug>/ entries in sitemap.xml in place.
+
+    Printing a fragment for hand-pasting is how seven live pages ended up
+    missing from the sitemap on 26 Aug. The build writes the file now.
+    Every other URL in the sitemap is left exactly as it is.
+    """
+    path = os.path.join(ROOT, "sitemap.xml")
+    if not os.path.exists(path):
+        print("\n!! sitemap.xml not found — hotel URLs NOT written")
+        return
+    xml = open(path).read()
+
+    # Strip every existing per-property entry (never /hotels/ itself).
+    before = xml.count("<loc>")
+    xml = re.sub(
+        r"\n?  <url>\s*\n?\s*<loc>https://lotusfairways\.com/hotels/[a-z0-9-]+/</loc>"
+        r".*?</url>", "", xml, flags=re.S)
+    xml = re.sub(
+        r"\n?  <url><loc>https://lotusfairways\.com/hotels/[a-z0-9-]+/</loc>"
+        r".*?</url>", "", xml, flags=re.S)
+
+    block = "\n  <!-- Hotel pages -->\n" + "".join(
+        "  <url>\n"
+        "    <loc>https://lotusfairways.com/hotels/%s/</loc>\n"
+        "    <changefreq>monthly</changefreq>\n"
+        "    <priority>0.6</priority>\n"
+        "  </url>\n" % s for s in sorted(indexable))
+
+    xml = xml.replace("</urlset>", block + "</urlset>")
+    open(path, "w").write(xml)
+    after = xml.count("<loc>")
+    print("\nSITEMAP WRITTEN — %d URLs (%d hotel pages). Was %d."
+          % (after, len(indexable), before))
 
 
 if __name__ == "__main__":

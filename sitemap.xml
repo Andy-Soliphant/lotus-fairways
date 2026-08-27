@@ -236,133 +236,15 @@
     <priority>0.9</priority>
   </url>
 
-  <url>
-    <loc>https://lotusfairways.com/hotels/shinta-mani-wild/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://lotusfairways.com/hotels/royal-sands-koh-rong/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://lotusfairways.com/hotels/song-saa/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://lotusfairways.com/hotels/palace-gate-phnom-penh/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://lotusfairways.com/hotels/raffles-le-royal/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://lotusfairways.com/hotels/rosewood-phnom-penh/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://lotusfairways.com/hotels/amansara/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://lotusfairways.com/hotels/aviary-siem-reap/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://lotusfairways.com/hotels/heritage-suites-siem-reap/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://lotusfairways.com/hotels/phum-baitang/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://lotusfairways.com/hotels/raffles-grand-angkor/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://lotusfairways.com/hotels/shinta-mani-angkor/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://lotusfairways.com/hotels/capella-bangkok/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://lotusfairways.com/hotels/chakrabongse-villas/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://lotusfairways.com/hotels/mandarin-oriental-bangkok/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://lotusfairways.com/hotels/peninsula-bangkok/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://lotusfairways.com/hotels/salil-hotel-riverside/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://lotusfairways.com/hotels/the-siam-bangkok/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
+
+  <!-- Hotel pages -->
   <url>
     <loc>https://lotusfairways.com/hotels/137-pillars-house/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://lotusfairways.com/hotels/rachamankha/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://lotusfairways.com/hotels/raya-heritage/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://lotusfairways.com/hotels/cape-nidhra-hua-hin/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://lotusfairways.com/hotels/centara-grand-hua-hin/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://lotusfairways.com/hotels/hyatt-regency-hua-hin/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://lotusfairways.com/hotels/the-sarojin/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://lotusfairways.com/hotels/rayavadee/</loc>
+    <loc>https://lotusfairways.com/hotels/amanoi/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -372,27 +254,32 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://lotusfairways.com/hotels/keemala/</loc>
+    <loc>https://lotusfairways.com/hotels/amansara/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://lotusfairways.com/hotels/trisara/</loc>
+    <loc>https://lotusfairways.com/hotels/anantara-hua-hin/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://lotusfairways.com/hotels/chicland-da-nang/</loc>
+    <loc>https://lotusfairways.com/hotels/aviary-siem-reap/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://lotusfairways.com/hotels/intercontinental-danang/</loc>
+    <loc>https://lotusfairways.com/hotels/bensley-collection-shinta-mani-siem-reap/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://lotusfairways.com/hotels/namia-riverside-da-nang/</loc>
+    <loc>https://lotusfairways.com/hotels/cape-nidhra-hua-hin/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/hotels/capella-bangkok/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -402,7 +289,57 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://lotusfairways.com/hotels/la-siesta-premium-hang-be/</loc>
+    <loc>https://lotusfairways.com/hotels/centara-grand-hua-hin/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/hotels/chakrabongse-villas/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/hotels/chicland-da-nang/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/hotels/four-seasons-nam-hai/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/hotels/fs-tented-camp-golden-triangle/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/hotels/heritage-suites-siem-reap/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/hotels/hotel-des-arts-saigon/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/hotels/hyatt-regency-hua-hin/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/hotels/hyatt-regency-phnom-penh/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/hotels/intercontinental-danang/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/hotels/keemala/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -417,12 +354,27 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lotusfairways.com/hotels/la-siesta-premium-hang-be/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/hotels/mandarin-oriental-bangkok/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lotusfairways.com/hotels/metropole-hanoi/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://lotusfairways.com/hotels/hotel-des-arts-saigon/</loc>
+    <loc>https://lotusfairways.com/hotels/namia-riverside-da-nang/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/hotels/palace-gate-phnom-penh/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -432,17 +384,77 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://lotusfairways.com/hotels/the-reverie-saigon/</loc>
+    <loc>https://lotusfairways.com/hotels/peninsula-bangkok/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://lotusfairways.com/hotels/four-seasons-nam-hai/</loc>
+    <loc>https://lotusfairways.com/hotels/phum-baitang/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://lotusfairways.com/hotels/amanoi/</loc>
+    <loc>https://lotusfairways.com/hotels/rachamankha/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/hotels/raffles-grand-angkor/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/hotels/raffles-le-royal/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/hotels/raya-heritage/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/hotels/rayavadee/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/hotels/rosewood-luang-prabang/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/hotels/rosewood-phnom-penh/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/hotels/royal-sands-koh-rong/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/hotels/salil-hotel-riverside/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/hotels/shinta-mani-angkor/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/hotels/shinta-mani-wild/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/hotels/soneva-kiri/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/hotels/song-saa/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -452,7 +464,32 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://lotusfairways.com/hotels/hyatt-regency-phnom-penh/</loc>
+    <loc>https://lotusfairways.com/hotels/the-legend-chiang-rai/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/hotels/the-reverie-saigon/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/hotels/the-rock-hua-hin/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/hotels/the-sarojin/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/hotels/the-siam-bangkok/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/hotels/trisara/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
