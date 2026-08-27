@@ -683,8 +683,8 @@
       "destination": "thailand",
       "area": "golden-triangle",
       "tier": "ultra",
-      "confirmed": false,
-      "tier_confirmed": false,
+      "confirmed": true,
+      "tier_confirmed": true,
       "preferred": false,
       "tags": [
         "leisure"
@@ -692,10 +692,11 @@
       "room_types": [],
       "character": "Overlooking the meeting of Thailand, Laos and Myanmar. Elephant camp on site.",
       "why": "",
-      "verdict": "",
+      "verdict": "Having your breakfast whilst watching the elephants meander below is one of the most enjoyable simple pleasures I have encountered. And at the Anantara Golden Triangle it can be a daily occurrence.",
       "image": "/images/hotel-thailand-golden-triangle-anantara-golden-triangle.jpg",
       "source": "",
-      "prose": ""
+      "prose": "Sixty-one rooms and suites on a bluff above the point where Thailand, Laos and Myanmar meet, with the elephant camp on the same land. The elephants are the reason people come and the reason to ask questions before booking, and we will tell you exactly how the camp works before you do. Beyond them it is a quiet resort in the hills of Chiang Rai province, an hour from the Four Seasons Tented Camp along the same stretch of river.",
+      "we_send": "Travellers who want the elephants and the three-river view from the table at breakfast, and want the camp itself to be the whole of the stay."
     },
     {
       "slug": "fs-tented-camp-golden-triangle",

@@ -242,6 +242,8 @@
   <!-- Hotel pages -->
 
   <!-- Hotel pages -->
+
+  <!-- Hotel pages -->
   <url>
     <loc>https://lotusfairways.com/hotels/137-pillars-house/</loc>
     <changefreq>monthly</changefreq>
@@ -259,6 +261,11 @@
   </url>
   <url>
     <loc>https://lotusfairways.com/hotels/amansara/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/hotels/anantara-golden-triangle/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

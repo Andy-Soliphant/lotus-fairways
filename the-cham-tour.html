@@ -226,6 +226,21 @@
     .waitlist-form { max-width: 540px; margin: var(--space-lg) auto 0; text-align: left; }
     .waitlist-form .btn-submit { width: 100%; margin-top: var(--space-sm); }
     .waitlist-form .form-note { text-align: center; margin-top: var(--space-md); color: rgba(247,243,236,0.5); font-size: 0.7rem; letter-spacing: 0.06em; }
+
+    /* ── The Coast band (page-local, three-up) ── */
+    .coast-strip { background: var(--deep); padding: var(--space-2xl) var(--space-xl); }
+    .coast-strip .inner { max-width: var(--max-width); margin: 0 auto; }
+    .coast-strip .eyebrow { color: var(--bronze); text-align: center; margin-bottom: var(--space-md); }
+    .coast-strip h2 { color: var(--white); text-align: center; margin-bottom: var(--space-sm); font-size: 2rem; }
+    .coast-strip .lede { color: var(--parchment-dark); text-align: center; max-width: 620px; margin: 0 auto var(--space-xl); font-size: 1rem; line-height: 1.8; }
+    .coast-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-md); }
+    .coast-item figure { margin: 0; }
+    .coast-item img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; border-radius: 2px; }
+    .coast-item figcaption { color: var(--parchment-dark); font-family: var(--font-sans); font-size: 0.72rem; letter-spacing: 0.04em; margin-top: 10px; line-height: 1.5; }
+    .coast-item figcaption strong { display: block; color: var(--bronze-light); font-family: var(--font-serif); font-size: 1rem; font-weight: 400; letter-spacing: 0; margin-bottom: 2px; }
+    .coast-item a { color: inherit; text-decoration: none; }
+    .coast-item a:hover figcaption strong { color: var(--white); }
+    @media (max-width: 760px) { .coast-grid { grid-template-columns: 1fr; } .coast-strip { padding: var(--space-xl) var(--space-md); } }
   </style>
 </head>
 <body>
@@ -296,6 +311,35 @@
     <p><em>Most travellers pass the towers on the road to somewhere else. This journey is the somewhere else.</em></p>
   </div>
 </section>
+
+<!-- ══════════════════════════════════════════
+     THE COAST
+══════════════════════════════════════════ -->
+<div class="coast-strip">
+  <div class="inner">
+    <div class="eyebrow">— The Coast —</div>
+    <h2>Where the eleven nights are spent</h2>
+    <p class="lede">The towers are what you come for. This is where you sleep between them &mdash; four hundred kilometres of headland, island and bay that were Cham water for thirteen centuries.</p>
+    <div class="coast-grid">
+      <div class="coast-item"><figure>
+        <a href="/hotels/namia-riverside-da-nang/">
+          <img src="/images/hotel-vietnam-da-nang-namia-riverside-da-nang.jpg" alt="Namia River Retreat, Hoi An" loading="lazy">
+          <figcaption><strong>Namia River Retreat</strong>Hoi An &middot; an islet in the Thu Bon, ten minutes by bicycle from the old town</figcaption>
+        </a>
+      </figure></div>
+      <div class="coast-item"><figure>
+        <img src="/images/vietnam-quy-nhon-eo-gio.jpg" alt="The headlands at Eo Gio, Quy Nhon" loading="lazy">
+        <figcaption><strong>Eo Gio</strong>Quy Nhon &middot; the coast below the last Cham capital, twenty minutes from B&aacute;nh &Iacute;t</figcaption>
+      </figure></div>
+      <div class="coast-item"><figure>
+        <a href="/hotels/amanoi/">
+          <img src="/images/hotel-vietnam-cam-ranh-amanoi.jpg" alt="Amanoi above Vinh Hy Bay, Ninh Thuan" loading="lazy">
+          <figcaption><strong>Amanoi</strong>Vinh Hy Bay &middot; above N&uacute;i Ch&uacute;a, with the Cham plain below</figcaption>
+        </a>
+      </figure></div>
+    </div>
+  </div>
+</div>
 
 <!-- ══════════════════════════════════════════
      THE ROUTE
