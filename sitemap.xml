@@ -240,6 +240,8 @@
   <!-- Hotel pages -->
 
   <!-- Hotel pages -->
+
+  <!-- Hotel pages -->
   <url>
     <loc>https://lotusfairways.com/hotels/137-pillars-house/</loc>
     <changefreq>monthly</changefreq>
@@ -302,6 +304,11 @@
   </url>
   <url>
     <loc>https://lotusfairways.com/hotels/chicland-da-nang/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/hotels/four-seasons-chiang-mai/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

@@ -619,8 +619,8 @@
       "destination": "thailand",
       "area": "chiang-mai",
       "tier": "ultra",
-      "confirmed": false,
-      "tier_confirmed": false,
+      "confirmed": true,
+      "tier_confirmed": true,
       "preferred": false,
       "tags": [
         "leisure"
