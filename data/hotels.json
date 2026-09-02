@@ -696,7 +696,7 @@
       "image": "/images/hotel-thailand-golden-triangle-anantara-golden-triangle.jpg",
       "source": "",
       "prose": "Sixty-one rooms and suites on a bluff above the point where Thailand, Laos and Myanmar meet, with the elephant camp on the same land. The elephants are the reason people come and the reason to ask questions before booking, and we will tell you exactly how the camp works before you do. Beyond them it is a quiet resort in the hills of Chiang Rai province, an hour from the Four Seasons Tented Camp along the same stretch of river.",
-      "we_send": "Travellers who want the elephants and the three-river view from the table at breakfast, and want the camp itself to be the whole of the stay."
+      "we_send": "Families and anyone who wants the elephants and the three-river view from the breakfast table, in a resort with proper rooms rather than tents."
     },
     {
       "slug": "fs-tented-camp-golden-triangle",
@@ -717,7 +717,7 @@
       "image": "/images/hotel-thailand-golden-triangle-fs-tented-camp-golden-triangle.jpg",
       "source": "",
       "prose": "Arrival is by longtail boat up the Ruak, and that is usually the moment guests understand what they have booked. The tents are scattered along half a mile of bamboo hillside, each looking across the river into Laos and Myanmar, with copper baths and outdoor showers under thatch. The rate covers everything — meals, drinks, the spa on its open platform above the valley, the time with the elephants — so nobody spends the week reading a menu. The elephants are rescues, cared for through the foundation the camp works with, and the hours spent with them are the reason to come rather than a diversion from it.",
-      "we_send": "Guests who want the elephants at the centre of the stay, and everything else taken care of"
+      "we_send": "Couples and adults who want the elephants at the centre of the stay and the camp itself to be the experience; older children only, so it is not the family choice."
     },
     {
       "slug": "anantara-hua-hin",
@@ -1267,7 +1267,7 @@
       "character": "No 21 Hang Thung Street, Old Quarter. Seventy rooms over twelve floors, pool, Red Bean Central restaurant.",
       "why": "",
       "verdict": "All the La Siesta hotels are very similar, which is a good thing. The only real difference is location, and even those are close. Stay at any of them and you'll leave smiling.",
-      "image": "/images/hotel-vietnam-hanoi-la-siesta-classic-hang-than.jpg",
+      "image": "/images/hotel-vietnam-hanoi-la-siesta-classic-hang-thung.jpg",
       "source": "andy/6aug - split",
       "prose": "One of the group's Old Quarter addresses, a few streets from the busiest part and run to the same standard as its sisters.",
       "we_send": "Guests who want the same La Siesta welcome, with a pool and river views"
@@ -1653,6 +1653,48 @@
       "we_send": "Guests who want a comfortable, well-run base in the middle of Chiang Rai",
       "image": "/images/hotel-thailand-chiang-rai-the-legend-chiang-rai.jpg",
       "why": ""
+    },
+    {
+      "slug": "topas-ecolodge-sapa",
+      "name": "Topas Ecolodge",
+      "destination": "vietnam",
+      "area": "sapa",
+      "tier": "premium",
+      "confirmed": true,
+      "tier_confirmed": false,
+      "preferred": false,
+      "tags": [
+        "leisure"
+      ],
+      "room_types": [],
+      "character": "Fifty white-granite bungalows on a hilltop inside Hoang Lien National Park, forty-five minutes out of Sapa town. Heated infinity pool, no televisions, opened 2005.",
+      "why": "The only property that makes a Sapa destination page possible; carries the northern mountains for L&F.",
+      "verdict": "",
+      "image": "",
+      "source": "andy/2sep2026-sapa-kep",
+      "prose": "A hilltop inside Hoang Lien National Park, forty-five minutes above Sapa town, where fifty bungalows of local white granite sit along a ridge and every one of them looks down the valley. It began in 2005 as a Danish-Vietnamese project and it still runs that way: the staff come from the villages below, the walking starts at the door rather than after a drive, and the heated infinity pool is pointed at the mountains rather than at the property. There are no televisions in the rooms. The trade-off is the road — the town is a proper drive away, which is exactly why the view is what it is.",
+      "we_send": "Travellers who want the northern mountains from inside them, with the walking starting at the door and the valley in front of them all day."
+    },
+    {
+      "slug": "knai-bang-chatt",
+      "name": "Knai Bang Chatt",
+      "destination": "cambodia",
+      "area": "kep",
+      "tier": "premium",
+      "confirmed": true,
+      "tier_confirmed": false,
+      "preferred": false,
+      "tags": [
+        "leisure"
+      ],
+      "room_types": [],
+      "character": "Eighteen rooms across restored 1960s New Khmer modernist villas on the Kep seafront, with a saltwater infinity pool over the Gulf of Thailand and a sailing club.",
+      "why": "The only L&F-tier property on the Cambodian south coast; makes a Kep page possible and gives the Cardamoms and Phnom Penh a coastal finish.",
+      "verdict": "",
+      "image": "",
+      "source": "andy/2sep2026-sapa-kep",
+      "prose": "Kep was Cambodia's seaside town before the war, and the villas along its shore were built in the 1960s by architects trained under Vann Molyvann, who had himself studied under Le Corbusier. Knai Bang Chatt is what happened when a handful of them were restored rather than replaced: eighteen rooms, no two the same, teak beds and hand-glazed tile, terraces facing west over the water. There is a saltwater infinity pool on the seafront, a sailing club with catamarans and kayaks, and a restaurant built out over the pier. Kep National Park is behind the town and the crab market is ten minutes away.",
+      "we_send": "Guests who want the Cambodian coast at the end of a temple journey, in a piece of the country's own architectural history rather than a resort."
     }
   ]
 }

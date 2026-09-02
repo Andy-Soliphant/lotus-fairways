@@ -321,11 +321,14 @@ def main():
 
 
 def write_sitemap(indexable):
-    """Rewrite the /hotels/<slug>/ entries in sitemap.xml in place.
+    """Rewrite the /hotels/<slug>/ and /destinations/<country>/<place>/
+    entries in sitemap.xml in place.
 
     Printing a fragment for hand-pasting is how seven live pages ended up
     missing from the sitemap on 26 Aug. The build writes the file now.
-    Every other URL in the sitemap is left exactly as it is.
+    The destinations tree was added here on 2 Sep 2026 for the same reason:
+    build_destination_pages.py writes real pages, and a page Google cannot
+    see is a page that does not exist. Every other URL is left as it is.
     """
     path = os.path.join(ROOT, "sitemap.xml")
     if not os.path.exists(path):
@@ -349,11 +352,40 @@ def write_sitemap(indexable):
         "    <priority>0.6</priority>\n"
         "  </url>\n" % s for s in sorted(indexable))
 
+    # ── Destination pages, built by build_destination_pages.py ──────────
+    # Read from disk rather than from a list, so a page that exists is always
+    # in the sitemap and a page that has been removed drops out of it.
+    dests = []
+    for country in sorted(os.listdir(os.path.join(ROOT, "destinations"))):
+        cdir = os.path.join(ROOT, "destinations", country)
+        if not os.path.isdir(cdir):
+            continue
+        for place in sorted(os.listdir(cdir)):
+            if os.path.exists(os.path.join(cdir, place, "index.html")):
+                dests.append("%s/%s" % (country, place))
+
+    xml = re.sub(
+        r"\n?  <!-- Destination pages -->", "", xml)
+    xml = re.sub(
+        r"\n?  <url>\s*\n?\s*<loc>https://lotusfairways\.com/destinations/"
+        r"[a-z0-9-]+/[a-z0-9-]+/</loc>.*?</url>", "", xml, flags=re.S)
+    xml = re.sub(
+        r"\n?  <url><loc>https://lotusfairways\.com/destinations/"
+        r"[a-z0-9-]+/[a-z0-9-]+/</loc>.*?</url>", "", xml, flags=re.S)
+
+    if dests:
+        block += "\n  <!-- Destination pages -->\n" + "".join(
+            "  <url>\n"
+            "    <loc>https://lotusfairways.com/destinations/%s/</loc>\n"
+            "    <changefreq>monthly</changefreq>\n"
+            "    <priority>0.7</priority>\n"
+            "  </url>\n" % d for d in dests)
+
     xml = xml.replace("</urlset>", block + "</urlset>")
     open(path, "w").write(xml)
     after = xml.count("<loc>")
-    print("\nSITEMAP WRITTEN — %d URLs (%d hotel pages). Was %d."
-          % (after, len(indexable), before))
+    print("\nSITEMAP WRITTEN — %d URLs (%d hotel pages, %d destination pages). Was %d."
+          % (after, len(indexable), len(dests), before))
 
 
 if __name__ == "__main__":

@@ -246,6 +246,10 @@
   <!-- Hotel pages -->
 
   <!-- Hotel pages -->
+
+  <!-- Hotel pages -->
+
+  <!-- Hotel pages -->
   <url>
     <loc>https://lotusfairways.com/hotels/137-pillars-house/</loc>
     <changefreq>monthly</changefreq>
@@ -515,5 +519,57 @@
     <loc>https://lotusfairways.com/hotels/trisara/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+
+  <!-- Destination pages -->
+  <url>
+    <loc>https://lotusfairways.com/destinations/cambodia/phnom-penh/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/destinations/cambodia/siem-reap/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/destinations/thailand/bangkok/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/destinations/thailand/chiang-mai/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/destinations/thailand/hua-hin/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/destinations/thailand/krabi/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/destinations/thailand/phuket/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/destinations/vietnam/da-nang/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/destinations/vietnam/hanoi/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/destinations/vietnam/saigon/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>
