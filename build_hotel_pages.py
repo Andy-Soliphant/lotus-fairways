@@ -49,8 +49,9 @@ JOURNEY_USE = {
         "note": "Thailand &middot; Laos &middot; Cambodia &middot; Vietnam &mdash; the hotels of Bill Bensley",
         "slugs": [
             "the-siam-bangkok", "fs-tented-camp-golden-triangle",
-            "rosewood-luang-prabang", "bensley-collection-shinta-mani-siem-reap",
-            "shinta-mani-wild", "intercontinental-danang",
+            "four-seasons-chiang-mai", "rosewood-luang-prabang",
+            "bensley-collection-shinta-mani-siem-reap", "shinta-mani-wild",
+            "capella-hanoi", "intercontinental-danang",
         ],
     },
     "the-cham-tour.html": {
@@ -338,6 +339,9 @@ def write_sitemap(indexable):
 
     # Strip every existing per-property entry (never /hotels/ itself).
     before = xml.count("<loc>")
+    # The block comment is re-added below, so strip old copies first or they
+    # stack up one per run (found 11 Sep 2026: three copies in the sitemap).
+    xml = re.sub(r"\n?  <!-- Hotel pages -->\n*", "\n", xml)
     xml = re.sub(
         r"\n?  <url>\s*\n?\s*<loc>https://lotusfairways\.com/hotels/[a-z0-9-]+/</loc>"
         r".*?</url>", "", xml, flags=re.S)
