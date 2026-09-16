@@ -59,9 +59,7 @@ JOURNEY_USE = {
         "eyebrow": "Signature Journey",
         "note": "Through the lost kingdom of Champa",
         "slugs": [
-            "capella-bangkok", "chakrabongse-villas", "raffles-grand-angkor",
-            "raffles-le-royal", "amanoi", "anantara-quy-nhon",
-            "four-seasons-nam-hai", "namia-riverside-da-nang",
+            "amanoi", "anantara-quy-nhon", "namia-riverside-da-nang",
         ],
     },
 }
