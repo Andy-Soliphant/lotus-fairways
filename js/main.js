@@ -81,7 +81,7 @@
               <circle cx="50" cy="72.5" r="4.5" fill="#3a6040"/>
             </svg>
             <p style="font-family:'Cormorant Garamond',serif; font-size:1.4rem; color:#f7f3ec; margin-bottom:10px;">Thank you — we'll be in touch shortly.</p>
-            <p style="font-size:0.82rem; color:rgba(247,243,236,0.5); line-height:1.8;">We aim to respond within one business day. In the meantime, feel free to call us on 01603 340142 (Norfolk) or 01625 802142 (Cheshire).</p>
+            <p style="font-size:0.82rem; color:rgba(247,243,236,0.5); line-height:1.8;">We aim to respond within one business day. In the meantime, feel free to call us on 01625 802142.</p>
           </div>`;
       })
       .catch(() => {
