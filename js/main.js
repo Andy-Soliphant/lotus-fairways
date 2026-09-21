@@ -68,7 +68,8 @@
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams(new FormData(enquiryForm)).toString()
       })
-      .then(() => {
+      .then(res => {
+        if (!res.ok) throw new Error('Form POST failed: ' + res.status);
         enquiryForm.innerHTML = `
           <div style="text-align:center; padding:40px 0;">
             <svg width="48" height="48" viewBox="0 0 100 100" style="margin:0 auto 20px;">
@@ -105,7 +106,8 @@
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams(new FormData(guideForm)).toString()
       })
-      .then(() => {
+      .then(res => {
+        if (!res.ok) throw new Error('Form POST failed: ' + res.status);
         // Trigger PDF download
         const link = document.createElement('a');
         link.href = '/downloads/LotusAndFairways_ScotlandGolfGuide.pdf';
