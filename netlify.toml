@@ -16,6 +16,19 @@
   to = "/journal/"
   status = 301
 
+# Gulf & Mountains merged into The Northern Blend (22 Sep 2026)
+[[redirects]]
+  from = "/fairway-tours/the-gulf-and-mountains/*"
+  to = "/fairway-tours/the-northern-blend/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/fairway-tours/the-gulf-and-mountains"
+  to = "/fairway-tours/the-northern-blend/"
+  status = 301
+  force = true
+
 # Headers for performance and security
 [[headers]]
   for = "/*"
