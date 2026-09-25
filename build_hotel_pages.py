@@ -66,7 +66,7 @@ JOURNEY_USE = {
 
 AREA_FIXES = {
     "ho-chi-minh": "Ho Chi Minh City", "hoi-an": "Hoi An", "cam-ranh": "Cam Ranh",
-    "can-tho": "Can Tho", "quy-nhon": "Quy Nhon", "nha-trang": "Nha Trang",
+    "can-tho": "Can Tho", "con-dao": "Con Dao", "quy-nhon": "Quy Nhon", "nha-trang": "Nha Trang",
     "da-nang": "Da Nang", "koh-yao-noi": "Koh Yao Noi", "koh-kood": "Koh Kood",
     "koh-samui": "Koh Samui", "koh-rong": "Koh Rong", "khao-lak": "Khao Lak",
     "golden-triangle": "The Golden Triangle",

@@ -1094,3 +1094,9 @@ footer {
 .sig-card-content h3 { color: var(--white); font-size: clamp(1.4rem, 2.5vw, 2rem); margin-bottom: 8px; }
 .sig-card-content p { color: var(--parchment-dark); font-size: 0.88rem; margin-bottom: 14px; }
 .sig-card-link { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--bronze-light); font-family: var(--font-sans); }
+
+/* Internal links to hotel pages — added by link_hotel_mentions.py (Sep 2026).
+   Inherit the surrounding colour so a link never changes the look of a card;
+   a fine bronze rule shows it is clickable. */
+a.hotel-link { color: inherit; border-bottom: 1px solid var(--bronze-light); transition: var(--transition); }
+a.hotel-link:hover { color: var(--rose); border-bottom-color: var(--rose); }

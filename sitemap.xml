@@ -189,9 +189,7 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- Journal — indexable articles only. The migrated YLH pieces carry
-       noindex and are deliberately excluded: listing a noindex page in a
-       sitemap sends Google two contradictory instructions. -->
+  <!-- Journal. The nine migrated YLH articles had noindex lifted on 25 Sep 2026. -->
   <url>
     <loc>https://lotusfairways.com/journal/</loc>
     <lastmod>2026-07-17</lastmod>
@@ -224,6 +222,92 @@
     <loc>https://lotusfairways.com/journal/football-shirt-thailand.html</loc>
     <lastmod>2026-07-17</lastmod>
     <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://lotusfairways.com/journal/champa-vietnams-lost-kingdom.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/journal/four-seasons-tented-camp-or-anantara-golden-triangle.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/journal/bangkok-golf.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/journal/thailand-boutique-hotels.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/journal/thailand-golf-experience.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/journal/thailand-golf-planning.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/journal/vietnam-experts.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/journal/vietnam-first-time-journey.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/journal/vietnam-golf-hoi-an.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/journal/vietnam-multi-centre.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/journal/winter-golf.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://lotusfairways.com/journal/trisara-or-amanpuri.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/journal/the-reverie-or-hotel-des-arts-saigon.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/journal/rachamankha-or-raya-heritage-chiang-mai.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <!-- Signature journey -->

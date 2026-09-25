@@ -147,6 +147,56 @@
   <div class="journal-section-label">More Stories</div>
   <div class="journal-standard-grid">
 
+    <a href="/journal/trisara-or-amanpuri.html" class="j-card j-card-standard" data-tags="thailand">
+      <img src="/images/hotel-thailand-phuket-trisara.jpg" alt="Trisara, Phuket">
+      <div class="j-card-content">
+        <span class="j-card-tag">Thailand &middot; Which to Choose</span>
+        <h3 class="j-card-title">Trisara or Amanpuri?</h3>
+        <p class="j-card-excerpt">The original Aman or the private bay. Phuket&rsquo;s two great hideaways, and the one we would choose.</p>
+        <span class="j-card-meta">5 min read</span>
+      </div>
+    </a>
+
+    <a href="/journal/the-reverie-or-hotel-des-arts-saigon.html" class="j-card j-card-standard" data-tags="vietnam">
+      <img src="/images/hotel-vietnam-ho-chi-minh-the-reverie-saigon.jpg" alt="The Reverie Saigon">
+      <div class="j-card-content">
+        <span class="j-card-tag">Vietnam &middot; Which to Choose</span>
+        <h3 class="j-card-title">The Reverie or Hotel des Arts?</h3>
+        <p class="j-card-excerpt">Opulence and views, or 1930s Saigon and a rooftop pool. Where we stay in District 1.</p>
+        <span class="j-card-meta">4 min read</span>
+      </div>
+    </a>
+
+    <a href="/journal/rachamankha-or-raya-heritage-chiang-mai.html" class="j-card j-card-standard" data-tags="thailand">
+      <img src="/images/hotel-thailand-chiang-mai-rachamankha.jpg" alt="Rachamankha, Chiang Mai">
+      <div class="j-card-content">
+        <span class="j-card-tag">Thailand &middot; Which to Choose</span>
+        <h3 class="j-card-title">Rachamankha or Raya Heritage?</h3>
+        <p class="j-card-excerpt">Same people, same care. Inside the old city walls, or on the river beyond them.</p>
+        <span class="j-card-meta">4 min read</span>
+      </div>
+    </a>
+
+    <a href="/journal/champa-vietnams-lost-kingdom.html" class="j-card j-card-standard" data-tags="vietnam">
+      <img src="/images/vietnam-quy-nhon-eo-gio.jpg" alt="The coast near Quy Nhon, where the last Cham capital stood">
+      <div class="j-card-content">
+        <span class="j-card-tag">Vietnam &middot; History</span>
+        <h3 class="j-card-title">Champa: Vietnam&rsquo;s Lost Kingdom</h3>
+        <p class="j-card-excerpt">They sacked Angkor in 1177, traded with Baghdad, and fell in 1471. Where to see what survives along Vietnam&rsquo;s coast.</p>
+        <span class="j-card-meta">8 min read</span>
+      </div>
+    </a>
+
+    <a href="/journal/four-seasons-tented-camp-or-anantara-golden-triangle.html" class="j-card j-card-standard" data-tags="thailand">
+      <img src="/images/hotel-thailand-golden-triangle-anantara-golden-triangle.jpg" alt="Anantara Golden Triangle">
+      <div class="j-card-content">
+        <span class="j-card-tag">Thailand &middot; Which to Choose</span>
+        <h3 class="j-card-title">Four Seasons Tented Camp or Anantara Golden Triangle?</h3>
+        <p class="j-card-excerpt">Same river, same view, same elephants. Tents or rooms, couples or families &mdash; and which one we would send you to.</p>
+        <span class="j-card-meta">5 min read</span>
+      </div>
+    </a>
+
     <a href="/journal/vietnam-golf-hoi-an.html" class="j-card j-card-standard" data-tags="vietnam golf">
       <img src="/images/golf-vietnam-hoiana-shores-aerial.jpg" alt="Vietnam golf">
       <div class="j-card-content">
@@ -280,6 +330,12 @@
     tab.addEventListener('click', () => {
       document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
       tab.classList.add('active');
+      // Filter the cards. Tags may be space- or comma-separated.
+      const f = tab.dataset.filter;
+      document.querySelectorAll('.j-card').forEach(card => {
+        const tags = (card.dataset.tags || '').split(/[\s,]+/);
+        card.style.display = (f === 'all' || tags.includes(f)) ? '' : 'none';
+      });
     });
   });
 </script>

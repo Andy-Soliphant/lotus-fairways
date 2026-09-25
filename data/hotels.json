@@ -1695,6 +1695,48 @@
       "source": "andy/2sep2026-sapa-kep",
       "prose": "Kep was Cambodia's seaside town before the war, and the villas along its shore were built in the 1960s by architects trained under Vann Molyvann, who had himself studied under Le Corbusier. Knai Bang Chatt is what happened when a handful of them were restored rather than replaced: eighteen rooms, no two the same, teak beds and hand-glazed tile, terraces facing west over the water. There is a saltwater infinity pool on the seafront, a sailing club with catamarans and kayaks, and a restaurant built out over the pier. Kep National Park is behind the town and the crab market is ten minutes away.",
       "we_send": "Guests who want the Cambodian coast at the end of a temple journey, in a piece of the country's own architectural history rather than a resort."
+    },
+    {
+      "slug": "six-senses-con-dao",
+      "name": "Six Senses Con Dao",
+      "destination": "vietnam",
+      "area": "con-dao",
+      "tier": "ultra",
+      "confirmed": true,
+      "tier_confirmed": false,
+      "preferred": true,
+      "tags": [
+        "leisure"
+      ],
+      "room_types": [],
+      "character": "Fifty pool villas on a private stretch of Dat Doc Beach, backed by the Lo Voi mountains, inside the Con Dao national and marine park. A 45-minute flight from Saigon.",
+      "why": "Andy's pick as the best hotel on Con Dao, which he calls his strongest single card in Vietnam. Makes a Con Dao page and extension possible.",
+      "verdict": "",
+      "image": "",
+      "source": "andy/25sep2026-con-dao",
+      "prose": "",
+      "we_send": ""
+    },
+    {
+      "slug": "poulo-condor-con-dao",
+      "name": "Poulo Condor Boutique Resort & Spa",
+      "destination": "vietnam",
+      "area": "con-dao",
+      "tier": "premium",
+      "confirmed": true,
+      "tier_confirmed": false,
+      "preferred": false,
+      "tags": [
+        "leisure"
+      ],
+      "room_types": [],
+      "character": "Thirty-six suites and villas in gardens behind a 750-metre beach on Con Son, named for the islands' old name. Colonial-style architecture; some villas with private pools.",
+      "why": "Andy's second choice on Con Dao; the alternative to Six Senses.",
+      "verdict": "",
+      "image": "",
+      "source": "andy/25sep2026-con-dao",
+      "prose": "",
+      "we_send": ""
     }
   ]
 }
