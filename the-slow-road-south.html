@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Slow Road South — Forty-Four Nights Through Thailand, Laos, Cambodia and Vietnam | Lotus &amp; Fairways</title>
+  <meta name="description" content="A By Invitation journey of forty-four nights: Bangkok, Chiang Mai, the slow boat down the Mekong to Luang Prabang, Angkor, Phnom Penh, Hanoi, Sapa, Ha Long, Hue, Hoi An, Quy Nhon, Saigon and the Mekong Delta.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://lotusfairways.com/the-slow-road-south.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="The Slow Road South — Lotus &amp; Fairways">
+  <meta property="og:description" content="Forty-four nights, four countries, and no hurry. A private journey from Bangkok to the Mekong Delta, by road, river, rail and air.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lotusfairways.com/the-slow-road-south.html">
+  <meta property="og:image" content="https://lotusfairways.com/images/hotel-laos-luang-prabang-rosewood-luang-prabang.jpg">
+  <meta property="og:site_name" content="Lotus &amp; Fairways">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+
+  <style>
+    /* ── Page-specific additions, built on existing tokens ── */
+    .signature-hero {
+      position: relative;
+      height: 78vh;
+      min-height: 520px;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+    }
+    .signature-hero img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .signature-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(26,18,8,0.90) 0%, rgba(26,18,8,0.66) 42%, rgba(26,18,8,0.48) 100%);
+    }
+    .signature-hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 var(--space-xl) calc(var(--space-2xl) + 72px);
+      width: 100%;
+      color: var(--parchment);
+      text-shadow: 0 1px 18px rgba(26,18,8,0.55);
+    }
+    .signature-hero-content .eyebrow { color: var(--bronze-light); margin-bottom: var(--space-md); }
+    .signature-hero-content h1 { color: var(--white); margin-bottom: var(--space-md); max-width: 800px; }
+    .signature-hero-meta {
+      display: flex;
+      gap: var(--space-xl);
+      flex-wrap: wrap;
+      margin-top: var(--space-lg);
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+    }
+    .signature-hero-meta strong { display: block; font-family: var(--font-serif); font-size: 1.4rem; font-weight: 400; }
+
+    .at-a-glance {
+      background: var(--white);
+      border-radius: 4px;
+      box-shadow: var(--shadow-md);
+      padding: var(--space-xl);
+      margin-top: -90px;
+      position: relative;
+      z-index: 2;
+      max-width: var(--max-width);
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .at-a-glance-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--space-lg);
+    }
+    .at-a-glance-item h4 { color: var(--bronze); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 6px; font-family: var(--font-sans); font-weight: 500; }
+    .at-a-glance-item p { font-size: 0.95rem; color: var(--deep); margin: 0; line-height: 1.5; }
+
+    .price-note {
+      font-size: 0.75rem;
+      color: var(--warm-grey);
+      font-style: italic;
+      margin-top: var(--space-sm);
+    }
+
+    .intro-text {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .intro-text p { font-size: 1.1rem; line-height: 1.9; }
+
+    .timeline { max-width: 880px; margin: 0 auto; }
+    .day-block {
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      gap: var(--space-lg);
+      padding: var(--space-xl) 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .day-block:last-child { border-bottom: none; }
+    .day-number {
+      font-family: var(--font-serif);
+      font-size: 2.2rem;
+      color: var(--bronze);
+      line-height: 1;
+    }
+    .day-number span { display: block; font-family: var(--font-sans); font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--warm-grey); margin-top: 6px; }
+    .day-title { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 400; margin-bottom: 10px; color: var(--deep); }
+    .day-block p { margin-bottom: 12px; }
+    .day-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+    .day-tag {
+      font-size: 0.68rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 20px;
+      background: var(--rose-pale);
+      color: var(--rose);
+      font-family: var(--font-sans);
+    }
+    .day-tag.golf { background: #e8efe9; color: var(--green); }
+    .day-tag.whisky { background: #f3ead9; color: var(--bronze); }
+
+    .inclusions-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-2xl);
+      max-width: 880px;
+      margin: 0 auto;
+    }
+    @media (max-width: 700px) { .inclusions-grid { grid-template-columns: 1fr; gap: var(--space-xl); } }
+    .inclusions-grid h4 { font-family: var(--font-sans); font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: var(--space-md); }
+    .inclusions-grid ul li { font-size: 0.92rem; padding: 8px 0; border-bottom: 1px solid var(--rule); color: var(--slate); }
+    .inclusions-grid ul li:last-child { border-bottom: none; }
+
+    .gallery-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-sm);
+    }
+    .gallery-strip img { width: 100%; height: 200px; object-fit: cover; border-radius: 2px; }
+    @media (max-width: 700px) { .gallery-strip { grid-template-columns: repeat(2, 1fr); } }
+
+    .cta-band {
+      background: var(--green);
+      color: var(--parchment);
+      text-align: center;
+      padding: var(--space-3xl) var(--space-xl);
+    }
+    .cta-band h2 { color: var(--white); margin-bottom: var(--space-md); }
+    .cta-band p { color: var(--parchment-dark); max-width: 560px; margin: 0 auto var(--space-lg); font-size: 1rem; }
+  
+    /* ── Page-local additions for The Cham Tour ── */
+    .range-band {
+      background: var(--green);
+      color: var(--parchment);
+      padding: var(--space-xl) var(--space-xl);
+      text-align: center;
+    }
+    .range-band .range-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.6rem 2.2rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--parchment);
+    }
+    .range-band .sep { color: var(--bronze); }
+    .range-band .note {
+      display: block;
+      max-width: 640px;
+      margin: 0.9rem auto 0;
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1.2rem;
+      letter-spacing: 0;
+      text-transform: none;
+      color: var(--parchment-dark);
+    }
+
+    /* Stop tags — self-contained, no reliance on .golf / .whisky */
+    .day-tag.water { background: #f3ead9; color: #8a6524; }
+    .day-tag.stay  { background: #f5e7ec; color: var(--rose); }
+
+    .invitation-band {
+      background: var(--green);
+      color: var(--parchment);
+      padding: var(--space-3xl) var(--space-xl);
+    }
+    .invitation-band .inner { max-width: 720px; margin: 0 auto; }
+    .invitation-band .eyebrow { color: var(--bronze); margin-bottom: var(--space-md); }
+    .invitation-band h2 { color: var(--white); margin-bottom: var(--space-md); }
+    .invitation-band p { color: var(--parchment-dark); font-size: 1.05rem; line-height: 1.8; }
+
+    @media (max-width: 700px) {
+      .at-a-glance { margin-top: -50px; padding: var(--space-lg); }
+      .range-band { padding: var(--space-lg) var(--space-md); }
+      .range-band .range-inner { gap: 0.5rem 1.2rem; font-size: 0.66rem; }
+      .invitation-band { padding: var(--space-2xl) var(--space-md); }
+    }
+
+
+    /* ── The Work strip: four of his hotels, shown rather than described ── */
+    .work-strip { background: var(--deep); padding: var(--space-2xl) var(--space-xl); }
+    .work-strip .inner { max-width: var(--max-width); margin: 0 auto; }
+    .work-strip .eyebrow { color: var(--bronze); text-align: center; margin-bottom: var(--space-md); }
+    .work-strip h2 { color: var(--white); text-align: center; margin-bottom: var(--space-sm); font-size: 2rem; }
+    .work-strip .lede { color: var(--parchment-dark); text-align: center; max-width: 620px; margin: 0 auto var(--space-xl); font-size: 1rem; line-height: 1.8; }
+    .work-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-md); }
+    .work-item figure { margin: 0; }
+    .work-item img { width: 100%; aspect-ratio: 3/4; object-fit: cover; display: block; border-radius: 2px; }
+    .work-item figcaption { color: var(--parchment-dark); font-family: var(--font-sans); font-size: 0.72rem; letter-spacing: 0.04em; margin-top: 10px; line-height: 1.5; }
+    .work-item figcaption strong { display: block; color: var(--bronze-light); font-family: var(--font-serif); font-size: 1rem; font-weight: 400; letter-spacing: 0; margin-bottom: 2px; }
+    @media (max-width: 900px) { .work-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 480px) { .work-grid { grid-template-columns: 1fr; } .work-strip { padding: var(--space-xl) var(--space-md); } }
+
+    /* ── Waitlist form, sits inside the dark CTA band ── */
+    .waitlist-form { max-width: 540px; margin: var(--space-lg) auto 0; text-align: left; }
+    .waitlist-form .btn-submit { width: 100%; margin-top: var(--space-sm); }
+    .waitlist-form .form-note { text-align: center; margin-top: var(--space-md); color: rgba(247,243,236,0.5); font-size: 0.7rem; letter-spacing: 0.06em; }
+  </style>
+</head>
+<body>
+
+<!-- Nav injected by component -->
+<script src="/components/nav.js"></script>
+
+<section class="signature-hero">
+  <img src="/images/hotel-laos-luang-prabang-rosewood-luang-prabang.jpg" alt="Luang Prabang, reached by slow boat down the Mekong">
+  <div class="signature-hero-content">
+    <div class="eyebrow">&mdash; By Invitation &middot; Thailand &middot; Laos &middot; Cambodia &middot; Vietnam &mdash;</div>
+    <h1>The Slow Road South</h1>
+    <p style="font-size:1.1rem; color:var(--parchment-dark); max-width:640px;">Forty-four nights from Bangkok to the Mekong Delta, by road, river, rail and air. Four countries, sixteen places, and time in every one of them.</p>
+    <div class="signature-hero-meta">
+      <div><strong>44 Nights</strong>Bangkok to Can Tho</div>
+      <div><strong>Four Countries</strong>Thailand, Laos, Cambodia, Vietnam</div>
+      <div><strong>Private</strong>Your dates, your party</div>
+    </div>
+  </div>
+</section>
+
+<div class="at-a-glance">
+  <div class="at-a-glance-grid">
+    <div class="at-a-glance-item">
+      <h4>The Route</h4>
+      <p>Bangkok, Chiang Mai, Chiang Rai, the Mekong by slow boat, Luang Prabang, Siem Reap, Phnom Penh, Hanoi, Sapa, Ninh Binh, Ha Long Bay, Hue, Hoi An, Quy Nhon, Saigon, Can Tho</p>
+    </div>
+    <div class="at-a-glance-item">
+      <h4>How You Travel</h4>
+      <p>A slow boat into Laos, a private cabin down the Vietnamese coast by train, a night aboard on Ha Long Bay, the last stretch by boat to an islet in the Mekong, and flights where the distance calls for them</p>
+    </div>
+    <div class="at-a-glance-item">
+      <h4>Where You Stay</h4>
+      <p>Four Seasons Bangkok, 137 Pillars House, The Legend, Le Grand Pakbeng, Rosewood Luang Prabang, Phum Baitang, Raffles Hotel Le Royal, Capella Hanoi, Topas Ecolodge, Emeralda, Heritage Line Violet, Azerai La Residence, Four Seasons The Nam Hai, Zannier Bai San Ho, The Reverie, Legacy Mekong</p>
+    </div>
+    <div class="at-a-glance-item">
+      <h4>By Invitation</h4>
+      <p style="font-family:var(--font-serif); font-size:1.6rem;">Priced on request</p>
+      <p class="price-note">A private journey, built around your dates and your party. Take all of it, or any stretch of it, and we will price exactly what you want.</p>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="intro-text">
+    <p>Most journeys through Southeast Asia are built to be efficient: a city, a temple, a beach, a flight home. This one is built the other way round. It crosses into Laos by river rather than air, goes down the Vietnamese coast by train, and stops long enough in each place that you stop being a visitor to it.</p>
+    <p>It is a journey we have run in full, and it is the most complete picture of the region we know how to give. Four countries in order, north to south: the temples and the mountains of northern Thailand, the slow river into Laos, Angkor and the hard history of Phnom Penh, and then the whole length of Vietnam, from the Red Dao villages above Sapa to the floating markets of the Mekong.</p>
+    <p><em>Forty-four nights, and none of them spent in transit.</em></p>
+  </div>
+</section>
+
+<section class="section" style="background:var(--white);">
+  <div class="section-header">
+    <h2>The Journey</h2>
+    <div class="section-rule"></div>
+  </div>
+
+  <div class="timeline">
+
+    <div class="day-block">
+      <div class="day-number">1<span>Bangkok</span></div>
+      <div>
+        <h3 class="day-title">The River &mdash; Three Nights</h3>
+        <p>Arrive in your own time at Four Seasons Bangkok on the Chao Phraya. A morning on the klongs by private longtail, through the canal-side neighbourhoods that were the city&rsquo;s streets before it had roads, to the Grand Palace, Wat Pho and Wat Arun. On another evening, a tuk-tuk once the heat has gone: Chinatown&rsquo;s food stalls, the flower market at Pak Khlong Talat, Wat Pho lit up and nearly empty, and a last drink above the city.</p>
+        <div class="day-tags"><span class="day-tag water">Chao Phraya</span><span class="day-tag stay">Four Seasons Bangkok</span></div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-number">2<span>Chiang Mai</span></div>
+      <div>
+        <h3 class="day-title">The Mountain &mdash; Three Nights</h3>
+        <p>North to <a href="/hotels/137-pillars-house/">137 Pillars House</a>, in the Rajah Brooke Suite. A full day on Doi Inthanon, Thailand&rsquo;s highest mountain: the summit cloud forest, the two royal chedis, then down through the Pha Dok Siew waterfalls on a trail built and kept by the Karen village at its foot, where the coffee is grown and poured. Then the old city by red truck, khao soi for lunch, and Warorot market.</p>
+        <div class="day-tags"><span class="day-tag stay">137 Pillars House</span></div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-number">3<span>Chiang Rai</span></div>
+      <div>
+        <h3 class="day-title">The White Temple &mdash; One Night</h3>
+        <p>Through the mountains to <a href="/hotels/the-legend-chiang-rai/">The Legend</a> on the Mae Kok, stopping at Wat Rong Khun &mdash; the White Temple, the life&rsquo;s work of the painter Chalermchai Kositpipat, and like nothing else in Thailand.</p>
+        <div class="day-tags"><span class="day-tag stay">The Legend Chiang Rai</span></div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-number">4<span>Pakbeng</span></div>
+      <div>
+        <h3 class="day-title">The Slow Boat &mdash; One Night on the Mekong</h3>
+        <p>Across the border at Houay Xay and onto the river. Two days of slow boat down the Mekong into Laos, with a stop at a Khmu village of sixty families, and a night at Le Grand Pakbeng in the jungle above the water, halfway to Luang Prabang.</p>
+        <div class="day-tags"><span class="day-tag water">Mekong</span><span class="day-tag stay">Le Grand Pakbeng</span></div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-number">5<span>Luang Prabang</span></div>
+      <div>
+        <h3 class="day-title">The Royal Town &mdash; Four Nights</h3>
+        <p>The river delivers you, by way of the Pak Ou caves and their thousands of Buddhas. <a href="/hotels/rosewood-luang-prabang/">Rosewood Luang Prabang</a> sits in the hills outside town. The morning market, Wat Mai, the old royal palace and Wat Xieng Thong; lunch at the Kuang Si falls and its bear sanctuary; a day walking through Khmu and Hmong villages and back down the Nam Khan by boat. And a day that is simply yours.</p>
+        <div class="day-tags"><span class="day-tag water">Nam Khan</span><span class="day-tag stay">Rosewood Luang Prabang</span></div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-number">6<span>Siem Reap</span></div>
+      <div>
+        <h3 class="day-title">Angkor &mdash; Three Nights</h3>
+        <p>A direct flight south to <a href="/hotels/phum-baitang/">Phum Baitang</a> and its villas in the rice fields. Angkor Wat before dawn, into the temple as the crowds leave for breakfast; then Angkor Thom, the faces of the Bayon, and Ta Prohm with the jungle growing through it. An evening on the back of a Vespa through Siem Reap&rsquo;s night markets and street kitchens.</p>
+        <div class="day-tags"><span class="day-tag stay">Phum Baitang</span></div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-number">7<span>Phnom Penh</span></div>
+      <div>
+        <h3 class="day-title">The Capital &mdash; Two Nights</h3>
+        <p>By road on the old Angkor highway, by way of Sambor Prei Kuk &mdash; brick temples a century older than Angkor, with almost no one at them. Two nights at <a href="/hotels/raffles-le-royal/">Raffles Hotel Le Royal</a>. A morning at Tuol Sleng and Choeung Ek, which not everyone will want and which explains the country better than anything else can; and a gentler one by cyclo, past Wat Phnom, the central market and the Royal Palace.</p>
+        <div class="day-tags"><span class="day-tag stay">Raffles Hotel Le Royal</span></div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-number">8<span>Hanoi</span></div>
+      <div>
+        <h3 class="day-title">The Old Quarter &mdash; Three Nights</h3>
+        <p>North to <a href="/hotels/capella-hanoi/">Capella Hanoi</a>. A day by jeep through the alleys most visitors never find, the Temple of Literature and Tran Quoc pagoda, and the villages around West Lake. A tour of the Opera House, next door, subject to its reopening after renovation.</p>
+        <div class="day-tags"><span class="day-tag stay">Capella Hanoi</span></div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-number">9<span>Sapa</span></div>
+      <div>
+        <h3 class="day-title">The Mountains &mdash; Three Nights</h3>
+        <p>Into the Hoang Lien mountains and a pool villa at Topas Ecolodge, looking across the valley. Walks to the Red Dao villages of Lech, Nam Nhiu and Nam Cang, through rice terraces and over the river, with time for a Red Dao herbal bath at the lodge. The third day is free.</p>
+        <div class="day-tags"><span class="day-tag stay">Topas Ecolodge</span></div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-number">10<span>Ninh Binh</span></div>
+      <div>
+        <h3 class="day-title">The Karsts &mdash; Two Nights</h3>
+        <p>Down from the mountains to Emeralda Ninh Binh. Hoa Lu, Vietnam&rsquo;s first capital, then a private sampan along the Tam Coc river between the limestone towers, and the climb to the cave pagodas on Ngu Nhac mountain for those who want it.</p>
+        <div class="day-tags"><span class="day-tag stay">Emeralda Ninh Binh</span></div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-number">11<span>Ha Long Bay</span></div>
+      <div>
+        <h3 class="day-title">The Bay &mdash; One Night Aboard</h3>
+        <p>The Imperial Suite on Heritage Line&rsquo;s Violet. By bamboo boat through the floating village at Cua Van, into Tien Ong cave, a cooking class as the light goes, and a swim or a climb at Ti Top island in the morning.</p>
+        <div class="day-tags"><span class="day-tag water">Ha Long Bay</span><span class="day-tag stay">Heritage Line Violet</span></div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-number">12<span>Hue</span></div>
+      <div>
+        <h3 class="day-title">The Imperial City &mdash; Three Nights</h3>
+        <p>A flight south to Azerai La Residence, on the Perfume River. Thien Mu pagoda, the tomb of Khai Dinh, the Nguyen emperors&rsquo; citadel, and a cyclo to the lotus lake where they came to rest. And a day of Hue&rsquo;s royal cooking, from the market at Dong Ba to a garden house of the kind found only in this city.</p>
+        <div class="day-tags"><span class="day-tag water">Perfume River</span><span class="day-tag stay">Azerai La Residence Hue</span></div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-number">13<span>Hoi An</span></div>
+      <div>
+        <h3 class="day-title">The Coast &mdash; Five Nights</h3>
+        <p>Over the Hai Van Pass by road to <a href="/hotels/four-seasons-nam-hai/">Four Seasons The Nam Hai</a> and a one-bedroom ocean-view villa. A morning on the Thu Bon with the fishermen at the river mouth, then by coracle into the mangroves. The rest is deliberately unplanned: the old town, the beach, and nothing that has to be done.</p>
+        <div class="day-tags"><span class="day-tag water">Thu Bon</span><span class="day-tag stay">Four Seasons The Nam Hai</span></div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-number">14<span>Quy Nhon</span></div>
+      <div>
+        <h3 class="day-title">The Quiet Bay &mdash; Four Nights</h3>
+        <p>South by train from Da Nang, six hours down the coast in a private cabin &mdash; the transfer as part of the journey. A hill pool villa at Zannier Bai San Ho, above a bay very few people from Britain have heard of. Four nights with nothing in them, on purpose.</p>
+        <div class="day-tags"><span class="day-tag stay">Zannier Bai San Ho</span></div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-number">15<span>Saigon</span></div>
+      <div>
+        <h3 class="day-title">The City &mdash; Three Nights</h3>
+        <p>A flight to <a href="/hotels/the-reverie-saigon/">The Reverie</a> on Nguyen Hue. Up the Saigon river by boat to the tunnels at Cu Chi, and a day on the back of a vintage Vespa: coffee the Vietnamese way, the bird cafés, Cholon&rsquo;s temples, the Post Office and the Independence Palace.</p>
+        <div class="day-tags"><span class="day-tag water">Saigon River</span><span class="day-tag stay">The Reverie Saigon</span></div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-number">16<span>Can Tho</span></div>
+      <div>
+        <h3 class="day-title">The Delta &mdash; Three Nights</h3>
+        <p>Into the Mekong Delta, and the last stretch by boat to Legacy Mekong on its own islet in the Hau river. The Binh Thuy temple, the Duong family house of 1870 where <em>The Lover</em> was filmed, and Nam Nha pagoda; then the Cai Rang floating market at dawn, with breakfast on board. From here, home by way of Saigon.</p>
+        <div class="day-tags"><span class="day-tag water">Hau River</span><span class="day-tag stay">Legacy Mekong</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="invitation-band">
+  <div class="inner">
+    <div class="eyebrow">&mdash; By Invitation &mdash;</div>
+    <h2>All of it, or the part you want</h2>
+    <p>This is a private journey, not a departure. Your dates, your own party, and the pace set by you. The same route divides naturally &mdash; northern Thailand and the river into Laos; Cambodia; the north of Vietnam; the coast and the south &mdash; and any of those can be taken on its own or joined to another.</p>
+    <p>If you would rather travel with a small group and a host, <a href="/the-architects-asia.html" style="color:inherit;border-bottom:1px solid var(--bronze-light);">The Architect&rsquo;s Asia</a> covers much of the same ground in nineteen nights, departing December 2027.</p>
+    <p>Any house on it can be changed for one that suits you better, any stay lengthened, and anything above cut to make room for more time at the places you love. Getting there is arranged separately and individually: tell us the airport you would rather leave from and how you like to fly.</p>
+  </div>
+</div>
+
+<section class="cta-band">
+  <h2>Begin the Conversation</h2>
+  <p>Tell us when you would like to travel and which parts of it appeal, and we will come back to you with the journey and the price.</p>
+<form name="waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html" class="waitlist-form">
+    <input type="hidden" name="form-name" value="waitlist">
+      <input type="hidden" name="source-page" value="">
+    <input type="hidden" name="journey" value="The Slow Road South">
+    <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
+
+    <div class="form-grid">
+      <div class="form-row">
+        <label for="wl-first">First Name</label>
+        <input type="text" id="wl-first" name="first-name" placeholder="Your first name" required>
+      </div>
+      <div class="form-row">
+        <label for="wl-last">Last Name</label>
+        <input type="text" id="wl-last" name="last-name" placeholder="Your last name" required>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <label for="wl-email">Email Address</label>
+      <input type="email" id="wl-email" name="email" placeholder="your@email.com" required>
+    </div>
+
+    <div class="form-grid">
+      <div class="form-row">
+        <label for="wl-party">How Many Travelling</label>
+        <select id="wl-party" name="party-size">
+          <option value="">Select</option>
+          <option>Just me</option>
+          <option>Two of us</option>
+          <option>Three or four</option>
+          <option>A larger group</option>
+          <option>Not sure yet</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="wl-window">What Appeals</label>
+        <select id="wl-window" name="departure">
+          <option value="">Select</option>
+            <option>The whole journey</option>
+            <option>Northern Thailand and Laos</option>
+            <option>Cambodia</option>
+            <option>Vietnam, north to south</option>
+            <option>A mix &mdash; I will explain below</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <label for="wl-note">Anything We Should Know</label>
+      <textarea id="wl-note" name="message" rows="2" placeholder="Optional — when you would like to travel, who is coming, anything you would want us to plan around..."></textarea>
+    </div>
+
+    <button type="submit" class="btn-submit">Begin the Conversation &rarr;</button>
+    <p class="form-note">No obligation &middot; A reply from us, not an automated one</p>
+  </form>
+</section>
+
+<!-- Scripts -->
+<script src="/components/footer.js"></script>
+<script src="/js/main.js"></script>
+
+
+<script>
+/* Source tracking: records which page sent the visitor to this form.
+   Reads ?ref= if present, otherwise the same-origin referrer path. */
+(function () {
+  function label() {
+    var q = new URLSearchParams(window.location.search).get('ref');
+    if (q) return q;
+    var r = document.referrer;
+    if (!r) return 'direct';
+    try {
+      var u = new URL(r);
+      if (u.hostname !== window.location.hostname) return 'external: ' + u.hostname;
+      return u.pathname === '/' ? 'homepage' : u.pathname;
+    } catch (e) { return 'unknown'; }
+  }
+  var v = label();
+  document.querySelectorAll('input[name="source-page"]').forEach(function (el) { el.value = v; });
+})();
+</script>
+</body>
+</html>

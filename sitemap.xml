@@ -312,6 +312,24 @@
 
   <!-- Signature journey -->
   <url>
+    <loc>https://lotusfairways.com/vietnam-coast-and-island.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/the-heart-of-vietnam.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/the-slow-road-south.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lotusfairways.com/the-cham-tour.html</loc>
     <lastmod>2026-08-05</lastmod>
     <changefreq>weekly</changefreq>
