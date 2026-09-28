@@ -96,12 +96,13 @@
 
   // ── NAV HTML ─────────────────────────────────────────────────
   const path     = window.location.pathname;
-  const isGolf   = path.includes('/golf-in-asia');
+  const isGolf   = ['/golf-in-asia','/fairway-tours','/fairway-weekends'].some(p => path.includes(p));
   const isHotels = path.startsWith('/hotels');
   const isFairwayTours = path.includes('/fairway-tours');
   const isFW     = path.includes('/fairway-weekends');
   const isBeyond = path.includes('/beyond');
   const isDest   = path.includes('/destinations');
+  const isJourneys = ['/journeys','/the-architects-asia','/the-cham-tour','/the-slow-road-south','/the-heart-of-vietnam','/vietnam-coast-and-island'].some(p => path.startsWith(p));
 
   const navHTML = `
     <nav class="nav" id="main-nav" role="navigation" aria-label="Main navigation">
@@ -121,9 +122,8 @@
       </div>
       <ul class="nav-links" id="nav-links" role="list">
         <li class="${isDest ? 'active' : ''}"><a href="/destinations/">Destinations</a></li>
+        <li class="${isJourneys ? 'active' : ''}"><a href="/journeys/">Journeys</a></li>
         <li class="golf-link ${isGolf ? 'active' : ''}"><a href="/golf-in-asia/">Golf in Asia</a></li>
-        <li class="${isFairwayTours ? 'active' : ''}"><a href="/fairway-tours/">Fairway Tours</a></li>
-        <li class="${isFW ? 'active' : ''}"><a href="/fairway-weekends/">Fairway Weekends</a></li>
         <li class="beyond-link ${isBeyond ? 'active' : ''}"><a href="/beyond/">Beyond Asia</a></li>
         <li class="${isHotels ? 'active' : ''}"><a href="/hotels/">The Houses</a></li>
         <li><a href="/journal/">Journal</a></li>

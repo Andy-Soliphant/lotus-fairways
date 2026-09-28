@@ -72,6 +72,35 @@
       }
     }
 
+
+    /* ---- Front doors + featured departure (Sep 2026) ---- */
+    .feature-band{display:grid;grid-template-columns:1.1fr 1fr;background:var(--deep);color:var(--parchment)}
+    .feature-band .fb-img{position:relative;min-height:420px;overflow:hidden}
+    .feature-band .fb-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+    .feature-band .fb-text{padding:var(--space-2xl) var(--space-xl);display:flex;flex-direction:column;justify-content:center}
+    .feature-band .eyebrow{color:var(--bronze-light);margin-bottom:var(--space-sm)}
+    .feature-band h2{color:var(--parchment);font-size:clamp(2rem,3.2vw,3rem);margin-bottom:var(--space-md)}
+    .feature-band p{color:var(--parchment-dark);line-height:1.8;max-width:520px}
+    .fb-facts{display:flex;flex-wrap:wrap;gap:var(--space-lg);margin:var(--space-lg) 0}
+    .fb-facts div{font-family:var(--font-sans);font-size:.78rem;letter-spacing:.06em;color:var(--parchment-dark)}
+    .fb-facts strong{display:block;font-family:var(--font-serif);font-weight:400;font-size:1.35rem;color:var(--parchment);letter-spacing:0}
+    .fb-actions{display:flex;flex-wrap:wrap;gap:12px}
+    .doors{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-lg)}
+    .door{background:var(--white);border:1px solid var(--rule);display:flex;flex-direction:column}
+    .door-img{display:block;height:230px;overflow:hidden}
+    .door-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+    .door:hover .door-img img{transform:scale(1.04)}
+    .door-body{padding:var(--space-lg);display:flex;flex-direction:column;flex:1}
+    .door-body .eyebrow{color:var(--bronze);margin-bottom:6px}
+    .door-body h3{font-size:1.6rem;margin-bottom:var(--space-sm)}
+    .door-body h3 a{color:var(--deep)}
+    .door-body p{color:var(--slate);line-height:1.7;font-size:.95rem;margin-bottom:var(--space-md)}
+    .door-links{list-style:none;padding:0;margin:auto 0 0;border-top:1px solid var(--rule)}
+    .door-links li{border-bottom:1px solid var(--rule)}
+    .door-links a{display:flex;justify-content:space-between;gap:12px;padding:10px 0;font-size:.9rem;color:var(--deep)}
+    .door-links a span{color:var(--warm-grey);font-size:.8rem;white-space:nowrap}
+    .door-links a:hover{color:var(--rose)}
+    @media(max-width:900px){.doors{grid-template-columns:1fr}.feature-band{grid-template-columns:1fr}.feature-band .fb-img{min-height:260px}.feature-band .fb-text{padding:var(--space-xl) var(--space-lg)}}
   </style>
 
   <!-- Favicon placeholder -->
@@ -173,6 +202,79 @@
     <span class="ticker-item">Golf Groups</span><span class="ticker-item">·</span>
   </div>
 </div>
+
+
+<!-- ══════════════════════════════════════════
+     FEATURED DEPARTURE — The Architect's Asia
+══════════════════════════════════════════ -->
+<section class="feature-band" aria-label="Featured departure">
+  <a class="fb-img" href="/the-architects-asia.html"><img src="/images/hotel-cambodia-cardamom-mountains-shinta-mani-wild-3.jpg" alt="Shinta Mani Wild, in the Cardamom Mountains"></a>
+  <div class="fb-text">
+    <div class="eyebrow">&mdash; The 2027 Departure &mdash;</div>
+    <h2>The Architect&rsquo;s Asia</h2>
+    <p>Nineteen nights through eight hotels by one designer, Bill Bensley, across Thailand, Laos, Cambodia and Vietnam &mdash; from a riverside house in Bangkok to a jungle camp in the Cardamoms. One departure, hosted from the first evening to the last.</p>
+    <div class="fb-facts">
+      <div><strong>30 Nov &ndash; 19 Dec 2027</strong>Home before Christmas</div>
+      <div><strong>Twelve guests</strong>At the very most</div>
+      <div><strong>&pound;30,000</strong>Per person, sharing</div>
+    </div>
+    <div class="fb-actions">
+      <a href="/the-architects-asia.html" class="btn btn-rose">See the Journey</a>
+      <a href="/the-architects-asia.html#reserve" class="btn btn-outline-light">Reserve Your Place</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     THREE WAYS TO TRAVEL
+══════════════════════════════════════════ -->
+<section class="section">
+  <div class="section-header">
+    <h2>Three Ways to Travel With Us</h2>
+    <div class="section-rule"></div>
+  </div>
+  <div class="doors">
+    <div class="door">
+      <a class="door-img" href="/golf-in-asia/"><img src="/images/golf-thailand-black-mountain-aerial.jpg" alt="Black Mountain, Hua Hin" loading="lazy"></a>
+      <div class="door-body">
+        <div class="eyebrow">&mdash; Golf &mdash;</div>
+        <h3><a href="/golf-in-asia/">Golf in Asia</a></h3>
+        <p>Championship courses in Thailand, Vietnam and Cambodia, with the hotels named and the tee times booked.</p>
+        <ul class="door-links">
+          <li><a href="/fairway-tours/">Fairway Tours <span>multi-centre</span></a></li>
+          <li><a href="/fairway-weekends/">Fairway Weekends <span>short breaks</span></a></li>
+          <li><a href="/golf-in-asia/">Seven-night city weeks <span>from &pound;632</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="door">
+      <a class="door-img" href="/journeys/"><img src="/images/hotel-laos-luang-prabang-rosewood-luang-prabang.jpg" alt="Rosewood Luang Prabang" loading="lazy"></a>
+      <div class="door-body">
+        <div class="eyebrow">&mdash; Private Journeys &mdash;</div>
+        <h3><a href="/journeys/">Journeys</a></h3>
+        <p>Routes we have run, travelled privately on your own dates, from eleven nights in Vietnam to forty-four across four countries.</p>
+        <ul class="door-links">
+          <li><a href="/the-heart-of-vietnam.html">The Heart of Vietnam <span>11 nights</span></a></li>
+          <li><a href="/vietnam-coast-and-island.html">Coast and Island <span>16 nights</span></a></li>
+          <li><a href="/the-slow-road-south.html">The Slow Road South <span>By Invitation</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="door">
+      <a class="door-img" href="/journeys/#small-groups"><img src="/images/vietnam-hoi-an-lanterns.jpg" alt="Hoi An" loading="lazy"></a>
+      <div class="door-body">
+        <div class="eyebrow">&mdash; Small Groups &mdash;</div>
+        <h3><a href="/journeys/#small-groups">Hosted Departures</a></h3>
+        <p>One route, one date, twelve guests at the very most, and a host who knows every room on it.</p>
+        <ul class="door-links">
+          <li><a href="/the-architects-asia.html">The Architect&rsquo;s Asia <span>Dec 2027</span></a></li>
+          <li><a href="/the-cham-tour.html">The Cham Tour <span>Mar 2027</span></a></li>
+          <li><a href="/journeys/#small-groups">All departures <span>&rarr;</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ══════════════════════════════════════════
      INTRO SPLIT
@@ -481,56 +583,6 @@
 
   </div>
 </div>
-
-<!-- ══════════════════════════════════════════
-     SIGNATURE EXPERIENCES
-══════════════════════════════════════════ -->
-<section class="section">
-  <div class="section-header">
-    <h2>Signature Experiences</h2>
-    <div class="section-rule"></div>
-  </div>
-  <p style="max-width:640px; margin-bottom:var(--space-xl); color:var(--warm-grey);">Beyond individual destinations, these are journeys built around a single, sustained idea — crafted for travellers who want more than an itinerary.</p>
-  <div class="sig-grid">
-    <a href="/whisky-and-fairways.html" class="sig-card">
-      <img src="/images/scotland-glenfinnan-viaduct.jpg" alt="Whisky & Fairways — Scotland">
-      <div class="sig-card-content">
-        <div class="eyebrow">— Scotland —</div>
-        <h3>Whisky & Fairways</h3>
-        <p>Nine days through Scotland's finest links and Speyside's great distilleries. St Andrews, Carnoustie, Royal Dornoch — golf by morning, single malt by evening.</p>
-        <span class="sig-card-link">Explore the Journey →</span>
-      </div>
-    </a>
-    <a href="/the-cham-tour.html" class="sig-card">
-      <img src="/images/vietnam-hoi-an-lanterns.jpg" alt="The Cham Tour — central Vietnam">
-      <div class="sig-card-content">
-        <div class="eyebrow">— Central Vietnam —</div>
-        <h3>The Cham Tour</h3>
-        <p>For thirteen centuries the Cham ran the sea trade of Southeast Asia. In 1177 they sailed up the Mekong and took Angkor. Eleven nights along the coast that was theirs — My Son at first light, the last capital at Vijaya, and the Cham who are still there.</p>
-        <span class="sig-card-link">Explore the Journey →</span>
-      </div>
-    </a>
-    <a href="/the-architects-asia.html" class="sig-card">
-      <img src="/images/hotel-cambodia-cardamom-mountains-shinta-mani-wild-3.jpg" alt="The Architect's Asia — the hotels of Bill Bensley">
-      <div class="sig-card-content">
-        <div class="eyebrow">— Thailand · Laos · Cambodia · Vietnam —</div>
-        <h3>The Architect's Asia</h3>
-        <p>One man designed all of them. Sixteen nights through the hotels of Bill Bensley — a riverside house of antiques, a camp above three borders, and a jungle lodge you reach by zipline.</p>
-        <span class="sig-card-link">Explore the Journey →</span>
-      </div>
-    </a>
-    <a href="/fairway-weekends/" class="sig-card">
-      <img src="/images/golf-thailand-black-mountain-aerial.jpg" alt="Fairway Weekends — Asia Golf">
-      <div class="sig-card-content">
-        <div class="eyebrow">— Asia Golf —</div>
-        <h3>Fairway Weekends</h3>
-        <p>Championship golf, premium hotels and great evenings. Seven destinations across Thailand and Vietnam — from couples to groups of twelve.</p>
-        <span class="sig-card-link">Explore Fairway Weekends →</span>
-      </div>
-    </a>
-  </div>
-<div style="margin-top:26px;display:flex;gap:14px;flex-wrap:wrap;"><a href="/fairway-tours/" style="background:#c49a5e;color:#22301f;padding:12px 22px;border-radius:3px;font-size:.8rem;letter-spacing:.06em;text-decoration:none;">Fairway Tours &mdash; multi-centre flagships</a><a href="/golf-in-asia/" style="border:1px solid rgba(42,74,46,.45);color:#2a4a2e;padding:12px 22px;border-radius:3px;font-size:.8rem;letter-spacing:.06em;text-decoration:none;">Seven-night city weeks from &pound;632</a></div>
-</section>
 
 <!-- ══════════════════════════════════════════
      ENQUIRY SECTION
