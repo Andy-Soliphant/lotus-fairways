@@ -101,6 +101,12 @@
     .door-links a span{color:var(--warm-grey);font-size:.8rem;white-space:nowrap}
     .door-links a:hover{color:var(--rose)}
     @media(max-width:900px){.doors{grid-template-columns:1fr}.feature-band{grid-template-columns:1fr}.feature-band .fb-img{min-height:260px}.feature-band .fb-text{padding:var(--space-xl) var(--space-lg)}}
+
+    html,body{overflow-x:hidden}
+    .hero-caption{z-index:3;bottom:40px;right:120px}
+    @media(max-width:768px){.hero-caption{right:24px;bottom:96px}}
+    .hero-caption-dest a{color:var(--parchment) !important;font-size:1.05rem;border-bottom:1px solid var(--bronze-light);padding-bottom:2px}
+    .hero-caption-dest a:hover{color:var(--bronze-light) !important}
   </style>
 
   <!-- Favicon placeholder -->
@@ -136,16 +142,20 @@
 ══════════════════════════════════════════ -->
 <section class="hero" aria-label="Hero">
 
-  <div class="hero-slide active" aria-hidden="true">
+  <div class="hero-slide active" aria-hidden="true" data-caption="Thailand">
     <img src="images/thailand-bangkok-wat-arun.jpg"
          alt="Thailand — luxury temples and beaches">
   </div>
-  <div class="hero-slide" aria-hidden="true">
+  <div class="hero-slide" aria-hidden="true" data-caption="The Architect&#8217;s Asia &middot; December 2027" data-href="/the-architects-asia.html">
+    <img src="images/hotel-cambodia-cardamom-mountains-shinta-mani-wild-3.jpg"
+         alt="The Architect's Asia — Shinta Mani Wild, in the Cardamom Mountains">
+  </div>
+  <div class="hero-slide" aria-hidden="true" data-caption="Vietnam">
     <img src="images/vietnam-hoi-an-lanterns.jpg"
          alt="Vietnam — lantern-lit Hoi An">
   </div>
-  <div class="hero-slide" aria-hidden="true">
-    <img src="images/golf-thailand-chiang-mai-dusk.jpg"
+  <div class="hero-slide" aria-hidden="true" data-caption="Golf in Asia" data-href="/golf-in-asia/">
+    <img src="images/golf-thailand-black-mountain-aerial.jpg"
          alt="Golf in Asia — championship fairways">
   </div>
 
@@ -163,46 +173,13 @@
     <div class="hero-dot active" onclick="window.LF&&window.LF.goToSlide(0)"></div>
     <div class="hero-dot" onclick="window.LF&&window.LF.goToSlide(1)"></div>
     <div class="hero-dot" onclick="window.LF&&window.LF.goToSlide(2)"></div>
+    <div class="hero-dot" onclick="window.LF&&window.LF.goToSlide(3)"></div>
   </div>
-  <div class="hero-caption" aria-hidden="true">
+  <div class="hero-caption">
     <div class="hero-caption-dest" id="slide-caption">Thailand</div>
   </div>
 
 </section>
-
-<!-- ══════════════════════════════════════════
-     TICKER
-══════════════════════════════════════════ -->
-<div class="ticker" aria-hidden="true">
-  <div class="ticker-inner">
-    <span class="ticker-item rose">Thailand</span><span class="ticker-item">·</span>
-    <span class="ticker-item">Vietnam</span><span class="ticker-item">·</span>
-    <span class="ticker-item green">Cambodia</span><span class="ticker-item">·</span>
-    <span class="ticker-item">Championship Golf</span><span class="ticker-item">·</span>
-    <span class="ticker-item gold">Private Villas</span><span class="ticker-item">·</span>
-    <span class="ticker-item">Bespoke Itineraries</span><span class="ticker-item">·</span>
-    <span class="ticker-item rose">ATOL Protected</span><span class="ticker-item">·</span>
-    <span class="ticker-item">30 Years Experience</span><span class="ticker-item">·</span>
-    <span class="ticker-item gold">Family Specialists</span><span class="ticker-item">·</span>
-    <span class="ticker-item">Honeymoons</span><span class="ticker-item">·</span>
-    <span class="ticker-item green">Scotland Golf</span><span class="ticker-item">·</span>
-    <span class="ticker-item">Golf Groups</span><span class="ticker-item">·</span>
-    <!-- repeat for seamless loop -->
-    <span class="ticker-item rose">Thailand</span><span class="ticker-item">·</span>
-    <span class="ticker-item">Vietnam</span><span class="ticker-item">·</span>
-    <span class="ticker-item green">Cambodia</span><span class="ticker-item">·</span>
-    <span class="ticker-item">Championship Golf</span><span class="ticker-item">·</span>
-    <span class="ticker-item gold">Private Villas</span><span class="ticker-item">·</span>
-    <span class="ticker-item">Bespoke Itineraries</span><span class="ticker-item">·</span>
-    <span class="ticker-item rose">ATOL Protected</span><span class="ticker-item">·</span>
-    <span class="ticker-item">30 Years Experience</span><span class="ticker-item">·</span>
-    <span class="ticker-item gold">Family Specialists</span><span class="ticker-item">·</span>
-    <span class="ticker-item">Honeymoons</span><span class="ticker-item">·</span>
-    <span class="ticker-item green">Scotland Golf</span><span class="ticker-item">·</span>
-    <span class="ticker-item">Golf Groups</span><span class="ticker-item">·</span>
-  </div>
-</div>
-
 
 <!-- ══════════════════════════════════════════
      FEATURED DEPARTURE — The Architect's Asia
@@ -235,7 +212,7 @@
   </div>
   <div class="doors">
     <div class="door">
-      <a class="door-img" href="/golf-in-asia/"><img src="/images/golf-thailand-black-mountain-aerial.jpg" alt="Black Mountain, Hua Hin" loading="lazy"></a>
+      <a class="door-img" href="/golf-in-asia/"><img src="/images/golf-vietnam-hoiana-shores-aerial.jpg" alt="Hoiana Shores, central Vietnam" loading="lazy"></a>
       <div class="door-body">
         <div class="eyebrow">&mdash; Golf &mdash;</div>
         <h3><a href="/golf-in-asia/">Golf in Asia</a></h3>
@@ -675,7 +652,7 @@
 
 <!-- Scripts -->
 <script src="/components/footer.js?v=2"></script>
-<script src="/js/main.js?v=4"></script>
+<script src="/js/main.js?v=5"></script>
 
 
 <script>

@@ -23,7 +23,11 @@
   const slides   = document.querySelectorAll('.hero-slide');
   const dots     = document.querySelectorAll('.hero-dot');
   const caption  = document.getElementById('slide-caption');
-  const captions = ['Thailand', 'Vietnam', 'Golf in Asia'];
+  // Captions come from each slide's data-caption (and optional data-href);
+  // the old fixed list is the fallback for pages that don't set them.
+  const fallback = ['Thailand', 'Vietnam', 'Golf in Asia'];
+  const captions = Array.from(slides).map((s, i) => s.dataset.caption || fallback[i] || '');
+  const links    = Array.from(slides).map(s => s.dataset.href || '');
 
   if (slides.length > 1) {
     let current = 0;
@@ -35,7 +39,17 @@
       current = (n + slides.length) % slides.length;
       slides[current].classList.add('active');
       if (dots[current]) dots[current].classList.add('active');
-      if (caption && captions[current]) caption.textContent = captions[current];
+      if (caption && captions[current]) {
+        if (links[current]) {
+          caption.innerHTML = '';
+          const a = document.createElement('a');
+          a.href = links[current]; a.textContent = captions[current] + ' \u2192';
+          a.style.color = 'inherit'; a.style.pointerEvents = 'auto';
+          caption.appendChild(a);
+        } else {
+          caption.textContent = captions[current];
+        }
+      }
       clearInterval(timer);
       timer = setInterval(nextSlide, 5000);
     }
