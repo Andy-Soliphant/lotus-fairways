@@ -102,7 +102,7 @@
   const isFW     = path.includes('/fairway-weekends');
   const isBeyond = path.includes('/beyond');
   const isDest   = path.includes('/destinations');
-  const isJourneys = ['/journeys','/the-architects-asia','/the-cham-tour','/the-slow-road-south','/the-heart-of-vietnam','/vietnam-coast-and-island'].some(p => path.startsWith(p));
+  const isJourneys = ['/journeys','/the-architects-asia','/the-cham-tour','/the-slow-road-south','/the-heart-of-vietnam','/vietnam-coast-and-island','/vietnam-and-cambodia','/bali-and-lombok','/mountain-river-and-island','/thailand-for-two'].some(p => path.startsWith(p));
 
   const navHTML = `
     <nav class="nav" id="main-nav" role="navigation" aria-label="Main navigation">

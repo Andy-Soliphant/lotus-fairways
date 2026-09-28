@@ -312,6 +312,30 @@
 
   <!-- Signature journey -->
   <url>
+    <loc>https://lotusfairways.com/thailand-for-two.html</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/mountain-river-and-island.html</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/bali-and-lombok-family-journey.html</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/vietnam-and-cambodia.html</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lotusfairways.com/journeys/</loc>
     <lastmod>2026-09-28</lastmod>
     <changefreq>weekly</changefreq>
