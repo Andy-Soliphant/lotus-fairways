@@ -43,7 +43,7 @@
 
   // ── CURRENCY SYSTEM ──────────────────────────────────────────
   // Exchange rates — update these periodically (approx. guidance only)
-  const RATES = { GBP: 1, EUR: 1.19, USD: 1.27, SGD: 1.71 };
+  const RATES = { GBP: 1, EUR: 1.19, USD: 1.34, SGD: 1.71 };
   const SYMBOLS = { GBP: '£', EUR: '€', USD: '$', SGD: 'S$' };
   let activeCurrency = sessionStorage.getItem('lf_currency') || 'GBP';
 
@@ -56,7 +56,45 @@
   }
 
   // Find and update all price elements on page
+  // Wrap any plain "£12,345" in page text so it converts too. Pages written
+  // without the lf-price span (journeys, tour cards) are handled here, once,
+  // for every page current and future. Form options, scripts and styles are skipped.
+  function wrapPlainPrices() {
+    if (!document.body) return;
+    const SKIP = /^(SCRIPT|STYLE|NOSCRIPT|OPTION|SELECT|TEXTAREA|INPUT)$/;
+    const RE = /£\s?(\d{1,3}(?:,\d{3})+|\d+)/g;
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+      acceptNode(n) {
+        if (!n.nodeValue || n.nodeValue.indexOf('£') === -1) return NodeFilter.FILTER_REJECT;
+        for (let el = n.parentElement; el; el = el.parentElement) {
+          if (SKIP.test(el.tagName) || el.classList.contains('lf-price') || el.classList.contains('nav-currency')) return NodeFilter.FILTER_REJECT;
+        }
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    const nodes = [];
+    while (walker.nextNode()) nodes.push(walker.currentNode);
+    nodes.forEach(n => {
+      const text = n.nodeValue;
+      const frag = document.createDocumentFragment();
+      let last = 0, m;
+      RE.lastIndex = 0;
+      while ((m = RE.exec(text))) {
+        frag.appendChild(document.createTextNode(text.slice(last, m.index)));
+        const span = document.createElement('span');
+        span.className = 'lf-price';
+        span.setAttribute('data-price-gbp', m[1].replace(/,/g, ''));
+        span.textContent = m[0];
+        frag.appendChild(span);
+        last = m.index + m[0].length;
+      }
+      frag.appendChild(document.createTextNode(text.slice(last)));
+      n.parentNode.replaceChild(frag, n);
+    });
+  }
+
   function updatePrices() {
+    wrapPlainPrices();
     const symbol = SYMBOLS[activeCurrency];
     const rate   = RATES[activeCurrency];
     document.querySelectorAll('.lf-price[data-price-gbp]').forEach(el => {
