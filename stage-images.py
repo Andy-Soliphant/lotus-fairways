@@ -717,6 +717,15 @@ def main():
             # or a thumbnail rarely survives character for character.
             order = {pin_key(nm): i for i, nm in enumerate(pinned)}
             keep = [c for c in group if pin_key(os.path.basename(c["rel"])) in order]
+            # One file per pin. Media kits often hold the same photograph twice
+            # (a HERO folder and the root, or a 1500px and a 1240px copy); both
+            # match the pin, and without this the extras spill into -4, -5, -6.
+            best = {}
+            for c in keep:
+                k = pin_key(os.path.basename(c["rel"]))
+                if k not in best or c["bytes"] > best[k]["bytes"]:
+                    best[k] = c
+            keep = list(best.values())
             found = {pin_key(os.path.basename(c["rel"])) for c in keep}
             missing = [nm for nm in pinned if pin_key(nm) not in found]
             for nm in missing:

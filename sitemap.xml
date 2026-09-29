@@ -404,6 +404,8 @@
 
 
 
+
+
   <!-- Hotel pages -->
   <url>
     <loc>https://lotusfairways.com/hotels/137-pillars-house/</loc>
@@ -437,6 +439,11 @@
   </url>
   <url>
     <loc>https://lotusfairways.com/hotels/anantara-riverside-bangkok/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/hotels/andaz-bali/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -641,12 +648,22 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lotusfairways.com/hotels/tampah-hills/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lotusfairways.com/hotels/thai-akara/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://lotusfairways.com/hotels/the-legend-chiang-rai/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/hotels/the-purist-villas/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
