@@ -79,11 +79,16 @@ TINY_BYTES = 60_000     # below this it is a thumbnail; judged without opening t
 # Their images are still usable, but only after everything in the main folder.
 BACK_OF_HOUSE = ("spa", "wellness", "gym", "fitness", "travel craft", "travel",
                  "meeting", "wedding", "yoga", "map", "thumb")
+EXCLUDE_FOLDERS = ("influencer", "174x174", "_resized", "thumbnail")
+
 MAX_WIDTH = 2000        # anything wider is resampled DOWN. Never up.
 JPEG_QUALITY = 76
 MIN_SCORE = 0.5         # at least half the hotel's own name must appear
 STOPWORDS = {"hotel", "resort", "the", "a", "and", "villas", "collection",
-             "img", "dsc", "photo", "image", "copy", "final", "edit"}
+             "img", "dsc", "photo", "image", "copy", "final", "edit",
+             # Indonesian island names are regions, not areas: a "Bali" folder must
+             # not score against every hotel with Bali in its name.
+             "bali"}
 
 
 def normalise(text):
@@ -150,6 +155,25 @@ FOLDER_OVERRIDES = {
     # Strip the area and "Rosewood Luang Prabang" reduces to "rosewood",
     # which ties with Rosewood Bangkok and Rosewood Phnom Penh.
     "rosewood luang prabang": "rosewood-luang-prabang",
+    # Indonesia, added 29 Sep 2026. Named explicitly: several collide on brand
+    # alone ("capella", "four seasons") and two OneDrive folders are misspelt.
+    "the purist villas": "the-purist-villas",
+    "tampah hills": "tampah-hills",
+    "andaz": "andaz-bali",
+    "amandari": "amandari",
+    "amankila": "amankila",
+    "capella ubud": "capella-ubud",
+    "four seasons sayan": "four-seasons-sayan",
+    "four seasons jimbaran": "four-seasons-jimbaran",
+    "como shambhala estate": "como-shambhala-estate",
+    "belmond jimbaran puri": "belmond-jimbaran-puri",
+    "alilai uluwatu": "alila-uluwatu",          # folder is misspelt in OneDrive
+    "alila uluwatu": "alila-uluwatu",
+    "samanvaya sidemen": "samanvaya-sidemen",
+    "amanjiwo": "amanjiwo",
+    "nihi sumba": "nihi-sumba",
+    "cap karoso": "cap-karoso",
+    "oberoi lombok": "oberoi-lombok",
 }
 
 
@@ -450,7 +474,12 @@ def main():
 
     files = []
     for root, dirs, names in os.walk(STAGING):
-        dirs[:] = [d for d in dirs if not d.startswith(".")]
+        # Never file from these: influencer and photographer folders (their rights
+        # are not ours), web pages saved from a browser ("..._files"), thumbnails.
+        dirs[:] = [d for d in dirs if not d.startswith(".")
+                   and not any(x in d.lower() for x in EXCLUDE_FOLDERS)
+                   and not d.lower().endswith("_files")
+                   and not d.startswith("@")]
         for nm in sorted(names):
             if nm.lower().endswith((".jpg", ".jpeg", ".png", ".heic")) \
                     and not nm.startswith("."):

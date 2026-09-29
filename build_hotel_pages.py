@@ -27,7 +27,7 @@ OUT_ROOT = os.path.join(ROOT, "hotels")
 TIER_LABEL = {"ultra": "Ultra Luxury", "premium": "Premium", "classic": "Classic"}
 COUNTRY_LABEL = {
     "thailand": "Thailand", "vietnam": "Vietnam",
-    "cambodia": "Cambodia", "laos": "Laos",
+    "cambodia": "Cambodia", "laos": "Laos", "indonesia": "Indonesia",
 }
 
 # Areas with a golf trip page, so a hotel can link back to it.

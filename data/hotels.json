@@ -1737,6 +1737,342 @@
       "source": "andy/25sep2026-con-dao",
       "prose": "",
       "we_send": ""
+    },
+    {
+      "slug": "the-purist-villas",
+      "name": "The Purist Villas",
+      "destination": "indonesia",
+      "area": "ubud",
+      "tier": "premium",
+      "confirmed": true,
+      "tier_confirmed": false,
+      "preferred": false,
+      "tags": [
+        "leisure"
+      ],
+      "room_types": [],
+      "character": "Eighteen villas five minutes outside Ubud, including a two-bedroom residence built from an antique Javanese joglo.",
+      "why": "On the Bali and Lombok family journey.",
+      "verdict": "",
+      "image": "/images/hotel-indonesia-ubud-the-purist-villas.jpg",
+      "source": "andy/29sep2026-indonesia",
+      "prose": "",
+      "we_send": ""
+    },
+    {
+      "slug": "tampah-hills",
+      "name": "Tampah Hills",
+      "destination": "indonesia",
+      "area": "lombok",
+      "tier": "premium",
+      "confirmed": true,
+      "tier_confirmed": false,
+      "preferred": false,
+      "tags": [
+        "leisure"
+      ],
+      "room_types": [],
+      "character": "Private villas high above Lombok's south coast, each with its own infinity pool and the beaches below.",
+      "why": "On the Bali and Lombok family journey.",
+      "verdict": "",
+      "image": "/images/hotel-indonesia-lombok-tampah-hills.jpg",
+      "source": "andy/29sep2026-indonesia",
+      "prose": "",
+      "we_send": ""
+    },
+    {
+      "slug": "andaz-bali",
+      "name": "Andaz Bali",
+      "destination": "indonesia",
+      "area": "sanur",
+      "tier": "premium",
+      "confirmed": true,
+      "tier_confirmed": false,
+      "preferred": false,
+      "tags": [
+        "leisure"
+      ],
+      "room_types": [],
+      "character": "On the reef-sheltered beach at Sanur, laid out like a traditional Balinese village.",
+      "why": "On the Bali and Lombok family journey.",
+      "verdict": "",
+      "image": "/images/hotel-indonesia-sanur-andaz-bali.jpg",
+      "source": "andy/29sep2026-indonesia",
+      "prose": "",
+      "we_send": ""
+    },
+    {
+      "slug": "amandari",
+      "name": "Amandari",
+      "destination": "indonesia",
+      "area": "ubud",
+      "tier": "ultra",
+      "confirmed": true,
+      "tier_confirmed": false,
+      "preferred": false,
+      "tags": [
+        "leisure"
+      ],
+      "room_types": [],
+      "character": "Aman's first house in Bali, in the village of Kedewatan above the Ayung River gorge, its suites laid out like a Balinese village.",
+      "why": "",
+      "verdict": "",
+      "image": "/images/hotel-indonesia-ubud-amandari.jpg",
+      "source": "andy/29sep2026-indonesia",
+      "prose": "",
+      "we_send": ""
+    },
+    {
+      "slug": "amankila",
+      "name": "Amankila",
+      "destination": "indonesia",
+      "area": "manggis",
+      "tier": "ultra",
+      "confirmed": true,
+      "tier_confirmed": false,
+      "preferred": false,
+      "tags": [
+        "leisure"
+      ],
+      "room_types": [],
+      "character": "On the cliffs of East Bali near Manggis, looking across the Lombok Strait, known for its three tiered pools.",
+      "why": "",
+      "verdict": "",
+      "image": "/images/hotel-indonesia-manggis-amankila.jpg",
+      "source": "andy/29sep2026-indonesia",
+      "prose": "",
+      "we_send": ""
+    },
+    {
+      "slug": "capella-ubud",
+      "name": "Capella Ubud",
+      "destination": "indonesia",
+      "area": "ubud",
+      "tier": "ultra",
+      "confirmed": true,
+      "tier_confirmed": false,
+      "preferred": false,
+      "tags": [
+        "leisure"
+      ],
+      "room_types": [],
+      "character": "A tented camp in the rainforest at Keliki, north of Ubud, designed by Bill Bensley.",
+      "why": "",
+      "verdict": "",
+      "image": "/images/hotel-indonesia-ubud-capella-ubud.jpg",
+      "source": "andy/29sep2026-indonesia",
+      "prose": "",
+      "we_send": ""
+    },
+    {
+      "slug": "four-seasons-sayan",
+      "name": "Four Seasons Resort Bali at Sayan",
+      "destination": "indonesia",
+      "area": "ubud",
+      "tier": "ultra",
+      "confirmed": true,
+      "tier_confirmed": false,
+      "preferred": false,
+      "tags": [
+        "leisure"
+      ],
+      "room_types": [],
+      "character": "In the Ayung River valley near Ubud, reached across a bridge to a lotus pond on the main building's roof.",
+      "why": "",
+      "verdict": "",
+      "image": "/images/hotel-indonesia-ubud-four-seasons-sayan.jpg",
+      "source": "andy/29sep2026-indonesia",
+      "prose": "",
+      "we_send": ""
+    },
+    {
+      "slug": "four-seasons-jimbaran",
+      "name": "Four Seasons Resort Bali at Jimbaran Bay",
+      "destination": "indonesia",
+      "area": "jimbaran",
+      "tier": "ultra",
+      "confirmed": true,
+      "tier_confirmed": false,
+      "preferred": false,
+      "tags": [
+        "leisure"
+      ],
+      "room_types": [],
+      "character": "Villas stepping down a hillside above Jimbaran Bay, each with its own plunge pool.",
+      "why": "",
+      "verdict": "",
+      "image": "/images/hotel-indonesia-jimbaran-four-seasons-jimbaran.jpg",
+      "source": "andy/29sep2026-indonesia",
+      "prose": "",
+      "we_send": ""
+    },
+    {
+      "slug": "como-shambhala-estate",
+      "name": "COMO Shambhala Estate",
+      "destination": "indonesia",
+      "area": "ubud",
+      "tier": "ultra",
+      "confirmed": true,
+      "tier_confirmed": false,
+      "preferred": false,
+      "tags": [
+        "leisure"
+      ],
+      "room_types": [],
+      "character": "COMO's wellness retreat in the jungle above the Ayung River, near Ubud.",
+      "why": "",
+      "verdict": "",
+      "image": "/images/hotel-indonesia-ubud-como-shambhala-estate.jpg",
+      "source": "andy/29sep2026-indonesia",
+      "prose": "",
+      "we_send": ""
+    },
+    {
+      "slug": "belmond-jimbaran-puri",
+      "name": "Belmond Jimbaran Puri",
+      "destination": "indonesia",
+      "area": "jimbaran",
+      "tier": "premium",
+      "confirmed": true,
+      "tier_confirmed": false,
+      "preferred": false,
+      "tags": [
+        "leisure"
+      ],
+      "room_types": [],
+      "character": "Cottages and pool villas in tropical gardens on the beach at Jimbaran Bay.",
+      "why": "",
+      "verdict": "",
+      "image": "/images/hotel-indonesia-jimbaran-belmond-jimbaran-puri.jpg",
+      "source": "andy/29sep2026-indonesia",
+      "prose": "",
+      "we_send": ""
+    },
+    {
+      "slug": "alila-uluwatu",
+      "name": "Alila Villas Uluwatu",
+      "destination": "indonesia",
+      "area": "uluwatu",
+      "tier": "ultra",
+      "confirmed": true,
+      "tier_confirmed": false,
+      "preferred": false,
+      "tags": [
+        "leisure"
+      ],
+      "room_types": [],
+      "character": "Contemporary villas on the clifftops of the Bukit peninsula, above the Indian Ocean.",
+      "why": "",
+      "verdict": "",
+      "image": "",
+      "source": "andy/29sep2026-indonesia",
+      "prose": "",
+      "we_send": ""
+    },
+    {
+      "slug": "samanvaya-sidemen",
+      "name": "Samanvaya Sidemen",
+      "destination": "indonesia",
+      "area": "sidemen",
+      "tier": "premium",
+      "confirmed": true,
+      "tier_confirmed": false,
+      "preferred": false,
+      "tags": [
+        "leisure"
+      ],
+      "room_types": [],
+      "character": "In the Sidemen valley of East Bali, looking across rice terraces towards Mount Agung.",
+      "why": "",
+      "verdict": "",
+      "image": "/images/hotel-indonesia-sidemen-samanvaya-sidemen.jpg",
+      "source": "andy/29sep2026-indonesia",
+      "prose": "",
+      "we_send": ""
+    },
+    {
+      "slug": "amanjiwo",
+      "name": "Amanjiwo",
+      "destination": "indonesia",
+      "area": "borobudur",
+      "tier": "ultra",
+      "confirmed": true,
+      "tier_confirmed": false,
+      "preferred": false,
+      "tags": [
+        "leisure"
+      ],
+      "room_types": [],
+      "character": "In Central Java, facing Borobudur across the rice fields.",
+      "why": "",
+      "verdict": "",
+      "image": "/images/hotel-indonesia-borobudur-amanjiwo.jpg",
+      "source": "andy/29sep2026-indonesia",
+      "prose": "",
+      "we_send": ""
+    },
+    {
+      "slug": "nihi-sumba",
+      "name": "Nihi Sumba",
+      "destination": "indonesia",
+      "area": "sumba",
+      "tier": "ultra",
+      "confirmed": true,
+      "tier_confirmed": false,
+      "preferred": false,
+      "tags": [
+        "leisure"
+      ],
+      "room_types": [],
+      "character": "On a private beach in West Sumba, known for its surf, its horses and a remote island's pace.",
+      "why": "",
+      "verdict": "",
+      "image": "/images/hotel-indonesia-sumba-nihi-sumba.jpg",
+      "source": "andy/29sep2026-indonesia",
+      "prose": "",
+      "we_send": ""
+    },
+    {
+      "slug": "cap-karoso",
+      "name": "Cap Karoso",
+      "destination": "indonesia",
+      "area": "sumba",
+      "tier": "ultra",
+      "confirmed": true,
+      "tier_confirmed": false,
+      "preferred": false,
+      "tags": [
+        "leisure"
+      ],
+      "room_types": [],
+      "character": "A beach resort on the western coast of Sumba.",
+      "why": "",
+      "verdict": "",
+      "image": "/images/hotel-indonesia-sumba-cap-karoso.jpg",
+      "source": "andy/29sep2026-indonesia",
+      "prose": "",
+      "we_send": ""
+    },
+    {
+      "slug": "oberoi-lombok",
+      "name": "The Oberoi Beach Resort, Lombok",
+      "destination": "indonesia",
+      "area": "lombok",
+      "tier": "premium",
+      "confirmed": true,
+      "tier_confirmed": false,
+      "preferred": false,
+      "tags": [
+        "leisure"
+      ],
+      "room_types": [],
+      "character": "Pavilions and villas on Medana Beach in north-west Lombok, looking across to the Gili islands.",
+      "why": "",
+      "verdict": "",
+      "image": "",
+      "source": "andy/29sep2026-indonesia",
+      "prose": "",
+      "we_send": ""
     }
   ]
 }

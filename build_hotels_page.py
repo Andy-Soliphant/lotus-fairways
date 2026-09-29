@@ -31,8 +31,9 @@ COUNTRY_LABEL = {
     "vietnam": "Vietnam",
     "cambodia": "Cambodia",
     "laos": "Laos",
+    "indonesia": "Indonesia",
 }
-COUNTRY_ORDER = ["thailand", "vietnam", "cambodia", "laos"]
+COUNTRY_ORDER = ["thailand", "vietnam", "cambodia", "laos", "indonesia"]
 
 # Areas that have a golf trip page, so a hotel card can link back to it.
 TRIP_AREAS = {
