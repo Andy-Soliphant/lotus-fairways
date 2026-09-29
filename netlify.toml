@@ -30,6 +30,31 @@
   force = true
 
 # Headers for performance and security
+# Old journal URLs still being crawled (Search Console 404s, 29 Sep 2026)
+[[redirects]]
+  from = "/journal/north-south-vietnam/*"
+  to = "/journal/vietnam-multi-centre.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/journal/north-south-vietnam"
+  to = "/journal/vietnam-multi-centre.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/journal/scotland-golf-us-travellers/*"
+  to = "/whisky-and-fairways.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/journal/scotland-golf-us-travellers"
+  to = "/whisky-and-fairways.html"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.values]
