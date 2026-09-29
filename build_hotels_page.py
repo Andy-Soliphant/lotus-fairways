@@ -93,6 +93,10 @@ def load():
         imgs = images_for(h)
         if not imgs:
             continue
+        # "hold" in hotels.json keeps a property off the site while its
+        # photography is not good enough to show. Remove it to publish.
+        if h.get("hold"):
+            continue
         h["_images"] = imgs
         live.append(h)
     return hotels, live

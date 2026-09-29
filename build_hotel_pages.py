@@ -294,6 +294,9 @@ def main():
     for h in hotels:
         imgs = images_for(h)
         has_verdict = bool((h.get("verdict") or "").strip())
+        if h.get("hold"):
+            skipped.append((h["slug"], "held: " + h["hold"]))
+            continue
         if not imgs or not has_verdict:
             reason = []
             if not imgs:

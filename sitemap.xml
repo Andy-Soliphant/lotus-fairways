@@ -406,9 +406,31 @@
 
 
 
+
+
   <!-- Hotel pages -->
   <url>
     <loc>https://lotusfairways.com/hotels/137-pillars-house/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/hotels/alila-uluwatu/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/hotels/amandari/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/hotels/amanjiwo/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/hotels/amankila/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -453,7 +475,17 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lotusfairways.com/hotels/belmond-jimbaran-puri/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lotusfairways.com/hotels/bensley-collection-shinta-mani-siem-reap/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/hotels/cap-karoso/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -469,6 +501,11 @@
   </url>
   <url>
     <loc>https://lotusfairways.com/hotels/capella-hanoi/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/hotels/capella-ubud/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -489,6 +526,11 @@
   </url>
   <url>
     <loc>https://lotusfairways.com/hotels/four-seasons-chiang-mai/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/hotels/four-seasons-jimbaran/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -563,6 +605,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lotusfairways.com/hotels/nihi-sumba/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lotusfairways.com/hotels/palace-gate-phnom-penh/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -624,6 +671,11 @@
   </url>
   <url>
     <loc>https://lotusfairways.com/hotels/salil-hotel-riverside/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lotusfairways.com/hotels/samanvaya-sidemen/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
