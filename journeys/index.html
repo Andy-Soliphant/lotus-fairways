@@ -278,6 +278,8 @@
     .jcard .jimg{height:220px;overflow:hidden}
     .jcard img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
     .jcard:hover img{transform:scale(1.04)}
+    .jcard .jimg-interim{display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--green) 0%,#1f3a23 55%,var(--deep) 100%)}
+    .jcard .jimg-interim span{font-family:var(--font-serif);font-style:italic;font-size:1.9rem;letter-spacing:.04em;color:var(--parchment);opacity:.92}
     .jcard .jbody{padding:var(--space-lg);display:flex;flex-direction:column;flex:1}
     .jcard .eyebrow{color:var(--bronze);margin-bottom:6px}
     .jcard h3{font-size:1.5rem;margin-bottom:var(--space-sm);color:var(--deep)}
@@ -372,6 +374,7 @@
       </a>
 
       <a class="jcard" href="/bali-and-lombok-family-journey.html">
+        <div class="jimg jimg-interim" aria-hidden="true"><span>Bali &middot; Lombok</span></div>
         <div class="jbody">
           <div class="eyebrow">Indonesia &middot; For Families</div>
           <h3>Bali and Lombok</h3>

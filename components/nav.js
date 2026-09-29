@@ -99,19 +99,15 @@
     const rate   = RATES[activeCurrency];
     document.querySelectorAll('.lf-price[data-price-gbp]').forEach(el => {
       const gbp = parseInt(el.getAttribute('data-price-gbp'), 10);
-      el.textContent = symbol + Math.round(gbp * rate).toLocaleString();
-      let note = el.nextElementSibling;
-      if (activeCurrency !== 'GBP') {
-        if (!note || !note.classList.contains('lf-approx')) {
-          note = document.createElement('span');
-          note.className = 'lf-approx';
-          note.style.cssText = 'font-size:0.65em;opacity:0.6;margin-left:3px;';
-          note.textContent = 'approx.';
-          el.insertAdjacentElement('afterend', note);
-        }
-      } else {
-        if (note && note.classList.contains('lf-approx')) note.remove();
-      }
+      const conv = gbp * rate;
+      // Round converted prices so they read as the estimates they are
+      const step = activeCurrency === 'GBP' ? 1 : (conv >= 10000 ? 100 : 10);
+      const shown = Math.round(conv / step) * step;
+      el.textContent = (activeCurrency === 'GBP' ? '' : '\u2248\u2009') + symbol + shown.toLocaleString('en-GB');
+      el.title = activeCurrency === 'GBP' ? '' : 'Approximate conversion from \u00a3' + gbp.toLocaleString('en-GB') + '. Quoted in pounds sterling.';
+      // Remove the old inline "approx." note if present
+      const note = el.nextElementSibling;
+      if (note && note.classList.contains('lf-approx')) note.remove();
     });
   }
 
