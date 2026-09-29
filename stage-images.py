@@ -177,6 +177,19 @@ FOLDER_OVERRIDES = {
 }
 
 
+# Properties that may ONLY be claimed through their FOLDER_OVERRIDES entry.
+# The Indonesia library is full of sister properties - Alila Seminyak, Alila
+# Manggis, Oberoi Seminyak, COMO Uma - that score against our hotels on the
+# brand word alone ("alila", "oberoi"). For these, the named folder is the
+# only way in; a lookalike folder cannot claim them or block them.
+OVERRIDE_ONLY = {
+    "the-purist-villas", "tampah-hills", "andaz-bali", "amandari", "amankila",
+    "capella-ubud", "four-seasons-sayan", "four-seasons-jimbaran",
+    "como-shambhala-estate", "belmond-jimbaran-puri", "alila-uluwatu",
+    "samanvaya-sidemen", "amanjiwo", "nihi-sumba", "cap-karoso", "oberoi-lombok",
+}
+
+
 def folder_override(src, hotels):
     """Return (hotel, folder_that_matched) for an explicitly assigned path.
 
@@ -290,6 +303,7 @@ def folder_match(src, hotels, places):
     """
     rel = os.path.relpath(os.path.dirname(src), STAGING)
     parts = [] if rel == "." else rel.split(os.sep)
+    hotels = [h for h in hotels if h["slug"] not in OVERRIDE_ONLY]
     hits = []                                   # nearest first
     for parent in reversed(parts):
         if normalise(parent) in places:         # a region, not a property
