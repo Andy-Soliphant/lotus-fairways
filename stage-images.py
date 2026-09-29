@@ -222,7 +222,71 @@ PROTECTED = {
 }
 
 
+def pin_key(name):
+    stem = os.path.splitext(name)[0].lower()
+    return re.sub(r"[\s_\-]+", "", stem)
+
+
 IMAGE_PINS = {
+    # Nihi Sumba, chosen 29 Sep 2026 from the resort's HERO Images folder:
+    # villa pool facing the surf break, the villa deck, horses on the beach at dusk.
+    "nihi-sumba": [
+        "ReadMcKendree_2017-06-6-Nihiwatu-25.jpg",
+        "ReadMcKendree_2017-06-5-Nihiwatu-183.jpg",
+        "JasonChilds-1806-00949.jpg",
+    ],
+    # The rest of the Indonesia set, chosen 29 Sep 2026 from Andy's previews.
+    # Hero first. Setting over room; no renders, no influencer photography.
+    "alila-uluwatu": [          # clifftop pool, sunset cabana, villa at dusk
+        "Alila_Villas_Uluwatu_3bedroom_Hillside_Villas_Pool.jpg",
+        "uluwatu-view.jpg",
+        "One-Bedroom_Villa_Sunset.jpg",
+    ],
+    "amandari": [               # the infinity pool, a suite pool, the garden
+        "Amandari-Gallery-11_2.jpg",
+        "Aman_Amandari_Gallery_13.jpg",
+        "Amandari-Gallery-14.jpg",
+    ],
+    "amankila": [               # the tiered pool, aerial with Agung, pool at dusk
+        "Aman_Amankila_Gallery_7.jpg",
+        "Aman_Amankila_Experiences_1.jpg",
+        "Amankila Suite, Amankila, Bali, Indonesia_5.jpg",
+    ],
+    "belmond-jimbaran-puri": [  # pool and pavilion, villa pool, the beach at sunset
+        "pool.jpg",
+        "jpb-acc-villa-deluxe-pool08.jpg",
+        "beach private dinner copy.jpg",
+    ],
+    "the-purist-villas": [      # pool villa garden, pool at night, the daybed deck
+        "Garden-Suites-Gallery-04.jpg",
+        "River-3-CF106985.jpg",
+        "River-1-IN4C9959.jpg",
+    ],
+    "amanjiwo": [               # pool and rotunda, terrace facing the volcano, grounds
+        "Aman_Amanjiwo_Gallery_1.jpg",
+        "Amanjiwo, Indonesia - Outdoor Dining_1.jpg",
+        "Aman_Amanjiwo_Gallery_26.jpg",
+    ],
+    "tampah-hills": [           # villa on its hill, terrace, living pavilion
+        "Tampah-Hills-Villa-Kami13.jpg",
+        "Seaside-Collective-Tampah-Hills13-1024x682.jpg",
+        "Seaside-Collective-Tampah-Hills20-1024x682.jpg",
+    ],
+    "capella-ubud": [           # tent pool over the valley, tents in the forest, a tent
+        "CapellaUbud Keliki Valley Tent Pool 2.jpg",
+        "CapellaUbud.jpg",
+        "Capella Ubud Accommodation River Tent Bedroom3.jpg",
+    ],
+    "cap-karoso": [             # the beach at sunset, a villa terrace, surfers at dusk
+        "CapKaroso-Karosobeach-sunset.jpg",
+        "CapKaroso-VillaNdara-terrace-chair-plant-pool.jpg",
+        "Surfers-sunset-beach.jpg",
+    ],
+    "samanvaya-sidemen": [      # interim: spa pool, a room, the restaurant
+        "New-Project-34.jpg",
+        "New-Project-18.jpg",
+        "Samanvaya9-scaled.jpg",
+    ],
     "rosewood-luang-prabang": [
         "the-great-house-008_WIDE-LARGE-16-9.jpg",
         "hilltop-tent-007_WIDE-LARGE-16-9.jpg",
@@ -648,18 +712,22 @@ def main():
         # there is nothing better. Size decides within each band.
         pinned = IMAGE_PINS.get(slug)
         if pinned:
-            order = {nm: i for i, nm in enumerate(pinned)}
-            keep = [c for c in group if os.path.basename(c["rel"]) in order]
-            missing = [nm for nm in pinned
-                       if nm not in {os.path.basename(c["rel"]) for c in keep}]
+            # Compare loosely: case, spaces/underscores/hyphens and the
+            # extension are ignored, because a name copied from a chat upload
+            # or a thumbnail rarely survives character for character.
+            order = {pin_key(nm): i for i, nm in enumerate(pinned)}
+            keep = [c for c in group if pin_key(os.path.basename(c["rel"])) in order]
+            found = {pin_key(os.path.basename(c["rel"])) for c in keep}
+            missing = [nm for nm in pinned if pin_key(nm) not in found]
             for nm in missing:
                 print(f"  !! pinned file not found for {slug}: {nm}")
             for c in group:
                 if c not in keep:
                     unmatched.append((c["rel"], "not one of the pinned three"))
-            keep.sort(key=lambda c: order[os.path.basename(c["rel"])])
+            keep.sort(key=lambda c: order[pin_key(os.path.basename(c["rel"]))])
             for i, c in enumerate(keep, 1):
                 c["explicit"] = i
+                c["pinned"] = True
             group = keep
         group.sort(key=lambda c: (c["back"], -c["bytes"]))
         seen = set()
@@ -692,7 +760,9 @@ def main():
             # an undersized first photograph - something beats nothing - but a
             # REPLACEMENT has to be at least as wide as what it displaces.
             existing = os.path.join(IMAGES, target_name(c["hotel"], c["n"]))
-            if c["w"] and os.path.exists(existing):
+            # A PIN is exempt: it is a human choice made on subject, and the
+            # best photograph of a place is not always the widest file.
+            if c["w"] and os.path.exists(existing) and not c.get("pinned"):
                 try:
                     from PIL import Image as _I
                     with _I.open(existing) as _im:
