@@ -164,6 +164,30 @@
     }
     .cta-band h2 { color: var(--white); margin-bottom: var(--space-md); }
     .cta-band p { color: var(--parchment-dark); max-width: 560px; margin: 0 auto var(--space-lg); font-size: 1rem; }
+
+    /* hero: meta row level and clear of the card below */
+    .signature-hero-content { padding-bottom: calc(var(--space-2xl) + 110px); }
+    .signature-hero-meta { display:grid; grid-template-columns: repeat(3, minmax(0, 230px)); gap: var(--space-lg); }
+    @media (max-width: 640px) { .signature-hero { height:auto; min-height:78vh; padding-top:110px; } .signature-hero-meta { grid-template-columns: 1fr; gap: var(--space-sm); } }
+    /* photography */
+    .photo-section { max-width: var(--max-width); margin: 0 auto; }
+    .photo-grid { display:grid; gap: var(--space-md); grid-template-columns: repeat(2, 1fr); }
+    .photo-grid.three { grid-template-columns: repeat(3, 1fr); }
+    .photo-grid figure { margin:0; }
+    .photo-grid img { width:100%; aspect-ratio: 3/2; object-fit:cover; display:block; border-radius:2px; }
+    .photo-grid figcaption { font-size:0.85rem; line-height:1.6; color:var(--slate); margin-top:8px; }
+    .photo-grid figcaption strong { display:block; font-family:var(--font-serif); font-weight:400; font-size:1.15rem; color:var(--deep); }
+    .photo-grid .wide { grid-column: 1 / -1; }
+    .photo-grid .wide img { aspect-ratio: 21/9; }
+    .photo-band { position:relative; height:62vh; min-height:360px; overflow:hidden; }
+    .photo-band img { width:100%; height:100%; object-fit:cover; display:block; }
+    .photo-band .band-caption { position:absolute; left:0; right:0; bottom:0; padding: var(--space-xl); background:linear-gradient(to top, rgba(26,18,8,0.7), transparent); color:var(--white); font-family:var(--font-serif); font-size:clamp(1.2rem,2.4vw,1.7rem); font-style:italic; }
+    .photo-band .band-caption span { display:block; max-width:var(--max-width); margin:0 auto; }
+    @media (max-width: 760px) { .photo-grid, .photo-grid.three { grid-template-columns: 1fr; } .photo-grid .wide img { aspect-ratio: 3/2; } }
+    .host-photo { float:right; width:min(42%, 300px); margin:0 0 var(--space-md) var(--space-lg); }
+    .host-photo img { width:100%; aspect-ratio:4/5; object-fit:cover; display:block; border-radius:2px; }
+    .host-photo figcaption { font-size:0.8rem; color:var(--warm-grey); font-style:italic; margin-top:6px; }
+    @media (max-width: 640px) { .host-photo { float:none; width:100%; margin:0 0 var(--space-md); } }
   </style>
 
 </head>
@@ -218,6 +242,34 @@
     <p>The week runs the right way round. Five nights in Hua Hin first, where the courses sit minutes from the beach and the pace is slow, then north to Bangkok for three nights and the two best tee times of the trip. Partners who do not play are not an afterthought: there is something worth doing on every golf day, and they pay a price that reflects the rounds they are not taking.</p>
   </div>
 </section>
+
+<!-- THE COURSES -->
+<section class="section">
+  <div class="photo-section">
+    <div class="section-header"><h2>The Courses</h2><div class="section-rule"></div></div>
+    <div class="photo-grid">
+      <figure class="wide"><img src="/images/golf-thailand-black-mountain-aerial.jpg" alt="Black Mountain golf course from the air, Hua Hin" loading="lazy"><figcaption><strong>Black Mountain</strong>Tour-conditioned fairways cut through old pineapple plantation, with the granite left where it stood. Day three.</figcaption></figure>
+      <figure><img src="/images/golf-thailand-hua-hin-pineapple-valley-2.jpg" alt="Golfers on the tee at Pineapple Valley, Hua Hin" loading="lazy"><figcaption><strong>Pineapple Valley</strong>Rolling fairways with the hills behind, and a finish that decides the friendly wagers. Day five.</figcaption></figure>
+      <figure><img src="/images/golf-thailand-bangkok-thai-country-club.jpg" alt="The lake at Thai Country Club, Bangkok" loading="lazy"><figcaption><strong>Thai Country Club</strong>The finale. Johnnie Walker Classic pedigree and conditioning to match, with visitors rationed. Day eight.</figcaption></figure>
+    </div>
+    <div class="photo-grid" style="margin-top:var(--space-md);">
+      <figure><img src="/images/golf-thailand-bangkok-royal-gems.jpg" alt="Water and bunkers in front of a green at Royal Gems, Bangkok" loading="lazy"><figcaption><strong>Royal Gems</strong>Azaleas, stone bridges and water in front of the greens. The pairs day, with partners drawn at dinner the night before. Day seven.</figcaption></figure>
+      <figure><img src="/images/golf-thailand-bangkok-royal-gems-2.jpg" alt="Golfers on the green across the lake at Royal Gems" loading="lazy"><figcaption><strong>Over the water</strong>Royal Gems on our last visit, caddies and umbrellas on the green.</figcaption></figure>
+    </div>
+    <p style="max-width:720px; margin:var(--space-lg) auto 0; color:var(--slate); text-align:center;">With Majestic Creek to open the week and Nikanti on the road north: six rounds, and every one of them counts towards the cup.</p>
+    <div class="photo-grid three" style="margin-top:var(--space-xl);">
+      <figure><img src="/images/golf-thailand-bangkok-royal-gems-island-green.jpg" alt="The island green at Royal Gems, Bangkok" loading="lazy"></figure>
+      <figure><img src="/images/golf-thailand-bangkok-royal-gems-tee-shot.jpg" alt="A golfer teeing off at Royal Gems, Bangkok" loading="lazy"></figure>
+      <figure><img src="/images/golf-thailand-bangkok-royal-gems-bunkers.jpg" alt="Fairway bunkers at Royal Gems, Bangkok" loading="lazy"></figure>
+    </div>
+    <p style="text-align:center; font-size:0.85rem; color:var(--warm-grey); font-style:italic; margin-top:8px;">More of Royal Gems, photographed on our own rounds rather than borrowed from a brochure.</p>
+  </div>
+</section>
+
+<div class="photo-band">
+  <img src="/images/golf-thailand-hua-hin-pineapple-valley-3.jpg" alt="Late light over Pineapple Valley, Hua Hin" loading="lazy">
+  <div class="band-caption"><span>Morning rounds, before the heat. Afternoons are yours.</span></div>
+</div>
 
 <!-- TIMELINE -->
 <section class="section" style="background:var(--white);">
@@ -313,6 +365,22 @@
 </section>
 
 <!-- COMPETITION -->
+<!-- WHERE YOU STAY -->
+<section class="section" style="background:var(--white);">
+  <div class="photo-section">
+    <div class="section-header"><h2>Where You Stay</h2><div class="section-rule"></div></div>
+    <div class="photo-grid">
+      <figure><img src="/images/hotel-thailand-hua-hin-cape-nidhra-hua-hin.jpg" alt="Sunset over the Gulf of Thailand from Cape Nidhra, Hua Hin" loading="lazy"><figcaption><strong>Cape Nidhra, Hua Hin</strong>Five nights. Every suite has its own pool, and the beach is a short walk from the lobby.</figcaption></figure>
+      <figure><img src="/images/hotel-thailand-bangkok-the-sukhothai-bangkok.jpg" alt="A Thai pavilion in the gardens of The Sukhothai, Bangkok" loading="lazy"><figcaption><strong>The Sukhothai, Bangkok</strong>Three nights. Gardens and lotus ponds off Sathorn, and one of the quietest addresses in the city.</figcaption></figure>
+    </div>
+    <div class="photo-grid three" style="margin-top:var(--space-md);">
+      <figure><img src="/images/hotel-thailand-bangkok-the-sukhothai-bangkok-2.jpg" alt="The pool at The Sukhothai, Bangkok" loading="lazy"></figure>
+      <figure><img src="/images/thailand-bangkok-wat-arun.jpg" alt="Wat Arun, Bangkok" loading="lazy"></figure>
+      <figure><img src="/images/thailand-bangkok-longtail-canal.jpg" alt="A longtail boat on the canals of Bangkok" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
 <section class="section">
   <div class="intro-text">
     <h2 style="margin-bottom:var(--space-md);">There is a trophy at the end of it</h2>
@@ -330,6 +398,7 @@
     <p>For a golfer travelling without a partner it answers the other question too. You arrive alone and you play in a three-ball every day, eat with the group when you want to and take an evening off when you don't. Eight to twelve people is enough for proper company and small enough that nobody is lost in it &mdash; and there is a single supplement rather than a stranger in the other bed.</p>
 
     <h2 style="margin:var(--space-xl) 0 var(--space-md);">Travelling with your host</h2>
+    <figure class="host-photo"><img src="/images/golf-thailand-bangkok-royal-gems-host.jpg" alt="Your host on the tee at Royal Gems, Bangkok" loading="lazy"><figcaption>Your host, on the tee at Royal Gems.</figcaption></figure>
     <p>A host who travels with you changes a golf holiday in small, practical ways. The tee sheet is arranged so the group plays together rather than being split across a morning. Someone who knows the caddie master is there when it matters. Dinner is booked by a person who has eaten there. Nobody spends an evening working out where the bus goes in the morning.</p>
     <p>It also decides who the week suits: golf couples, pairs of friends, and single golfers who would rather join a group than organise one. Eight guests minimum and twelve maximum, so the party fits three tee times and one dinner table.</p>
     <p>One departure, one host, and no coach.</p>
