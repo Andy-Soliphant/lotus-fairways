@@ -62,6 +62,36 @@ JOURNEY_USE = {
             "amanoi", "anantara-quy-nhon", "namia-riverside-da-nang",
         ],
     },
+    "bali-and-lombok-family-journey.html": {
+        "title": "Bali and Lombok",
+        "eyebrow": "Private Journey",
+        "note": "Indonesia &mdash; twelve nights, built for a family",
+        "slugs": ["the-purist-villas", "tampah-hills", "andaz-bali"],
+    },
+    "bali-done-properly.html": {
+        "title": "Bali, Done Properly",
+        "eyebrow": "Private Journey",
+        "note": "Indonesia &mdash; Ubud, Sidemen and Jimbaran Bay in ten nights",
+        "slugs": ["amandari", "samanvaya-sidemen", "four-seasons-jimbaran"],
+    },
+    "java-and-bali.html": {
+        "title": "Java and Bali",
+        "eyebrow": "Private Journey",
+        "note": "Indonesia &mdash; Borobudur, Ubud and the east coast in eleven nights",
+        "slugs": ["amanjiwo", "capella-ubud", "amankila"],
+    },
+    "bali-and-sumba.html": {
+        "title": "Bali and Sumba",
+        "eyebrow": "Private Journey",
+        "note": "Indonesia &mdash; Ubud, a remote island and the Uluwatu clifftops",
+        "slugs": ["amandari", "nihi-sumba", "cap-karoso", "alila-uluwatu"],
+    },
+    "the-three-amans.html": {
+        "title": "The Three Amans",
+        "eyebrow": "By Invitation",
+        "note": "Indonesia &mdash; Amanjiwo, Amandari and Amankila in twelve nights",
+        "slugs": ["amanjiwo", "amandari", "amankila"],
+    },
 }
 
 AREA_FIXES = {

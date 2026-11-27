@@ -194,18 +194,77 @@
   </div>
 </section>
 
-<!-- JOURNEY -->
+<!-- JOURNEYS -->
+<style>
+  .ijgrid { display:grid; grid-template-columns:repeat(3,1fr); gap:var(--space-lg); max-width:var(--max-width); margin:0 auto; }
+  .ijgrid .jcard { display:block; background:var(--white); color:inherit; text-decoration:none; border:1px solid var(--rule); transition:transform .2s; }
+  .ijgrid .jcard:hover { transform:translateY(-3px); }
+  .ijgrid .jimg img { width:100%; aspect-ratio:4/3; object-fit:cover; display:block; }
+  .ijgrid .jbody { padding:var(--space-lg); }
+  .ijgrid .jbody .eyebrow { color:var(--bronze); margin-bottom:6px; }
+  .ijgrid .jbody h3 { font-size:1.35rem; margin-bottom:8px; color:var(--deep); }
+  .ijgrid .jbody p { font-size:0.95rem; line-height:1.7; color:var(--slate); margin-bottom:var(--space-md); }
+  .ijgrid .jmeta { font-family:var(--font-sans); font-size:0.78rem; letter-spacing:0.06em; color:var(--warm-grey); display:flex; justify-content:space-between; gap:8px; }
+  .ijgrid .jmeta strong { color:var(--rose); font-weight:500; }
+  .ijreads { max-width:var(--max-width); margin:var(--space-xl) auto 0; text-align:center; font-size:0.95rem; color:var(--slate); }
+  .ijreads a { color:var(--rose); border-bottom:1px solid var(--rule); }
+  @media (max-width:900px){ .ijgrid { grid-template-columns:1fr 1fr; } }
+  @media (max-width:560px){ .ijgrid { grid-template-columns:1fr; } }
+</style>
 <section class="section">
-  <div class="two-col">
-    <img src="/images/hotel-indonesia-ubud-the-purist-villas.jpg" alt="The Purist Villas, Ubud">
-    <div>
-      <div class="eyebrow">— A Journey —</div>
-      <h2>Bali and Lombok, built for a family.</h2>
-      <p>Villas outside Ubud, a private house above Lombok&rsquo;s south coast, and Sanur by the sea to finish. Twelve nights, paced for children and the adults travelling with them.</p>
-      <a href="/bali-and-lombok-family-journey.html" class="btn btn-outline" style="margin-top:var(--space-md);">See the journey →</a>
-      <p style="margin-top:var(--space-md);">Every journey we build is shaped around who is travelling. If you would rather a couple&rsquo;s Bali, or Bali with Java or Sumba added, we will build it.</p>
-    </div>
+  <div class="section-header">
+    <div class="eyebrow">— Journeys —</div>
+    <h2>Five ways to see it</h2>
+    <div class="section-rule"></div>
   </div>
+  <div class="ijgrid">
+      <a class="jcard" href="/bali-done-properly.html">
+        <div class="jimg"><img src="/images/hotel-indonesia-ubud-amandari.jpg" alt="Bali, Done Properly" loading="lazy"></div>
+        <div class="jbody">
+          <div class="eyebrow">Bali</div>
+          <h3>Bali, Done Properly</h3>
+          <p>Ubud, the Sidemen valley and Jimbaran Bay. The island most visitors miss.</p>
+          <div class="jmeta"><span>10 nights</span><strong>From &pound;4,100 pp</strong></div>
+        </div>
+      </a>
+      <a class="jcard" href="/java-and-bali.html">
+        <div class="jimg"><img src="/images/hotel-indonesia-borobudur-amanjiwo.jpg" alt="Java and Bali" loading="lazy"></div>
+        <div class="jbody">
+          <div class="eyebrow">Java &middot; Bali</div>
+          <h3>Java and Bali</h3>
+          <p>Borobudur from Amanjiwo, a rainforest camp above Ubud, and the east coast.</p>
+          <div class="jmeta"><span>11 nights</span><strong>From &pound;6,300 pp</strong></div>
+        </div>
+      </a>
+      <a class="jcard" href="/bali-and-sumba.html">
+        <div class="jimg"><img src="/images/hotel-indonesia-sumba-nihi-sumba.jpg" alt="Bali and Sumba" loading="lazy"></div>
+        <div class="jbody">
+          <div class="eyebrow">Bali &middot; Sumba</div>
+          <h3>Bali and Sumba</h3>
+          <p>Ubud, four nights at Nihi or Cap Karoso, and the Uluwatu clifftops.</p>
+          <div class="jmeta"><span>10 nights</span><strong>From &pound;5,750 pp</strong></div>
+        </div>
+      </a>
+      <a class="jcard" href="/bali-and-lombok-family-journey.html">
+        <div class="jimg"><img src="/images/hotel-indonesia-ubud-the-purist-villas.jpg" alt="Bali and Lombok" loading="lazy"></div>
+        <div class="jbody">
+          <div class="eyebrow">Bali &middot; Lombok &middot; Families</div>
+          <h3>Bali and Lombok</h3>
+          <p>Villas outside Ubud, a private house above Lombok&rsquo;s south coast, and Sanur.</p>
+          <div class="jmeta"><span>12 nights</span><strong>From &pound;4,280 pp</strong></div>
+        </div>
+      </a>
+      <a class="jcard" href="/the-three-amans.html">
+        <div class="jimg"><img src="/images/hotel-indonesia-manggis-amankila.jpg" alt="The Three Amans" loading="lazy"></div>
+        <div class="jbody">
+          <div class="eyebrow">By Invitation</div>
+          <h3>The Three Amans</h3>
+          <p>Amanjiwo, Amandari and Amankila, in order, in pool suites.</p>
+          <div class="jmeta"><span>12 nights</span><strong>From &pound;9,150 pp</strong></div>
+        </div>
+      </a>
+  </div>
+  <p class="ijreads">Every route is private and can be reshaped around you. Before you choose: <a href="/journal/when-to-go-to-bali.html">when to go to Bali</a>, and <a href="/journal/bali-beyond-bali.html">which island to add</a>.</p>
 </section>
 
 <!-- WHEN TO GO -->

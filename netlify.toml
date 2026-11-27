@@ -29,6 +29,19 @@
   status = 301
   force = true
 
+# Hosted golf week moved from March to November 2027 (27 Nov 2026)
+[[redirects]]
+  from = "/hosted-thailand-march-2027.html"
+  to = "/hosted-thailand-november-2027.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/hosted-thailand-march-2027"
+  to = "/hosted-thailand-november-2027.html"
+  status = 301
+  force = true
+
 # Headers for performance and security
 # Old journal URLs still being crawled (Search Console 404s, 29 Sep 2026)
 [[redirects]]
