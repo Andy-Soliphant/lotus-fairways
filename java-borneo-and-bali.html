@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Java, Borneo and Bali — Temples, Orangutans and Volcanoes | Lotus &amp; Fairways</title>
+  <meta name="description" content="Fourteen nights across Indonesia: Borobudur and Prambanan, orangutans from a private river boat in Borneo, sunrise over Mount Bromo, Ubud, and Lombok to finish. From &pound;3,750 per person.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://lotusfairways.com/java-borneo-and-bali.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Java, Borneo and Bali — Lotus &amp; Fairways">
+  <meta property="og:description" content="Borobudur, orangutans in Borneo, sunrise at Bromo, then Bali and Lombok. Fourteen nights across five islands.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lotusfairways.com/java-borneo-and-bali.html">
+  <meta property="og:site_name" content="Lotus &amp; Fairways">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- Favicon -->
+  <meta property="og:image" content="https://lotusfairways.com/images/hotel-indonesia-borobudur-amanjiwo-3.jpg">
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+
+  <style>
+    /* ── Page-specific additions, built on existing tokens ── */
+    .signature-hero {
+      position: relative;
+      height: 78vh;
+      min-height: 520px;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+    }
+    .signature-hero img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .signature-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(26,18,8,0.90) 0%, rgba(26,18,8,0.66) 42%, rgba(26,18,8,0.48) 100%);
+    }
+    .signature-hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 var(--space-xl) calc(var(--space-2xl) + 72px);
+      width: 100%;
+      color: var(--parchment);
+      text-shadow: 0 1px 18px rgba(26,18,8,0.55);
+    }
+    .signature-hero-content .eyebrow { color: var(--bronze-light); margin-bottom: var(--space-md); }
+    .signature-hero-content h1 { color: var(--white); margin-bottom: var(--space-md); max-width: 800px; }
+    .signature-hero-meta {
+      display: flex;
+      gap: var(--space-xl);
+      flex-wrap: wrap;
+      margin-top: var(--space-lg);
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+    }
+    .signature-hero-meta strong { display: block; font-family: var(--font-serif); font-size: 1.4rem; font-weight: 400; }
+
+    .at-a-glance {
+      background: var(--white);
+      border-radius: 4px;
+      box-shadow: var(--shadow-md);
+      padding: var(--space-xl);
+      margin-top: -90px;
+      position: relative;
+      z-index: 2;
+      max-width: var(--max-width);
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .at-a-glance-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--space-lg);
+    }
+    .at-a-glance-item h4 { color: var(--bronze); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 6px; font-family: var(--font-sans); font-weight: 500; }
+    .at-a-glance-item p { font-size: 0.95rem; color: var(--deep); margin: 0; line-height: 1.5; }
+
+    .price-note {
+      font-size: 0.75rem;
+      color: var(--warm-grey);
+      font-style: italic;
+      margin-top: var(--space-sm);
+    }
+
+    .intro-text {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .intro-text p { font-size: 1.1rem; line-height: 1.9; }
+
+    .timeline { max-width: 880px; margin: 0 auto; }
+    .day-block {
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      gap: var(--space-lg);
+      padding: var(--space-xl) 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .day-block:last-child { border-bottom: none; }
+    .day-number {
+      font-family: var(--font-serif);
+      font-size: 2.2rem;
+      color: var(--bronze);
+      line-height: 1;
+    }
+    .day-number span { display: block; font-family: var(--font-sans); font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--warm-grey); margin-top: 6px; }
+    .day-title { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 400; margin-bottom: 10px; color: var(--deep); }
+    .day-block p { margin-bottom: 12px; }
+    .day-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+    .day-tag {
+      font-size: 0.68rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 20px;
+      background: var(--rose-pale);
+      color: var(--rose);
+      font-family: var(--font-sans);
+    }
+    .day-tag.golf { background: #e8efe9; color: var(--green); }
+    .day-tag.whisky { background: #f3ead9; color: var(--bronze); }
+
+    .inclusions-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-2xl);
+      max-width: 880px;
+      margin: 0 auto;
+    }
+    @media (max-width: 700px) { .inclusions-grid { grid-template-columns: 1fr; gap: var(--space-xl); } }
+    .inclusions-grid h4 { font-family: var(--font-sans); font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: var(--space-md); }
+    .inclusions-grid ul li { font-size: 0.92rem; padding: 8px 0; border-bottom: 1px solid var(--rule); color: var(--slate); }
+    .inclusions-grid ul li:last-child { border-bottom: none; }
+
+    .gallery-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-sm);
+    }
+    .gallery-strip img { width: 100%; height: 200px; object-fit: cover; border-radius: 2px; }
+    @media (max-width: 700px) { .gallery-strip { grid-template-columns: repeat(2, 1fr); } }
+
+    .cta-band {
+      background: var(--green);
+      color: var(--parchment);
+      text-align: center;
+      padding: var(--space-3xl) var(--space-xl);
+    }
+    .cta-band h2 { color: var(--white); margin-bottom: var(--space-md); }
+    .cta-band p { color: var(--parchment-dark); max-width: 560px; margin: 0 auto var(--space-lg); font-size: 1rem; }
+  
+    /* ── Page-local additions for The Cham Tour ── */
+    .range-band {
+      background: var(--green);
+      color: var(--parchment);
+      padding: var(--space-xl) var(--space-xl);
+      text-align: center;
+    }
+    .range-band .range-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.6rem 2.2rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--parchment);
+    }
+    .range-band .sep { color: var(--bronze); }
+    .range-band .note {
+      display: block;
+      max-width: 640px;
+      margin: 0.9rem auto 0;
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1.2rem;
+      letter-spacing: 0;
+      text-transform: none;
+      color: var(--parchment-dark);
+    }
+
+    /* Stop tags — self-contained, no reliance on .golf / .whisky */
+    .day-tag.water { background: #f3ead9; color: #8a6524; }
+    .day-tag.stay  { background: #f5e7ec; color: var(--rose); }
+
+    .invitation-band {
+      background: var(--green);
+      color: var(--parchment);
+      padding: var(--space-3xl) var(--space-xl);
+    }
+    .invitation-band .inner { max-width: 720px; margin: 0 auto; }
+    .invitation-band .eyebrow { color: var(--bronze); margin-bottom: var(--space-md); }
+    .invitation-band h2 { color: var(--white); margin-bottom: var(--space-md); }
+    .invitation-band p { color: var(--parchment-dark); font-size: 1.05rem; line-height: 1.8; }
+
+    @media (max-width: 700px) {
+      .at-a-glance { margin-top: -50px; padding: var(--space-lg); }
+      .range-band { padding: var(--space-lg) var(--space-md); }
+      .range-band .range-inner { gap: 0.5rem 1.2rem; font-size: 0.66rem; }
+      .invitation-band { padding: var(--space-2xl) var(--space-md); }
+    }
+
+
+    /* ── The Work strip: four of his hotels, shown rather than described ── */
+    .work-strip { background: var(--deep); padding: var(--space-2xl) var(--space-xl); }
+    .work-strip .inner { max-width: var(--max-width); margin: 0 auto; }
+    .work-strip .eyebrow { color: var(--bronze); text-align: center; margin-bottom: var(--space-md); }
+    .work-strip h2 { color: var(--white); text-align: center; margin-bottom: var(--space-sm); font-size: 2rem; }
+    .work-strip .lede { color: var(--parchment-dark); text-align: center; max-width: 620px; margin: 0 auto var(--space-xl); font-size: 1rem; line-height: 1.8; }
+    .work-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-md); }
+    .work-item figure { margin: 0; }
+    .work-item img { width: 100%; aspect-ratio: 3/4; object-fit: cover; display: block; border-radius: 2px; }
+    .work-item figcaption { color: var(--parchment-dark); font-family: var(--font-sans); font-size: 0.72rem; letter-spacing: 0.04em; margin-top: 10px; line-height: 1.5; }
+    .work-item figcaption strong { display: block; color: var(--bronze-light); font-family: var(--font-serif); font-size: 1rem; font-weight: 400; letter-spacing: 0; margin-bottom: 2px; }
+    @media (max-width: 900px) { .work-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 480px) { .work-grid { grid-template-columns: 1fr; } .work-strip { padding: var(--space-xl) var(--space-md); } }
+
+    /* ── Waitlist form, sits inside the dark CTA band ── */
+    .waitlist-form { max-width: 540px; margin: var(--space-lg) auto 0; text-align: left; }
+    .waitlist-form .btn-submit { width: 100%; margin-top: var(--space-sm); }
+    .waitlist-form .form-note { text-align: center; margin-top: var(--space-md); color: rgba(247,243,236,0.5); font-size: 0.7rem; letter-spacing: 0.06em; }
+  </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QT9QGJB8ET"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-QT9QGJB8ET");
+  </script>
+</head>
+<body>
+
+<!-- Nav injected by component -->
+<script src="/components/nav.js"></script>
+
+<section class="signature-hero">
+  <img src="/images/hotel-indonesia-borobudur-amanjiwo-3.jpg" alt="Rice fields below the Menoreh hills near Borobudur, Central Java">
+  <div class="signature-hero-content">
+    <div class="eyebrow">&mdash; Journeys &middot; Indonesia &middot; Java &middot; Borneo &middot; Bali &mdash;</div>
+    <h1>Java, Borneo and Bali</h1>
+    <p style="font-size:1.1rem; color:var(--parchment-dark); max-width:640px;">Fourteen nights and five islands: the temples of Central Java, orangutans from a river boat in Borneo, sunrise over Bromo, then Ubud and the beaches of Lombok.</p>
+    <div class="signature-hero-meta">
+      <div><strong>14 Nights</strong>Java, Borneo, Bali, Lombok</div><div><strong>Wildlife & Temples</strong>An active journey</div><div><strong>Private</strong>Your dates, your party</div>
+    </div>
+  </div>
+</section>
+
+<div class="at-a-glance">
+  <div class="at-a-glance-grid">
+    <div class="at-a-glance-item">
+      <h4>The Route</h4>
+      <p>Borobudur in Central Java, Tanjung Puting in Borneo, Surabaya and Mount Bromo in East Java, Ubud, and the north-west coast of Lombok</p>
+    </div>
+    <div class="at-a-glance-item">
+      <h4>What You Do</h4>
+      <p>Borobudur at sunrise and Prambanan, Merapi by jeep or the Dieng Plateau, orangutans at Camp Leakey, Bromo&rsquo;s sea of sand at dawn, cycling through Ubud&rsquo;s villages, Tenganan and Penglipuran, and snorkelling off the Gili islands</p>
+    </div>
+    <div class="at-a-glance-item">
+      <h4>Where You Stay</h4>
+      <p>Plataran Heritage Borobudur, Borobudur &middot; A private klotok, Tanjung Puting &middot; Hotel Majapahit, Surabaya &middot; Plataran Bromo, Bromo &middot; Tanadewa, Ubud &middot; Tugu Lombok, Lombok</p>
+    </div>
+    <div class="at-a-glance-item">
+      <h4>The Price</h4>
+      <p style="font-family:var(--font-serif); font-size:1.6rem;">From &pound;3,750 per person</p>
+      <p class="price-note">Per person, two sharing, with three internal flights and the crossing to Lombok, private transfers in a Toyota Alphard, a guide throughout, the days out shown, all entrance fees, breakfast daily, eight lunches and two dinners. For four travelling together, from &pound;2,750 per person. Excludes international flights. Peak and festive dates cost more.</p>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="intro-text">
+    <p>Most visitors see one Indonesian island. This journey sees five, and each one shows a different country. Java has the temples, Borneo has the rainforest and the orangutans, East Java has the volcanoes, and Bali and Lombok are where it slows down.</p>
+    <p>It is an active trip and we will be straight about that. There are early starts, three internal flights, and two nights on a traditional river boat in Borneo, which is comfortable rather than luxurious. In return you will see things that very few people combine in one journey, and the last six nights are spent in Ubud and by the sea.</p>
+  </div>
+</section>
+
+<section class="section" style="background:var(--white);">
+  <div class="section-header">
+    <h2>The Journey</h2>
+    <div class="section-rule"></div>
+  </div>
+
+  <div class="timeline">
+
+    <div class="day-block">
+      <div class="day-number">1<span>Borobudur</span></div>
+      <div>
+        <h3 class="day-title">The Temples &mdash; Three Nights</h3>
+        <p>Arrive at Yogyakarta and go straight to Prambanan, the great ninth-century Hindu temple, before driving on to Plataran Heritage Borobudur in the hills near the temple. Sunrise over Borobudur the next morning, then a guided tour of the temple itself, a traditional breakfast, and a horse-drawn cart through the villages, followed by the smaller temples of Pawon and Mendut. On the third day choose between Merapi by jeep, through the old lava flows of Java&rsquo;s most active volcano, or the Dieng Plateau, with its ancient temples and coloured crater lakes.</p>
+        <div class="day-tags"><span class="day-tag">Borobudur</span><span class="day-tag">Prambanan</span><span class="day-tag stay">Plataran Heritage</span></div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-number">2<span>Borneo</span></div>
+      <div>
+        <h3 class="day-title">The River &mdash; Two Nights</h3>
+        <p>Fly to Pangkalan Bun in Kalimantan and board a private klotok, a traditional wooden river boat with two cabins, air conditioning and a sundeck, for two nights on the rivers of Tanjung Puting National Park. Orangutans at the feeding stations at Tanjung Harapan, Camp Leakey and Pondok Tanggui, a guided walk in the forest with a ranger, and the riverbanks at dusk from the deck. All meals are on board.</p>
+        <div class="day-tags"><span class="day-tag water">Sekonyer River</span><span class="day-tag">Camp Leakey</span><span class="day-tag stay">Private klotok</span></div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-number">3<span>Surabaya</span></div>
+      <div>
+        <h3 class="day-title">The Port &mdash; One Night</h3>
+        <p>Fly to Surabaya and stay at Hotel Majapahit, built in 1910 by a member of the Sarkies family, who built Raffles in Singapore. A morning walk through the old colonial quarter and the markets before the drive up to Bromo.</p>
+        <div class="day-tags"><span class="day-tag">Surabaya</span><span class="day-tag stay">Hotel Majapahit</span></div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-number">4<span>Bromo</span></div>
+      <div>
+        <h3 class="day-title">The Volcano &mdash; Two Nights</h3>
+        <p>Plataran Bromo sits in the hills below the Tengger caldera. Before dawn, by private jeep to watch the sun rise over Bromo, Semeru and the sea of sand, then down onto the sand to the crater and the Poten temple, with a picnic breakfast on the savannah. In the afternoon, a cooking class with local ingredients.</p>
+        <div class="day-tags"><span class="day-tag">Mount Bromo</span><span class="day-tag stay">Plataran Bromo</span></div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-number">5<span>Ubud</span></div>
+      <div>
+        <h3 class="day-title">The Villages &mdash; Three Nights</h3>
+        <p>A short flight to Bali and up to Tanadewa, in a courtyard villa with its own pool. A morning cycling through the rice fields and villages, with lunch with a local family. A day east to Penglipuran and its bamboo forest, the temple at Kehen, the beach at Virgin Beach, and the walled weaving village of Tenganan.</p>
+        <div class="day-tags"><span class="day-tag">Penglipuran</span><span class="day-tag">Tenganan</span><span class="day-tag stay">Tanadewa</span></div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-number">6<span>Lombok</span></div>
+      <div>
+        <h3 class="day-title">The Sea &mdash; Three Nights</h3>
+        <p>Across the strait to Tugu Lombok on Sire Beach, filled with antiques and old Indonesian art and facing the Gili islands. One morning snorkelling; the rest is rest, which by now you will have earned.</p>
+        <div class="day-tags"><span class="day-tag water">Gili Islands</span><span class="day-tag stay">Tugu Lombok</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="invitation-band">
+  <div class="inner">
+    <div class="eyebrow">&mdash; Plan Around It &mdash;</div>
+    <h2>Dates that matter</h2>
+    <p>Borobudur is closed on Mondays. Tanjung Puting National Park closes from 15 to 31 January and from 1 to 15 June each year, and Bromo closes for a ceremony around Nyepi, the Balinese new year, which falls on 8 March in 2027. We build your dates around all three.</p>
+    <p>Every journey we publish is private, and this one can be shortened or softened: Borneo can be dropped, the boat can be swapped for a lodge, or the beach nights lengthened. For the temples and Bali in more comfort, see <a href="/java-and-bali.html" style="color:inherit;border-bottom:1px solid var(--bronze-light);">Java and Bali</a>. Getting there is arranged separately; tell us the airport you would rather leave from.</p>
+  </div>
+</div>
+
+<section class="cta-band">
+  <h2>Begin the Conversation</h2>
+  <p>Tell us when you would like to travel and who is coming, and we will come back to you with the journey and the price.</p>
+<form name="waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html" class="waitlist-form">
+    <input type="hidden" name="form-name" value="waitlist">
+      <input type="hidden" name="source-page" value="">
+    <input type="hidden" name="journey" value="Java, Borneo and Bali">
+    <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
+
+    <div class="form-grid">
+      <div class="form-row">
+        <label for="wl-first">First Name</label>
+        <input type="text" id="wl-first" name="first-name" placeholder="Your first name" required>
+      </div>
+      <div class="form-row">
+        <label for="wl-last">Last Name</label>
+        <input type="text" id="wl-last" name="last-name" placeholder="Your last name" required>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <label for="wl-email">Email Address</label>
+      <input type="email" id="wl-email" name="email" placeholder="your@email.com" required>
+    </div>
+
+    <div class="form-grid">
+      <div class="form-row">
+        <label for="wl-party">How Many Travelling</label>
+        <select id="wl-party" name="party-size">
+          <option value="">Select</option>
+          <option>Just me</option>
+          <option>Two of us</option>
+          <option>Three or four</option>
+          <option>A larger group</option>
+          <option>Not sure yet</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="wl-window">When</label>
+        <select id="wl-window" name="departure">
+          <option value="">Select</option>
+            <option>In the next six months</option>
+            <option>Later this year or next</option>
+            <option>Not sure yet</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <label for="wl-note">Anything We Should Know</label>
+      <textarea id="wl-note" name="message" rows="2" placeholder="Optional — when you would like to travel, who is coming, anything you would want us to plan around..."></textarea>
+    </div>
+
+    <button type="submit" class="btn-submit">Begin the Conversation &rarr;</button>
+    <p class="form-note">No obligation &middot; A reply from us, not an automated one</p>
+  </form>
+</section>
+
+
+<!-- Scripts -->
+<script src="/components/footer.js"></script>
+<script src="/js/main.js"></script>
+
+
+<script>
+/* Source tracking: records which page sent the visitor to this form.
+   Reads ?ref= if present, otherwise the same-origin referrer path. */
+(function () {
+  function label() {
+    var q = new URLSearchParams(window.location.search).get('ref');
+    if (q) return q;
+    var r = document.referrer;
+    if (!r) return 'direct';
+    try {
+      var u = new URL(r);
+      if (u.hostname !== window.location.hostname) return 'external: ' + u.hostname;
+      return u.pathname === '/' ? 'homepage' : u.pathname;
+    } catch (e) { return 'unknown'; }
+  }
+  var v = label();
+  document.querySelectorAll('input[name="source-page"]').forEach(function (el) { el.value = v; });
+})();
+</script>
+</body>
+</html>
